@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MuiTreeView from 'material-ui-treeview';
+
+const tree = [
+  {
+    value: 'Parent A',
+    nodes: [{ value: 'Child A' }, { value: 'Child B' }],
+  },
+  {
+    value: 'Parent B',
+    nodes: [
+      {
+        value: 'Child C',
+      },
+      {
+        value: 'Parent C',
+        nodes: [
+          { value: 'Child D' },
+          { value: 'Child E' },
+          { value: 'Child F' },
+        ],
+      },
+    ],
+  },
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<MuiTreeView tree={tree} onLeafClick={node => alert(`${node} clicked`)} />);
 }
 
 export default App;
