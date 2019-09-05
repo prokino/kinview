@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
 import MuiTreeView from 'material-ui-treeview';
-import classification from './data/classification.json';
+import data from './data/classification.json';
 
 let tree=[];
 
-function convertToTree(data)
+function convertToTree()
 {
   for (let i =0; i < data.length;i++)
   {
-    console.log(classification[i].Group)
-
+    console.log(data[i].Group);
   }
   return data;
 }
