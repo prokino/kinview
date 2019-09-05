@@ -8,7 +8,8 @@
     "material-ui-treeview": "^3.4.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "react-treebeard": "^3.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
