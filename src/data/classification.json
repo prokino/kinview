@@ -1,0 +1,4028 @@
+[
+    {
+      "Group": "AGC",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "AGC",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "AGC",
+      "Subfamily": "AGC-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "AGC1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "AGC-Sar",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "AGC-Sar",
+      "Subfamily": "Ciliate-E2b",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "Akt",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "AktR",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "AktR",
+      "Subfamily": "Ciliate-E2b",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "DMPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "DMPK",
+      "Subfamily": "CRIK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "DMPK",
+      "Subfamily": "GEK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "DMPK",
+      "Subfamily": "ROCK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "GRK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "GRK",
+      "Subfamily": "BARK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "GRK",
+      "Subfamily": "GRK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "MAST",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "MAST",
+      "Subfamily": "MAST",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "MAST",
+      "Subfamily": "MASTL",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "NDR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "NDR",
+      "Subfamily": "LATS",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "NDR",
+      "Subfamily": "NDR",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "NDR",
+      "Subfamily": "NDR-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "PDK1",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKA",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKC",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKC",
+      "Subfamily": "PKCa",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKC",
+      "Subfamily": "PKCd",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKC",
+      "Subfamily": "PKCh",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKC",
+      "Subfamily": "PKCi",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKC",
+      "Subfamily": "PKC-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKG",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PKN",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "PTF",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "PTF",
+      "Subfamily": "FPK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "MSK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSK-p1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSK-p2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSK-p3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSK-p4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSKp70",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSKp90",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSK",
+      "Subfamily": "RSK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSKL",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "RSKR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "SGK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "YANK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "AGC",
+      "Family": "AGC-Unique",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK1",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK1",
+      "Subfamily": "CAMK1c",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK2",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "AMPK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "BRSK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CAMKL-Tvag1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CAMKL-Tvag2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CAMKL-Tvag3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CAMKL-Tvag4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CHK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CIPK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CIPK1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CIPK2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "GIN4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "HUNK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "Kin1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "Kin4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "LKB",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "MARK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "MELK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "NIM1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "NuaK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "PASK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "QIK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "Smoe1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "SNRK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMKL",
+      "Subfamily": "CAMKL-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK-Tt",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK-Tvag1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK-Tvag2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK-Tvag3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CASK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "CDPKa",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "CDPKb",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "CDPKd",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "CDPKe",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "CDPKf",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "Ciliate-E2a",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CDPK",
+      "Subfamily": "CDPK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "Chk1L",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "Ciliate-C1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "DAPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "DAPK",
+      "Subfamily": "DAPK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "DAPK",
+      "Subfamily": "DRAK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "DCAMKL",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "MAPKAPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "MAPKAPK",
+      "Subfamily": "MK2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "MAPKAPK",
+      "Subfamily": "MK5",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "MAPKAPK",
+      "Subfamily": "MNK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "MLCK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "MLCK-like",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "PHK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "PIM",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "PKD",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "PPCK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "PPCK",
+      "Subfamily": "PPCK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CAMK",
+      "Family": "PSK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "RAD53",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "SgK495",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "STK33",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "Trbl",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "Trio",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "TSSK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CAMK",
+      "Family": "CAMK-Unique",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "CK1-A",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "CK1-D",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "CK1-G",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "CK1x",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "CK1y",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1",
+      "Subfamily": "CK1-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "Dual",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "TTBK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "TTBKL",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "VRK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CK1",
+      "Family": "Worm10",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "Worm11",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "Worm6",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "Worm7",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "Worm8",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "Worm9",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CK1",
+      "Family": "CK1-Unique",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CCRK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDC2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDC2-smoe1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDC2-smoe2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK4",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK5",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK7",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK8",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK8-like",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK9",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK10",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK11",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK20",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDKB",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK-DD1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CRK7",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CRK7-like",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CRK7-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "PCTAIRE",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "PFTAIRE",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "PITSLRE",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDK",
+      "Subfamily": "CDK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CDKL",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CK2",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CLK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CMGC-GL1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CMGC-Tvag1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "Dicty1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "DYRK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "DYRK2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "DyrkP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "HIPK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "PRP4",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "YAK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "DYRK",
+      "Subfamily": "DYRK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "GSK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "ERK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "ERK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "ERK3",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "ERK5",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "ERK7",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "JNK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "nmo",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "p38",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "MAPK",
+      "Subfamily": "MAPK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "CMGC",
+      "Family": "RCK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "RCK",
+      "Subfamily": "MAK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "RCK",
+      "Subfamily": "MOK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "SRPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "CMGC",
+      "Family": "CMGC-Unique",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "RGC",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "RGC",
+      "Family": "RGC",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "Dicty3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "Dicty3",
+      "Subfamily": "FNIPK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "Dicty3",
+      "Subfamily": "NZAK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "Dicty3",
+      "Subfamily": "Dicty3-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "ASK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "CDC15",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "MEKK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "MEKK2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "MEKK2-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "MEKK2-plant2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "MEKK4",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "MEKK15",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "NPK1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "STE11-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "STE11-plant2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "STE11-plant3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE11",
+      "Subfamily": "STE11-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "FRAY",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "KHS",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "MKC",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "MSN",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "MST",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "MST-like",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "NinaC",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "PAKA",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "PAKB",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "PAKL",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "SLK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "Ste20-DD1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "STLK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "TAO",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "YSK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE20",
+      "Subfamily": "Ste20-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "MEK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "MEK3",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "MEK4",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "MEK5",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "MEK7",
+      "HasAlignment": true
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "STE7-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "STE7-plant2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE7",
+      "Subfamily": "STE7-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE-plant1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "STE",
+      "Family": "STE-Unique",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Abl",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Ack",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "ALK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Axl",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "CCK4",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Csk",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "CTKA",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "CTKB",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "DDR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "EGFR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Eph",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "FAK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Fer",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "FGFR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "FGTK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "FYTK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "HMTK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "InsR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Jak",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "KIN16",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "KIN6",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Lmr",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "LRTK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Met",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Musk",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "PDGFR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "REF",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Ret",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Ror",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKA",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKB",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKC",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKD",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKE",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKF",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKG",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKH",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKJ",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKL",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "RTKM",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Ryk",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Sev",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "SFK-Abl",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "SFK-Csk",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "SFK-Src",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "SFK-Tec",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "Frk",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "SrcA",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "Src-Aque1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "SrcB",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "Src-Echino1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "Src-Echino2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "SRM",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Src",
+      "Subfamily": "Src-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Syk",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Tec",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "Tie",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "TK-Sp1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "TMR",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "Trk",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "UTK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK",
+      "Family": "VEGFR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK",
+      "Family": "TK-Unique",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTB",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTB",
+      "Subfamily": "PTB-MiaB",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTB",
+      "Subfamily": "SHC-like",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTB",
+      "Subfamily": "Unique",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTP",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTP",
+      "Subfamily": "HD-PTP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTP",
+      "Subfamily": "PTP-BAS",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTP",
+      "Subfamily": "PTP-H1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTP",
+      "Subfamily": "RPTP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "PTP",
+      "Subfamily": "SHP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "BSD-SH2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Cbl",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Chimera",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "CH-SH2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Crk",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "DEP-SH2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Glyco",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Grb2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Myo-SH2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "PIK3R12",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "PKCa-SH2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "PLCg",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "RasA1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Rhombid-SH2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Rin",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "SH2D4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "SH2-PDZ",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "SH2-R",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "SH2-R-Cad",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "SH2-R-HYR",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Shc",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "SHIP2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "STAT",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Supt6h",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "TNS1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Vav",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TK-assoc",
+      "Family": "SH2",
+      "Subfamily": "Unique",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "ARK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "ARMK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "CZAK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "Dicty4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "Dicty4",
+      "Subfamily": "DRK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "Dicty4",
+      "Subfamily": "Shk",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "Dicty4",
+      "Subfamily": "Dicty4-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "Dicty5",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "DPYK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "Gdt",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "CR4L",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "Extensin",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAK-0",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAK-14",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKa",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKb",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKd",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKf",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKg",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKh",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKj",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKk",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAKm",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LLEC",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRK19",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR10",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR10a",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR10b",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR11",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR24",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR25",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR31",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR36",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR6",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR7a",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR8",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR8-2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR8x",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRR9",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRRIa",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRRIb",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRRIc",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LRRXI",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "LysM",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "PERK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RKF3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK15",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK17",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK33",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK34",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK6",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "RLCK-OS3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "SD21",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "SD2b",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "SD2b2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "WAKc23",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "IRAK",
+      "Subfamily": "IRAK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "LISK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "LISK",
+      "Subfamily": "LIMK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "LISK",
+      "Subfamily": "LISK-DD1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "LISK",
+      "Subfamily": "TESK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "LRRK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "HH498",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "HH-a1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "HH-a2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "HH-B",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "HH-C",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "ILK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "LZK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "MLK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "MLK-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "MLKx",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "MLKy",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "MLKz",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "TAK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "ZAK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "MLK",
+      "Subfamily": "MLK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "RAF",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "RAF",
+      "Subfamily": "KSR",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "RAF",
+      "Subfamily": "RAF",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "RIPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "STKR",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "STKR",
+      "Subfamily": "STKR1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "STKR",
+      "Subfamily": "STKR2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-ccin",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-ciliate1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-ciliate2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-ciliate3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-ciliate4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-ciliate5",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-Sp1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-Tvag1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-Tvag2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-Tvag3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "WAKL",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "WAK-like",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "TKL",
+      "Family": "TKL-Unique",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "AgaK1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Aur",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "BUB",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Bud32",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "CAMKK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "CAMKK",
+      "Subfamily": "CAMKK-Meta",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "CAMKK",
+      "Subfamily": "ELM",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "CAMKK",
+      "Subfamily": "CAMKK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "CDC7",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A5",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A7",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A8",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-A9",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-B1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-B2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-B3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C5",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C6",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C7",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C8",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C8",
+      "Subfamily": "C2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-C8",
+      "Subfamily": "C8",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-D1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E2",
+      "Subfamily": "Ciliate-E2a",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E2",
+      "Subfamily": "Ciliate-E2b",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E2",
+      "Subfamily": "Ciliate-E2c",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E2",
+      "Subfamily": "Ciliate-E2-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E5",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E6",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E7",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E8",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-E9",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-F1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-F2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-G",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-Unique",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Ciliate-Unique",
+      "Subfamily": "Ciliate-E2b",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Dicty10",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Dicty6",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Dicty7",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Dicty8",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Dicty9",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Dusty",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "FunK1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "HAL",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Haspin",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "IKK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "IKS",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "IRE",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "KIS",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Mak2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "MOS",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NAK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NAK",
+      "Subfamily": "BIKE",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NAK",
+      "Subfamily": "GAK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NAK",
+      "Subfamily": "MPSK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NAK",
+      "Subfamily": "NAK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK4",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK6",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK8",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK9",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK10",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NEK",
+      "Subfamily": "NEK11",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Nek",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Nek",
+      "Subfamily": "Nek-GL1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Nek",
+      "Subfamily": "Nek-GL2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Nek",
+      "Subfamily": "Nek-GL3",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Nek",
+      "Subfamily": "Nek-GL4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Nek",
+      "Subfamily": "Nek-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "NKF1",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NKF2",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NKF3",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NKF4",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NKF5",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "NRBP",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Other-GL1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Other-Tvag1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Other-Tvag2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Other-Tvag3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "PAN3",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "GCN2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "HRI",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "PEK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "PKR",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "PKR-like",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "PEK",
+      "Subfamily": "PEK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "PLK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PLK",
+      "Subfamily": "PLK1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PLK",
+      "Subfamily": "PLK2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PLK",
+      "Subfamily": "SAK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "PLK",
+      "Subfamily": "PLK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "RAN",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "SAMK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "SCY1",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "SgK071",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "SgK493",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Slob",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "TBCK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "TLK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "TOPK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "TTK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "ULK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "ULK",
+      "Subfamily": "Fused",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "ULK",
+      "Subfamily": "ULK",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "ULK",
+      "Subfamily": "ULK-frag",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "ULK",
+      "Subfamily": "ULK-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "ULK",
+      "Subfamily": "ULK-plant2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Uni1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Unique",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "urch",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "urch",
+      "Subfamily": "urchA",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "urch",
+      "Subfamily": "urchB",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "urch",
+      "Subfamily": "urchC",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "urch",
+      "Subfamily": "urch-unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "VPS15",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "WEE",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "WEE",
+      "Subfamily": "Myt1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "WEE",
+      "Subfamily": "WEE1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "WEE",
+      "Subfamily": "WEE-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "WNK",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Other",
+      "Family": "Worm1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Worm2",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Worm3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Worm4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Worm5",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Other",
+      "Family": "Other-Unique",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-A",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-B",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-B-plant1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-C",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-D",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-E",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-F",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-G",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-H",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "AFK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Alpha",
+      "Subfamily": "Alpha-sponge",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Alpha",
+      "Subfamily": "Alpha-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Alpha",
+      "Subfamily": "ChaK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Alpha",
+      "Subfamily": "eEF2K",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Alpha",
+      "Subfamily": "MHCK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Alpha",
+      "Subfamily": "VWL",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "BAZ",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "BCR",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "BLVRA",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "BRD",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "CAK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "Col4A3BP",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "FAST",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "G11",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "GTF2F1",
+      "Subfamily": "",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "HisK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PDHK",
+      "Subfamily": "BCKDK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PDHK",
+      "Subfamily": "PDHK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PI3",
+      "Subfamily": "PI4",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PI3K",
+      "Subfamily": "PI4K",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "ATM",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "ATR",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "DNAPK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "FRAP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "PI3K",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "PI4K",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "SMG1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "PIKK",
+      "Subfamily": "TRRAP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "RIO",
+      "Subfamily": "RIO1",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "RIO",
+      "Subfamily": "RIO2",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "RIO",
+      "Subfamily": "RIO3",
+      "HasAlignment": true
+    },
+    {
+      "Group": "Atypical",
+      "Family": "TAF1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "Atypical",
+      "Family": "TIF1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ABC1",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-A",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-B",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ABC1",
+      "Subfamily": "ABC1-C",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "Alpha",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "Alpha",
+      "Subfamily": "Alpha-Kineto1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "ACAD",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "CAK-fungal1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "ChoK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "Fmp29",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "Fmp29-like",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "FruK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "CAK",
+      "Subfamily": "CAK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ccin3",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ccin4",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "ccin9",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "FJ",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PI3K",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PI4K",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "ATM",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "ATR",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "DNAPK",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "FRAP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "PI3K",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "PI4K",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIK",
+      "Subfamily": "PIK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIKK",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIKK",
+      "Subfamily": "ATM",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIKK",
+      "Subfamily": "ATR",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIKK",
+      "Subfamily": "FRAP",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PIKK",
+      "Subfamily": "PIKK-Unclassified",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "RIO",
+      "Subfamily": "",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "RIO",
+      "Subfamily": "RIO1",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "RIO",
+      "Subfamily": "RIO2",
+      "HasAlignment": false
+    },
+    {
+      "Group": "PKL",
+      "Family": "PKL-Unique",
+      "Subfamily": "",
+      "HasAlignment": false
+    }
+  ]
