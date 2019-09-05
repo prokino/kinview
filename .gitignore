@@ -2,3 +2,4 @@ kinview-linux-x64/*
 pack/*
 node_modules/*
 npm-debug.log
+helpers/__pycache__/
