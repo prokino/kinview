@@ -7,6 +7,7 @@
                 "nodes": [
                     {
                         "value": "AGC-plant1",
+                        "path": "AGC/AGC/AGC-plant1",
                         "nodes": []
                     }
                 ]
@@ -20,6 +21,7 @@
                 "nodes": [
                     {
                         "value": "Ciliate-E2b",
+                        "path": "AGC/AGC-Sar/Ciliate-E2b",
                         "nodes": []
                     }
                 ]
@@ -33,6 +35,7 @@
                 "nodes": [
                     {
                         "value": "Ciliate-E2b",
+                        "path": "AGC/AktR/Ciliate-E2b",
                         "nodes": []
                     }
                 ]
@@ -42,14 +45,17 @@
                 "nodes": [
                     {
                         "value": "CRIK",
+                        "path": "AGC/DMPK/CRIK",
                         "nodes": []
                     },
                     {
                         "value": "GEK",
+                        "path": "AGC/DMPK/GEK",
                         "nodes": []
                     },
                     {
                         "value": "ROCK",
+                        "path": "AGC/DMPK/ROCK",
                         "nodes": []
                     }
                 ]
@@ -59,10 +65,12 @@
                 "nodes": [
                     {
                         "value": "BARK",
+                        "path": "AGC/GRK/BARK",
                         "nodes": []
                     },
                     {
                         "value": "GRK",
+                        "path": "AGC/GRK/GRK",
                         "nodes": []
                     }
                 ]
@@ -72,10 +80,12 @@
                 "nodes": [
                     {
                         "value": "MAST",
+                        "path": "AGC/MAST/MAST",
                         "nodes": []
                     },
                     {
                         "value": "MASTL",
+                        "path": "AGC/MAST/MASTL",
                         "nodes": []
                     }
                 ]
@@ -85,14 +95,17 @@
                 "nodes": [
                     {
                         "value": "LATS",
+                        "path": "AGC/NDR/LATS",
                         "nodes": []
                     },
                     {
                         "value": "NDR",
+                        "path": "AGC/NDR/NDR",
                         "nodes": []
                     },
                     {
                         "value": "NDR-Unclassified",
+                        "path": "AGC/NDR/NDR-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -110,22 +123,27 @@
                 "nodes": [
                     {
                         "value": "PKCa",
+                        "path": "AGC/PKC/PKCa",
                         "nodes": []
                     },
                     {
                         "value": "PKCd",
+                        "path": "AGC/PKC/PKCd",
                         "nodes": []
                     },
                     {
                         "value": "PKCh",
+                        "path": "AGC/PKC/PKCh",
                         "nodes": []
                     },
                     {
                         "value": "PKCi",
+                        "path": "AGC/PKC/PKCi",
                         "nodes": []
                     },
                     {
                         "value": "PKC-Unclassified",
+                        "path": "AGC/PKC/PKC-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -143,6 +161,7 @@
                 "nodes": [
                     {
                         "value": "FPK",
+                        "path": "AGC/PTF/FPK",
                         "nodes": []
                     }
                 ]
@@ -152,34 +171,42 @@
                 "nodes": [
                     {
                         "value": "MSK",
+                        "path": "AGC/RSK/MSK",
                         "nodes": []
                     },
                     {
                         "value": "RSK-p1",
+                        "path": "AGC/RSK/RSK-p1",
                         "nodes": []
                     },
                     {
                         "value": "RSK-p2",
+                        "path": "AGC/RSK/RSK-p2",
                         "nodes": []
                     },
                     {
                         "value": "RSK-p3",
+                        "path": "AGC/RSK/RSK-p3",
                         "nodes": []
                     },
                     {
                         "value": "RSK-p4",
+                        "path": "AGC/RSK/RSK-p4",
                         "nodes": []
                     },
                     {
                         "value": "RSKp70",
+                        "path": "AGC/RSK/RSKp70",
                         "nodes": []
                     },
                     {
                         "value": "RSKp90",
+                        "path": "AGC/RSK/RSKp90",
                         "nodes": []
                     },
                     {
                         "value": "RSK-Unclassified",
+                        "path": "AGC/RSK/RSK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -214,6 +241,7 @@
                 "nodes": [
                     {
                         "value": "CAMK1c",
+                        "path": "CAMK/CAMK1/CAMK1c",
                         "nodes": []
                     }
                 ]
@@ -227,98 +255,122 @@
                 "nodes": [
                     {
                         "value": "AMPK",
+                        "path": "CAMK/CAMKL/AMPK",
                         "nodes": []
                     },
                     {
                         "value": "BRSK",
+                        "path": "CAMK/CAMKL/BRSK",
                         "nodes": []
                     },
                     {
                         "value": "CAMKL-Tvag1",
+                        "path": "CAMK/CAMKL/CAMKL-Tvag1",
                         "nodes": []
                     },
                     {
                         "value": "CAMKL-Tvag2",
+                        "path": "CAMK/CAMKL/CAMKL-Tvag2",
                         "nodes": []
                     },
                     {
                         "value": "CAMKL-Tvag3",
+                        "path": "CAMK/CAMKL/CAMKL-Tvag3",
                         "nodes": []
                     },
                     {
                         "value": "CAMKL-Tvag4",
+                        "path": "CAMK/CAMKL/CAMKL-Tvag4",
                         "nodes": []
                     },
                     {
                         "value": "CHK1",
+                        "path": "CAMK/CAMKL/CHK1",
                         "nodes": []
                     },
                     {
                         "value": "CIPK",
+                        "path": "CAMK/CAMKL/CIPK",
                         "nodes": []
                     },
                     {
                         "value": "CIPK1",
+                        "path": "CAMK/CAMKL/CIPK1",
                         "nodes": []
                     },
                     {
                         "value": "CIPK2",
+                        "path": "CAMK/CAMKL/CIPK2",
                         "nodes": []
                     },
                     {
                         "value": "GIN4",
+                        "path": "CAMK/CAMKL/GIN4",
                         "nodes": []
                     },
                     {
                         "value": "HUNK",
+                        "path": "CAMK/CAMKL/HUNK",
                         "nodes": []
                     },
                     {
                         "value": "Kin1",
+                        "path": "CAMK/CAMKL/Kin1",
                         "nodes": []
                     },
                     {
                         "value": "Kin4",
+                        "path": "CAMK/CAMKL/Kin4",
                         "nodes": []
                     },
                     {
                         "value": "LKB",
+                        "path": "CAMK/CAMKL/LKB",
                         "nodes": []
                     },
                     {
                         "value": "MARK",
+                        "path": "CAMK/CAMKL/MARK",
                         "nodes": []
                     },
                     {
                         "value": "MELK",
+                        "path": "CAMK/CAMKL/MELK",
                         "nodes": []
                     },
                     {
                         "value": "NIM1",
+                        "path": "CAMK/CAMKL/NIM1",
                         "nodes": []
                     },
                     {
                         "value": "NuaK",
+                        "path": "CAMK/CAMKL/NuaK",
                         "nodes": []
                     },
                     {
                         "value": "PASK",
+                        "path": "CAMK/CAMKL/PASK",
                         "nodes": []
                     },
                     {
                         "value": "QIK",
+                        "path": "CAMK/CAMKL/QIK",
                         "nodes": []
                     },
                     {
                         "value": "Smoe1",
+                        "path": "CAMK/CAMKL/Smoe1",
                         "nodes": []
                     },
                     {
                         "value": "SNRK",
+                        "path": "CAMK/CAMKL/SNRK",
                         "nodes": []
                     },
                     {
                         "value": "CAMKL-Unclassified",
+                        "path": "CAMK/CAMKL/CAMKL-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -348,30 +400,37 @@
                 "nodes": [
                     {
                         "value": "CDPKa",
+                        "path": "CAMK/CDPK/CDPKa",
                         "nodes": []
                     },
                     {
                         "value": "CDPKb",
+                        "path": "CAMK/CDPK/CDPKb",
                         "nodes": []
                     },
                     {
                         "value": "CDPKd",
+                        "path": "CAMK/CDPK/CDPKd",
                         "nodes": []
                     },
                     {
                         "value": "CDPKe",
+                        "path": "CAMK/CDPK/CDPKe",
                         "nodes": []
                     },
                     {
                         "value": "CDPKf",
+                        "path": "CAMK/CDPK/CDPKf",
                         "nodes": []
                     },
                     {
                         "value": "Ciliate-E2a",
+                        "path": "CAMK/CDPK/Ciliate-E2a",
                         "nodes": []
                     },
                     {
                         "value": "CDPK-Unclassified",
+                        "path": "CAMK/CDPK/CDPK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -389,10 +448,12 @@
                 "nodes": [
                     {
                         "value": "DAPK",
+                        "path": "CAMK/DAPK/DAPK",
                         "nodes": []
                     },
                     {
                         "value": "DRAK",
+                        "path": "CAMK/DAPK/DRAK",
                         "nodes": []
                     }
                 ]
@@ -406,14 +467,17 @@
                 "nodes": [
                     {
                         "value": "MK2",
+                        "path": "CAMK/MAPKAPK/MK2",
                         "nodes": []
                     },
                     {
                         "value": "MK5",
+                        "path": "CAMK/MAPKAPK/MK5",
                         "nodes": []
                     },
                     {
                         "value": "MNK",
+                        "path": "CAMK/MAPKAPK/MNK",
                         "nodes": []
                     }
                 ]
@@ -443,6 +507,7 @@
                 "nodes": [
                     {
                         "value": "PPCK-Unclassified",
+                        "path": "CAMK/PPCK/PPCK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -489,26 +554,32 @@
                 "nodes": [
                     {
                         "value": "CK1-A",
+                        "path": "CK1/CK1/CK1-A",
                         "nodes": []
                     },
                     {
                         "value": "CK1-D",
+                        "path": "CK1/CK1/CK1-D",
                         "nodes": []
                     },
                     {
                         "value": "CK1-G",
+                        "path": "CK1/CK1/CK1-G",
                         "nodes": []
                     },
                     {
                         "value": "CK1x",
+                        "path": "CK1/CK1/CK1x",
                         "nodes": []
                     },
                     {
                         "value": "CK1y",
+                        "path": "CK1/CK1/CK1y",
                         "nodes": []
                     },
                     {
                         "value": "CK1-Unclassified",
+                        "path": "CK1/CK1/CK1-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -567,94 +638,117 @@
                 "nodes": [
                     {
                         "value": "CCRK",
+                        "path": "CMGC/CDK/CCRK",
                         "nodes": []
                     },
                     {
                         "value": "CDC2",
+                        "path": "CMGC/CDK/CDC2",
                         "nodes": []
                     },
                     {
                         "value": "CDC2-smoe1",
+                        "path": "CMGC/CDK/CDC2-smoe1",
                         "nodes": []
                     },
                     {
                         "value": "CDC2-smoe2",
+                        "path": "CMGC/CDK/CDC2-smoe2",
                         "nodes": []
                     },
                     {
                         "value": "CDK2",
+                        "path": "CMGC/CDK/CDK2",
                         "nodes": []
                     },
                     {
                         "value": "CDK4",
+                        "path": "CMGC/CDK/CDK4",
                         "nodes": []
                     },
                     {
                         "value": "CDK5",
+                        "path": "CMGC/CDK/CDK5",
                         "nodes": []
                     },
                     {
                         "value": "CDK7",
+                        "path": "CMGC/CDK/CDK7",
                         "nodes": []
                     },
                     {
                         "value": "CDK8",
+                        "path": "CMGC/CDK/CDK8",
                         "nodes": []
                     },
                     {
                         "value": "CDK8-like",
+                        "path": "CMGC/CDK/CDK8-like",
                         "nodes": []
                     },
                     {
                         "value": "CDK9",
+                        "path": "CMGC/CDK/CDK9",
                         "nodes": []
                     },
                     {
                         "value": "CDK10",
+                        "path": "CMGC/CDK/CDK10",
                         "nodes": []
                     },
                     {
                         "value": "CDK11",
+                        "path": "CMGC/CDK/CDK11",
                         "nodes": []
                     },
                     {
                         "value": "CDK20",
+                        "path": "CMGC/CDK/CDK20",
                         "nodes": []
                     },
                     {
                         "value": "CDKB",
+                        "path": "CMGC/CDK/CDKB",
                         "nodes": []
                     },
                     {
                         "value": "CDK-DD1",
+                        "path": "CMGC/CDK/CDK-DD1",
                         "nodes": []
                     },
                     {
                         "value": "CRK7",
+                        "path": "CMGC/CDK/CRK7",
                         "nodes": []
                     },
                     {
                         "value": "CRK7-like",
+                        "path": "CMGC/CDK/CRK7-like",
                         "nodes": []
                     },
                     {
                         "value": "CRK7-plant1",
+                        "path": "CMGC/CDK/CRK7-plant1",
                         "nodes": []
                     },
                     {
                         "value": "PCTAIRE",
+                        "path": "CMGC/CDK/PCTAIRE",
                         "nodes": []
                     },
                     {
                         "value": "PFTAIRE",
+                        "path": "CMGC/CDK/PFTAIRE",
                         "nodes": []
                     },
                     {
                         "value": "PITSLRE",
+                        "path": "CMGC/CDK/PITSLRE",
                         "nodes": []
                     },
                     {
                         "value": "CDK-Unclassified",
+                        "path": "CMGC/CDK/CDK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -688,30 +782,37 @@
                 "nodes": [
                     {
                         "value": "DYRK1",
+                        "path": "CMGC/DYRK/DYRK1",
                         "nodes": []
                     },
                     {
                         "value": "DYRK2",
+                        "path": "CMGC/DYRK/DYRK2",
                         "nodes": []
                     },
                     {
                         "value": "DyrkP",
+                        "path": "CMGC/DYRK/DyrkP",
                         "nodes": []
                     },
                     {
                         "value": "HIPK",
+                        "path": "CMGC/DYRK/HIPK",
                         "nodes": []
                     },
                     {
                         "value": "PRP4",
+                        "path": "CMGC/DYRK/PRP4",
                         "nodes": []
                     },
                     {
                         "value": "YAK",
+                        "path": "CMGC/DYRK/YAK",
                         "nodes": []
                     },
                     {
                         "value": "DYRK-Unclassified",
+                        "path": "CMGC/DYRK/DYRK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -725,38 +826,47 @@
                 "nodes": [
                     {
                         "value": "ERK",
+                        "path": "CMGC/MAPK/ERK",
                         "nodes": []
                     },
                     {
                         "value": "ERK1",
+                        "path": "CMGC/MAPK/ERK1",
                         "nodes": []
                     },
                     {
                         "value": "ERK3",
+                        "path": "CMGC/MAPK/ERK3",
                         "nodes": []
                     },
                     {
                         "value": "ERK5",
+                        "path": "CMGC/MAPK/ERK5",
                         "nodes": []
                     },
                     {
                         "value": "ERK7",
+                        "path": "CMGC/MAPK/ERK7",
                         "nodes": []
                     },
                     {
                         "value": "JNK",
+                        "path": "CMGC/MAPK/JNK",
                         "nodes": []
                     },
                     {
                         "value": "nmo",
+                        "path": "CMGC/MAPK/nmo",
                         "nodes": []
                     },
                     {
                         "value": "p38",
+                        "path": "CMGC/MAPK/p38",
                         "nodes": []
                     },
                     {
                         "value": "MAPK-Unclassified",
+                        "path": "CMGC/MAPK/MAPK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -766,10 +876,12 @@
                 "nodes": [
                     {
                         "value": "MAK",
+                        "path": "CMGC/RCK/MAK",
                         "nodes": []
                     },
                     {
                         "value": "MOK",
+                        "path": "CMGC/RCK/MOK",
                         "nodes": []
                     }
                 ]
@@ -801,14 +913,17 @@
                 "nodes": [
                     {
                         "value": "FNIPK",
+                        "path": "STE/Dicty3/FNIPK",
                         "nodes": []
                     },
                     {
                         "value": "NZAK",
+                        "path": "STE/Dicty3/NZAK",
                         "nodes": []
                     },
                     {
                         "value": "Dicty3-Unclassified",
+                        "path": "STE/Dicty3/Dicty3-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -818,54 +933,67 @@
                 "nodes": [
                     {
                         "value": "ASK",
+                        "path": "STE/STE11/ASK",
                         "nodes": []
                     },
                     {
                         "value": "CDC15",
+                        "path": "STE/STE11/CDC15",
                         "nodes": []
                     },
                     {
                         "value": "MEKK1",
+                        "path": "STE/STE11/MEKK1",
                         "nodes": []
                     },
                     {
                         "value": "MEKK2",
+                        "path": "STE/STE11/MEKK2",
                         "nodes": []
                     },
                     {
                         "value": "MEKK2-plant1",
+                        "path": "STE/STE11/MEKK2-plant1",
                         "nodes": []
                     },
                     {
                         "value": "MEKK2-plant2",
+                        "path": "STE/STE11/MEKK2-plant2",
                         "nodes": []
                     },
                     {
                         "value": "MEKK4",
+                        "path": "STE/STE11/MEKK4",
                         "nodes": []
                     },
                     {
                         "value": "MEKK15",
+                        "path": "STE/STE11/MEKK15",
                         "nodes": []
                     },
                     {
                         "value": "NPK1",
+                        "path": "STE/STE11/NPK1",
                         "nodes": []
                     },
                     {
                         "value": "STE11-plant1",
+                        "path": "STE/STE11/STE11-plant1",
                         "nodes": []
                     },
                     {
                         "value": "STE11-plant2",
+                        "path": "STE/STE11/STE11-plant2",
                         "nodes": []
                     },
                     {
                         "value": "STE11-plant3",
+                        "path": "STE/STE11/STE11-plant3",
                         "nodes": []
                     },
                     {
                         "value": "STE11-Unclassified",
+                        "path": "STE/STE11/STE11-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -875,66 +1003,82 @@
                 "nodes": [
                     {
                         "value": "FRAY",
+                        "path": "STE/STE20/FRAY",
                         "nodes": []
                     },
                     {
                         "value": "KHS",
+                        "path": "STE/STE20/KHS",
                         "nodes": []
                     },
                     {
                         "value": "MKC",
+                        "path": "STE/STE20/MKC",
                         "nodes": []
                     },
                     {
                         "value": "MSN",
+                        "path": "STE/STE20/MSN",
                         "nodes": []
                     },
                     {
                         "value": "MST",
+                        "path": "STE/STE20/MST",
                         "nodes": []
                     },
                     {
                         "value": "MST-like",
+                        "path": "STE/STE20/MST-like",
                         "nodes": []
                     },
                     {
                         "value": "NinaC",
+                        "path": "STE/STE20/NinaC",
                         "nodes": []
                     },
                     {
                         "value": "PAKA",
+                        "path": "STE/STE20/PAKA",
                         "nodes": []
                     },
                     {
                         "value": "PAKB",
+                        "path": "STE/STE20/PAKB",
                         "nodes": []
                     },
                     {
                         "value": "PAKL",
+                        "path": "STE/STE20/PAKL",
                         "nodes": []
                     },
                     {
                         "value": "SLK",
+                        "path": "STE/STE20/SLK",
                         "nodes": []
                     },
                     {
                         "value": "Ste20-DD1",
+                        "path": "STE/STE20/Ste20-DD1",
                         "nodes": []
                     },
                     {
                         "value": "STLK",
+                        "path": "STE/STE20/STLK",
                         "nodes": []
                     },
                     {
                         "value": "TAO",
+                        "path": "STE/STE20/TAO",
                         "nodes": []
                     },
                     {
                         "value": "YSK",
+                        "path": "STE/STE20/YSK",
                         "nodes": []
                     },
                     {
                         "value": "Ste20-Unclassified",
+                        "path": "STE/STE20/Ste20-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -944,34 +1088,42 @@
                 "nodes": [
                     {
                         "value": "MEK1",
+                        "path": "STE/STE7/MEK1",
                         "nodes": []
                     },
                     {
                         "value": "MEK3",
+                        "path": "STE/STE7/MEK3",
                         "nodes": []
                     },
                     {
                         "value": "MEK4",
+                        "path": "STE/STE7/MEK4",
                         "nodes": []
                     },
                     {
                         "value": "MEK5",
+                        "path": "STE/STE7/MEK5",
                         "nodes": []
                     },
                     {
                         "value": "MEK7",
+                        "path": "STE/STE7/MEK7",
                         "nodes": []
                     },
                     {
                         "value": "STE7-plant1",
+                        "path": "STE/STE7/STE7-plant1",
                         "nodes": []
                     },
                     {
                         "value": "STE7-plant2",
+                        "path": "STE/STE7/STE7-plant2",
                         "nodes": []
                     },
                     {
                         "value": "STE7-Unclassified",
+                        "path": "STE/STE7/STE7-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -1182,34 +1334,42 @@
                 "nodes": [
                     {
                         "value": "Frk",
+                        "path": "TK/Src/Frk",
                         "nodes": []
                     },
                     {
                         "value": "SrcA",
+                        "path": "TK/Src/SrcA",
                         "nodes": []
                     },
                     {
                         "value": "Src-Aque1",
+                        "path": "TK/Src/Src-Aque1",
                         "nodes": []
                     },
                     {
                         "value": "SrcB",
+                        "path": "TK/Src/SrcB",
                         "nodes": []
                     },
                     {
                         "value": "Src-Echino1",
+                        "path": "TK/Src/Src-Echino1",
                         "nodes": []
                     },
                     {
                         "value": "Src-Echino2",
+                        "path": "TK/Src/Src-Echino2",
                         "nodes": []
                     },
                     {
                         "value": "SRM",
+                        "path": "TK/Src/SRM",
                         "nodes": []
                     },
                     {
                         "value": "Src-Unclassified",
+                        "path": "TK/Src/Src-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -1260,14 +1420,17 @@
                 "nodes": [
                     {
                         "value": "PTB-MiaB",
+                        "path": "TK-assoc/PTB/PTB-MiaB",
                         "nodes": []
                     },
                     {
                         "value": "SHC-like",
+                        "path": "TK-assoc/PTB/SHC-like",
                         "nodes": []
                     },
                     {
                         "value": "Unique",
+                        "path": "TK-assoc/PTB/Unique",
                         "nodes": []
                     }
                 ]
@@ -1277,22 +1440,27 @@
                 "nodes": [
                     {
                         "value": "HD-PTP",
+                        "path": "TK-assoc/PTP/HD-PTP",
                         "nodes": []
                     },
                     {
                         "value": "PTP-BAS",
+                        "path": "TK-assoc/PTP/PTP-BAS",
                         "nodes": []
                     },
                     {
                         "value": "PTP-H1",
+                        "path": "TK-assoc/PTP/PTP-H1",
                         "nodes": []
                     },
                     {
                         "value": "RPTP",
+                        "path": "TK-assoc/PTP/RPTP",
                         "nodes": []
                     },
                     {
                         "value": "SHP",
+                        "path": "TK-assoc/PTP/SHP",
                         "nodes": []
                     }
                 ]
@@ -1302,110 +1470,137 @@
                 "nodes": [
                     {
                         "value": "BSD-SH2",
+                        "path": "TK-assoc/SH2/BSD-SH2",
                         "nodes": []
                     },
                     {
                         "value": "Cbl",
+                        "path": "TK-assoc/SH2/Cbl",
                         "nodes": []
                     },
                     {
                         "value": "Chimera",
+                        "path": "TK-assoc/SH2/Chimera",
                         "nodes": []
                     },
                     {
                         "value": "CH-SH2",
+                        "path": "TK-assoc/SH2/CH-SH2",
                         "nodes": []
                     },
                     {
                         "value": "Crk",
+                        "path": "TK-assoc/SH2/Crk",
                         "nodes": []
                     },
                     {
                         "value": "DEP-SH2",
+                        "path": "TK-assoc/SH2/DEP-SH2",
                         "nodes": []
                     },
                     {
                         "value": "Glyco",
+                        "path": "TK-assoc/SH2/Glyco",
                         "nodes": []
                     },
                     {
                         "value": "Grb2",
+                        "path": "TK-assoc/SH2/Grb2",
                         "nodes": []
                     },
                     {
                         "value": "Myo-SH2",
+                        "path": "TK-assoc/SH2/Myo-SH2",
                         "nodes": []
                     },
                     {
                         "value": "PIK3R12",
+                        "path": "TK-assoc/SH2/PIK3R12",
                         "nodes": []
                     },
                     {
                         "value": "PKCa-SH2",
+                        "path": "TK-assoc/SH2/PKCa-SH2",
                         "nodes": []
                     },
                     {
                         "value": "PLCg",
+                        "path": "TK-assoc/SH2/PLCg",
                         "nodes": []
                     },
                     {
                         "value": "RasA1",
+                        "path": "TK-assoc/SH2/RasA1",
                         "nodes": []
                     },
                     {
                         "value": "Rhombid-SH2",
+                        "path": "TK-assoc/SH2/Rhombid-SH2",
                         "nodes": []
                     },
                     {
                         "value": "Rin",
+                        "path": "TK-assoc/SH2/Rin",
                         "nodes": []
                     },
                     {
                         "value": "SH2D4",
+                        "path": "TK-assoc/SH2/SH2D4",
                         "nodes": []
                     },
                     {
                         "value": "SH2-PDZ",
+                        "path": "TK-assoc/SH2/SH2-PDZ",
                         "nodes": []
                     },
                     {
                         "value": "SH2-R",
+                        "path": "TK-assoc/SH2/SH2-R",
                         "nodes": []
                     },
                     {
                         "value": "SH2-R-Cad",
+                        "path": "TK-assoc/SH2/SH2-R-Cad",
                         "nodes": []
                     },
                     {
                         "value": "SH2-R-HYR",
+                        "path": "TK-assoc/SH2/SH2-R-HYR",
                         "nodes": []
                     },
                     {
                         "value": "Shc",
+                        "path": "TK-assoc/SH2/Shc",
                         "nodes": []
                     },
                     {
                         "value": "SHIP2",
+                        "path": "TK-assoc/SH2/SHIP2",
                         "nodes": []
                     },
                     {
                         "value": "STAT",
+                        "path": "TK-assoc/SH2/STAT",
                         "nodes": []
                     },
                     {
                         "value": "Supt6h",
+                        "path": "TK-assoc/SH2/Supt6h",
                         "nodes": []
                     },
                     {
                         "value": "TNS1",
+                        "path": "TK-assoc/SH2/TNS1",
                         "nodes": []
                     },
                     {
                         "value": "Vav",
+                        "path": "TK-assoc/SH2/Vav",
                         "nodes": []
                     },
                     {
                         "value": "Unique",
+                        "path": "TK-assoc/SH2/Unique",
                         "nodes": []
                     }
                 ]
@@ -1432,14 +1627,17 @@
                 "nodes": [
                     {
                         "value": "DRK",
+                        "path": "TKL/Dicty4/DRK",
                         "nodes": []
                     },
                     {
                         "value": "Shk",
+                        "path": "TKL/Dicty4/Shk",
                         "nodes": []
                     },
                     {
                         "value": "Dicty4-Unclassified",
+                        "path": "TKL/Dicty4/Dicty4-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -1461,206 +1659,257 @@
                 "nodes": [
                     {
                         "value": "CR4L",
+                        "path": "TKL/IRAK/CR4L",
                         "nodes": []
                     },
                     {
                         "value": "Extensin",
+                        "path": "TKL/IRAK/Extensin",
                         "nodes": []
                     },
                     {
                         "value": "IRAK-0",
+                        "path": "TKL/IRAK/IRAK-0",
                         "nodes": []
                     },
                     {
                         "value": "IRAK-14",
+                        "path": "TKL/IRAK/IRAK-14",
                         "nodes": []
                     },
                     {
                         "value": "IRAKa",
+                        "path": "TKL/IRAK/IRAKa",
                         "nodes": []
                     },
                     {
                         "value": "IRAKb",
+                        "path": "TKL/IRAK/IRAKb",
                         "nodes": []
                     },
                     {
                         "value": "IRAKd",
+                        "path": "TKL/IRAK/IRAKd",
                         "nodes": []
                     },
                     {
                         "value": "IRAKf",
+                        "path": "TKL/IRAK/IRAKf",
                         "nodes": []
                     },
                     {
                         "value": "IRAKg",
+                        "path": "TKL/IRAK/IRAKg",
                         "nodes": []
                     },
                     {
                         "value": "IRAKh",
+                        "path": "TKL/IRAK/IRAKh",
                         "nodes": []
                     },
                     {
                         "value": "IRAKj",
+                        "path": "TKL/IRAK/IRAKj",
                         "nodes": []
                     },
                     {
                         "value": "IRAKk",
+                        "path": "TKL/IRAK/IRAKk",
                         "nodes": []
                     },
                     {
                         "value": "IRAKm",
+                        "path": "TKL/IRAK/IRAKm",
                         "nodes": []
                     },
                     {
                         "value": "LLEC",
+                        "path": "TKL/IRAK/LLEC",
                         "nodes": []
                     },
                     {
                         "value": "LRK19",
+                        "path": "TKL/IRAK/LRK19",
                         "nodes": []
                     },
                     {
                         "value": "LRR10",
+                        "path": "TKL/IRAK/LRR10",
                         "nodes": []
                     },
                     {
                         "value": "LRR10a",
+                        "path": "TKL/IRAK/LRR10a",
                         "nodes": []
                     },
                     {
                         "value": "LRR10b",
+                        "path": "TKL/IRAK/LRR10b",
                         "nodes": []
                     },
                     {
                         "value": "LRR11",
+                        "path": "TKL/IRAK/LRR11",
                         "nodes": []
                     },
                     {
                         "value": "LRR2",
+                        "path": "TKL/IRAK/LRR2",
                         "nodes": []
                     },
                     {
                         "value": "LRR24",
+                        "path": "TKL/IRAK/LRR24",
                         "nodes": []
                     },
                     {
                         "value": "LRR25",
+                        "path": "TKL/IRAK/LRR25",
                         "nodes": []
                     },
                     {
                         "value": "LRR3",
+                        "path": "TKL/IRAK/LRR3",
                         "nodes": []
                     },
                     {
                         "value": "LRR31",
+                        "path": "TKL/IRAK/LRR31",
                         "nodes": []
                     },
                     {
                         "value": "LRR36",
+                        "path": "TKL/IRAK/LRR36",
                         "nodes": []
                     },
                     {
                         "value": "LRR6",
+                        "path": "TKL/IRAK/LRR6",
                         "nodes": []
                     },
                     {
                         "value": "LRR7a",
+                        "path": "TKL/IRAK/LRR7a",
                         "nodes": []
                     },
                     {
                         "value": "LRR8",
+                        "path": "TKL/IRAK/LRR8",
                         "nodes": []
                     },
                     {
                         "value": "LRR8-2",
+                        "path": "TKL/IRAK/LRR8-2",
                         "nodes": []
                     },
                     {
                         "value": "LRR8x",
+                        "path": "TKL/IRAK/LRR8x",
                         "nodes": []
                     },
                     {
                         "value": "LRR9",
+                        "path": "TKL/IRAK/LRR9",
                         "nodes": []
                     },
                     {
                         "value": "LRRIa",
+                        "path": "TKL/IRAK/LRRIa",
                         "nodes": []
                     },
                     {
                         "value": "LRRIb",
+                        "path": "TKL/IRAK/LRRIb",
                         "nodes": []
                     },
                     {
                         "value": "LRRIc",
+                        "path": "TKL/IRAK/LRRIc",
                         "nodes": []
                     },
                     {
                         "value": "LRRXI",
+                        "path": "TKL/IRAK/LRRXI",
                         "nodes": []
                     },
                     {
                         "value": "LysM",
+                        "path": "TKL/IRAK/LysM",
                         "nodes": []
                     },
                     {
                         "value": "PERK",
+                        "path": "TKL/IRAK/PERK",
                         "nodes": []
                     },
                     {
                         "value": "RKF3",
+                        "path": "TKL/IRAK/RKF3",
                         "nodes": []
                     },
                     {
                         "value": "RLCK15",
+                        "path": "TKL/IRAK/RLCK15",
                         "nodes": []
                     },
                     {
                         "value": "RLCK17",
+                        "path": "TKL/IRAK/RLCK17",
                         "nodes": []
                     },
                     {
                         "value": "RLCK3",
+                        "path": "TKL/IRAK/RLCK3",
                         "nodes": []
                     },
                     {
                         "value": "RLCK33",
+                        "path": "TKL/IRAK/RLCK33",
                         "nodes": []
                     },
                     {
                         "value": "RLCK34",
+                        "path": "TKL/IRAK/RLCK34",
                         "nodes": []
                     },
                     {
                         "value": "RLCK4",
+                        "path": "TKL/IRAK/RLCK4",
                         "nodes": []
                     },
                     {
                         "value": "RLCK6",
+                        "path": "TKL/IRAK/RLCK6",
                         "nodes": []
                     },
                     {
                         "value": "RLCK-OS3",
+                        "path": "TKL/IRAK/RLCK-OS3",
                         "nodes": []
                     },
                     {
                         "value": "SD21",
+                        "path": "TKL/IRAK/SD21",
                         "nodes": []
                     },
                     {
                         "value": "SD2b",
+                        "path": "TKL/IRAK/SD2b",
                         "nodes": []
                     },
                     {
                         "value": "SD2b2",
+                        "path": "TKL/IRAK/SD2b2",
                         "nodes": []
                     },
                     {
                         "value": "WAKc23",
+                        "path": "TKL/IRAK/WAKc23",
                         "nodes": []
                     },
                     {
                         "value": "IRAK-Unclassified",
+                        "path": "TKL/IRAK/IRAK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -1670,14 +1919,17 @@
                 "nodes": [
                     {
                         "value": "LIMK",
+                        "path": "TKL/LISK/LIMK",
                         "nodes": []
                     },
                     {
                         "value": "LISK-DD1",
+                        "path": "TKL/LISK/LISK-DD1",
                         "nodes": []
                     },
                     {
                         "value": "TESK",
+                        "path": "TKL/LISK/TESK",
                         "nodes": []
                     }
                 ]
@@ -1691,62 +1943,77 @@
                 "nodes": [
                     {
                         "value": "HH498",
+                        "path": "TKL/MLK/HH498",
                         "nodes": []
                     },
                     {
                         "value": "HH-a1",
+                        "path": "TKL/MLK/HH-a1",
                         "nodes": []
                     },
                     {
                         "value": "HH-a2",
+                        "path": "TKL/MLK/HH-a2",
                         "nodes": []
                     },
                     {
                         "value": "HH-B",
+                        "path": "TKL/MLK/HH-B",
                         "nodes": []
                     },
                     {
                         "value": "HH-C",
+                        "path": "TKL/MLK/HH-C",
                         "nodes": []
                     },
                     {
                         "value": "ILK",
+                        "path": "TKL/MLK/ILK",
                         "nodes": []
                     },
                     {
                         "value": "LZK",
+                        "path": "TKL/MLK/LZK",
                         "nodes": []
                     },
                     {
                         "value": "MLK",
+                        "path": "TKL/MLK/MLK",
                         "nodes": []
                     },
                     {
                         "value": "MLK-plant1",
+                        "path": "TKL/MLK/MLK-plant1",
                         "nodes": []
                     },
                     {
                         "value": "MLKx",
+                        "path": "TKL/MLK/MLKx",
                         "nodes": []
                     },
                     {
                         "value": "MLKy",
+                        "path": "TKL/MLK/MLKy",
                         "nodes": []
                     },
                     {
                         "value": "MLKz",
+                        "path": "TKL/MLK/MLKz",
                         "nodes": []
                     },
                     {
                         "value": "TAK1",
+                        "path": "TKL/MLK/TAK1",
                         "nodes": []
                     },
                     {
                         "value": "ZAK",
+                        "path": "TKL/MLK/ZAK",
                         "nodes": []
                     },
                     {
                         "value": "MLK-Unclassified",
+                        "path": "TKL/MLK/MLK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -1756,10 +2023,12 @@
                 "nodes": [
                     {
                         "value": "KSR",
+                        "path": "TKL/RAF/KSR",
                         "nodes": []
                     },
                     {
                         "value": "RAF",
+                        "path": "TKL/RAF/RAF",
                         "nodes": []
                     }
                 ]
@@ -1773,10 +2042,12 @@
                 "nodes": [
                     {
                         "value": "STKR1",
+                        "path": "TKL/STKR/STKR1",
                         "nodes": []
                     },
                     {
                         "value": "STKR2",
+                        "path": "TKL/STKR/STKR2",
                         "nodes": []
                     }
                 ]
@@ -1859,14 +2130,17 @@
                 "nodes": [
                     {
                         "value": "CAMKK-Meta",
+                        "path": "Other/CAMKK/CAMKK-Meta",
                         "nodes": []
                     },
                     {
                         "value": "ELM",
+                        "path": "Other/CAMKK/ELM",
                         "nodes": []
                     },
                     {
                         "value": "CAMKK-Unclassified",
+                        "path": "Other/CAMKK/CAMKK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -1948,10 +2222,12 @@
                 "nodes": [
                     {
                         "value": "C2",
+                        "path": "Other/Ciliate-C8/C2",
                         "nodes": []
                     },
                     {
                         "value": "C8",
+                        "path": "Other/Ciliate-C8/C8",
                         "nodes": []
                     }
                 ]
@@ -1969,18 +2245,22 @@
                 "nodes": [
                     {
                         "value": "Ciliate-E2a",
+                        "path": "Other/Ciliate-E2/Ciliate-E2a",
                         "nodes": []
                     },
                     {
                         "value": "Ciliate-E2b",
+                        "path": "Other/Ciliate-E2/Ciliate-E2b",
                         "nodes": []
                     },
                     {
                         "value": "Ciliate-E2c",
+                        "path": "Other/Ciliate-E2/Ciliate-E2c",
                         "nodes": []
                     },
                     {
                         "value": "Ciliate-E2-Unclassified",
+                        "path": "Other/Ciliate-E2/Ciliate-E2-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2030,6 +2310,7 @@
                 "nodes": [
                     {
                         "value": "Ciliate-E2b",
+                        "path": "Other/Ciliate-Unique/Ciliate-E2b",
                         "nodes": []
                     }
                 ]
@@ -2099,18 +2380,22 @@
                 "nodes": [
                     {
                         "value": "BIKE",
+                        "path": "Other/NAK/BIKE",
                         "nodes": []
                     },
                     {
                         "value": "GAK",
+                        "path": "Other/NAK/GAK",
                         "nodes": []
                     },
                     {
                         "value": "MPSK",
+                        "path": "Other/NAK/MPSK",
                         "nodes": []
                     },
                     {
                         "value": "NAK-Unclassified",
+                        "path": "Other/NAK/NAK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2120,34 +2405,42 @@
                 "nodes": [
                     {
                         "value": "NEK1",
+                        "path": "Other/NEK/NEK1",
                         "nodes": []
                     },
                     {
                         "value": "NEK2",
+                        "path": "Other/NEK/NEK2",
                         "nodes": []
                     },
                     {
                         "value": "NEK4",
+                        "path": "Other/NEK/NEK4",
                         "nodes": []
                     },
                     {
                         "value": "NEK6",
+                        "path": "Other/NEK/NEK6",
                         "nodes": []
                     },
                     {
                         "value": "NEK8",
+                        "path": "Other/NEK/NEK8",
                         "nodes": []
                     },
                     {
                         "value": "NEK9",
+                        "path": "Other/NEK/NEK9",
                         "nodes": []
                     },
                     {
                         "value": "NEK10",
+                        "path": "Other/NEK/NEK10",
                         "nodes": []
                     },
                     {
                         "value": "NEK11",
+                        "path": "Other/NEK/NEK11",
                         "nodes": []
                     }
                 ]
@@ -2157,22 +2450,27 @@
                 "nodes": [
                     {
                         "value": "Nek-GL1",
+                        "path": "Other/Nek/Nek-GL1",
                         "nodes": []
                     },
                     {
                         "value": "Nek-GL2",
+                        "path": "Other/Nek/Nek-GL2",
                         "nodes": []
                     },
                     {
                         "value": "Nek-GL3",
+                        "path": "Other/Nek/Nek-GL3",
                         "nodes": []
                     },
                     {
                         "value": "Nek-GL4",
+                        "path": "Other/Nek/Nek-GL4",
                         "nodes": []
                     },
                     {
                         "value": "Nek-Unclassified",
+                        "path": "Other/Nek/Nek-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2226,26 +2524,32 @@
                 "nodes": [
                     {
                         "value": "GCN2",
+                        "path": "Other/PEK/GCN2",
                         "nodes": []
                     },
                     {
                         "value": "HRI",
+                        "path": "Other/PEK/HRI",
                         "nodes": []
                     },
                     {
                         "value": "PEK",
+                        "path": "Other/PEK/PEK",
                         "nodes": []
                     },
                     {
                         "value": "PKR",
+                        "path": "Other/PEK/PKR",
                         "nodes": []
                     },
                     {
                         "value": "PKR-like",
+                        "path": "Other/PEK/PKR-like",
                         "nodes": []
                     },
                     {
                         "value": "PEK-Unclassified",
+                        "path": "Other/PEK/PEK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2255,18 +2559,22 @@
                 "nodes": [
                     {
                         "value": "PLK1",
+                        "path": "Other/PLK/PLK1",
                         "nodes": []
                     },
                     {
                         "value": "PLK2",
+                        "path": "Other/PLK/PLK2",
                         "nodes": []
                     },
                     {
                         "value": "SAK",
+                        "path": "Other/PLK/SAK",
                         "nodes": []
                     },
                     {
                         "value": "PLK-Unclassified",
+                        "path": "Other/PLK/PLK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2316,22 +2624,27 @@
                 "nodes": [
                     {
                         "value": "Fused",
+                        "path": "Other/ULK/Fused",
                         "nodes": []
                     },
                     {
                         "value": "ULK",
+                        "path": "Other/ULK/ULK",
                         "nodes": []
                     },
                     {
                         "value": "ULK-frag",
+                        "path": "Other/ULK/ULK-frag",
                         "nodes": []
                     },
                     {
                         "value": "ULK-plant1",
+                        "path": "Other/ULK/ULK-plant1",
                         "nodes": []
                     },
                     {
                         "value": "ULK-plant2",
+                        "path": "Other/ULK/ULK-plant2",
                         "nodes": []
                     }
                 ]
@@ -2349,18 +2662,22 @@
                 "nodes": [
                     {
                         "value": "urchA",
+                        "path": "Other/urch/urchA",
                         "nodes": []
                     },
                     {
                         "value": "urchB",
+                        "path": "Other/urch/urchB",
                         "nodes": []
                     },
                     {
                         "value": "urchC",
+                        "path": "Other/urch/urchC",
                         "nodes": []
                     },
                     {
                         "value": "urch-unclassified",
+                        "path": "Other/urch/urch-unclassified",
                         "nodes": []
                     }
                 ]
@@ -2374,14 +2691,17 @@
                 "nodes": [
                     {
                         "value": "Myt1",
+                        "path": "Other/WEE/Myt1",
                         "nodes": []
                     },
                     {
                         "value": "WEE1",
+                        "path": "Other/WEE/WEE1",
                         "nodes": []
                     },
                     {
                         "value": "WEE-Unclassified",
+                        "path": "Other/WEE/WEE-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2424,38 +2744,47 @@
                 "nodes": [
                     {
                         "value": "ABC1-A",
+                        "path": "Atypical/ABC1/ABC1-A",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-B",
+                        "path": "Atypical/ABC1/ABC1-B",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-B-plant1",
+                        "path": "Atypical/ABC1/ABC1-B-plant1",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-C",
+                        "path": "Atypical/ABC1/ABC1-C",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-D",
+                        "path": "Atypical/ABC1/ABC1-D",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-E",
+                        "path": "Atypical/ABC1/ABC1-E",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-F",
+                        "path": "Atypical/ABC1/ABC1-F",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-G",
+                        "path": "Atypical/ABC1/ABC1-G",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-H",
+                        "path": "Atypical/ABC1/ABC1-H",
                         "nodes": []
                     }
                 ]
@@ -2469,26 +2798,32 @@
                 "nodes": [
                     {
                         "value": "Alpha-sponge",
+                        "path": "Atypical/Alpha/Alpha-sponge",
                         "nodes": []
                     },
                     {
                         "value": "Alpha-Unclassified",
+                        "path": "Atypical/Alpha/Alpha-Unclassified",
                         "nodes": []
                     },
                     {
                         "value": "ChaK",
+                        "path": "Atypical/Alpha/ChaK",
                         "nodes": []
                     },
                     {
                         "value": "eEF2K",
+                        "path": "Atypical/Alpha/eEF2K",
                         "nodes": []
                     },
                     {
                         "value": "MHCK",
+                        "path": "Atypical/Alpha/MHCK",
                         "nodes": []
                     },
                     {
                         "value": "VWL",
+                        "path": "Atypical/Alpha/VWL",
                         "nodes": []
                     }
                 ]
@@ -2538,10 +2873,12 @@
                 "nodes": [
                     {
                         "value": "BCKDK",
+                        "path": "Atypical/PDHK/BCKDK",
                         "nodes": []
                     },
                     {
                         "value": "PDHK",
+                        "path": "Atypical/PDHK/PDHK",
                         "nodes": []
                     }
                 ]
@@ -2551,6 +2888,7 @@
                 "nodes": [
                     {
                         "value": "PI4",
+                        "path": "Atypical/PI3/PI4",
                         "nodes": []
                     }
                 ]
@@ -2560,6 +2898,7 @@
                 "nodes": [
                     {
                         "value": "PI4K",
+                        "path": "Atypical/PI3K/PI4K",
                         "nodes": []
                     }
                 ]
@@ -2569,34 +2908,42 @@
                 "nodes": [
                     {
                         "value": "ATM",
+                        "path": "Atypical/PIKK/ATM",
                         "nodes": []
                     },
                     {
                         "value": "ATR",
+                        "path": "Atypical/PIKK/ATR",
                         "nodes": []
                     },
                     {
                         "value": "DNAPK",
+                        "path": "Atypical/PIKK/DNAPK",
                         "nodes": []
                     },
                     {
                         "value": "FRAP",
+                        "path": "Atypical/PIKK/FRAP",
                         "nodes": []
                     },
                     {
                         "value": "PI3K",
+                        "path": "Atypical/PIKK/PI3K",
                         "nodes": []
                     },
                     {
                         "value": "PI4K",
+                        "path": "Atypical/PIKK/PI4K",
                         "nodes": []
                     },
                     {
                         "value": "SMG1",
+                        "path": "Atypical/PIKK/SMG1",
                         "nodes": []
                     },
                     {
                         "value": "TRRAP",
+                        "path": "Atypical/PIKK/TRRAP",
                         "nodes": []
                     }
                 ]
@@ -2606,14 +2953,17 @@
                 "nodes": [
                     {
                         "value": "RIO1",
+                        "path": "Atypical/RIO/RIO1",
                         "nodes": []
                     },
                     {
                         "value": "RIO2",
+                        "path": "Atypical/RIO/RIO2",
                         "nodes": []
                     },
                     {
                         "value": "RIO3",
+                        "path": "Atypical/RIO/RIO3",
                         "nodes": []
                     }
                 ]
@@ -2636,14 +2986,17 @@
                 "nodes": [
                     {
                         "value": "ABC1-A",
+                        "path": "PKL/ABC1/ABC1-A",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-B",
+                        "path": "PKL/ABC1/ABC1-B",
                         "nodes": []
                     },
                     {
                         "value": "ABC1-C",
+                        "path": "PKL/ABC1/ABC1-C",
                         "nodes": []
                     }
                 ]
@@ -2653,6 +3006,7 @@
                 "nodes": [
                     {
                         "value": "Alpha-Kineto1",
+                        "path": "PKL/Alpha/Alpha-Kineto1",
                         "nodes": []
                     }
                 ]
@@ -2662,30 +3016,37 @@
                 "nodes": [
                     {
                         "value": "ACAD",
+                        "path": "PKL/CAK/ACAD",
                         "nodes": []
                     },
                     {
                         "value": "CAK-fungal1",
+                        "path": "PKL/CAK/CAK-fungal1",
                         "nodes": []
                     },
                     {
                         "value": "ChoK",
+                        "path": "PKL/CAK/ChoK",
                         "nodes": []
                     },
                     {
                         "value": "Fmp29",
+                        "path": "PKL/CAK/Fmp29",
                         "nodes": []
                     },
                     {
                         "value": "Fmp29-like",
+                        "path": "PKL/CAK/Fmp29-like",
                         "nodes": []
                     },
                     {
                         "value": "FruK",
+                        "path": "PKL/CAK/FruK",
                         "nodes": []
                     },
                     {
                         "value": "CAK-Unclassified",
+                        "path": "PKL/CAK/CAK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2719,30 +3080,37 @@
                 "nodes": [
                     {
                         "value": "ATM",
+                        "path": "PKL/PIK/ATM",
                         "nodes": []
                     },
                     {
                         "value": "ATR",
+                        "path": "PKL/PIK/ATR",
                         "nodes": []
                     },
                     {
                         "value": "DNAPK",
+                        "path": "PKL/PIK/DNAPK",
                         "nodes": []
                     },
                     {
                         "value": "FRAP",
+                        "path": "PKL/PIK/FRAP",
                         "nodes": []
                     },
                     {
                         "value": "PI3K",
+                        "path": "PKL/PIK/PI3K",
                         "nodes": []
                     },
                     {
                         "value": "PI4K",
+                        "path": "PKL/PIK/PI4K",
                         "nodes": []
                     },
                     {
                         "value": "PIK-Unclassified",
+                        "path": "PKL/PIK/PIK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2752,18 +3120,22 @@
                 "nodes": [
                     {
                         "value": "ATM",
+                        "path": "PKL/PIKK/ATM",
                         "nodes": []
                     },
                     {
                         "value": "ATR",
+                        "path": "PKL/PIKK/ATR",
                         "nodes": []
                     },
                     {
                         "value": "FRAP",
+                        "path": "PKL/PIKK/FRAP",
                         "nodes": []
                     },
                     {
                         "value": "PIKK-Unclassified",
+                        "path": "PKL/PIKK/PIKK-Unclassified",
                         "nodes": []
                     }
                 ]
@@ -2773,10 +3145,12 @@
                 "nodes": [
                     {
                         "value": "RIO1",
+                        "path": "PKL/RIO/RIO1",
                         "nodes": []
                     },
                     {
                         "value": "RIO2",
+                        "path": "PKL/RIO/RIO2",
                         "nodes": []
                     }
                 ]

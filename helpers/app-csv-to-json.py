@@ -37,7 +37,7 @@ def main():
             if subfamily != '':
                 group = next(x for x in groups if x['value'] == row['Group'])
                 family = next(x for x in group['nodes'] if x['value'] == row['Family'])
-                family['nodes'].append({'value':subfamily, 'nodes': []})
+                family['nodes'].append({'value':subfamily,'path':"{0}/{1}/{2}".format(group['value'],family['value'],subfamily), 'nodes': []})
     
     with open(jsonPath, 'w') as f:
         f.write(json.dumps(groups, indent=4))

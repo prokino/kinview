@@ -14,8 +14,7 @@
             "request": "launch",
             "name": "Launch Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "/home/saber/workspace/kinview-react",
-            "trace": "verbose"
+            "webRoot": "/home/saber/workspace/kinview-react"
         }
     ]
 }
