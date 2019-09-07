@@ -27,17 +27,21 @@ const useStyles = makeStyles(theme => ({
 function App() {
   
 
-  const [value, setValue] = React.useState('rdbfirst');
-  const [firstlabel, setFirstLabel] = React.useState('Select a protein');
+  const [rdbvalue, setRdbValue] = React.useState('rdbfirst');
+  const [firstLabel, setFirstLabel] = React.useState('');
+  const [secondLabel, setSecondLabel] = React.useState('');
 
   function handleChange(event) {
-    setValue(event.target.value);
+    setRdbValue(event.target.value);
   }
   function leafClicked(node)
   {
     const path = node.path;//.split("/");
     console.log(path);
-    setFirstLabel(path);
+    if (rdbvalue === 'rdbfirst')
+      setFirstLabel(path);
+    else if (rdbvalue === 'rdbsecond')
+      setSecondLabel(path);
   }
   function nodeClicked(node)
   {
@@ -63,7 +67,7 @@ function App() {
           <Box>
           <FormControl component="fieldset">
       {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
-          <RadioGroup aria-label="position" name="position" value={value} onChange={handleChange} row>
+          <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} row>
               <FormControlLabel
                 value="rdbfirst"
                 control={<Radio color="primary" />}
@@ -79,13 +83,15 @@ function App() {
               />
           </RadioGroup>
           </FormControl>
-          <Typography variant="h6" id="modal-title">{firstlabel}</Typography>
-            <MuiTreeView tree={tree} onParentClick={nodeClicked} onLeafClick={leafClicked} />
+          <MuiTreeView tree={tree} onParentClick={nodeClicked} onLeafClick={leafClicked} />
           </Box>  
           </Paper>
         </Grid>
         <Grid item xs={10}>
-          <Paper className={classes.paper}>weblogo</Paper>
+          <Typography variant="h6" id="modal-title">{firstLabel}</Typography>
+          <Paper className={classes.paper}>weblogo first</Paper>
+          <Typography variant="h6" id="modal-title">{secondLabel}</Typography>
+          <Paper className={classes.paper}>weblogo second</Paper>
         </Grid>
       </Grid>
     </div>
