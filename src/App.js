@@ -9,7 +9,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -25,21 +25,31 @@ const useStyles = makeStyles(theme => ({
 // console.log(tree);
 
 function App() {
-  const [value, setValue] = React.useState('rdbfirst');
+  
+
+  const [rdbvalue, setRdbValue] = React.useState('rdbfirst');
+  const [firstLabel, setFirstLabel] = React.useState('');
+  const [secondLabel, setSecondLabel] = React.useState('');
 
   function handleChange(event) {
-    setValue(event.target.value);
+    setRdbValue(event.target.value);
   }
-  function treeClicked(node)
+  function leafClicked(node)
+  {
+    const path = node.path;//.split("/");
+    console.log(path);
+    if (rdbvalue === 'rdbfirst')
+      setFirstLabel(path);
+    else if (rdbvalue === 'rdbsecond')
+      setSecondLabel(path);
+  }
+  function nodeClicked(node)
   {
     let path =[]
+    
+    if (node.parent!=null)
+      path.push(node.parent.value);
     path.push(node.value);
-    while (node!=null)
-    {
-      if (node.parent!=null)
-        path.push(node.parent.value);
-      node = node.parent;
-    }
     console.log(path);
     //node => alert(`${node} clicked`)
 
@@ -57,7 +67,7 @@ function App() {
           <Box>
           <FormControl component="fieldset">
       {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
-          <RadioGroup aria-label="position" name="position" value={value} onChange={handleChange} row>
+          <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} row>
               <FormControlLabel
                 value="rdbfirst"
                 control={<Radio color="primary" />}
@@ -73,12 +83,15 @@ function App() {
               />
           </RadioGroup>
           </FormControl>
-            <MuiTreeView tree={tree} onParentClick={treeClicked} onLeafClick={treeClicked} />
+          <MuiTreeView tree={tree} onParentClick={nodeClicked} onLeafClick={leafClicked} />
           </Box>  
           </Paper>
         </Grid>
         <Grid item xs={10}>
-          <Paper className={classes.paper}>weblogo</Paper>
+          <Typography variant="h6" id="modal-title">{firstLabel}</Typography>
+          <Paper className={classes.paper}>weblogo first</Paper>
+          <Typography variant="h6" id="modal-title">{secondLabel}</Typography>
+          <Paper className={classes.paper}>weblogo second</Paper>
         </Grid>
       </Grid>
     </div>
