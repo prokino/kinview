@@ -43,36 +43,6 @@ def main():
         f.write(json.dumps(groups, indent=4))
         print("{0} created.".format(jsonPath))
 
-    # tree = Tree()
-    # tree.create_node("ePKF") #root
-
-    # data = []
-    # with open(csvPath) as f:
-    #     csvreader = csv.DictReader(f)
-    #     for row in csvreader:
-    #         group = row['Group']
-    #         family = row['Family']
-    #         subfamily = row['Subfamily']
-    #         hasalignment = row['HasAlignment']
-    #         if tree[group] is None:
-    #             tree.create_node(group)
-    #         if family != '' and not family in tree[group].fpointer:
-    #             tree.create_node(family,parent=group)
-
-    
-    # for node in tree.nodes:
-    #     if not node.name in data:
-    #         entity = {'value': node.name}
-    #         if len(node.fpointer)>0:
-    #             entity["nodes"] = node.fpointer
-    #             for child3 in node.fpointer:
-    #                 print(type(child3))
-    #                 #entity["nodes"][child3]["nodes"] = child3.fpointer
-    #         data.append(entity)
-
-    # with open(jsonPath, 'w') as f:
-    #     f.write(json.dumps(data, indent=4))
-    # print("{0} created.".format(jsonPath))
 
 if __name__ == "__main__":
     main()

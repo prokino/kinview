@@ -62,14 +62,14 @@ function App() {
                 value="rdbfirst"
                 control={<Radio color="primary" />}
                 label="First"
-                labelPlacement="start"
+                labelPlacement="end"
               />
               
               <FormControlLabel
                 value="rdbsecond"
                 control={<Radio color="primary" />}
                 label="Second"
-                labelPlacement="start"
+                labelPlacement="end"
               />
           </RadioGroup>
           </FormControl>
