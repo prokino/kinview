@@ -14,7 +14,7 @@ def main():
         for row in csvreader:
             group = row['Group']
             if not any(g['value'] == group for g in groups): #if group not already added to the groups
-                groups.append({'value':group, 'nodes': []})
+                groups.append({'value':group, 'HasAlignment': row['HasAlignment'], 'nodes': []})
             
         #data = groups
     
@@ -25,7 +25,7 @@ def main():
             family = row['Family']
             if family != '': #and not family in group.nodes:
                 group = next(x for x in groups if x['value'] == row['Group']) #find the first (and the only) group having the group name
-                entity = {'value':family, 'nodes': []}
+                entity = {'value':family, 'HasAlignment': row['HasAlignment'],'nodes': []}
                 if not entity in group['nodes']:
                     group['nodes'].append(entity)
                 
@@ -37,7 +37,9 @@ def main():
             if subfamily != '':
                 group = next(x for x in groups if x['value'] == row['Group'])
                 family = next(x for x in group['nodes'] if x['value'] == row['Family'])
-                family['nodes'].append({'value':subfamily,'path':"{0}/{1}/{2}".format(group['value'],family['value'],subfamily), 'nodes': []})
+                family['nodes'].append({'value':subfamily,
+                                        'path':"{0}_{1}_{2}".format(group['value'],family['value'],subfamily),
+                                        'HasAlignment': row['HasAlignment'] })
     
     with open(jsonPath, 'w') as f:
         f.write(json.dumps(groups, indent=4))
