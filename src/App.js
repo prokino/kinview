@@ -74,6 +74,174 @@ function App() {
     
     //return 'weblogo/family/ePKf_TKL_TKL-Unique.png';
   }
+  function draw_ptms(topbot) {
+    //define variables
+        let data = topbot.ptmData, nRows = data.getNumberOfRows(),
+        nCols = data.getNumberOfColumns(),
+        positions = data.getDistinctValues(0),
+        i, current, minpos = 0, dmax = 0,
+        sums = {},counts = {}, height = 10,
+        posn = [], pos = 0, total = 0, rcounts = {},
+        vis, letter, label, tlabel, ndata = {}, text, p2 = [];
+        //sort data & log to console
+        //data.sort([{column:0},{column:1},{column:2}]);
+        data.addColumn('number'); //total
+        data.addColumn('number'); //letter height - 4
+        data.addColumn('number'); //yvalue of letter bottom - 5
+        //redistribute to new container
+        //assumes y-scroll
+        let row = 1, dis = {},mean=0,std=0,total=0;
+      //reset to profile numbering
+      //find total counts for each position
+      for (i=0; i<nRows; i+=1) {
+        if (!(data.getValue(i,0) in rcounts)) {
+          rcounts[data.getValue(i,0)] = 0;
+        }
+        if (!(data.getValue(i,0) in counts)) {
+          counts[data.getValue(i,0)] = {};
+        }
+        if (!(data.getValue(i,1) in counts[data.getValue(i,0)])) {
+          counts[data.getValue(i,0)][data.getValue(i,1)] = 0
+        }
+        if (!(data.getValue(i,0) in dis)) {
+          dis[data.getValue(i,0)] = {};
+        }
+        if (!(data.getValue(i,1) in dis[data.getValue(i,0)])) {
+          dis[data.getValue(i,0)][data.getValue(i,1)] = data.getValue(i,3)
+        //post.attr("transform", "translate("+(10+(p2[i]-1)*rowWidth)+","+b+")");
+        }
+        counts[data.getValue(i,0)][data.getValue(i,1)] += data.getValue(i,2)
+              rcounts[data.getValue(i,0)] += data.getValue(i,2)
+      }
+      let cmt = '', mmax=0, mmin=100;
+      data.setValue(0,5,0);
+      //adjust for multiple lines
+      for (let pos in counts) {
+              if (rcounts[pos] > mmax) {
+                  mmax = rcounts[pos];
+              }
+              if (rcounts[pos] < mmin) {
+                  mmin = rcounts[pos]
+              }
+        if (!(pos in ndata)) {
+          ndata[pos] = []
+        }
+        for (let res in counts[pos]) {
+          ndata[pos].push([res,counts[pos][res],dis[pos][res]]);
+        }
+        ndata[pos].sort(function(f,s) { return s[1]-f[1]; });
+      }
+      for (let pos in ndata) {
+        let k = ndata[pos].length;
+        for (let res in ndata[pos]) {
+          ndata[pos][res].push(k);
+          k -= 1;
+        }
+      }
+  
+      let nd1 = {}, nd2 = {};
+      for (let pos in ndata) {
+        if (!(pos in nd2)) {
+          nd2[pos] = [];
+        }
+        if (!(pos in nd1)) {
+          nd1[pos] = [];
+        }
+        for (let res in ndata[pos]) {
+          if (!(ndata[pos][res] == null)) {
+            nd2[pos].push(ndata[pos][res][0]);
+            nd1[pos].push({ 'res':ndata[pos][res][0], 
+              'cnt':ndata[pos][res][1], 
+              'type':ndata[pos][res][2], 
+              'y':15*ndata[pos][res][3] });
+          }
+        }
+      }
+      
+        //find std of totals
+              //visualization
+        //for each position, select current display and add
+        //ptm overlay
+        let vis = d3.selectAll("#sequences #annotations #"+topbot.locale);
+        for (i=0; i<positions.length; i+=1) {
+          let temp = " #p"+positions[i], tempv = " #f"+positions[i];
+          vis.append("g")
+            .attr("id","f"+positions[i])
+            //.attr("transform", function(d) {
+              //return "translate("+(p2[i]*rowWidth)+","+300+")";
+            //})
+            .style("opacity", 0);
+          let scale = 0, tscale = Math.min(100,mmax)
+                  let scval = 0.6+(2-0.6)*(Math.min(tscale,rcounts[positions[i]]) - mmin)/(tscale-mmin)
+          scale = scval
+          let circ = d3.selectAll("#sequences #"+topbot.locale+temp)
+            .select("#data-ffeats")
+            .append("circle")
+            //.attr("cx", function (d) { return this.parentNode.parentNode.getBBox().x + this.parentNode.parentNode.getBBox().width/2; })
+            .attr("cx", function (d) { return rowWidth/2 +2} )
+            .attr("cy", "13")
+            .attr("r", function (d) {  return scale*7; }) //max radius of 20
+            //.attr("transform", "translate(0,45)")
+            .attr("fill", "green");
+          //draw letters
+          let svg = d3.selectAll("#sequences #annotations #"+topbot.locale+tempv);
+          svg.selectAll("svg").data(nd1[positions[i]])
+            .enter()
+            .append("text")
+            .attr("transform", function(d) {
+              return "translate(0,"+(-d.y)+")";
+            })
+            .text(function (d) { return d.res; })
+            .attr("font-family", "monospace")
+            .attr("font-size", "16px")
+            .attr("cursor", "default")
+            .attr("fill", function (d) { return colorSchemes["classic"][d.res]; });
+  
+          svg.selectAll("svg").data(nd1[positions[i]])
+            .enter()
+            .append("text")
+            .attr("transform", function(d) {
+              return "translate(20,"+(-d.y)+")";
+            })
+            .text(function (d) { return " - "+d.cnt+" - "+d.type })
+            .attr("font-family", "monospace")
+            .attr("font-size", "12px")
+            .attr("cursor", "default");
+  
+          //svg.append("rect")
+            //.attr("id","r"+positions[i])
+            //.attr("rx", "10")
+            //.attr("ry", "10")
+            //.attr("width", function (d) {  return this.parentNode.getBBox().width+10; })
+            //.attr("height", function (d) { return this.parentNode.getBBox().height; })
+            //.attr("x", function (d) { return this.parentNode.getBBox().x-5; })
+            //.attr("y", function (d) { return this.parentNode.getBBox().y; })
+            //.attr("fill-opacity", 0)
+            //.attr("stroke", "green")
+            //.attr("stroke-width",3);
+  
+          let test = d3.selectAll("#sequences #"+topbot.locale+temp+" #data-ffeats")
+            .on("mouseover", function() { 
+              let vartem = "f"+this.parentNode.id.slice(1), seq_div = $("#sequences"), offset = seq_div.scrollLeft(), seq_width = seq_div.width(), vtemp = d3.selectAll("#sequences #annotations #"+topbot.locale+" #"+vartem), vheight = vtemp.node().getBBox().height, vwidth = vtemp.node().getBBox().width;
+              vtemp.attr("transform", "translate(" + Math.max(offset+10,(offset+(seq_width-vwidth)/2)) + ","+(vheight+20)+")")
+                .transition().duration(100).style("opacity",1); })
+            .on("mouseout", function() { 
+              let vartem = "f"+this.parentNode.id.slice(1);
+              d3.selectAll("#sequences #annotations #"+topbot.locale+" #"+vartem).transition().duration(100).style("opacity",0); })
+            .on("click", function (d) { 
+              let temp_aas = [];
+              for (var j=0; j<nd1[d.pos].length; j+=1) {
+                if (nd1[d.pos][j].cnt > 0) {
+                temp_aas.push(nd1[d.pos][j].res);
+                }
+              }
+              position_clicked(topbot, d.pos, temp_aas, "ptms"); });
+              //return "translate("+(p2[i]*rowWidth)+","+300+")";
+          //var a = svg.node().getBBox();
+          //var b = a.height+20;
+          //svg.attr("transform", "translate("+(10+(positions[i]-1)*rowWidth)+","+b+")");
+        }
+    }
   function drawd()
   {
     var img = document.getElementById("firstImage");
