@@ -30,7 +30,8 @@ const useStyles = makeStyles(theme => ({
   },
   mainBox:
   {
-    marginLeft: 200
+    marginLeft: 200,
+    display: 'inline-block',
   }
 }));
 // console.log(tree);
@@ -236,18 +237,20 @@ function annotations()
           </Box>  
           </Paper>
         </Grid>
-        <Grid id="sequences" item xs={10} className={classes.mainBox}>
+        <Grid id="sequences" item xs={10} >
+          <div className={classes.mainBox}>
+        {draw_sstructure()}
           <Paper className={classes.paper}>
             <Typography variant="h6" id="modal-title">{firstLabel}</Typography>
             {/* <canvas id='firstCanvas'></canvas> */}
             <img id='firstImage' src={getImage(firstLabel)} />
           </Paper>
-          {draw_sstructure()}
           <div id="sstruct"></div>
           <Paper className={classes.paper}>
             <Typography variant="h6" id="modal-title">{secondLabel}</Typography>
             <img id='secondImage' src={getImage(secondLabel)} />
           </Paper>
+          </div>
         </Grid>
       </Grid>
     </div>
