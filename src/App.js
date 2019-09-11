@@ -24,11 +24,20 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  leftBox:
+  {
+    position: 'fixed'
+  },
+  mainBox:
+  {
+    marginLeft: 200
+  }
 }));
 // console.log(tree);
 const imgLogoStyle = {
   width: '100px'
 };
+
 
 function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbfirst');
@@ -100,6 +109,7 @@ function App() {
         //generate svg window	
         var sstruct = d3.select("#sstruct")
           .append("svg")
+          .style("margin-left",70)
           .attr("width",242*rowWidth)
           .attr("height",70);
         //loops
@@ -201,7 +211,7 @@ function annotations()
             <img id="logo" src='img/kinview-logo.png' style={imgLogoStyle} />
           </Paper>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} className={classes.leftBox}>
           <Paper className={classes.paper}>
           <Box>
           <FormControl component="fieldset">
@@ -210,14 +220,14 @@ function annotations()
               <FormControlLabel
                 value="rdbfirst"
                 control={<Radio color="primary" />}
-                label="First"
+                label="Top"
                 labelPlacement="end"
               />
               
               <FormControlLabel
                 value="rdbsecond"
                 control={<Radio color="primary" />}
-                label="Second"
+                label="Bottom"
                 labelPlacement="end"
               />
           </RadioGroup>
@@ -226,7 +236,7 @@ function annotations()
           </Box>  
           </Paper>
         </Grid>
-        <Grid id="sequences" item xs={10}>
+        <Grid id="sequences" item xs={10} className={classes.mainBox}>
           <Paper className={classes.paper}>
             <Typography variant="h6" id="modal-title">{firstLabel}</Typography>
             {/* <canvas id='firstCanvas'></canvas> */}
