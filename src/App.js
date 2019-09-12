@@ -13,6 +13,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Drawer } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from "d3";
+import { red } from '@material-ui/core/colors';
 
 const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
@@ -28,16 +29,37 @@ const useStyles = makeStyles(theme => ({
   {
     position: 'fixed'
   },
-  mainBox:
+  mainBoxVisible:
   {
     marginLeft: 200,
-    display: 'inline-block',
+    display: 'inline-block'
+  },
+  mainBoxInvisible:
+  {
+    marginLeft: 200,
+    display: 'none'
+  },
+  text:
+  {
+    color:red
   }
 }));
 // console.log(tree);
 const imgLogoStyle = {
   width: '100px'
 };
+
+// const treeStyles = {
+//   control: styles => ({ ...styles, color: 'red' }),
+//   text: (styles, { text, childPanel }) => {
+//     //const color = chroma(data.color);
+//     return {
+//       ...styles,
+//       backgroundColor: 'blue',
+//       color: 'green',
+//     };
+//   },
+// };
 
 
 function App() {
@@ -238,7 +260,7 @@ function annotations()
           </Paper>
         </Grid>
         <Grid id="sequences" item xs={10} >
-          <div className={classes.mainBox}>
+          <div className={firstLabel != ''? classes.mainBoxVisible:classes.mainBoxInvisible}>
         {draw_sstructure()}
           <Paper className={classes.paper}>
             <Typography variant="h6" id="modal-title">{firstLabel}</Typography>

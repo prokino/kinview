@@ -50,10 +50,11 @@ const styles = theme => ({
   panelSummary: {
     padding: 0,
     marginLeft: theme.spacing.unit,
+    marginTop:-5
   },
   panelDetails: {
     padding: 0,
-    display: 'block',
+    display: 'block'
   },
   panelExpanded: {
     margin: 0,
@@ -71,6 +72,7 @@ const styles = theme => ({
     textOverflow: 'ellipsis',
     whiteSpace: 'noWrap',
     maxWidth: '75vw',
+    fontSize:14
   },
   expandIcon: {},
 });
@@ -190,6 +192,7 @@ class MuiTreeView extends Component {
     return (
       <ExpansionPanel
         classes={expansionPanelClasses}
+        expandedHeight={3}
         style={{ textIndent }}
         key={node.id || node.value}
         elevation={0}
