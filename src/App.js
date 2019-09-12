@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
   mainBoxInvisible:
   {
-    marginLeft: 200,
+    marginLeft: 215,
     display: 'none'
   },
   text:
