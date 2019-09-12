@@ -48,6 +48,11 @@ const useStyles = makeStyles(theme => ({
 const imgLogoStyle = {
   width: '100px'
 };
+const imgUgaLogoStyle= {
+  float:'right',
+  width: '120px',
+  marginTop: '-40px'
+};
 
 // const treeStyles = {
 //   control: styles => ({ ...styles, color: 'red' }),
@@ -231,7 +236,9 @@ function annotations()
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <img id="logo" src='img/kinview-logo.png' style={imgLogoStyle} />
+            <Typography variant="h4">KinView</Typography>
+            {/* <img id="logo" src='img/kinview-logo.png' style={imgLogoStyle} /> */}
+            <img id="ugalogo" src='img/uga-logo.png' style={imgUgaLogoStyle} />
           </Paper>
         </Grid>
         <Grid item xs={2} className={classes.leftBox}>
