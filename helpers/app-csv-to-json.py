@@ -2,8 +2,9 @@ import csv, json
 #from treestruct import Tree
 def getvalue(s):
     return s.split('@')[1]
-def main():
-    csvPath = 'src/data/classification_july1_hasAln.csv'
+def classification_csv_to_json():
+    #csvPath = 'src/data/classification_july1_hasAln.csv'
+    csvPath = 'src/data/KinaseTree.csv'
     jsonPath = 'src/data/classification.json'
     data = {}
     groups = []
@@ -52,6 +53,9 @@ def main():
         f.write(json.dumps(groups, indent=4))
         print("{0} created.".format(jsonPath))
 
+def numbering_csv_to_json():
+    pass
 
 if __name__ == "__main__":
-    main()
+    classification_csv_to_json()
+    numbering_csv_to_json()
