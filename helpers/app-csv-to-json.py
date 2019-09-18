@@ -57,6 +57,15 @@ def classification_csv_to_json():
         f.write(json.dumps(groups, indent=4))
         print("{0} created.".format(jsonPath))
 
+def prettyjson(cols,jsonPath):
+    all_json="{"
+    for prot in cols:
+        elem = json.loads("{\"" + prot + "\":" + json.dumps(cols[prot])+"}")
+        all_json += '{},\n'.format(json.dumps(elem)).replace("{","").replace("}","")
+    
+    with open(jsonPath, 'w') as f_write:
+        f_write.write(all_json[:-2] + "}")
+
 def numbering_csv_to_json():
     csvPath = 'src/data/KinView_Numbering.csv'
     jsonPath = 'src/data/numbering.json'
@@ -78,28 +87,13 @@ def numbering_csv_to_json():
         for row in csvreader:
             idx += 1
             for protein in cols:
-                cols.setdefault(protein,[]).append(row[protein])
+                cols.setdefault(protein,[]).append(None if not row[protein] else int(row[protein]))
 
-    prettyjson()
-    with open(jsonPath, 'w') as f:
-        f.write(json.dumps(cols, indent=2))
+    prettyjson(cols,jsonPath)
+    # with open(jsonPath, 'w') as f:
+    #     f.write(json.dumps(cols, indent=2))
 
     print("{0} created.".format(jsonPath))
-def prettyjson():
-
-with open(infile) as f_read:
-    for line in f_read:
-        line = line.strip()
-        if len(line) > 0:
-            try:
-                elem = json.loads(line)
-                elem.pop(key_to_remove, None)
-
-                outfile = '{}.json'.format(elem['name'])      # this may raise KeyError
-                with open(outfile, 'w') as f_write:
-                    f_write.write('{}\n'.format(json.dumps(elem)))
-            except json.JSONDecodeError:
-                pass
 
 if __name__ == "__main__":
     #classification_csv_to_json()
