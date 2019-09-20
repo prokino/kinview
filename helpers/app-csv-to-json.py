@@ -6,56 +6,61 @@ def classification_csv_to_json():
     #csvPath = 'src/data/classification_july1_hasAln.csv'
     csvPath = 'src/data/KinaseTree.csv'
     jsonPath = 'src/data/classification.json'
-    data = {}
     groups = []
+    interested_rows = []
+    #Filter CSV file, so we will have distinct Group, Family, and Subfamily rows
+    with open(csvPath) as f:
+        csvreader = csv.DictReader(f)
+        for row in csvreader:
+            if not any(r['Group'] == row['Group'] and r['Family'] == row['Family'] and r['Subfamily'] == row['Subfamily'] for r in interested_rows): 
+                interested_rows.append(row)
 
     #Group
-    with open(csvPath) as f:
-        csvreader = csv.DictReader(f)
-        idx = 0
-        for row in csvreader:
-            idx += 1
-            group = row['Group']
-            if not any(g['value'] == group for g in groups): #if group not already added to the groups
-                groups.append({'id': "id" + str(idx) + "@" + group, 'value':group,'protein':row['Protein'], 'path': row['WebLogo'], 'nodes': []})
-            
-        #data = groups
-    
+    idx = 0
+    for row in interested_rows:
+        idx += 1
+        group = row['Group']
+        if not any(g['value'] == group for g in groups): #if group not already added to the groups
+            groups.append({'id': "id" + str(idx) + "@" + group, 
+                           'value':group,
+                           'protein':row['Protein'],
+                           'path': row['WebLogo'],
+                           'members':row['Members'].split(";"),
+                           'nodes': []})
+        
     #Family
-    with open(csvPath) as f:
-        csvreader = csv.DictReader(f)
-        idx = 0
-        for row in csvreader:
-            idx += 1
-            family = row['Family']
-            if family != '': #and not family in group.nodes:
-                group = next(x for x in groups if x['value'] == row['Group']) #find the first (and the only) group having the group name
-                if not any(x for x in group['nodes'] if x['value'] == family): #in group['nodes']['text']:
-                    entity = {'id':"id" + str(idx) + "@" + family, 'value':family,'protein':row['Protein'], 'path': row['WebLogo'],'nodes': []}
-                    group['nodes'].append(entity)
+    for row in interested_rows:
+        idx += 1
+        family = row['Family']
+        if family != '': #and not family in group.nodes:
+            group = next(x for x in groups if x['value'] == row['Group']) #find the first (and the only) group having the group name
+            if not any(x for x in group['nodes'] if x['value'] == family): #in group['nodes']['text']:
+                entity = {'id':"id" + str(idx) + "@" + family, 
+                          'value':family,
+                          'protein':row['Protein'], 
+                          'path': row['WebLogo'],
+                          'members':row['Members'].split(";"),
+                          'nodes': []}
+                group['nodes'].append(entity)
                 
     #Subfamily
-    with open(csvPath) as f:
-        csvreader = csv.DictReader(f)
-        idx = 0
-        for row in csvreader:
-            idx += 1
-            subfamily = row['Subfamily']
-            if subfamily != '':
-                group = next(x for x in groups if x['value'] == row['Group'])
-                family = next(x for x in group['nodes'] if x['value'] == row['Family'])
-                family['nodes'].append({'id':"id" + str(idx) + "@" + subfamily,
-                                        'value': subfamily,
-                                        'protein':row['Protein'],
-                                        'path':row['WebLogo']
-                                        #'path':"{0}_{1}_{2}".format(group['value'],family['value'],subfamily),
-                                        #'HasAlignment': row['HasAlignment'] 
-
-                                        })
+    for row in interested_rows:
+        idx += 1
+        subfamily = row['Subfamily']
+        if subfamily != '':
+            group = next(x for x in groups if x['value'] == row['Group'])
+            family = next(x for x in group['nodes'] if x['value'] == row['Family'])
+            family['nodes'].append({'id':"id" + str(idx) + "@" + subfamily,
+                                    'value': subfamily,
+                                    'members':row['Members'].split(";"),
+                                    'path':row['WebLogo']
+                                    #'path':"{0}_{1}_{2}".format(group['value'],family['value'],subfamily),
+                                    #'HasAlignment': row['HasAlignment'] 
+                                    })
     
     with open(jsonPath, 'w') as f:
         f.write(json.dumps(groups, indent=4))
-        print("{0} created.".format(jsonPath))
+        print("Classification {0} created.".format(jsonPath))
 
 def prettyjson(cols,jsonPath):
     all_json="{"
@@ -93,8 +98,8 @@ def numbering_csv_to_json():
     # with open(jsonPath, 'w') as f:
     #     f.write(json.dumps(cols, indent=2))
 
-    print("{0} created.".format(jsonPath))
+    print("Numbering {0} created.".format(jsonPath))
 
 if __name__ == "__main__":
-    #classification_csv_to_json()
-    numbering_csv_to_json()
+    classification_csv_to_json()
+    #numbering_csv_to_json()
