@@ -15,6 +15,14 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
+import Chip from '@material-ui/core/Chip';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
+import Fab from '@material-ui/core/Fab';
+import Tooltip from '@material-ui/core/Tooltip';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +44,28 @@ const useStyles = makeStyles(theme => ({
   {
     marginLeft: 215,
     display: 'none'
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '0px solid #000',
+    boxShadow: "none",//theme.shadows[5],
+    padding: theme.spacing(3, 10, 1),
+    maxHeight: 400, 
+    overflow: 'auto'
+  },
+  hidden: 
+  { 
+    display:"none"
+  },
+  structure:
+  {
+    marginLeft: 188,
+    width: 4863
   }
 }));
 // console.log(tree);
@@ -62,10 +92,20 @@ const imgUgaLogoStyle= {
 
 
 function App() {
-  const [rdbvalue, setRdbValue] = React.useState('rdbfirst');
+  const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
+  const [selectedNodes, addToSelectedNodes] = React.useState([]);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   
   function handleChange(event) {
     setRdbValue(event.target.value);
@@ -142,14 +182,16 @@ function App() {
   //     ctx.stroke();
   //   }
   // }
-  function draw_sstructure() {
-    var imgStyle = {
-      marginLeft: 15,
-      width: 4863
-    };
-    return <img src={'img/KinView_Structure.png'} style={imgStyle} />;
-}
- 
+  
+function showSelectionOptions(selectedNode)
+{
+  let selection = "";
+  if (selectedNode)  
+            selection ="";
+            
+
+  return selection;
+} 
 // function annotations()
 // {
 //   let pdata = [];
@@ -193,7 +235,7 @@ function App() {
           <Box>
           <FormControl component="fieldset">
       {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
-          <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} row>
+          {/* <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} row>
               <FormControlLabel
                 value="rdbfirst"
                 control={<Radio color="primary" />}
@@ -207,17 +249,72 @@ function App() {
                 label="Bottom"
                 labelPlacement="end"
               />
+          </RadioGroup> */}
+          <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} column>
+              <FormControlLabel
+                value="rdbResidue"
+                control={<Radio color="primary" />}
+                label="Residue"
+                labelPlacement="end"
+              />
+              <FormControlLabel
+                value="rdbMutation"
+                control={<Radio color="primary" />}
+                label="Mutation"
+                labelPlacement="end"
+              />
+              
+              <FormControlLabel
+                value="rdbPTM"
+                control={<Radio color="primary" />}
+                label="PTM"
+                labelPlacement="end"
+              />
           </RadioGroup>
+          <Tooltip title="Add to Compare" aria-label="add">
+              <Fab size="small" color="primary" className={classes.fab}>
+                <AddIcon onClick={handleOpen} />
+              </Fab>
+              </Tooltip>
+              
+              <Box className={selectedNode ? "":classes.hidden} p={2}>
+              <Tooltip title="Selected item" aria-label="add">
+                  <Chip label={selectedNode.value} aria-label="remove selection" deleteIcon={<DeleteForeverIcon />} 
+                  onDelete={() => {}}  />
+              </Tooltip>
+              </Box>
+          {showSelectionOptions(selectedNode)}
+           
           </FormControl>
-          <MuiTreeView tree={tree} onParentClick={nodeClicked} onLeafClick={leafClicked} />
+          <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div className={classes.paper}>
+            <h2 id="transition-modal-title">Select a group, family, or subfamily</h2>
+            <MuiTreeView tree={tree} onParentClick={nodeClicked} onLeafClick={leafClicked} />
+          </div>
+        </Fade>
+      </Modal>
+          
           </Box>  
           </Paper>
         </Grid>
         <Grid id="sequences" item xs={10} >
           <div className={1===1 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
-          {draw_sstructure()}
-          <Paper className={classes.paper} elevation="0">
-            <KinWeblogo src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getCandidateNumbers(selectedNode)}/>
+
+        <img src={'img/KinView_Structure.png'} className={selectedNode ? classes.structure:classes.hidden} />;
+          <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
+            <KinWeblogo className={selectedNode ? "":classes.hidden} src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getCandidateNumbers(selectedNode)}/>
           </Paper>
           <div id="sstruct"></div>
           {/* <Paper className={classes.paper}>

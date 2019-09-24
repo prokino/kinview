@@ -7,7 +7,6 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -41,7 +40,7 @@ const useStyles = makeStyles(theme => ({
       flexBasis: '33.33%',
     },
     leftside:{
-      minWidth: 80
+      minWidth: 70
     },
     helper: {
       borderLeft: `2px solid ${theme.palette.divider}`,
@@ -146,7 +145,7 @@ function KinWeblogo(props)
          <IconButton aria-label="delete" className={classes.margin}>
               <DeleteIcon fontSize="small" /></IconButton>  | {showlabel('Weblogo',props.label)} 
             
-           {/* <Chip label="" onDelete={() => {}} /> */}
+           
            {/* <Typography className={classes.heading}>WebLogo {props.label}</Typography> */}
          </div>
          <div className={classes.column}>
