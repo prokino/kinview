@@ -15,14 +15,13 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
-const rowWidth = 30, rowHeight = 120;
+// const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   paper: {
     padding: theme.spacing(2),
-    
   },
   leftBox:
   {
@@ -40,9 +39,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 // console.log(tree);
-const imgLogoStyle = {
-  width: '100px'
-};
+// const imgLogoStyle = {
+//   width: '100px'
+// };
 const imgUgaLogoStyle= {
   float:'right',
   width: '120px',
@@ -80,13 +79,21 @@ function App() {
   //   //   setSecondLabel(node.value);
     
   // }
-  function getNumbers(node)
+  function getCandidateNumbers(node)
   {
     let numbering = {numberingjson}
     //todo: members[0] should be a dropdown box
     if (!node || !node.members || node.members.length == 0 || !(node.members[0] in numbering.numberingjson))
         return null;
-    return numbering.numberingjson[node.members[0]];
+    
+    let candidates = []
+    node.members.forEach(function(n){
+      if (numbering.numberingjson.hasOwnProperty(n))
+        candidates.push({"name":n,"value":numbering.numberingjson[n]});
+    });
+    
+    return candidates;    
+    //return numbering.numberingjson[node.members[0]];
   }
   function leafClicked(node)
   {
@@ -182,7 +189,7 @@ function App() {
           </Paper>
         </Grid>
         <Grid item xs={2} className={classes.leftBox}>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper} >
           <Box>
           <FormControl component="fieldset">
       {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
@@ -209,8 +216,8 @@ function App() {
         <Grid id="sequences" item xs={10} >
           <div className={1===1 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
           {draw_sstructure()}
-          <Paper className={classes.paper}>
-            <KinWeblogo src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getNumbers(selectedNode)}/>
+          <Paper className={classes.paper} elevation="0">
+            <KinWeblogo src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getCandidateNumbers(selectedNode)}/>
           </Paper>
           <div id="sstruct"></div>
           {/* <Paper className={classes.paper}>

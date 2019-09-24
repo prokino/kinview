@@ -46,6 +46,7 @@ const styles = theme => ({
     width: '100%',
     paddingRight: 0,
     paddingLeft: 0,
+    zIndex: "top"
   },
   panelSummary: {
     padding: 0,
