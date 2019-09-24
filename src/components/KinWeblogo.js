@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
       alignItems: 'baseline',
     },
     column: {
-      flexBasis: '33.33%',
+      // flexBasis: '33.33%',
     },
     leftside:{
       minWidth: 70
@@ -70,16 +70,16 @@ function showlabel(prefix,lbl)
     return prefix + ': ' + lbl;
   return "";
 }
-function renderOptions(numbers)
-{
-  if (!numbers)
-    return "N/A";
-  return numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) });
-}  
+// function renderOptions(numbers)
+// {
+//   if (!numbers)
+//     return "N/A";
+//   return numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) });
+// }  
   
 function KinWeblogo(props)
 {
-    const [selectedNumbering, setNumbering] = React.useState(props && props.numbers?props.numbers:'');
+    const [selectedNumbering, setNumbering] = React.useState(props && props.numbers?props.numbers[0]:'');
     const [selectedNumberingValue, setNumberingValue] = React.useState('');
     const [propChanged, setPropChanged] = React.useState(false);
     
@@ -117,7 +117,7 @@ function KinWeblogo(props)
         //numbering = JSON.parse('[' + val + ']').map(n => n === null ? '- ' : <span class="v">{n}</span>);
         numbering = val[0].value.map(n => n === null ? '- ' : <span class="v">{n}</span>);
       //showNumbers()
-      setNumbering(numbering);
+      setNumbering({"value":numbering});
       setPropChanged(true);
       setNumberingValue(event.target.value);
     }
@@ -143,7 +143,7 @@ function KinWeblogo(props)
          id="panel1c-header">
          <div className={classes.column}>
          <IconButton aria-label="delete" className={classes.margin}>
-              <DeleteIcon fontSize="small" /></IconButton>  | {showlabel('Weblogo',props.label)} 
+              <DeleteIcon onClick={() => {alert('Delete to be implemented!')}} fontSize="small" /></IconButton>  | {showlabel('Weblogo',props.label)} 
             
            
            {/* <Typography className={classes.heading}>WebLogo {props.label}</Typography> */}
@@ -167,7 +167,8 @@ function KinWeblogo(props)
                   id: 'numbering-native-label-placeholder',
                 }}
               >
-                {renderOptions(props.numbers)}
+                {/* {renderOptions(props.numbers)} */}
+                {props.numbers? props.numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) }):""}
               
 
               </NativeSelect>
@@ -177,7 +178,7 @@ function KinWeblogo(props)
          <div className={clsx(classes.column, classes.helper)}>
          <img id='firstImage' src={props.src} />
             <div class="numberingdiv">
-              {selectedNumbering}
+            {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span class="v">{n}</span>):""}
             </div>
          </div>
        </ExpansionPanelDetails>

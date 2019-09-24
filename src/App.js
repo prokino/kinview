@@ -33,7 +33,8 @@ const useStyles = makeStyles(theme => ({
   },
   leftBox:
   {
-    position: 'fixed'
+    position: 'fixed',
+    // zIndex:'top'
   },
   mainBoxVisible:
   {
@@ -55,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     border: '0px solid #000',
     boxShadow: "none",//theme.shadows[5],
     padding: theme.spacing(3, 10, 1),
-    maxHeight: 400, 
+    // maxHeight: 400, 
     overflow: 'auto'
   },
   hidden: 
@@ -96,7 +97,7 @@ function App() {
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
-  const [selectedNodes, addToSelectedNodes] = React.useState([]);
+  const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -132,26 +133,35 @@ function App() {
         candidates.push({"name":n,"value":numbering.numberingjson[n]});
     });
     
-    return candidates;    
+    return candidates;
     //return numbering.numberingjson[node.members[0]];
   }
-  function leafClicked(node)
+  function leafOrNodeClicked(node)
   {
     // const path = node.path;//leaves have node path
     // console.log(path);
     setSelectedNode(node);
+    setSelectedNodes([
+      ...selectedNodes,
+      node
+    ]);
+  }
+  function leafClicked(node)
+  {
+    leafOrNodeClicked(node);
   }
   function nodeClicked(node)
   {
-    // let path =[] //non-leaves don't have path, so we should build one
-    // if (node.parent!=null)
-    //   path.push(node.parent.value);
-    // path.push(node.value);
-    
-    setSelectedNode(node);
-    //node => alert(`${node} clicked`)
-
+    leafOrNodeClicked(node);
   }
+//   function renderWeblogos()
+// {
+//   if (selectedNodes.length == 0)
+//     return "N/A";
+//   return selectedNodes.map((item,i) => { return (
+//     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
+//   ) });
+// }
   // function getImage(lbl)
   // {
   //   console.log(lbl)
@@ -278,9 +288,9 @@ function showSelectionOptions(selectedNode)
               </Tooltip>
               
               <Box className={selectedNode ? "":classes.hidden} p={2}>
-              <Tooltip title="Selected item" aria-label="add">
+              <Tooltip title="Last Selection" aria-label="add">
                   <Chip label={selectedNode.value} aria-label="remove selection" deleteIcon={<DeleteForeverIcon />} 
-                  onDelete={() => {}}  />
+                  onDelete={() => {alert('Delete to be implemented!')}}  />
               </Tooltip>
               </Box>
           {showSelectionOptions(selectedNode)}
@@ -314,7 +324,14 @@ function showSelectionOptions(selectedNode)
 
         <img src={'img/KinView_Structure.png'} className={selectedNode ? classes.structure:classes.hidden} />;
           <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
-            <KinWeblogo className={selectedNode ? "":classes.hidden} src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getCandidateNumbers(selectedNode)}/>
+          {
+            selectedNodes.map(function(item, idx){
+            return (<KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>)
+          })}
+       
+          
+            {/* {renderWeblogos()} */}
+            {/* <KinWeblogo className={selectedNode ? "":classes.hidden} src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getCandidateNumbers(selectedNode)}/> */}
           </Paper>
           <div id="sstruct"></div>
           {/* <Paper className={classes.paper}>
