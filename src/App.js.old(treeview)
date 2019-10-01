@@ -15,13 +15,12 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
-import DendrogramMenu from './components/DendrogramMenu'
 import Chip from '@material-ui/core/Chip';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
-
+import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 // const rowWidth = 30, rowHeight = 120;
@@ -47,13 +46,16 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 215,
     display: 'none'
   },
-  
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   paper: {
     backgroundColor: theme.palette.background.paper,
     border: '0px solid #000',
     boxShadow: "none",//theme.shadows[5],
     padding: theme.spacing(3, 10, 1),
-    minWidth: 400,
     // maxHeight: 400, 
     overflow: 'auto'
   },
@@ -134,18 +136,24 @@ function App() {
     return candidates;
     //return numbering.numberingjson[node.members[0]];
   }
-  function nodeClicked(node)
+  function leafOrNodeClicked(node)
   {
-      alert(node);
     // const path = node.path;//leaves have node path
     // console.log(path);
-    //setSelectedNode(node);
-    // setSelectedNodes([
-    //   ...selectedNodes,
-    //   node
-    // ]);
+    setSelectedNode(node);
+    setSelectedNodes([
+      ...selectedNodes,
+      node
+    ]);
   }
-  
+  function leafClicked(node)
+  {
+    leafOrNodeClicked(node);
+  }
+  function nodeClicked(node)
+  {
+    leafOrNodeClicked(node);
+  }
 //   function renderWeblogos()
 // {
 //   if (selectedNodes.length == 0)
@@ -185,7 +193,42 @@ function App() {
   //   }
   // }
   
+function showSelectionOptions(selectedNode)
+{
+  let selection = "";
+  if (selectedNode)  
+            selection ="";
+            
 
+  return selection;
+} 
+// function annotations()
+// {
+//   let pdata = [];
+//         for (let i=1; i<=241; i+=1) {
+//           pdata.push({'pos':i,
+//               'x':rowWidth*(i-1),
+//               'y':120});
+//         }
+//         const locale = "firstImage"
+//         const vis = d3.selectAll("#sequences #"+locale);
+//         const letterbox = vis.selectAll("png")
+//         .data(pdata)
+//         .enter()
+//         .append("g")
+//         .attr("transform", function(d) { return "translate("+(d.x+5)+","+d.y+")"; })
+//         .attr("id", function (d) { return "p"+d.pos; });
+//       console.log(vis);
+//       letterbox.append("g")
+//         .attr("id", "data-seq")
+//         .attr("transform", "translate(3,-10)");
+//       letterbox.append("g")
+//         .attr("transform", "translate(8,-10)")
+//         .attr("id", "data-num");
+//       letterbox.append("g")
+//         .attr("id", "data-ffeats");
+  
+// }
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -201,21 +244,86 @@ function App() {
         <Grid item xs={2} className={classes.leftBox}>
           <Paper className={classes.paper} >
           <Box>
-          
-          Circles: expand/collapse <br />
-          Labels: more information
+          <FormControl component="fieldset">
+      {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
+          {/* <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} row>
+              <FormControlLabel
+                value="rdbfirst"
+                control={<Radio color="primary" />}
+                label="Top"
+                labelPlacement="end"
+              />
+              
+              <FormControlLabel
+                value="rdbsecond"
+                control={<Radio color="primary" />}
+                label="Bottom"
+                labelPlacement="end"
+              />
+          </RadioGroup> */}
+          <RadioGroup aria-label="position" name="position" value={rdbvalue} onChange={handleChange} column>
+              <FormControlLabel
+                value="rdbResidue"
+                control={<Radio color="primary" />}
+                label="Residue"
+                labelPlacement="end"
+              />
+              <FormControlLabel
+                value="rdbMutation"
+                control={<Radio color="primary" />}
+                label="Mutation"
+                labelPlacement="end"
+              />
+              
+              <FormControlLabel
+                value="rdbPTM"
+                control={<Radio color="primary" />}
+                label="PTM"
+                labelPlacement="end"
+              />
+          </RadioGroup>
+          <Tooltip title="Add to Compare" aria-label="add">
+              <Fab size="small" color="primary" className={classes.fab}>
+                <AddIcon onClick={handleOpen} />
+              </Fab>
+              </Tooltip>
+              
+              <Box className={selectedNode ? "":classes.hidden} p={2}>
+              <Tooltip title="Last Selection" aria-label="add">
+                  <Chip label={selectedNode.value} aria-label="remove selection" deleteIcon={<DeleteForeverIcon />} 
+                  onDelete={() => {alert('Delete to be implemented!')}}  />
+              </Tooltip>
+              </Box>
+          {showSelectionOptions(selectedNode)}
+           
+          </FormControl>
+          <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div className={classes.paper}>
+            <h2 id="transition-modal-title">Select a group, family, or subfamily</h2>
+            <MuiTreeView tree={tree} onParentClick={nodeClicked} onLeafClick={leafClicked} />
+          </div>
+        </Fade>
+      </Modal>
           
           </Box>  
           </Paper>
         </Grid>
-        <div>
-        <DendrogramMenu width={720} height={400} onNodeClick={nodeClicked} />
-        </div>
-
         <Grid id="sequences" item xs={10} >
           <div className={1===1 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
 
-        <img src={'img/KinView_Structure.png'} className={selectedNode ? classes.structure:classes.hidden} />
+        <img src={'img/KinView_Structure.png'} className={selectedNode ? classes.structure:classes.hidden} />;
           <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
           {
             selectedNodes.map(function(item, idx){

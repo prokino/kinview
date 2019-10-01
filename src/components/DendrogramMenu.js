@@ -3824,6 +3824,12 @@ function DendrogramMenu(props) {
     useEffect(
         () => {
             if (props.width && props.height) {
+                const handleNodeClick = node => {
+                    if (props.onNodeClick) {
+                      props.onNodeClick(node);
+                    }
+                  };
+
                 // Set the dimensions and margins of the diagram
                 let margin = { top: 20, right: 90, bottom: 30, left: 90 },
                     width = props.width - margin.left - margin.right,
@@ -4009,6 +4015,9 @@ function DendrogramMenu(props) {
 
                     // Toggle children on click.
                     function click(d) {
+                        handleNodeClick({ d });
+                        
+                        //expand collapse
                         if (d.children) {
                             d._children = d.children;
                             d.children = null;
@@ -4049,7 +4058,7 @@ function DendrogramMenu(props) {
             if the variables are valid, but we do not have to compare old props
             to next props to decide whether to rerender.
         */
-        [props.width, props.height, d3Container.current]);
+        [props.width, props.height, props.onNodeClick, d3Container.current]);
 
 
     return (<div ref={d3Container} width={400} height={300} ></div>);
