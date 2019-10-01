@@ -3827,8 +3827,8 @@ function DendrogramMenu(props) {
             if (1 === 1) {
                 // Set the dimensions and margins of the diagram
                 let margin = { top: 20, right: 90, bottom: 30, left: 90 },
-                    width = 960 - margin.left - margin.right,
-                    height = 900 - margin.top - margin.bottom;
+                    width = props.width - margin.left - margin.right,
+                    height = props.width - margin.top - margin.bottom;
                 const svg = d3.select(d3Container.current).append("svg")
                     .attr("width", width + margin.right + margin.left)
                     .attr("height", height + margin.top + margin.bottom)
@@ -4050,9 +4050,9 @@ function DendrogramMenu(props) {
             if the variables are valid, but we do not have to compare old props
             to next props to decide whether to rerender.
         */
-        [props.data, d3Container.current]);
+        [props.width, props.height, d3Container.current]);
 
 
-    return (<div ref={d3Container} ></div>);
+    return (<div ref={d3Container} width="400" height="300" ></div>);
 }
 export default DendrogramMenu;
