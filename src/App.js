@@ -23,6 +23,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import DendrogramMenu from './components/DendrogramMenu';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -232,6 +233,7 @@ function showSelectionOptions(selectedNode)
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <DendrogramMenu />
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
