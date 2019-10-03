@@ -1,3 +1,4 @@
+//https://aspenmesh.io/2019/03/using-d3-in-react-a-pattern-for-using-data-visualization-at-scale/
 import React from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
@@ -136,7 +137,7 @@ function App() {
   }
   function nodeClicked(node)
   {
-      alert(node);
+    alert('node clicked');
     // const path = node.path;//leaves have node path
     // console.log(path);
     //setSelectedNode(node);
@@ -144,6 +145,15 @@ function App() {
     //   ...selectedNodes,
     //   node
     // ]);
+  }
+  function labelClicked(node)
+  {
+    //alert('label clicked');
+    setSelectedNode(node);
+    setSelectedNodes([
+      ...selectedNodes,
+      node
+    ]);
   }
   
 //   function renderWeblogos()
@@ -209,7 +219,7 @@ function App() {
           </Paper>
         </Grid>
         <div>
-        <DendrogramMenu width={720} height={400} onNodeClick={nodeClicked} />
+        <DendrogramMenu width={720} height={400} onNodeClick={nodeClicked} onLabelClick={labelClicked} />
         </div>
 
         <Grid id="sequences" item xs={10} >

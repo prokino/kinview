@@ -3826,7 +3826,12 @@ function DendrogramMenu(props) {
             if (props.width && props.height) {
                 const handleNodeClick = node => {
                     if (props.onNodeClick) {
-                      props.onNodeClick(node);
+                      props.onNodeClick(node.d.data);
+                    }
+                  };
+                  const handleLabelClick = node => {
+                    if (props.onLabelClick) {
+                      props.onLabelClick(node.d.data);
                     }
                   };
 
@@ -3834,7 +3839,9 @@ function DendrogramMenu(props) {
                 let margin = { top: 20, right: 90, bottom: 30, left: 90 },
                     width = props.width - margin.left - margin.right,
                     height = props.height - margin.top - margin.bottom;
-                const svg = d3.select(d3Container.current).append("svg")
+                //d3.selectAll("svg > *").remove();
+                
+                const svg = d3.select(d3Container.current)
                     .attr("width", width + margin.right + margin.left)
                     .attr("height", height + margin.top + margin.bottom)
                     .append("g")
@@ -3889,9 +3896,9 @@ function DendrogramMenu(props) {
                         .attr('class', 'node')
                         .attr("transform", function (d) {
                             return "translate(" + source.y0 + "," + source.x0 + ")";
-                        })
+                        });
                         //.call(drag)
-                        .on('click', click);
+                        
 
                     //var nodePlus = nodeEnter.enter().append()
 
@@ -3901,7 +3908,7 @@ function DendrogramMenu(props) {
                         .attr('r', 1e-6)
                         .style("fill", function (d) {
                             return d._children ? "#b0c4de" : "#fff";
-                        });
+                        }).on("click", click);
                     // nodeEnter.append('circle')
                     // .attr('class', classes.nodecircle)
                     // .attr('r', 1e-6)
@@ -4029,6 +4036,10 @@ function DendrogramMenu(props) {
                         }
                         update(d);
                     }
+                    function textclick(d)
+                    {
+                        handleLabelClick({ d });
+                    }
                 }
 
 
@@ -4063,6 +4074,8 @@ function DendrogramMenu(props) {
         [props.width, props.height, props.onNodeClick, d3Container.current]);
 
 
-    return (<div ref={d3Container} width={400} height={300} ></div>);
+    return (<svg ref={d3Container} width={400} height={300} >
+
+    </svg>);
 }
 export default DendrogramMenu;
