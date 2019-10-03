@@ -3917,6 +3917,7 @@ function DendrogramMenu(props) {
                     //     .attr("height", 16)
 
                     // Add labels for the nodes
+                    
                     nodeEnter.append('text')
                         .attr("dy", ".35em")
                         .attr("x", function (d) {
@@ -3927,7 +3928,8 @@ function DendrogramMenu(props) {
                         })
                         .text(function (d) {
                             return d.data.name;
-                        });
+                        })
+                        .append("div").attr("background-color","red");
 
                     // UPDATE
                     var nodeUpdate = nodeEnter.merge(node);
