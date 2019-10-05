@@ -137,7 +137,7 @@ function App() {
   }
   function nodeClicked(node)
   {
-    alert('node clicked');
+    
     // const path = node.path;//leaves have node path
     // console.log(path);
     //setSelectedNode(node);
@@ -150,10 +150,11 @@ function App() {
   {
     //alert('label clicked');
     setSelectedNode(node);
-    setSelectedNodes([
-      ...selectedNodes,
-      node
-    ]);
+    setSelectedNodes(selectedNodes => [...selectedNodes, node]);
+    // setSelectedNodes([
+    //   ...selectedNodes,
+    //   selectedNodes
+    // ]);
   }
   
 //   function renderWeblogos()
@@ -219,7 +220,7 @@ function App() {
           </Paper>
         </Grid>
         <div>
-        <DendrogramMenu width={720} height={400} onNodeClick={nodeClicked} onLabelClick={labelClicked} />
+        <DendrogramMenu width={720} height={400} onLabelClick={labelClicked} />
         </div>
 
         <Grid id="sequences" item xs={10} >

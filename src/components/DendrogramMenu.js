@@ -3815,7 +3815,7 @@ var treeData =
     ]
 }
 
-function DendrogramMenu(props) {
+function DendrogramMenuFunc(props) {
     const d3Container = useRef(null);
     //const classes = useStyles();
 
@@ -3926,6 +3926,7 @@ function DendrogramMenu(props) {
                     // Add labels for the nodes
                     
                     nodeEnter.append('text')
+                        .on("click", textclick)
                         .attr("dy", ".35em")
                         .attr("x", function (d) {
                             return d.children || d._children ? -13 : 13;
@@ -4078,4 +4079,10 @@ function DendrogramMenu(props) {
 
     </svg>);
 }
+function memoize()
+{
+    //because we don't want to re-render the dendrogram
+    return true;
+}
+const DendrogramMenu = React.memo(DendrogramMenuFunc,memoize);
 export default DendrogramMenu;
