@@ -5,7 +5,6 @@ import './App.css';
 import MuiTreeView from './components/MuiTreeView';
 import tree from './data/classification.json';
 import numberingjson from './data/numbering.json';
-import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Radio from '@material-ui/core/Radio';
@@ -17,12 +16,12 @@ import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
 import DendrogramMenu from './components/DendrogramMenu'
-import Chip from '@material-ui/core/Chip';
+import SelectionBox from './components/SelectionBox'
 import AddIcon from '@material-ui/icons/Add';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
-
+import Switch from '@material-ui/core/Switch';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 // const rowWidth = 30, rowHeight = 120;
@@ -35,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
   leftBox:
   {
-    position: 'fixed',
+    position: 'relative',
     // zIndex:'top'
   },
   mainBoxVisible:
@@ -97,6 +96,7 @@ function App() {
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
+  const [switchchecked, setSwitchChecked] = React.useState(true);
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -139,18 +139,30 @@ function App() {
   {
     
     // const path = node.path;//leaves have node path
-    // console.log(path);
-    //setSelectedNode(node);
-    // setSelectedNodes([
-    //   ...selectedNodes,
-    //   node
-    // ]);
+
   }
+  function handleChipDelete(nodeToDelete) {
+    var filtered = selectedNodes.filter(function(value, index, arr){
+      return value.id != nodeToDelete;
+  });
+    setSelectedNodes(filtered);
+  }
+  const handleSwitchChange = () => {
+    setSwitchChecked(prev => !prev);
+    if (switchchecked)
+    {
+      
+    }
+  };
+
   function labelClicked(node)
   {
     //alert('label clicked');
     setSelectedNode(node);
-    setSelectedNodes(selectedNodes => [...selectedNodes, node]);
+    if (!selectedNodes.includes(node))
+    {
+      setSelectedNodes(selectedNodes => [...selectedNodes, node]);
+    }
     // setSelectedNodes([
     //   ...selectedNodes,
     //   selectedNodes
@@ -209,18 +221,25 @@ function App() {
             <img id="ugalogo" src='img/uga-logo.png' style={imgUgaLogoStyle} />
           </Paper>
         </Grid>
+        
         <Grid item xs={2} className={classes.leftBox}>
-          <Paper className={classes.paper} >
-          <Box>
-          
-          Circles: expand/collapse <br />
-          Labels: more information
-          
-          </Box>  
-          </Paper>
+        <FormControlLabel
+        control={<Switch checked={switchchecked} onChange={handleSwitchChange} />}
+        label="Show Hierarchy"/>
+          <Fade in={switchchecked}>
+              <div>
+              <Grid  item>
+                <SelectionBox items={selectedNodes} onDelete={handleChipDelete} />
+              </Grid>
+              <Grid  item>
+              <DendrogramMenu width={720} height={400} onLabelClick={labelClicked} />
+              </Grid>
+              </div>
+          </Fade>
         </Grid>
+
+
         <div>
-        <DendrogramMenu width={720} height={400} onLabelClick={labelClicked} />
         </div>
 
         <Grid id="sequences" item xs={10} >

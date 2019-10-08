@@ -177,8 +177,8 @@ function KinWeblogo(props)
          </div>
          <div className={clsx(classes.column, classes.helper)}>
          <img id='firstImage' src={props.src} />
-            <div class="numberingdiv">
-            {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span class="v">{n}</span>):""}
+            <div className="numberingdiv">
+            {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span className="v">{n}</span>):""}
             </div>
          </div>
        </ExpansionPanelDetails>

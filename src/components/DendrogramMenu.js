@@ -3929,15 +3929,17 @@ function DendrogramMenuFunc(props) {
                         .on("click", textclick)
                         .attr("dy", ".35em")
                         .attr("x", function (d) {
-                            return d.children || d._children ? -13 : 13;
+                            return -1 * (d.data.name.length * 3) -45;
+                            //return d.children || d._children ? -13 : 13;
                         })
                         .attr("text-anchor", function (d) {
-                            return d.children || d._children ? "end" : "start";
+                            return "start";
+                            //return d.children || d._children ? "end" : "start";
                         })
                         .text(function (d) {
                             return d.data.name;
-                        })
-                        .append("div").attr("background-color","red");
+                        });
+                        
 
                     // UPDATE
                     var nodeUpdate = nodeEnter.merge(node);
@@ -4035,6 +4037,7 @@ function DendrogramMenuFunc(props) {
                             d.children = d._children;
                             d._children = null;
                         }
+                        svg.attr("width", 120);
                         update(d);
                     }
                     function textclick(d)
@@ -4075,7 +4078,7 @@ function DendrogramMenuFunc(props) {
         [props.width, props.height, props.onNodeClick, d3Container.current]);
 
 
-    return (<svg ref={d3Container} width={400} height={300} >
+    return (<svg id="scalesvg" ref={d3Container} width={props.width} height={props.height} >
 
     </svg>);
 }
