@@ -9,10 +9,12 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
+
 import FormControl from '@material-ui/core/FormControl';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 
@@ -20,6 +22,17 @@ const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
       flexWrap: 'wrap',
+    },
+    button: {
+      margin: theme.spacing(1),
+    },
+    visible:
+    {
+      display: 'inline-block'
+    },
+    hidden: 
+    { 
+      display:"none"
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
@@ -82,7 +95,20 @@ function KinWeblogo(props)
     const [selectedNumbering, setNumbering] = React.useState(props && props.numbers?props.numbers[0]:'');
     const [selectedNumberingValue, setNumberingValue] = React.useState('');
     const [propChanged, setPropChanged] = React.useState(false);
+    const [resudieChecked, setResudieChecked] = React.useState(true);
+    const [mutationChecked, setMutationChecked] = React.useState(false);
+    const [ptmChecked, setPtmChecked] = React.useState(false);
     
+    const toggleResidue = () => {
+      setResudieChecked(prev => !prev);
+    };
+    const toggleMutation = () => {
+      setMutationChecked(prev => !prev);
+    };
+    const togglePtm = () => {
+      setPtmChecked(prev => !prev);
+      return false;
+    };
     //componentDidMount
  
       useEffect( ()=>{
@@ -141,15 +167,25 @@ function KinWeblogo(props)
          expandIcon={<ExpandMoreIcon />}
          aria-controls="panel1c-content"
          id="panel1c-header">
-         <div className={classes.column}>
-         <IconButton aria-label="delete" className={classes.margin}>
-              <DeleteIcon onClick={() => {alert('Delete to be implemented!')}} fontSize="small" /></IconButton>  | {showlabel('Weblogo',props.label)} 
-            
-           
-           {/* <Typography className={classes.heading}>WebLogo {props.label}</Typography> */}
-         </div>
-         <div className={classes.column}>
-         </div>
+
+<FormGroup row>
+<Button variant="outlined" color="secondary" className={classes.button}>
+        {props.label}
+      </Button>
+        <FormControlLabel
+          control={<Switch checked={resudieChecked}  value="residue" onChange={toggleResidue} />}
+          label="Residue"
+        />
+        <FormControlLabel
+          control={<Switch checked={mutationChecked} value="mutation" onChange={toggleMutation} disabled  />}
+          label="Mutation"
+        />
+        <FormControlLabel
+          control={ <Switch checked={ptmChecked} value="ptm" onChange={togglePtm} disabled  /> }
+          label="PTM"
+        />
+      </FormGroup>
+         
        </ExpansionPanelSummary>
        <ExpansionPanelDetails className={classes.details}>
          {/* <div className={classes.column}>
@@ -157,7 +193,7 @@ function KinWeblogo(props)
          <div className={classes.leftside}>
               <FormControl className={classes.formControl}>
               <InputLabel shrink htmlFor="numbering-native-label-placeholder">
-                Numbering
+                Alignments
               </InputLabel>
               <NativeSelect
                 value={selectedNumberingValue}
@@ -176,7 +212,7 @@ function KinWeblogo(props)
             </FormControl>
          </div>
          <div className={clsx(classes.column, classes.helper)}>
-         <img id='firstImage' src={props.src} />
+         <img id='firstImage' src={props.src} className={resudieChecked ? classes.visible: classes.hidden} />
             <div className="numberingdiv">
             {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span className="v">{n}</span>):""}
             </div>

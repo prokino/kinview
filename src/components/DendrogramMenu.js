@@ -3844,6 +3844,8 @@ function DendrogramMenuFunc(props) {
                 const svg = d3.select(d3Container.current)
                     .attr("width", width + margin.right + margin.left)
                     .attr("height", height + margin.top + margin.bottom)
+                    // .attr("width", "100%")
+                    // .attr("height", "100%")
                     .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

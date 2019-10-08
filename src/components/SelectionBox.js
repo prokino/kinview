@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles(theme => ({
     root: {
       backgroundColor: '#e8edf7',
-      marginLeft: 100
+      width:"auto"
     },
     visible:
     {
@@ -35,8 +35,8 @@ function SelectionBox(props) {
       <div className={classes.root}>
                    <Box className={!props.items || props.items.length == 0 ? classes.visible:classes.hidden}>
           
-                        Circles: expand/collapse <br />
-                        Labels: more information
+                        Click on the circles to expand or collapse <br />
+                        Click on the labels to add to comparison
           
                 </Box>  
                 <Box className={props.items && props.items.length>0 ? classes.visible:classes.hidden}>

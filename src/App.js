@@ -23,11 +23,12 @@ import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import Switch from '@material-ui/core/Switch';
 import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+import Collapse from '@material-ui/core/Collapse';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    marginLeft:30
   },
   paper: {
     padding: theme.spacing(2),
@@ -49,21 +50,20 @@ const useStyles = makeStyles(theme => ({
   },
   
   paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: '0px solid #000',
-    boxShadow: "none",//theme.shadows[5],
-    padding: theme.spacing(3, 10, 1),
-    minWidth: 400,
-    // maxHeight: 400, 
-    overflow: 'auto'
+    // backgroundColor: theme.palette.background.paper,
+    // border: '0px solid #000',
+    // boxShadow: "none",//theme.shadows[5],
+    // padding: theme.spacing(3, 10, 1),
+    // minWidth: 400,
+    // overflow: 'auto'
   },
   hidden: 
   { 
-    display:"none"
+    display:"hidden"
   },
   structure:
   {
-    marginLeft: 188,
+    marginLeft: 108,
     width: 4863
   }
 }));
@@ -212,44 +212,29 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <Typography variant="h4">KinView</Typography>
-            {/* <img id="logo" src='img/kinview-logo.png' style={imgLogoStyle} /> */}
-            <img id="ugalogo" src='img/uga-logo.png' style={imgUgaLogoStyle} />
-          </Paper>
-        </Grid>
-        
-        <Grid item xs={2} className={classes.leftBox}>
+        <Grid item>
         <FormControlLabel
         control={<Switch checked={switchchecked} onChange={handleSwitchChange} />}
         label="Show Hierarchy"/>
-          <Fade in={switchchecked}>
-              <div>
-              <Grid  item>
                 <SelectionBox items={selectedNodes} onDelete={handleChipDelete} />
               </Grid>
+         
+          <Collapse in={switchchecked}>
+              <div>
+            
               <Grid  item>
               <DendrogramMenu width={720} height={400} onLabelClick={labelClicked} />
               </Grid>
               </div>
-          </Fade>
-        </Grid>
+          </Collapse>
 
-
-        <div>
-        </div>
-
-        <Grid id="sequences" item xs={10} >
-          <div className={1===1 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
+          <div className={selectedNodes.length>0 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
 
         <img src={'img/KinView_Structure.png'} className={selectedNode ? classes.structure:classes.hidden} />
           <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
           {
             selectedNodes.map(function(item, idx){
-            return (<KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>)
+            return (<KinWeblogo src={'weblogos/' + item.path} label={item.name} numbers={getCandidateNumbers(item)}/>)
           })}
        
           
@@ -261,8 +246,27 @@ function App() {
             <KinWeblogo src={getImage(secondLabel)} label={secondLabel} numbers={[22,33,33,55,null,66,77,12]}/>
           </Paper> */}
           </div>
+      
+      {/* <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <Typography variant="h4">KinView</Typography>
+            <img id="ugalogo" src='img/uga-logo.png' style={imgUgaLogoStyle} />
+          </Paper>
         </Grid>
-      </Grid>
+        
+        <Grid item xs={2} className={classes.leftBox}>
+     
+        </Grid>
+
+
+        <div>
+        </div>
+
+        <Grid id="sequences" item xs={10} >
+          
+        </Grid>
+      </Grid> */}
     </div>
   );
 }
