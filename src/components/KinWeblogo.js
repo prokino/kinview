@@ -99,15 +99,14 @@ function KinWeblogo(props)
     const [mutationChecked, setMutationChecked] = React.useState(false);
     const [ptmChecked, setPtmChecked] = React.useState(false);
     
-    const toggleResidue = () => {
+    function toggleResidue() {
       setResudieChecked(prev => !prev);
     };
-    const toggleMutation = () => {
+    function toggleMutation() {
       setMutationChecked(prev => !prev);
     };
-    const togglePtm = () => {
+    function togglePtm() {
       setPtmChecked(prev => !prev);
-      return false;
     };
     //componentDidMount
  
@@ -173,16 +172,15 @@ function KinWeblogo(props)
         {props.label}
       </Button>
         <FormControlLabel
-          control={<Switch checked={resudieChecked}  value="residue" onChange={toggleResidue} />}
+          control={<Switch checked={resudieChecked}  value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
           label="Residue"
         />
         <FormControlLabel
-          control={<Switch checked={mutationChecked} value="mutation" onChange={toggleMutation} disabled  />}
+          control={<Switch checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
           label="Mutation"
         />
         <FormControlLabel
-          control={ <Switch checked={ptmChecked} value="ptm" onChange={togglePtm} disabled  /> }
-          label="PTM"
+          control={ <Switch checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
         />
       </FormGroup>
          
@@ -216,6 +214,12 @@ function KinWeblogo(props)
             <div className="numberingdiv">
             {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span className="v">{n}</span>):""}
             </div>
+         </div>
+         <div className={mutationChecked ? classes.visible: classes.hidden}>
+                Mutation Data
+         </div>
+         <div className={ptmChecked ? classes.visible: classes.hidden}>
+                PTM Data
          </div>
        </ExpansionPanelDetails>
        <Divider />
