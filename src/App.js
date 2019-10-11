@@ -2,7 +2,6 @@
 import React from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
-import MuiTreeView from './components/MuiTreeView';
 import tree from './data/classification.json';
 import numberingjson from './data/numbering.json';
 import Paper from '@material-ui/core/Paper';
@@ -15,7 +14,7 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
-import DendrogramMenu from './components/DendrogramMenu'
+import KinTreeView from './components/KinTreeView'
 import SelectionBox from './components/SelectionBox'
 import AddIcon from '@material-ui/icons/Add';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
@@ -107,8 +106,17 @@ function App() {
     setOpen(false);
   };
   
-  function handleChange(event) {
-    setRdbValue(event.target.value);
+  function handleChange(node,checked) {
+    console.log("id=" +node.id);
+    console.log("checked=" +checked);
+    if (checked)
+    {
+    setSelectedNode(node);
+    if (!selectedNodes.includes(node))
+    {
+      setSelectedNodes(selectedNodes => [...selectedNodes, node]);
+    }
+  }
   }
   // function nodeSelected(node)
   // {
@@ -135,12 +143,7 @@ function App() {
     return candidates;
     //return numbering.numberingjson[node.members[0]];
   }
-  function nodeClicked(node)
-  {
-    
-    // const path = node.path;//leaves have node path
 
-  }
   function handleChipDelete(nodeToDelete) {
     var filtered = selectedNodes.filter(function(value, index, arr){
       return value.id != nodeToDelete;
@@ -155,19 +158,7 @@ function App() {
     }
   };
 
-  function labelClicked(node)
-  {
-    //alert('label clicked');
-    setSelectedNode(node);
-    if (!selectedNodes.includes(node))
-    {
-      setSelectedNodes(selectedNodes => [...selectedNodes, node]);
-    }
-    // setSelectedNodes([
-    //   ...selectedNodes,
-    //   selectedNodes
-    // ]);
-  }
+
   
 //   function renderWeblogos()
 // {
@@ -223,7 +214,7 @@ function App() {
               <div>
             
               <Grid  item>
-              <DendrogramMenu width={720} height={400} onLabelClick={labelClicked} />
+                <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
               </Grid>
               </div>
           </Collapse>
@@ -234,39 +225,15 @@ function App() {
           <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
           {
             selectedNodes.map(function(item, idx){
-            return (<KinWeblogo src={'weblogos/' + item.path} label={item.name} numbers={getCandidateNumbers(item)}/>)
+            return (<KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>)
           })}
        
           
-            {/* {renderWeblogos()} */}
-            {/* <KinWeblogo className={selectedNode ? "":classes.hidden} src={'weblogos/' + selectedNode.path} label={selectedNode.value} numbers={getCandidateNumbers(selectedNode)}/> */}
           </Paper>
           <div id="sstruct"></div>
-          {/* <Paper className={classes.paper}>
-            <KinWeblogo src={getImage(secondLabel)} label={secondLabel} numbers={[22,33,33,55,null,66,77,12]}/>
-          </Paper> */}
           </div>
       
-      {/* <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <Typography variant="h4">KinView</Typography>
-            <img id="ugalogo" src='img/uga-logo.png' style={imgUgaLogoStyle} />
-          </Paper>
-        </Grid>
-        
-        <Grid item xs={2} className={classes.leftBox}>
      
-        </Grid>
-
-
-        <div>
-        </div>
-
-        <Grid id="sequences" item xs={10} >
-          
-        </Grid>
-      </Grid> */}
     </div>
   );
 }

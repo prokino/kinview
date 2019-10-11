@@ -33,16 +33,15 @@ function SelectionBox(props) {
       }
     return (
       <div className={classes.root}>
-                   <Box className={!props.items || props.items.length == 0 ? classes.visible:classes.hidden}>
+                   {/* <Box className={!props.items || props.items.length == 0 ? classes.visible:classes.hidden}>
           
-                        Click on the circles to expand or collapse <br />
-                        Click on the labels to add to comparison
+                        Help text for the first time visitors go here. We can don't show it if a user revists the app.
           
-                </Box>  
+                </Box>   */}
                 <Box className={props.items && props.items.length>0 ? classes.visible:classes.hidden}>
                     {
                         props.items.map(function(item, idx){
-                        return (<Chip size="small" label={item.name} onDelete={handleDelete.bind(this,item.id)} color="primary" className={classes.chip} />);
+                        return (<Chip size="small" label={item.value} onDelete={handleDelete.bind(this,item.id)} color="primary" className={classes.chip} />);
                     })}
           </Box>
       </div>
