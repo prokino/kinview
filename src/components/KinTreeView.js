@@ -8,9 +8,10 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 const useStyles = makeStyles(theme => ({
     root: {
-      height: 216,
+      // height: 216,
       flexGrow: 1,
       maxWidth: 200,
+      position: 'relative'
     }
   }));
 

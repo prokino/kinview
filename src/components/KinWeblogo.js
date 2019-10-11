@@ -21,7 +21,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
-      flexWrap: 'wrap',
     },
     button: {
       margin: theme.spacing(1),
@@ -116,45 +115,21 @@ function KinWeblogo(props)
         // setNumberingValue('AKT1');
       }, [] );
    
-    
-    // props.numbers? 
-    // props.numbers.map(n => n === null ? '- ' : <span class="v">{n}</span>)
-    // :''
-    // const showNumbers = candidates =>
-    // {
-    //   const numbering = "N/A";
-    //   if (candidates && candidates.length>0)
-    //     numbering = candidates[0].value.map(n => n === null ? '- ' : <span class="v">{n}</span>);
-    //   //return "N/A";
-    //   setNumbering(numbering);
-    //   //return candidates? candidates.map(n => n === null ? '- ' : <span class="v">{n}</span>): "N/A";
-    // }
-    
-    //init:
-    // if (props.numbers)
-    //   setNumbering(props.numbers.map(n => n === null ? '- ' : <span class="v">{n}</span>));
+
     const numberingChanged = event => {
       if (props.numbers && event.target)
       {
       const val = props.numbers.filter(function(item){return item.name == event.target.value});
       let numbering = "N/A";
       if (val)
-        //numbering = JSON.parse('[' + val + ']').map(n => n === null ? '- ' : <span class="v">{n}</span>);
-        numbering = val[0].value.map(n => n === null ? '- ' : <span class="v">{n}</span>);
+        numbering = val[0].value.map(n => n === null ? '- ' : <span className="v">{n}</span>);
       //showNumbers()
       setNumbering({"value":numbering});
       setPropChanged(true);
       setNumberingValue(event.target.value);
     }
     };
-    // const setNumberingState = candidates =>
-    // {
-    //   const numbering = "N/A";
-    //    if (candidates && candidates.length>0)
-    //       numbering = candidates[0].value.map(n => n === null ? '- ' : <span class="v">{n}</span>);
-    //   setNumbering(numbering);
-
-    // }
+ 
 
     
     const classes = useStyles();

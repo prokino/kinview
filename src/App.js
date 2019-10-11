@@ -6,28 +6,19 @@ import tree from './data/classification.json';
 import numberingjson from './data/numbering.json';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
 import KinTreeView from './components/KinTreeView'
 import SelectionBox from './components/SelectionBox'
-import AddIcon from '@material-ui/icons/Add';
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
-import Fab from '@material-ui/core/Fab';
-import Tooltip from '@material-ui/core/Tooltip';
 import Switch from '@material-ui/core/Switch';
-import Backdrop from '@material-ui/core/Backdrop';
-import Collapse from '@material-ui/core/Collapse';
+import Box from '@material-ui/core/Box';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    marginLeft:30
+    marginLeft:30,
   },
   paper: {
     padding: theme.spacing(2),
@@ -39,13 +30,27 @@ const useStyles = makeStyles(theme => ({
   },
   mainBoxVisible:
   {
-    marginLeft: 200,
+    //marginLeft: 200,
     display: 'inline-block'
   },
   mainBoxInvisible:
   {
-    marginLeft: 215,
+   // marginLeft: 215,
     display: 'none'
+  },
+  treeVisible:
+  {
+    display: 'inline-block',
+    marginRight: 40
+  },
+  treeInvisible:
+  {
+    //marginLeft: 0,
+    display: 'none'
+  },
+  nowrap:
+  {
+    flexWrap: "nowrap !important",
   },
   
   paper: {
@@ -58,7 +63,7 @@ const useStyles = makeStyles(theme => ({
   },
   hidden: 
   { 
-    display:"hidden"
+    display:"none"
   },
   structure:
   {
@@ -95,7 +100,9 @@ function App() {
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
-  const [switchchecked, setSwitchChecked] = React.useState(true);
+  const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
+  const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
+  
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -150,13 +157,13 @@ function App() {
   });
     setSelectedNodes(filtered);
   }
-  const handleSwitchChange = () => {
-    setSwitchChecked(prev => !prev);
-    if (switchchecked)
-    {
-      
-    }
+  const handleTreeSwitchChange = () => {
+    setSwitchShowTreeChecked(prev => !prev);
   };
+  const handleDomainSwitchChange = () => {
+    setSwitchDomainChecked(prev => !prev);
+  };
+  
 
 
   
@@ -204,34 +211,42 @@ function App() {
   return (
     <div className={classes.root}>
         <Grid item>
-        <FormControlLabel
-        control={<Switch checked={switchchecked} onChange={handleSwitchChange} />}
-        label="Show Hierarchy"/>
-                <SelectionBox items={selectedNodes} onDelete={handleChipDelete} />
-              </Grid>
+          <FormControlLabel
+          control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />}
+          label="Hierarchy"/>
+
+          <FormControlLabel
+          control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />}
+          label="Domain Structure"/>
+                {/* <SelectionBox items={selectedNodes} onDelete={handleChipDelete} /> */}
+          </Grid>
          
-          <Collapse in={switchchecked}>
-              <div>
-            
-              <Grid  item>
-                <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
-              </Grid>
-              </div>
-          </Collapse>
-
-          <div className={selectedNodes.length>0 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
-
-        <img src={'img/KinView_Structure.png'} className={selectedNode ? classes.structure:classes.hidden} />
-          <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
-          {
-            selectedNodes.map(function(item, idx){
-            return (<KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>)
-          })}
-       
           
-          </Paper>
-          <div id="sstruct"></div>
-          </div>
+          <Grid item xs={12}>
+          <Grid container justify="left" spacing={1} className={classes.nowrap}>
+          <Grid key="leftTree" className={switchShowTreeChecked?classes.treeVisible:classes.treeInvisible} item>
+              <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
+            </Grid>
+            <Grid key="rightContents" item>
+            <div className={selectedNodes.length>0 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
+
+              <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure:classes.hidden} />
+                <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
+                {
+                  selectedNodes.map(function(item, idx){
+                  return (<KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>)
+                })}
+
+                
+                </Paper>
+   
+                </div>
+            </Grid>
+        </Grid>
+      </Grid>
+
+       
+    
       
      
     </div>
