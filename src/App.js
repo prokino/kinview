@@ -11,9 +11,11 @@ import { makeStyles } from '@material-ui/core/styles';
 //import * as d3 from "d3";
 import KinWeblogo from './components/KinWeblogo'
 import KinTreeView from './components/KinTreeView'
-import SelectionBox from './components/SelectionBox'
 import Switch from '@material-ui/core/Switch';
 import Box from '@material-ui/core/Box';
+import SelectionBox from './components/SelectionBox'
+import {SortableContainer, SortableElement} from 'react-sortable-hoc';
+import arrayMove from 'array-move';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -104,6 +106,22 @@ function App() {
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
 
   const [open, setOpen] = React.useState(false);
+
+  const SortableItem = SortableElement(({value}) => <li>{value}</li>);
+  const SortableList = SortableContainer(({items}) => {
+    return (
+      <ul>
+        {items.map((value, index) => (
+          <SortableItem key={`item-${value}`} index={index} value={value} />
+        ))}
+      </ul>
+    );
+  });
+  onSortEnd = ({oldIndex, newIndex}) => {
+    this.setState(({items}) => ({
+      items: arrayMove(items, oldIndex, newIndex),
+    }));
+  };
   
 
 
@@ -239,9 +257,11 @@ function App() {
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper className={selectedNode ? classes.paper : classes.hidden} elevation="0">
                 {
-                  selectedNodes.map(function (item, idx) {
-                    return (<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
-                  })}
+                  <SortableList items={selectedNodes} onSortEnd={onSortEnd} />
+                  // selectedNodes.map(function (item, idx) {
+                  //   return //(<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
+                  // })
+                  }
 
 
               </Paper>

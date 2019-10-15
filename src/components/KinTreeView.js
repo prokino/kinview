@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
@@ -22,6 +22,7 @@ function KinTreeView(props) {
     const classes = useStyles();
     const [filter, setFilter] = React.useState('');
     const [nodes, setNodes] = React.useState(props.nodes);
+    const filterInput = useRef(null);
     function handleNodeClick(e,node)
     {
       props.onCheckBoxesChanged(node,e.target.checked);
@@ -51,6 +52,8 @@ function KinTreeView(props) {
     }
     else
       setNodes(props.nodes);
+
+    filterInput.current.focus();
     //  else
     //    setNodes(props.nodes);
 
@@ -73,7 +76,7 @@ function KinTreeView(props) {
             id={`checkbox-${node.id}`}
             color="primary"
             onChange={(e)=>handleNodeClick(e,node)}
-            onClick={e => (e.stopPropagation())}
+            //onClick={e => (e.stopPropagation())}
           />
       <TreeItem nodeId={ node.id } label={ node.value } >
           { children(node.nodes) }
@@ -90,7 +93,7 @@ function KinTreeView(props) {
         <Search />
       </Grid>
       <Grid item>
-        <TextField id="input-with-icon-grid" label="Filter" onChange={handleFilterChange} />
+        <TextField autoFocus ref={filterInput} id="input-with-icon-grid" label="Filter" onChange={handleFilterChange} />
       </Grid>
     </Grid>
               
