@@ -21,13 +21,39 @@ const useStyles = makeStyles(theme => ({
 function KinTreeView(props) {
     const classes = useStyles();
     const [filter, setFilter] = React.useState('');
+    const [nodes, setNodes] = React.useState(props.nodes);
     function handleNodeClick(e,node)
     {
       props.onCheckBoxesChanged(node,e.target.checked);
     }
     function handleFilterChange(e)
     {
-      setFilter(e.target.value);
+      let filtered;
+      if (e.target.value)
+      {
+        filtered= props.nodes.filter(function iter(o) {
+          var temp;
+          if (o.value.toLowerCase().includes(e.target.value.toLowerCase())) {
+              return true;
+          }
+          if (!Array.isArray(o.nodes)) {
+              return false;
+          }
+          temp = o.nodes.filter(iter);
+          if (temp.length) {
+              o.nodes = temp;
+              filtered = temp;
+              
+              return true;
+          }
+      });
+      setNodes(filtered);
+    }
+    else
+      setNodes(props.nodes);
+    //  else
+    //    setNodes(props.nodes);
+
     }
     function makeTree(nodes) {
       const children = (members) => {
@@ -74,7 +100,7 @@ function KinTreeView(props) {
       defaultExpandIcon={<ChevronRightIcon />}
     >
       {
-        makeTree(props.nodes)
+        makeTree(nodes)
           //   nodes.map(function(item, idx){
           //   return (<TreeItem nodeId={item.id} label={item.value}/>)
           // })}

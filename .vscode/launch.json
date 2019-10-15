@@ -12,9 +12,16 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
+            "name": "Chromium",
             "url": "http://localhost:3000",
             "runtimeExecutable": "/usr/bin/chromium",
+            "webRoot": "/home/saber/workspace/kinview-react/src"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome",
+            "url": "http://localhost:3000",
             "webRoot": "/home/saber/workspace/kinview-react/src"
         }
     ]
