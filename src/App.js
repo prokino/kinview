@@ -106,21 +106,25 @@ function App() {
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
 
   const [open, setOpen] = React.useState(false);
+  const [items, setItems] = useState([]);
 
-  const SortableItem = SortableElement(({value}) => <li>{value}</li>);
+  const SortableItem = SortableElement((item) => 
+  // <li>{value}</li>
+  <KinWeblogo src={'weblogos/' + item.value.path} label={item.value.value} numbers={getCandidateNumbers(item.value)}/>
+  );
   const SortableList = SortableContainer(({items}) => {
     return (
       <ul>
-        {items.map((value, index) => (
-          <SortableItem key={`item-${value}`} index={index} value={value} />
+        {selectedNodes.map((item, index) => (
+          <SortableItem key={`item-${item.id}`} index={index} value={item} />
+  //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
+
         ))}
       </ul>
     );
   });
-  onSortEnd = ({oldIndex, newIndex}) => {
-    this.setState(({items}) => ({
-      items: arrayMove(items, oldIndex, newIndex),
-    }));
+  const onSortEnd = ({oldIndex, newIndex}) => {
+    setSelectedNodes(arrayMove(selectedNodes, oldIndex, newIndex));
   };
   
 
