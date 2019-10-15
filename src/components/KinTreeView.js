@@ -5,6 +5,9 @@ import TreeItem from '@material-ui/lab/TreeItem';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Checkbox from '@material-ui/core/Checkbox';
+import Search from '@material-ui/icons/Search';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -15,13 +18,17 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-function KinTreeViewFunc(props) {
+function KinTreeView(props) {
     const classes = useStyles();
+    const [filter, setFilter] = React.useState('');
     function handleNodeClick(e,node)
     {
       props.onCheckBoxesChanged(node,e.target.checked);
     }
-    
+    function handleFilterChange(e)
+    {
+      setFilter(e.target.value);
+    }
     function makeTree(nodes) {
       const children = (members) => {
         if (members) {
@@ -50,7 +57,18 @@ function KinTreeViewFunc(props) {
     }
 
     return (
-      <TreeView
+
+<div>
+    <Grid container spacing={1} alignItems="flex-end">
+      <Grid item>
+        <Search />
+      </Grid>
+      <Grid item>
+        <TextField id="input-with-icon-grid" label="Filter" onChange={handleFilterChange} />
+      </Grid>
+    </Grid>
+              
+   <TreeView
       className={classes.root}
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpandIcon={<ChevronRightIcon />}
@@ -61,26 +79,14 @@ function KinTreeViewFunc(props) {
           //   return (<TreeItem nodeId={item.id} label={item.value}/>)
           // })}
       }
-      {/* <TreeItem nodeId="1" label="Applications">
-        <TreeItem nodeId="2" label="Calendar" />
-        <TreeItem nodeId="3" label="Chrome" />
-        <TreeItem nodeId="4" label="Webstorm" />
-      </TreeItem>
-      <TreeItem nodeId="5" label="Documents">
-        <TreeItem nodeId="6" label="Material-UI">
-          <TreeItem nodeId="7" label="src">
-            <TreeItem nodeId="8" label="index.js" />
-            <TreeItem nodeId="9" label="tree-view.js" />
-          </TreeItem>
-        </TreeItem>
-      </TreeItem> */}
     </TreeView>
+    </div>
     );
 }
 function memoize()
 {
     //because we don't want to re-render the dendrogram
-    return true;
+    return false;
 }
-const KinTreeView = React.memo(KinTreeViewFunc,memoize);
+//const KinTreeView = React.memo(KinTreeViewFunc,memoize);
 export default KinTreeView;

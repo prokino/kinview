@@ -1,5 +1,5 @@
 //https://aspenmesh.io/2019/03/using-d3-in-react-a-pattern-for-using-data-visualization-at-scale/
-import React from 'react';
+import React, { useRef, useEffect,useState } from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
 import tree from './data/classification.json';
@@ -18,10 +18,10 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    marginLeft:30,
+    marginLeft: 30,
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(0),
   },
   leftBox:
   {
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   mainBoxInvisible:
   {
-   // marginLeft: 215,
+    // marginLeft: 215,
     display: 'none'
   },
   treeVisible:
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
   {
     flexWrap: "nowrap !important",
   },
-  
+
   paper: {
     // backgroundColor: theme.palette.background.paper,
     // border: '0px solid #000',
@@ -61,9 +61,9 @@ const useStyles = makeStyles(theme => ({
     // minWidth: 400,
     // overflow: 'auto'
   },
-  hidden: 
-  { 
-    display:"none"
+  hidden:
+  {
+    display: "none"
   },
   structure:
   {
@@ -75,8 +75,8 @@ const useStyles = makeStyles(theme => ({
 // const imgLogoStyle = {
 //   width: '100px'
 // };
-const imgUgaLogoStyle= {
-  float:'right',
+const imgUgaLogoStyle = {
+  float: 'right',
   width: '120px',
   marginTop: '-40px'
 };
@@ -102,8 +102,10 @@ function App() {
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
-  
+
   const [open, setOpen] = React.useState(false);
+  
+
 
   const handleOpen = () => {
     setOpen(true);
@@ -112,49 +114,53 @@ function App() {
   const handleClose = () => {
     setOpen(false);
   };
-  
-  function handleChange(node,checked) {
-    console.log("id=" +node.id);
-    console.log("checked=" +checked);
-    if (checked)
-    {
-    setSelectedNode(node);
-    if (!selectedNodes.includes(node))
-    {
+
+  function handleChange(node, checked) {
+    console.log("id=" + node.id);
+    console.log("checked=" + checked);
+    console.log("handleChange:" + selectedNodes.length);
+
+
+    if (checked) { //add the selection to selectedNodes
+      setSelectedNode(node);
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
     }
-  }
+    else //remvoe the Selection
+    {
+      //setSelectedNode('');
+      handleDelete(node);     
+    }
+
   }
   // function nodeSelected(node)
   // {
-    
+
   //   // if (rdbvalue === 'rdbfirst')
   //   //   setFirstLabel(node.value);
   //   // else if (rdbvalue === 'rdbsecond')
   //   //   setSecondLabel(node.value);
-    
+
   // }
-  function getCandidateNumbers(node)
-  {
-    let numbering = {numberingjson}
+  function getCandidateNumbers(node) {
+    let numbering = { numberingjson }
     //todo: members[0] should be a dropdown box
     if (!node || !node.members || node.members.length == 0 || !(node.members[0] in numbering.numberingjson))
-        return null;
-    
+      return null;
+
     let candidates = []
-    node.members.forEach(function(n){
+    node.members.forEach(function (n) {
       if (numbering.numberingjson.hasOwnProperty(n))
-        candidates.push({"name":n,"value":numbering.numberingjson[n]});
+        candidates.push({ "name": n, "value": numbering.numberingjson[n] });
     });
-    
+
     return candidates;
     //return numbering.numberingjson[node.members[0]];
   }
 
-  function handleChipDelete(nodeToDelete) {
-    var filtered = selectedNodes.filter(function(value, index, arr){
-      return value.id != nodeToDelete;
-  });
+  function handleDelete(nodeToDelete) {
+    var filtered = selectedNodes.filter(function (value, index, arr) {
+      return value.id != nodeToDelete.id;
+    });
     setSelectedNodes(filtered);
   }
   const handleTreeSwitchChange = () => {
@@ -163,40 +169,40 @@ function App() {
   const handleDomainSwitchChange = () => {
     setSwitchDomainChecked(prev => !prev);
   };
-  
 
 
-  
-//   function renderWeblogos()
-// {
-//   if (selectedNodes.length == 0)
-//     return "N/A";
-//   return selectedNodes.map((item,i) => { return (
-//     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
-//   ) });
-// }
+
+
+  //   function renderWeblogos()
+  // {
+  //   if (selectedNodes.length == 0)
+  //     return "N/A";
+  //   return selectedNodes.map((item,i) => { return (
+  //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
+  //   ) });
+  // }
   // function getImage(lbl)
   // {
   //   console.log(lbl)
   //   let src = '';
   //   if (lbl !== '')
   //     src = 'weblogos/PK_' + lbl + '.png';
-    
+
   //   return src;
   // }
-  
+
   // function drawd()
   // {
   //   var img = document.getElementById("firstImage");
   //   if (img!==null && img.src!=='')
   //   {  
-     
+
   //     var cnvs = document.getElementById("firstCanvas");
   //    console.log(cnvs);
   //     cnvs.style.position = "absolute";
   //     cnvs.style.left = img.offsetLeft + "px";
   //     cnvs.style.top = img.offsetTop + "px";
-      
+
   //     var ctx = cnvs.getContext("2d");
   //     ctx.beginPath();
   //     ctx.arc(250, 210, 200, 0, 2 * Math.PI, false);
@@ -205,50 +211,50 @@ function App() {
   //     ctx.stroke();
   //   }
   // }
-  
+
 
   const classes = useStyles();
   return (
     <div className={classes.root}>
-        <Grid item>
-          <FormControlLabel
+      <Grid item>
+        <FormControlLabel
           control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />}
-          label="Hierarchy"/>
+          label="Hierarchy" />
 
-          <FormControlLabel
+        <FormControlLabel
           control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />}
-          label="Domain Structure"/>
-                {/* <SelectionBox items={selectedNodes} onDelete={handleChipDelete} /> */}
+          label="Domain Structure" />
+        {/* <SelectionBox items={selectedNodes} onDelete={handleDelete} /> */}
+      </Grid>
+
+
+      <Grid item xs={12}>
+        <Grid container justify="left" spacing={1} className={classes.nowrap}>
+          <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
+            <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
           </Grid>
-         
-          
-          <Grid item xs={12}>
-          <Grid container justify="left" spacing={1} className={classes.nowrap}>
-          <Grid key="leftTree" className={switchShowTreeChecked?classes.treeVisible:classes.treeInvisible} item>
-              <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
-            </Grid>
-            <Grid key="rightContents" item>
-            <div className={selectedNodes.length>0 ? classes.mainBoxVisible:classes.mainBoxInvisible}>
+          <Grid key="rightContents" item>
+            <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
-              <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure:classes.hidden} />
-                <Paper className={selectedNode ? classes.paper:classes.hidden} elevation="0">
+              <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+              <Paper className={selectedNode ? classes.paper : classes.hidden} elevation="0">
                 {
-                  selectedNodes.map(function(item, idx){
-                  return (<KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>)
-                })}
+                  selectedNodes.map(function (item, idx) {
+                    return (<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
+                  })}
 
-                
-                </Paper>
-   
-                </div>
-            </Grid>
+
+              </Paper>
+
+            </div>
+          </Grid>
         </Grid>
       </Grid>
 
-       
-    
-      
-     
+
+
+
+
     </div>
   );
 }

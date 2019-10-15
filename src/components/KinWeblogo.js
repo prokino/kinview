@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
+import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
+import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
@@ -17,6 +16,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
+import { withStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -76,6 +76,48 @@ const useStyles = makeStyles(theme => ({
         
     },
   }));
+
+const ExpansionPanel = withStyles({
+  root: {
+    border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+    },
+    '&$expanded': {
+      margin: 'auto',
+    },
+  },
+  expanded: {},
+})(MuiExpansionPanel);
+
+const ExpansionPanelSummary = withStyles({
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, .03)',
+    borderBottom: '1px solid rgba(0, 0, 0, .125)',
+    marginBottom: -1,
+    minHeight: 56,
+    '&$expanded': {
+      minHeight: 56,
+    },
+  },
+  content: {
+    '&$expanded': {
+      margin: '12px 0',
+    },
+  },
+  expanded: {},
+})(MuiExpansionPanelSummary);
+
+const ExpansionPanelDetails = withStyles(theme => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiExpansionPanelDetails);
+
 function showlabel(prefix,lbl)  
 {
   if (lbl)
@@ -135,12 +177,12 @@ function KinWeblogo(props)
     const classes = useStyles();
 
     return(
-     <div className={classes.root}>
-     <ExpansionPanel defaultExpanded>
+     //<div className={classes.root}>
+     <div>
+     <ExpansionPanel square defaultExpanded>
        <ExpansionPanelSummary
-         expandIcon={<ExpandMoreIcon />}
-         aria-controls="panel1c-content"
-         id="panel1c-header">
+         //expandIcon={<ExpandMoreIcon />}
+         aria-controls="panel1d-content" id="panel1d-header">
 
 <FormGroup row>
 <Button variant="outlined" color="secondary" className={classes.button}>
@@ -160,7 +202,7 @@ function KinWeblogo(props)
       </FormGroup>
          
        </ExpansionPanelSummary>
-       <ExpansionPanelDetails className={classes.details}>
+       <ExpansionPanelDetails>
          {/* <div className={classes.column}>
          </div> */}
          <div className={classes.leftside}>
@@ -185,7 +227,7 @@ function KinWeblogo(props)
             </FormControl>
          </div>
          <div className={clsx(classes.column, classes.helper)}>
-         <img id='firstImage' src={props.src} className={resudieChecked ? classes.visible: classes.hidden} />
+         <img id='firstImage' src={props.src} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"} className={resudieChecked ? classes.visible: classes.hidden} />
             <div className="numberingdiv">
             {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span className="v">{n}</span>):""}
             </div>
@@ -197,13 +239,13 @@ function KinWeblogo(props)
                 PTM Data
          </div>
        </ExpansionPanelDetails>
-       <Divider />
+       {/* <Divider />
        <ExpansionPanelActions>
          <Button size="small">Cancel</Button>
          <Button size="small" color="primary">
            Save
          </Button>
-       </ExpansionPanelActions>
+       </ExpansionPanelActions> */}
      </ExpansionPanel>
    </div>
     
