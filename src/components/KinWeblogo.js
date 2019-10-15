@@ -17,7 +17,8 @@ import Switch from '@material-ui/core/Switch';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import { withStyles } from '@material-ui/core/styles';
-
+import {SortableContainer, SortableElement,sortableHandle} from 'react-sortable-hoc';
+import ReorderIcon from '@material-ui/icons/Reorder';
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
@@ -73,6 +74,10 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
         minWidth: 120,
       },
+      formGroupRow :
+      {
+        verticalAlign:'middle',
+      }
         
     },
   }));
@@ -139,7 +144,8 @@ function KinWeblogo(props)
     const [resudieChecked, setResudieChecked] = React.useState(true);
     const [mutationChecked, setMutationChecked] = React.useState(false);
     const [ptmChecked, setPtmChecked] = React.useState(false);
-    
+    const DragHandle = sortableHandle(() => <ReorderIcon />);
+
     function toggleResidue() {
       setResudieChecked(prev => !prev);
     };
@@ -184,7 +190,8 @@ function KinWeblogo(props)
          //expandIcon={<ExpandMoreIcon />}
          aria-controls="panel1d-content" id="panel1d-header">
 
-<FormGroup row>
+<FormGroup row className={classes.formGroupRow}>
+<DragHandle />
 <Button variant="outlined" color="secondary" className={classes.button}>
         {props.label}
       </Button>
@@ -227,6 +234,7 @@ function KinWeblogo(props)
             </FormControl>
          </div>
          <div className={clsx(classes.column, classes.helper)}>
+         
          <img id='firstImage' src={props.src} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"} className={resudieChecked ? classes.visible: classes.hidden} />
             <div className="numberingdiv">
             {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span className="v">{n}</span>):""}

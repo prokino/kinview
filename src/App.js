@@ -14,12 +14,12 @@ import KinTreeView from './components/KinTreeView'
 import Switch from '@material-ui/core/Switch';
 import Box from '@material-ui/core/Box';
 import SelectionBox from './components/SelectionBox'
-import {SortableContainer, SortableElement} from 'react-sortable-hoc';
+import {SortableContainer, SortableElement,sortableHandle} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
     marginLeft: 30,
   },
   paper: {
@@ -100,6 +100,7 @@ function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
+  
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
@@ -109,14 +110,16 @@ function App() {
   const [items, setItems] = useState([]);
 
   const SortableItem = SortableElement((item) => 
-  // <li>{value}</li>
+  <div>
+    
   <KinWeblogo src={'weblogos/' + item.value.path} label={item.value.value} numbers={getCandidateNumbers(item.value)}/>
+  </div>
   );
   const SortableList = SortableContainer(({items}) => {
     return (
       <ul>
         {selectedNodes.map((item, index) => (
-          <SortableItem key={`item-${item.id}`} index={index} value={item} />
+          <SortableItem key={`item-${item.id}`} index={index} value={item}  />
   //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
 
         ))}
@@ -261,7 +264,7 @@ function App() {
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper className={selectedNode ? classes.paper : classes.hidden} elevation="0">
                 {
-                  <SortableList items={selectedNodes} onSortEnd={onSortEnd} />
+                  <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {
                   //   return //(<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
                   // })
