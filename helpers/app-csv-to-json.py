@@ -11,6 +11,7 @@ def classification_csv_to_json():
     #Filter CSV file, so we will have distinct Group, Family, and Subfamily rows
     with open(csvPath) as f:
         csvreader = csv.DictReader(f)
+        next(csvreader) #ignore the first group, because we don't need it in the treeview
         for row in csvreader:
             if not any(r['Group'] == row['Group'] and r['Family'] == row['Family'] and r['Subfamily'] == row['Subfamily'] for r in interested_rows): 
                 interested_rows.append(row)
