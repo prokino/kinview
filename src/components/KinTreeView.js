@@ -7,7 +7,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Checkbox from '@material-ui/core/Checkbox';
 import Search from '@material-ui/icons/Search';
 import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -64,12 +64,7 @@ function KinTreeView(props) {
           return makeTree(members);
         }
       }
-      const checkBoxClicked = (event, checked, id) => {
-        if (checked)
-        alert("checked " + id);
-        else
-        alert("not checked " + id);
-     };
+
       return nodes.map((node, index) => {
         return <div style={{ display: 'flex', alignItems: 'baseline' }}>   
           <Checkbox
@@ -88,15 +83,16 @@ function KinTreeView(props) {
     return (
 
 <div>
-    <Grid container spacing={1} alignItems="flex-end">
-      <Grid item>
-        <Search />
-      </Grid>
-      <Grid item>
-        <TextField autoFocus ref={filterInput} id="input-with-icon-grid" label="Filter" onChange={handleFilterChange} />
-      </Grid>
-    </Grid>
-              
+<TextField autoFocus ref={filterInput} id="input-with-icon-grid" label="Filter" onChange={handleFilterChange} 
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <Search />
+            </InputAdornment>
+          ),
+        }}
+        />
+    
    <TreeView
       className={classes.root}
       defaultCollapseIcon={<ExpandMoreIcon />}

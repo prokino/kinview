@@ -16,6 +16,12 @@ import Box from '@material-ui/core/Box';
 import SelectionBox from './components/SelectionBox'
 import {SortableContainer, SortableElement,sortableHandle} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -105,6 +111,9 @@ function App() {
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
+  const [openResetDialog, setOpenResetDialog] = React.useState(false);
+
+  
 
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
@@ -132,13 +141,6 @@ function App() {
   
 
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   function handleChange(node, checked) {
     console.log("id=" + node.id);
@@ -194,7 +196,9 @@ function App() {
   const handleDomainSwitchChange = () => {
     setSwitchDomainChecked(prev => !prev);
   };
-
+  const handleResetClick = () => {
+    setOpenResetDialog(true);
+  }
 
 
 
@@ -237,11 +241,20 @@ function App() {
   //   }
   // }
 
+  const handleCloseYes = () => {
+    setOpenResetDialog(false);
+    setSelectedNodes([]);
+    
 
+  };
+  const handleCloseNo = () => {
+    setOpenResetDialog(false);
+  };
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Grid item>
+      
         <FormControlLabel
           control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />}
           label="Hierarchy" />
@@ -249,6 +262,33 @@ function App() {
         <FormControlLabel
           control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />}
           label="Domain Structure" />
+            <FormControlLabel
+        control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>}
+        />
+
+<Dialog
+        open={openResetDialog}
+        onClose={handleCloseNo}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Confirmation"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Do you want to remove all of the selections?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseYes} color="primary">
+            Yes
+          </Button>
+          <Button onClick={handleCloseNo} color="primary" autoFocus>
+            No
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+
         {/* <SelectionBox items={selectedNodes} onDelete={handleDelete} /> */}
       </Grid>
 
