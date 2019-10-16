@@ -11,7 +11,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   /* align-items: center;
   justify-content: center; */
@@ -48,7 +48,10 @@
   writing-mode: vertical-lr;
   padding-right: 7.92px;
 }
-
+.hidden
+{
+  visibility: hidden;
+}
 
 .node circle {
   fill: #fff;

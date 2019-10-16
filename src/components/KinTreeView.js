@@ -66,7 +66,7 @@ function KinTreeView(props) {
       }
 
       return nodes.map((node, index) => {
-        return <div style={{ display: 'flex', alignItems: 'baseline' }}>   
+        return <div key={`node-${index}`} style={{ display: 'flex', alignItems: 'baseline' }}>   
           <Checkbox
             id={`checkbox-${node.id}`}
             color="primary"

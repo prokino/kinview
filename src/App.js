@@ -121,7 +121,7 @@ function App() {
   const SortableItem = SortableElement((item) => 
   <div>
     
-  <KinWeblogo src={'weblogos/' + item.value.path} label={item.value.value} numbers={getCandidateNumbers(item.value)}/>
+  <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)}/>
   </div>
   );
   const SortableList = SortableContainer(({items}) => {
@@ -294,7 +294,7 @@ function App() {
 
 
       <Grid item xs={12}>
-        <Grid container justify="left" spacing={1} className={classes.nowrap}>
+        <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
             <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
           </Grid>
@@ -302,7 +302,7 @@ function App() {
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
-              <Paper className={selectedNode ? classes.paper : classes.hidden} elevation="0">
+              <Paper className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {

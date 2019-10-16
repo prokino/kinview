@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
+import classNames from 'classnames/bind';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
 
 import FormControl from '@material-ui/core/FormControl';
@@ -48,6 +49,7 @@ const useStyles = makeStyles(theme => ({
     },
     details: {
       alignItems: 'baseline',
+      display:'block'
     },
     column: {
       // flexBasis: '33.33%',
@@ -81,6 +83,7 @@ const useStyles = makeStyles(theme => ({
         
     },
   }));
+
 
 const ExpansionPanel = withStyles({
   root: {
@@ -145,6 +148,10 @@ function KinWeblogo(props)
     const [mutationChecked, setMutationChecked] = React.useState(false);
     const [ptmChecked, setPtmChecked] = React.useState(false);
     const DragHandle = sortableHandle(() => <ReorderIcon />);
+    const numberingclass = classNames({
+  "numberingdiv":true,
+  "hidden": !(resudieChecked || mutationChecked || ptmChecked)
+});
 
     function toggleResidue() {
       setResudieChecked(prev => !prev);
@@ -177,8 +184,6 @@ function KinWeblogo(props)
       setNumberingValue(event.target.value);
     }
     };
- 
-
     
     const classes = useStyles();
 
@@ -193,8 +198,23 @@ function KinWeblogo(props)
 <FormGroup row className={classes.formGroupRow}>
 <DragHandle />
 <Button variant="outlined" color="secondary" className={classes.button}>
-        {props.label}
+        {props.value.value}
       </Button>
+      <NativeSelect
+                value={selectedNumberingValue}
+                onChange={numberingChanged}
+                onClick={e => { e.stopPropagation(); }}
+                inputProps={{
+                  name: 'numbering',
+                  id: 'numbering-native-label-placeholder',
+                }}
+              >
+                {/* {renderOptions(props.numbers)} */}
+                {props.numbers? props.numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) }):""}
+              
+
+              </NativeSelect>
+
         <FormControlLabel
           control={<Switch checked={resudieChecked}  value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
           label="Residue"
@@ -209,43 +229,31 @@ function KinWeblogo(props)
       </FormGroup>
          
        </ExpansionPanelSummary>
-       <ExpansionPanelDetails>
-         {/* <div className={classes.column}>
-         </div> */}
-         <div className={classes.leftside}>
+       <ExpansionPanelDetails className={classes.details}>
+         {/* <div className={classes.leftside}>
               <FormControl className={classes.formControl}>
               <InputLabel shrink htmlFor="numbering-native-label-placeholder">
                 Alignments
               </InputLabel>
-              <NativeSelect
-                value={selectedNumberingValue}
-                onChange={numberingChanged}
-                inputProps={{
-                  name: 'numbering',
-                  id: 'numbering-native-label-placeholder',
-                }}
-              >
-                {/* {renderOptions(props.numbers)} */}
-                {props.numbers? props.numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) }):""}
-              
-
-              </NativeSelect>
-              {/* <FormHelperText>Label + placeholder</FormHelperText> */}
+          
             </FormControl>
-         </div>
-         <div className={clsx(classes.column, classes.helper)}>
-         
-         <img id='firstImage' src={props.src} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"} className={resudieChecked ? classes.visible: classes.hidden} />
-            <div className="numberingdiv">
-            {selectedNumbering?selectedNumbering.value.map(n => n === null ? '- ' : <span className="v">{n}</span>):""}
-            </div>
-         </div>
-         <div className={mutationChecked ? classes.visible: classes.hidden}>
-                Mutation Data
-         </div>
-         <div className={ptmChecked ? classes.visible: classes.hidden}>
+         </div> */}
+         <Box>
+          <img id={`weblogo-${props.value.id}`} className={resudieChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
+          
+         </Box>
+         <Box className={mutationChecked ? classes.visible: classes.hidden}>
+           <img id={`mutation-${props.value.id}`}  src={`mut_freq/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
+         </Box>
+         <Box className={ptmChecked ? classes.visible: classes.hidden}>
                 PTM Data
-         </div>
+         </Box>
+         <div className={numberingclass}>
+              {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? '- ' : <span key={`p${index}`} className="v">{n}</span>):""}
+              </div>
+     
+         
+      
        </ExpansionPanelDetails>
        {/* <Divider />
        <ExpansionPanelActions>
