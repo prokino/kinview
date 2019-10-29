@@ -1,5 +1,5 @@
 //https://aspenmesh.io/2019/03/using-d3-in-react-a-pattern-for-using-data-visualization-at-scale/
-import React, { useRef, useEffect,useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
 import tree from './data/classification.json';
@@ -12,9 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import KinWeblogo from './components/KinWeblogo'
 import KinTreeView from './components/KinTreeView'
 import Switch from '@material-ui/core/Switch';
-import Box from '@material-ui/core/Box';
-import SelectionBox from './components/SelectionBox'
-import {SortableContainer, SortableElement,sortableHandle} from 'react-sortable-hoc';
+import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -22,6 +20,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import TextField from '@material-ui/core/TextField';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -106,39 +105,40 @@ function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
-  
+
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
 
-  
+
 
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
+  const [height, setHeight] = React.useState("100");
 
-  const SortableItem = SortableElement((item) => 
-  <div>
-    
-  <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)}/>
-  </div>
+  const SortableItem = SortableElement((item) =>
+    <div>
+
+      <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)} height={height} />
+    </div>
   );
-  const SortableList = SortableContainer(({items}) => {
+  const SortableList = SortableContainer(({ items }) => {
     return (
       <ul>
         {selectedNodes.map((item, index) => (
-          <SortableItem key={`item-${item.id}`} index={index} value={item}  />
-  //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
+          <SortableItem key={`item-${item.id}`} index={index} value={item} />
+          //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
 
         ))}
       </ul>
     );
   });
-  const onSortEnd = ({oldIndex, newIndex}) => {
+  const onSortEnd = ({ oldIndex, newIndex }) => {
     setSelectedNodes(arrayMove(selectedNodes, oldIndex, newIndex));
   };
-  
+
 
 
 
@@ -155,7 +155,7 @@ function App() {
     else //remvoe the Selection
     {
       //setSelectedNode('');
-      handleDelete(node);     
+      handleDelete(node);
     }
 
   }
@@ -244,49 +244,44 @@ function App() {
   const handleCloseYes = () => {
     setOpenResetDialog(false);
     setSelectedNodes([]);
-    
-
   };
+
   const handleCloseNo = () => {
     setOpenResetDialog(false);
+  };
+  const heightChanged = event => {
+    setHeight(event.target.value);
   };
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Grid item>
-      
-        <FormControlLabel
-          control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />}
-          label="Hierarchy" />
+        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
+        <FormControlLabel label="Height" labelPlacement="start" control={<TextField value={height} onChange={heightChanged} style={{ width: 50 }} />} />
 
-        <FormControlLabel
-          control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />}
-          label="Domain Structure" />
-            <FormControlLabel
-        control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>}
-        />
-
-<Dialog
-        open={openResetDialog}
-        onClose={handleCloseNo}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"Confirmation"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Do you want to remove all of the selections?
+        <Dialog
+          open={openResetDialog}
+          onClose={handleCloseNo}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">{"Confirmation"}</DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              Do you want to remove all of the selections?
           </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseYes} color="primary">
-            Yes
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseYes} color="primary">
+              Yes
           </Button>
-          <Button onClick={handleCloseNo} color="primary" autoFocus>
-            No
+            <Button onClick={handleCloseNo} color="primary" autoFocus>
+              No
           </Button>
-        </DialogActions>
-      </Dialog>
+          </DialogActions>
+        </Dialog>
 
 
         {/* <SelectionBox items={selectedNodes} onDelete={handleDelete} /> */}
@@ -308,20 +303,13 @@ function App() {
                   // selectedNodes.map(function (item, idx) {
                   //   return //(<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
                   // })
-                  }
-
+                }
 
               </Paper>
-
             </div>
           </Grid>
         </Grid>
       </Grid>
-
-
-
-
-
     </div>
   );
 }

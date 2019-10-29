@@ -18,7 +18,7 @@ import Switch from '@material-ui/core/Switch';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import { withStyles } from '@material-ui/core/styles';
-import {SortableContainer, SortableElement,sortableHandle} from 'react-sortable-hoc';
+import {sortableHandle} from 'react-sortable-hoc';
 import ReorderIcon from '@material-ui/icons/Reorder';
 const useStyles = makeStyles(theme => ({
     root: {
@@ -107,14 +107,18 @@ const ExpansionPanelSummary = withStyles({
     backgroundColor: 'rgba(0, 0, 0, .03)',
     borderBottom: '1px solid rgba(0, 0, 0, .125)',
     marginBottom: -1,
-    minHeight: 56,
+    height: 44,
+    minHeight: 44,
+    maxHeight: 44,
     '&$expanded': {
-      minHeight: 56,
+      height: 44,
+      minHeight: 44,
+      maxHeight: 44,
     },
   },
   content: {
     '&$expanded': {
-      margin: '12px 0',
+      // margin: '12px 0',
     },
   },
   expanded: {},
@@ -125,6 +129,13 @@ const ExpansionPanelDetails = withStyles(theme => ({
     padding: theme.spacing(2),
   },
 }))(MuiExpansionPanelDetails);
+
+const StyledFormGroup = withStyles(theme => ({
+  root: {
+    display:'block',
+  },
+  
+}))(FormGroup);
 
 function showlabel(prefix,lbl)  
 {
@@ -195,7 +206,7 @@ function KinWeblogo(props)
          //expandIcon={<ExpandMoreIcon />}
          aria-controls="panel1d-content" id="panel1d-header">
 
-<FormGroup row className={classes.formGroupRow}>
+<StyledFormGroup row className={classes.formGroupRow}>
 <DragHandle />
 <Button variant="outlined" color="secondary" className={classes.button}>
         {props.value.value}
@@ -226,7 +237,7 @@ function KinWeblogo(props)
         <FormControlLabel
           control={ <Switch checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
         />
-      </FormGroup>
+      </StyledFormGroup>
          
        </ExpansionPanelSummary>
        <ExpansionPanelDetails className={classes.details}>
@@ -266,7 +277,10 @@ function KinWeblogo(props)
    </div>
     
     );
-    
-            
 }
-export default KinWeblogo;
+function memoize()
+{
+    return false;
+}
+//export default KinWeblogo;
+export default React.memo(KinWeblogo,memoize);
