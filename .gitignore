@@ -3,3 +3,4 @@ pack/*
 node_modules/*
 npm-debug.log
 helpers/__pycache__/
+.vscode/settings.json
