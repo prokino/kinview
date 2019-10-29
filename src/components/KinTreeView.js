@@ -111,7 +111,8 @@ function KinTreeView(props) {
 function memoize()
 {
     //because we don't want to re-render the dendrogram
-    return false;
+    return true;
 }
 //const KinTreeView = React.memo(KinTreeViewFunc,memoize);
-export default KinTreeView;
+//export default KinTreeView;
+export default React.memo(KinTreeView,memoize);
