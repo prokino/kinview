@@ -2,6 +2,7 @@
   "name": "kinview-react",
   "version": "0.1.0",
   "private": true,
+  "author": "Saber Soleymani",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "@material-ui/core": "^4.4.0",
@@ -23,7 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "react-build": "react-scripts build",
+    "release": "yarn react-build && electron-builder --publish=always"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,5 +48,15 @@
     "electron": "^6.0.8",
     "electron-builder": "^21.2.0",
     "wait-on": "^3.3.0"
+  },
+  "build": {
+    "appId": "edu.uga.kinview",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
   }
 }
