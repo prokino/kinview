@@ -28,6 +28,7 @@
     "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
     "react-build": "react-scripts build",
     "release": "yarn react-build && electron-builder --publish=always",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
