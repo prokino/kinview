@@ -21,6 +21,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
+import Slider from '@material-ui/core/Slider';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -259,7 +260,19 @@ function App() {
         <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
-        <FormControlLabel label="Height" labelPlacement="start" control={<TextField value={height} onChange={heightChanged} style={{ width: 50 }} />} />
+        <FormControlLabel label="Height" labelPlacement="start" control={
+        // <TextField value={height} onChange={heightChanged} style={{ width: 50 }} />
+            <Slider
+            onChange={heightChanged}
+            defaultValue={height}
+            getAriaValueText={{height}}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={1}
+            min={10}
+            max={200}
+          />
+        } />
 
         <Dialog
           open={openResetDialog}
