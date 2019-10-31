@@ -257,7 +257,7 @@ function KinWeblogo(props)
            <img id={`mutation-${props.value.id}`}  src={`mut_freq/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
          </Box>
          <Box className={ptmChecked ? classes.visible: classes.hidden}>
-                PTM Data
+           <img id={`ptm-${props.value.id}`}  src={`ptm/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
          </Box>
          <div className={numberingclass}>
               {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? '- ' : <span key={`p${index}`} className="v">{n}</span>):""}
