@@ -2,6 +2,7 @@
   "name": "kinview-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://prokino.github.io/kinview",
   "author": "Saber Soleymani",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
@@ -26,7 +27,8 @@
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
     "react-build": "react-scripts build",
-    "release": "yarn react-build && electron-builder --publish=always"
+    "release": "yarn react-build && electron-builder --publish=always",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +49,7 @@
     "concurrently": "^4.1.2",
     "electron": "^6.0.8",
     "electron-builder": "^21.2.0",
+    "gh-pages": "^2.1.1",
     "wait-on": "^3.3.0"
   },
   "build": {
@@ -55,7 +58,7 @@
       "build/**/*",
       "node_modules/**/*"
     ],
-    "directories":{
+    "directories": {
       "buildResources": "assets"
     }
   }
