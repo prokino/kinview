@@ -254,6 +254,7 @@ function App() {
     setHeight(event.target.value);
   };
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Grid item>
@@ -261,18 +262,19 @@ function App() {
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
         <FormControlLabel label="Height" labelPlacement="start" control={
-        // <TextField value={height} onChange={heightChanged} style={{ width: 50 }} />
-            <Slider
-            onChange={heightChanged}
-            defaultValue={height}
-            getAriaValueText={{height}}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            step={1}
-            min={10}
-            max={200}
-          />
+        <div style={{width:200}}>
+        <Slider
+        onChange={heightChanged}
+        defaultValue={height}
+        aria-labelledby="discrete-slider"
+        valueLabelDisplay="auto"
+        step={1}
+        min={10}
+        max={200}
+      />
+    </div>
         } />
+        
 
         <Dialog
           open={openResetDialog}
