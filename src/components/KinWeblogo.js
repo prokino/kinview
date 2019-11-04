@@ -282,5 +282,5 @@ function memoize()
 {
     return false;
 }
-//export default KinWeblogo;
-export default React.memo(KinWeblogo,memoize);
+export default KinWeblogo;
+//export default React.memo(KinWeblogo,memoize);

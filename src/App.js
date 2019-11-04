@@ -118,7 +118,6 @@ function App() {
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
   const [height, setHeight] = React.useState("100");
-
   const SortableItem = SortableElement((item) =>
     <div>
 
@@ -250,8 +249,8 @@ function App() {
   const handleCloseNo = () => {
     setOpenResetDialog(false);
   };
-  const heightChanged = event => {
-    setHeight(event.target.value);
+  const heightChanged = (event,value) => {
+    setHeight(value);
   };
   const classes = useStyles();
 
@@ -263,16 +262,16 @@ function App() {
         <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
         <FormControlLabel label="Height" labelPlacement="start" control={
         <div style={{width:200}}>
-        <Slider
-        onChange={heightChanged}
-        defaultValue={height}
-        aria-labelledby="discrete-slider"
-        valueLabelDisplay="auto"
-        step={1}
-        min={10}
-        max={200}
-      />
-    </div>
+            <Slider
+            onChange={heightChanged}
+            defaultValue={height}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={5}
+            min={10}
+            max={200}
+          />
+       </div>
         } />
         
 
