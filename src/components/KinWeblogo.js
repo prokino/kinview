@@ -164,14 +164,17 @@ function KinWeblogo(props)
   "hidden": !(residueChecked || mutationChecked || ptmChecked)
 });
 
-    function toggleResidue() {
+    function toggleResidue(event) {
       setResidueChecked(prev => !prev);
+      props.onChange(event);
     };
-    function toggleMutation() {
+    function toggleMutation(event) {
       setMutationChecked(prev => !prev);
+      props.onChange(event);
     };
-    function togglePtm() {
+    function togglePtm(event) {
       setPtmChecked(prev => !prev);
+      props.onChange(event);
     };
     //componentDidMount
  
@@ -227,15 +230,15 @@ function KinWeblogo(props)
               </NativeSelect>
 
         <FormControlLabel
-          control={<Switch checked={residueChecked}  value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
+          control={<Switch id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
           label="Residue"
         />
         <FormControlLabel
-          control={<Switch checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
+          control={<Switch id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
           label="Mutation"
         />
         <FormControlLabel
-          control={ <Switch checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
+          control={ <Switch id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
         />
       </StyledFormGroup>
          

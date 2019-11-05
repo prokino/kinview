@@ -118,10 +118,26 @@ function App() {
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
   const [height, setHeight] = React.useState("100");
+  const weblogoCheckboxChanged = e =>
+  {
+    //let node = selectedNodes.filter(k => k.id == val.id);
+    const modifiedNodes = selectedNodes.map((item,j)=>
+    {
+      if (e.target.id == "res-checkbox-" + item.id )
+        item.residueChecked = e.target.checked;
+      if (e.target.id == "mut-checkbox-" + item.id )
+        item.mutationChecked = e.target.checked;
+      if (e.target.id == "ptm-checkbox-" + item.id )
+        item.ptmChecked = e.target.checked;
+      
+      return item;
+    });
+    
+    setSelectedNodes(modifiedNodes);
+  }
   const SortableItem = SortableElement((item) =>
     <div>
-
-      <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)} height={height} residueChecked={item.residueChecked} mutationChecked={item.mutationChecked} ptmChecked={item.ptmChecked} />
+      <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)} height={height} residueChecked={item.value.residueChecked} onChange={weblogoCheckboxChanged} mutationChecked={item.value.mutationChecked} ptmChecked={item.value.ptmChecked} />
     </div>
   );
   const SortableList = SortableContainer(({ items }) => {
@@ -153,8 +169,8 @@ function App() {
 
     if (checked) { //add the selection to selectedNodes
       setSelectedNode(node);
-      node.ptmChecked = false;
       node.residueChecked = true;
+      node.ptmChecked = false;
       node.mutationChecked=false;
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
     }
