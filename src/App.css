@@ -99,3 +99,8 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.treeGroup
+{
+  margin-left: 5px!important;
+}

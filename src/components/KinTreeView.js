@@ -14,13 +14,14 @@ const useStyles = makeStyles(theme => ({
       // height: 216,
       flexGrow: 1,
       maxWidth: 200,
-      position: 'relative'
+      position: 'relative',
+      marginLeft: -15
     }
+
   }));
 
 function KinTreeView(props) {
     const classes = useStyles();
-    const [filter, setFilter] = React.useState('');
     const [nodes, setNodes] = React.useState(props.nodes);
     const filterInput = useRef(null);
     function handleNodeClick(e,node)
@@ -78,7 +79,7 @@ function KinTreeView(props) {
             onChange={(e)=>handleNodeClick(e,node)}
             //onClick={e => (e.stopPropagation())}
           />
-      <TreeItem nodeId={ node.id } label={ node.value } >
+      <TreeItem nodeId={ node.id } label={ node.value } classes={{group:'treeGroup'}}  >
           { children(node.nodes) }
         </TreeItem>
         </div>
