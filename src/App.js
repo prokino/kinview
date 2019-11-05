@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
   structure:
   {
-    marginLeft: 108,
+    marginLeft: 55,
     width: 4863
   }
 }));
@@ -107,6 +107,7 @@ function App() {
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
 
+  const [nodes,setNodes] = React.useState(tree.map((n)=>{n.checked=false;return n;}));
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
@@ -161,11 +162,10 @@ function App() {
   // }, [selectedNodes]);
 
 
-  function checkboxChanged(node, checked) {
+  function treeCheckboxChanged(node, checked) {
     console.log("id=" + node.id);
     console.log("checked=" + checked);
-    console.log("checkboxChanged:" + selectedNodes.length);
-
+    console.log("treeCheckboxChanged:" + selectedNodes.length);
 
     if (checked) { //add the selection to selectedNodes
       setSelectedNode(node);
@@ -327,7 +327,7 @@ function App() {
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView nodes={tree} onCheckBoxesChanged={checkboxChanged} />
+            <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>

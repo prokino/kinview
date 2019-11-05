@@ -27,6 +27,10 @@ function KinTreeView(props) {
     {
       props.onCheckBoxesChanged(node,e.target.checked);
     }
+    function checkInSelectedNodes(node)
+    {
+      return props.selectedNodes.filter(n => n.id == node.id).length > 0;
+    }
     function handleFilterChange(e)
     {
       let filtered;
@@ -70,6 +74,7 @@ function KinTreeView(props) {
           <Checkbox
             id={`checkbox-${node.id}`}
             color="primary"
+            checked={checkInSelectedNodes(node)}
             onChange={(e)=>handleNodeClick(e,node)}
             //onClick={e => (e.stopPropagation())}
           />
@@ -114,5 +119,4 @@ function memoize()
     return true;
 }
 //const KinTreeView = React.memo(KinTreeViewFunc,memoize);
-//export default KinTreeView;
-export default React.memo(KinTreeView,memoize);
+export default KinTreeView;
