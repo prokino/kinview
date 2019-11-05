@@ -155,17 +155,17 @@ function KinWeblogo(props)
     const [selectedNumbering, setNumbering] = React.useState(props && props.numbers?props.numbers[0]:'');
     const [selectedNumberingValue, setNumberingValue] = React.useState('');
     const [propChanged, setPropChanged] = React.useState(false);
-    const [resudieChecked, setResudieChecked] = React.useState(true);
-    const [mutationChecked, setMutationChecked] = React.useState(false);
-    const [ptmChecked, setPtmChecked] = React.useState(false);
+    const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
+    const [mutationChecked, setMutationChecked] = React.useState(props.mutationChecked);
+    const [ptmChecked, setPtmChecked] = React.useState(props.ptmChecked);
     const DragHandle = sortableHandle(() => <ReorderIcon />);
     const numberingclass = classNames({
   "numberingdiv":true,
-  "hidden": !(resudieChecked || mutationChecked || ptmChecked)
+  "hidden": !(residueChecked || mutationChecked || ptmChecked)
 });
 
     function toggleResidue() {
-      setResudieChecked(prev => !prev);
+      setResidueChecked(prev => !prev);
     };
     function toggleMutation() {
       setMutationChecked(prev => !prev);
@@ -227,7 +227,7 @@ function KinWeblogo(props)
               </NativeSelect>
 
         <FormControlLabel
-          control={<Switch checked={resudieChecked}  value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
+          control={<Switch checked={residueChecked}  value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
           label="Residue"
         />
         <FormControlLabel
@@ -250,7 +250,7 @@ function KinWeblogo(props)
             </FormControl>
          </div> */}
          <Box>
-          <img id={`weblogo-${props.value.id}`} className={resudieChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
+          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
           
          </Box>
          <Box className={mutationChecked ? classes.visible: classes.hidden}>

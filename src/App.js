@@ -121,7 +121,7 @@ function App() {
   const SortableItem = SortableElement((item) =>
     <div>
 
-      <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)} height={height} />
+      <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)} height={height} residueChecked={item.residueChecked} mutationChecked={item.mutationChecked} ptmChecked={item.ptmChecked} />
     </div>
   );
   const SortableList = SortableContainer(({ items }) => {
@@ -136,20 +136,26 @@ function App() {
     );
   });
   const onSortEnd = ({ oldIndex, newIndex }) => {
+
     setSelectedNodes(arrayMove(selectedNodes, oldIndex, newIndex));
   };
 
+  // useEffect(() => {
+  //   alert('han');
+  // }, [selectedNodes]);
 
 
-
-  function handleChange(node, checked) {
+  function checkboxChanged(node, checked) {
     console.log("id=" + node.id);
     console.log("checked=" + checked);
-    console.log("handleChange:" + selectedNodes.length);
+    console.log("checkboxChanged:" + selectedNodes.length);
 
 
     if (checked) { //add the selection to selectedNodes
       setSelectedNode(node);
+      node.ptmChecked = false;
+      node.residueChecked = true;
+      node.mutationChecked=false;
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
     }
     else //remvoe the Selection
@@ -305,7 +311,7 @@ function App() {
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView nodes={tree} onCheckBoxesChanged={handleChange} />
+            <KinTreeView nodes={tree} onCheckBoxesChanged={checkboxChanged} />
           </Grid>
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
