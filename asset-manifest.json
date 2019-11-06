@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kinview/static/css/main.77301709.chunk.css",
-    "main.js": "/kinview/static/js/main.ef5d7caa.chunk.js",
-    "main.js.map": "/kinview/static/js/main.ef5d7caa.chunk.js.map",
+    "main.css": "/kinview/static/css/main.d4d9de5c.chunk.css",
+    "main.js": "/kinview/static/js/main.e544f380.chunk.js",
+    "main.js.map": "/kinview/static/js/main.e544f380.chunk.js.map",
     "runtime~main.js": "/kinview/static/js/runtime~main.d607261f.js",
     "runtime~main.js.map": "/kinview/static/js/runtime~main.d607261f.js.map",
     "static/js/2.62301552.chunk.js": "/kinview/static/js/2.62301552.chunk.js",
     "static/js/2.62301552.chunk.js.map": "/kinview/static/js/2.62301552.chunk.js.map",
     "index.html": "/kinview/index.html",
-    "precache-manifest.8afac5f604c5c1568dd37cdb64190c58.js": "/kinview/precache-manifest.8afac5f604c5c1568dd37cdb64190c58.js",
+    "precache-manifest.9092ee561dc66830638efe08b3d3d338.js": "/kinview/precache-manifest.9092ee561dc66830638efe08b3d3d338.js",
     "service-worker.js": "/kinview/service-worker.js",
-    "static/css/main.77301709.chunk.css.map": "/kinview/static/css/main.77301709.chunk.css.map"
+    "static/css/main.d4d9de5c.chunk.css.map": "/kinview/static/css/main.d4d9de5c.chunk.css.map"
   }
 }
