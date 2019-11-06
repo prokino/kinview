@@ -2,6 +2,10 @@ import csv, json
 #from treestruct import Tree
 def getvalue(s):
     return s.split('@')[1]
+
+#removes space parantheses. For example, return DMPK1 in 'DMPK1 (DMPK)'
+def fixProtein(p):
+    return p.split(" ")[0]
 def classification_csv_to_json():
     #csvPath = 'src/data/classification_july1_hasAln.csv'
     csvPath = 'src/data/KinaseTree.csv'
@@ -24,7 +28,7 @@ def classification_csv_to_json():
         if not any(g['value'] == group for g in groups): #if group not already added to the groups
             groups.append({'id': "id" + str(idx) + "@" + group, 
                            'value':group,
-                           'protein':row['Protein'],
+                           'protein':fixProtein(row['Protein']),
                            'path': row['WebLogo'],
                            'members':row['Members'].split(";"),
                            'nodes': []})
@@ -38,7 +42,7 @@ def classification_csv_to_json():
             if not any(x for x in group['nodes'] if x['value'] == family): #in group['nodes']['text']:
                 entity = {'id':"id" + str(idx) + "@" + family, 
                           'value':family,
-                          'protein':row['Protein'], 
+                          'protein':fixProtein(row['Protein']), 
                           'path': row['WebLogo'],
                           'members':row['Members'].split(";"),
                           'nodes': []}
@@ -103,4 +107,4 @@ def numbering_csv_to_json():
 
 if __name__ == "__main__":
     classification_csv_to_json()
-    #numbering_csv_to_json()
+    numbering_csv_to_json()

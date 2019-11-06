@@ -4,5 +4,6 @@ node_modules/*
 npm-debug.log
 helpers/__pycache__/
 .vscode/settings.json
+.vscode/.ropeproject
 build/*
 dist/*
