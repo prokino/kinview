@@ -90,16 +90,19 @@ def numbering_csv_to_json():
         #cols = cols[1:] 
         del cols['Align_Position'] #Remove the first column (alignment)
 
-    with open(csvPath) as f:
-        csvreader = csv.DictReader(f)
-        idx = 0
+    #with open(csvPath) as f:
+    #    csvreader = csv.DictReader(f)
+    #    idx = 0
        # next(csvreader) #skip the header
         for row in csvreader:
-            idx += 1
+    #        idx += 1
             for protein in cols:
                 cols.setdefault(protein,[]).append(None if not row[protein] else int(row[protein]))
-
-    prettyjson(cols,jsonPath)
+   #remove parantheses from protein names
+    newcols={}
+    for col in cols:
+        newcols[fixProtein(col)] = cols[col]
+    prettyjson(newcols,jsonPath)
     # with open(jsonPath, 'w') as f:
     #     f.write(json.dumps(cols, indent=2))
 
