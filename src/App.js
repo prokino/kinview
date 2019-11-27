@@ -295,15 +295,15 @@ function App() {
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
         <FormControlLabel label="Height" labelPlacement="start" control={
-        <div style={{width:200}}>
+        <div style={{width:100}}>
             <Slider
             onChange={heightChanged}
             defaultValue={height}
             aria-labelledby="discrete-slider"
             valueLabelDisplay="auto"
             step={5}
-            min={10}
-            max={200}
+            min={50}
+            max={150}
           />
        </div>
         } />
