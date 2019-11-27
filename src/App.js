@@ -119,6 +119,10 @@ function App() {
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
   const [height, setHeight] = React.useState("100");
+  const weblogoRemove= node => e =>
+  {
+    handleDelete(node);
+  }
   const weblogoCheckboxChanged = e =>
   {
     //let node = selectedNodes.filter(k => k.id == val.id);
@@ -138,7 +142,15 @@ function App() {
   }
   const SortableItem = SortableElement((item) =>
     <div>
-      <KinWeblogo value={item.value} numbers={getCandidateNumbers(item.value)} height={height} residueChecked={item.value.residueChecked} onChange={weblogoCheckboxChanged} mutationChecked={item.value.mutationChecked} ptmChecked={item.value.ptmChecked} />
+      <KinWeblogo 
+          value={item.value} 
+          numbers={getCandidateNumbers(item.value)} 
+          height={height} 
+          onRemove={weblogoRemove(item.value)}
+          onChange={weblogoCheckboxChanged}
+          residueChecked={item.value.residueChecked} 
+          mutationChecked={item.value.mutationChecked}
+          ptmChecked={item.value.ptmChecked} />
     </div>
   );
   const SortableList = SortableContainer(({ items }) => {

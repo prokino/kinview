@@ -20,6 +20,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import { withStyles } from '@material-ui/core/styles';
 import {sortableHandle} from 'react-sortable-hoc';
 import ReorderIcon from '@material-ui/icons/Reorder';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
@@ -211,6 +213,7 @@ function KinWeblogo(props)
 
 <StyledFormGroup row className={classes.formGroupRow}>
 <DragHandle />
+<DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
 <Button variant="outlined" color="secondary" className={classes.button}>
         {props.value.value}
       </Button>
@@ -263,7 +266,7 @@ function KinWeblogo(props)
            <img id={`ptm-${props.value.id}`}  src={`ptm/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
          </Box>
          <div className={numberingclass}>
-              {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? '- ' : <span key={`p${index}`} className="v">{n}</span>):""}
+              {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} className="v">{n}</span>):""}
               </div>
      
          

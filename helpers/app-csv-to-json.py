@@ -90,8 +90,8 @@ def numbering_csv_to_json():
         #cols = cols[1:] 
         del cols['Align_Position'] #Remove the first column (alignment)
 
-    #with open(csvPath) as f:
-    #    csvreader = csv.DictReader(f)
+    with open(csvPath) as f:
+        csvreader = csv.DictReader(f)
     #    idx = 0
        # next(csvreader) #skip the header
         for row in csvreader:
@@ -109,5 +109,5 @@ def numbering_csv_to_json():
     print("Numbering {0} created.".format(jsonPath))
 
 if __name__ == "__main__":
-    classification_csv_to_json()
+    #classification_csv_to_json()
     numbering_csv_to_json()

@@ -31,22 +31,21 @@
     transform: rotate(360deg);
   }
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 .numberingdiv
 {
   color:#282c34;
-  
+  display:flex;
   float:left;
   margin-left: 63px;
-  font-family: 'Roboto', sans-serif;
+  margin-top: -4px;
+  font-family: 'Lucida Console', Monaco, monospace;
   font-size: 10px;
-  word-spacing: 7px;
-  line-height: 1.2;
+  line-height: 0;
 }
 .numberingdiv .v
 {
   writing-mode: vertical-lr;
-  width:20px;
+  min-width: 19.94px;
 }
 .hidden
 {
