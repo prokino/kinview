@@ -21,10 +21,18 @@ import { withStyles } from '@material-ui/core/styles';
 import {sortableHandle} from 'react-sortable-hoc';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import DeleteIcon from '@material-ui/icons/Delete';
+import { Card } from '@material-ui/core';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
+    },
+    card: {
+      width: 235,
+      margin:5
     },
     button: {
       margin: theme.spacing(1),
@@ -210,8 +218,14 @@ function KinWeblogo(props)
        <ExpansionPanelSummary
          //expandIcon={<ExpandMoreIcon />}
          aria-controls="panel1d-content" id="panel1d-header">
-
-<StyledFormGroup row className={classes.formGroupRow}>
+    <Card className={classes.card}>
+          {/* <Typography gutterBottom variant="h6" component="h2">
+            Selections
+          </Typography> */}
+      <CardActionArea>
+      <CardContent>
+      </CardContent>
+      <StyledFormGroup row className={classes.formGroupRow}>
 <DragHandle />
 <DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
 <Button variant="outlined" color="secondary" className={classes.button}>
@@ -244,6 +258,9 @@ function KinWeblogo(props)
           control={ <Switch id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
         />
       </StyledFormGroup>
+      </CardActionArea>
+    </Card>
+
          
        </ExpansionPanelSummary>
        <ExpansionPanelDetails className={classes.details}>

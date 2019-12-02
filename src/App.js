@@ -21,7 +21,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import TextField from '@material-ui/core/TextField';
 import Slider from '@material-ui/core/Slider';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -300,18 +299,18 @@ function App() {
 
   return (
     <div className={classes.root}>
-          <FormControlLabel label="Minimal" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+          <FormControlLabel label="Menu" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
       <Fade in="switchShowTreeChecked">
 <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid item key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible}>
-          <Card className={classes.card}>
+          <Card className={`${classes.card} ${selectedNodes.length > 0 ? classes.treeVisible : classes.treeInvisible}`}>
       <CardActionArea>
 
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          {/* <Typography gutterBottom variant="h6" component="h2">
             Settings
-          </Typography>
+          </Typography> */}
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <br />
         <FormControlLabel label="Height" labelPlacement="start" control={
@@ -364,10 +363,9 @@ function App() {
       </CardActions>
     </Card>
     <Card className={classes.card}>
-    
-          <Typography gutterBottom variant="h5" component="h2">
+          {/* <Typography gutterBottom variant="h6" component="h2">
             Selections
-          </Typography>
+          </Typography> */}
       <CardActionArea>
       <CardContent>
       <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
