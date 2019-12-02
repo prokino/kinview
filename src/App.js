@@ -14,6 +14,7 @@ import KinTreeView from './components/KinTreeView'
 import Switch from '@material-ui/core/Switch';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
+import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -22,11 +23,20 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import Slider from '@material-ui/core/Slider';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
     // flexGrow: 1,
     marginLeft: 30,
+  },
+  card: {
+    width: 235,
+    margin:5
   },
   paper: {
     padding: theme.spacing(0),
@@ -49,7 +59,7 @@ const useStyles = makeStyles(theme => ({
   treeVisible:
   {
     display: 'inline-block',
-    marginRight: 40
+    //marginRight: 40
   },
   treeInvisible:
   {
@@ -290,10 +300,20 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Grid item>
-        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+          <FormControlLabel label="Minimal" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+      <Fade in="switchShowTreeChecked">
+<Grid item xs={12}>
+        <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
+          <Grid item key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible}>
+          <Card className={classes.card}>
+      <CardActionArea>
+
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Settings
+          </Typography>
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
-        <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
+        <br />
         <FormControlLabel label="Height" labelPlacement="start" control={
         <div style={{width:100}}>
             <Slider
@@ -306,8 +326,8 @@ function App() {
             max={150}
           />
        </div>
-        } />
-        
+        } /> <br />
+        {/* <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} /> */}
 
         <Dialog
           open={openResetDialog}
@@ -333,15 +353,31 @@ function App() {
 
 
         {/* <SelectionBox items={selectedNodes} onDelete={handleDelete} /> */}
-      </Grid>
+      
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        {/* <Button size="small" color="primary">
+          Share
+        </Button> */}
+        <Button size="small" variant="outlined" color="primary" onClick={handleResetClick}>Reset</Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.card}>
+    
+          <Typography gutterBottom variant="h5" component="h2">
+            Selections
+          </Typography>
+      <CardActionArea>
+      <CardContent>
+      <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+      </CardContent>
 
-
-      <Grid item xs={12}>
-        <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
-          <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+      </CardActionArea>
+    </Card>
+      
           </Grid>
-          <Grid key="rightContents" item>
+          <Grid item key="rightContents">
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
@@ -358,6 +394,8 @@ function App() {
           </Grid>
         </Grid>
       </Grid>
+      </Fade>
+      
     </div>
   );
 }
