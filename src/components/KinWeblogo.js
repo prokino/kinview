@@ -134,7 +134,10 @@ const ExpansionPanelDetails = withStyles(theme => ({
 
 const StyledFormGroup = withStyles(theme => ({
   root: {
-    display:'block',
+    position:'sticky',
+    left:0,
+    display: 'flex',
+    placeItems: 'center'
   },
   
 }))(FormGroup);
@@ -214,7 +217,7 @@ function KinWeblogo(props)
 <StyledFormGroup row className={classes.formGroupRow}>
 <DragHandle />
 <DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
-<Button variant="outlined" color="secondary" className={classes.button}>
+<Button  size="small" variant="outlined" color="primary" className={classes.button}>
         {props.value.value}
       </Button>
       <NativeSelect
@@ -233,15 +236,15 @@ function KinWeblogo(props)
               </NativeSelect>
 
         <FormControlLabel
-          control={<Switch id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
+          control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
           label="Residue"
         />
         <FormControlLabel
-          control={<Switch id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
+          control={<Switch size="small" id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
           label="Mutation"
         />
         <FormControlLabel
-          control={ <Switch id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
+          control={ <Switch size="small" id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
         />
       </StyledFormGroup>
          
