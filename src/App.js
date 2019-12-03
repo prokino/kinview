@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
   },
   structure:
   {
-    marginLeft: 55,
+    marginLeft: 229,
     width: 4863
   }
 }));
@@ -281,84 +281,77 @@ function App() {
 
   return (
     <div className={classes.root}>
-          <FormControlLabel label="Menu" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
-      <Fade in={switchShowTreeChecked}>
-<Grid item xs={12} className="parentgrid" >
-          <Grid item key="leftTree" className={switchShowTreeChecked ? "treevisible" : "invisible"}>
-          <Card className={`${classes.card} ${selectedNodes.length > 0 ? "treevisible" : "invisible"}`}>
-      <CardActionArea>
-
-        <CardContent>
-          {/* <Typography gutterBottom variant="h6" component="h2">
+      {/* <FormControlLabel label="Menu" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} /> */}
+      {/* <Fade in={switchShowTreeChecked}> */}
+        <Grid item xs={12} className="parentgrid" >
+          <Grid item key="leftTree" className="treevisible">
+            <Card className={`${classes.card} ${selectedNodes.length > 0 ? "treevisible" : "invisible"}`}>
+              <CardActionArea>
+                <CardContent>
+                  {/* <Typography gutterBottom variant="h6" component="h2">
             Settings
           </Typography> */}
-        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
-        <br />
-        <FormControlLabel label="Height" labelPlacement="start" control={
-        <div style={{width:"100px"}}>
-            <Slider
-            onChange={heightChanged}
-            defaultValue={height}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            step={5}
-            min={50}
-            max={150}
-          />
-       </div>
-        } /> <br />
-        {/* <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} /> */}
+                  <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+                  <br />
+                  <FormControlLabel label="Height" labelPlacement="start" control={
+                    <div style={{ width: "100px" }}>
+                      <Slider
+                        onChange={heightChanged}
+                        defaultValue={height}
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={5}
+                        min={50}
+                        max={150}
+                      />
+                    </div>
+                  } /> <br />
+                  {/* <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} /> */}
 
-        <Dialog
-          open={openResetDialog}
-          onClose={handleCloseNo}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-          <DialogTitle id="alert-dialog-title">{"Confirmation"}</DialogTitle>
-          <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              Do you want to remove all of the selections?
+                  <Dialog
+                    open={openResetDialog}
+                    onClose={handleCloseNo}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                  >
+                    <DialogTitle id="alert-dialog-title">{"Confirmation"}</DialogTitle>
+                    <DialogContent>
+                      <DialogContentText id="alert-dialog-description">
+                        Do you want to remove all of the selections?
           </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleCloseYes} color="primary">
-              Yes
-          </Button>
-            <Button onClick={handleCloseNo} color="primary" autoFocus>
-              No
-          </Button>
-          </DialogActions>
-        </Dialog>
+                    </DialogContent>
+                    <DialogActions>
+                      <Button onClick={handleCloseYes} color="primary">Yes</Button>
+                      <Button onClick={handleCloseNo} color="primary" autoFocus>No</Button>
+                    </DialogActions>
+                  </Dialog>
 
+                  {/* <SelectionBox items={selectedNodes} onDelete={handleDelete} /> */}
 
-        {/* <SelectionBox items={selectedNodes} onDelete={handleDelete} /> */}
-      
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        {/* <Button size="small" color="primary">
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                {/* <Button size="small" color="primary">
           Share
         </Button> */}
-        <Button size="small" variant="outlined" color="primary" onClick={handleResetClick}>Reset</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.card}>
-          {/* <Typography gutterBottom variant="h6" component="h2">
+                <Button size="small" variant="outlined" color="primary" onClick={handleResetClick}>Reset</Button>
+              </CardActions>
+            </Card>
+            <Card className={classes.card}>
+              {/* <Typography gutterBottom variant="h6" component="h2">
             Selections
           </Typography> */}
-      <CardActionArea>
-      <CardContent>
-      <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
-      </CardContent>
+              <CardActionArea>
+                <CardContent>
+                  <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+                </CardContent>
 
-      </CardActionArea>
-    </Card>
-      
+              </CardActionArea>
+            </Card>
+
           </Grid>
           <Grid item key="rightContents">
             <div className={selectedNodes.length > 0 ? "mainBoxVisible" : "invisible"}>
-
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
                 {
@@ -367,13 +360,12 @@ function App() {
                   //   return //(<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
                   // })
                 }
-
               </Paper>
             </div>
           </Grid>
-      </Grid>
-      </Fade>
-      
+        </Grid>
+      {/* </Fade> */}
+
     </div>
   );
 }

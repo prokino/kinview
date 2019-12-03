@@ -113,20 +113,20 @@
 }
 .wrap {
   display: flex;
-  place-items: flex-end;
+  place-items: unset;
   /* white-space: nowrap; */
 }
 
 .left {
-  background: red;
+  /* background: red; */
   float:left;
+  z-index:1;
 }
 
 .right {
-  background: green;
   flex:none;
   flex-basis: 80%;
-  float:right;
+  float:left;
   overflow-x: auto;
 }
 
@@ -136,18 +136,24 @@
 {
   display: 'inline-block';
   float:left;  
-  background:Red; 
-  width:25%; 
+  /* background:Red;  */
+  width:20%; 
 }
 .mainBoxVisible
 {
-  float:right; 
-  background:blue; 
-  width:75%; 
-  height:280px; 
+  float:left;
+  padding-left: 3px; 
+  /* background:blue;  */
+  width:79%; 
 }
 
 .invisible
 {
   display: 'none';
+}
+.numberingselect
+{
+  bottom:0;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }

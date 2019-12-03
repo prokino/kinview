@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
     root: {
       // height: 216,
       flexGrow: 1,
-      maxWidth: 200,
       position: 'relative',
       marginLeft: -15
     }

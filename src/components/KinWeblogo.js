@@ -26,14 +26,15 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
     },
     card: {
-      width: 200,
-      margin:5,
+      margin:-5,
+      padding: 10
      // position: 'fixed'
     },
 
@@ -234,8 +235,7 @@ function KinWeblogo(props)
           {/* <Typography gutterBottom variant="h6" component="h2">
             Selections
           </Typography> */}
-      <CardActionArea>
-      <CardContent>
+
       
       <StyledFormGroup row className={classes.formGroupRow}>
 
@@ -269,6 +269,7 @@ function KinWeblogo(props)
         />  
       <NativeSelect
       size="small"
+      className="numberingselect"
                 value={selectedNumberingValue}
                 onChange={numberingChanged}
                 onClick={e => { e.stopPropagation(); }}
@@ -283,10 +284,7 @@ function KinWeblogo(props)
 
       
       </StyledFormGroup>
-      </CardContent>
-      </CardActionArea>
-      
-    </Card>
+ </Card>
     </div>
     <div className="right">
   <Box>
