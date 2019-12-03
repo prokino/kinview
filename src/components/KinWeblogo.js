@@ -25,15 +25,18 @@ import { Card } from '@material-ui/core';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
     },
     card: {
-      width: 235,
-      margin:5
+      width: 200,
+      margin:5,
+     // position: 'fixed'
     },
+
     button: {
       margin: theme.spacing(1),
     },
@@ -215,23 +218,57 @@ function KinWeblogo(props)
      //<div className={classes.root}>
      <div>
      <ExpansionPanel square defaultExpanded>
-       <ExpansionPanelSummary
-         //expandIcon={<ExpandMoreIcon />}
-         aria-controls="panel1d-content" id="panel1d-header">
+
+       <ExpansionPanelDetails className={classes.details}>
+         {/* <div className={classes.leftside}>
+              <FormControl className={classes.formControl}>
+              <InputLabel shrink htmlFor="numbering-native-label-placeholder">
+                Alignments
+              </InputLabel>
+          
+            </FormControl>
+         </div> */}
+<div className="wrap">
+    <div className="left">
     <Card className={classes.card}>
           {/* <Typography gutterBottom variant="h6" component="h2">
             Selections
           </Typography> */}
       <CardActionArea>
       <CardContent>
-      </CardContent>
+      
       <StyledFormGroup row className={classes.formGroupRow}>
-<DragHandle />
-<DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
-<Button variant="outlined" color="secondary" className={classes.button}>
-        {props.value.value}
-      </Button>
+
+      <Grid item xs={12}>
+        <Grid container justify="space-evenly" spacing={1}>
+            <Grid key="draghandle" item>
+            <DragHandle />
+            
+            </Grid>
+            <Grid key="itemname" item>
+            <Typography>{props.value.value}</Typography>
+            </Grid>
+            <Grid key="deleteicon" item>
+            <DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
+            </Grid>
+        
+        </Grid>
+      </Grid>
+
+
+<FormControlLabel
+          control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
+          label="Residue"
+        />
+        <FormControlLabel 
+          control={<Switch size="small" id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
+          label="Mutation"
+        />
+        <FormControlLabel
+          control={ <Switch size="small" id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
+        />  
       <NativeSelect
+      size="small"
                 value={selectedNumberingValue}
                 onChange={numberingChanged}
                 onClick={e => { e.stopPropagation(); }}
@@ -242,37 +279,17 @@ function KinWeblogo(props)
               >
                 {/* {renderOptions(props.numbers)} */}
                 {props.numbers? props.numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) }):""}
-              
-
               </NativeSelect>
 
-        <FormControlLabel
-          control={<Switch id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
-          label="Residue"
-        />
-        <FormControlLabel
-          control={<Switch id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
-          label="Mutation"
-        />
-        <FormControlLabel
-          control={ <Switch id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
-        />
+      
       </StyledFormGroup>
+      </CardContent>
       </CardActionArea>
+      
     </Card>
-
-         
-       </ExpansionPanelSummary>
-       <ExpansionPanelDetails className={classes.details}>
-         {/* <div className={classes.leftside}>
-              <FormControl className={classes.formControl}>
-              <InputLabel shrink htmlFor="numbering-native-label-placeholder">
-                Alignments
-              </InputLabel>
-          
-            </FormControl>
-         </div> */}
-         <Box>
+    </div>
+    <div className="right">
+  <Box>
           <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
           
          </Box>
@@ -285,6 +302,9 @@ function KinWeblogo(props)
          <div className={numberingclass}>
               {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} className="v">{n}</span>):""}
               </div>
+  </div>
+</div>
+         
      
          
       

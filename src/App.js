@@ -31,7 +31,9 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     // flexGrow: 1,
-    marginLeft: 30,
+    marginLeft: 5,
+    // maxWidth: "100% !important",
+    // overflow: "hidden"
   },
   card: {
     width: 235,
@@ -48,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   mainBoxVisible:
   {
     //marginLeft: 200,
-    display: 'inline-block'
+    display: 'contents'
   },
   mainBoxInvisible:
   {
@@ -300,7 +302,7 @@ function App() {
   return (
     <div className={classes.root}>
           <FormControlLabel label="Menu" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
-      <Fade in="switchShowTreeChecked">
+      <Fade in={switchShowTreeChecked}>
 <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid item key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible}>
@@ -314,7 +316,7 @@ function App() {
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <br />
         <FormControlLabel label="Height" labelPlacement="start" control={
-        <div style={{width:100}}>
+        <div style={{width:"100px"}}>
             <Slider
             onChange={heightChanged}
             defaultValue={height}
