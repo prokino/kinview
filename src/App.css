@@ -127,6 +127,27 @@
   flex:none;
   flex-basis: 80%;
   float:right;
-  /* height: 100vh;  */
   overflow-x: auto;
+}
+
+/* App.js */
+
+.treevisible
+{
+  display: 'inline-block';
+  float:left;  
+  background:Red; 
+  width:25%; 
+}
+.mainBoxVisible
+{
+  float:right; 
+  background:blue; 
+  width:75%; 
+  height:280px; 
+}
+
+.invisible
+{
+  display: 'none';
 }

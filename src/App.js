@@ -47,26 +47,6 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     // zIndex:'top'
   },
-  mainBoxVisible:
-  {
-    //marginLeft: 200,
-    display: 'contents'
-  },
-  mainBoxInvisible:
-  {
-    // marginLeft: 215,
-    display: 'none'
-  },
-  treeVisible:
-  {
-    display: 'inline-block',
-    //marginRight: 40
-  },
-  treeInvisible:
-  {
-    //marginLeft: 0,
-    display: 'none'
-  },
   nowrap:
   {
     flexWrap: "nowrap !important",
@@ -303,10 +283,9 @@ function App() {
     <div className={classes.root}>
           <FormControlLabel label="Menu" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
       <Fade in={switchShowTreeChecked}>
-<Grid item xs={12}>
-        <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
-          <Grid item key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible}>
-          <Card className={`${classes.card} ${selectedNodes.length > 0 ? classes.treeVisible : classes.treeInvisible}`}>
+<Grid item xs={12} className="parentgrid" >
+          <Grid item key="leftTree" className={switchShowTreeChecked ? "treevisible" : "invisible"}>
+          <Card className={`${classes.card} ${selectedNodes.length > 0 ? "treevisible" : "invisible"}`}>
       <CardActionArea>
 
         <CardContent>
@@ -378,7 +357,7 @@ function App() {
       
           </Grid>
           <Grid item key="rightContents">
-            <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
+            <div className={selectedNodes.length > 0 ? "mainBoxVisible" : "invisible"}>
 
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
@@ -392,7 +371,6 @@ function App() {
               </Paper>
             </div>
           </Grid>
-        </Grid>
       </Grid>
       </Fade>
       
