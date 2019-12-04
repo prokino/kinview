@@ -21,22 +21,11 @@ import { withStyles } from '@material-ui/core/styles';
 import {sortableHandle} from 'react-sortable-hoc';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { Card } from '@material-ui/core';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
       width: '100%',
     },
-    card: {
-      width: 200,
-      margin:5,
-     // position: 'fixed'
-    },
-
     button: {
       margin: theme.spacing(1),
     },
@@ -221,6 +210,9 @@ function KinWeblogo(props)
      //<div className={classes.root}>
      <div>
      <ExpansionPanel square defaultExpanded>
+       <ExpansionPanelSummary
+         //expandIcon={<ExpandMoreIcon />}
+         aria-controls="panel1d-content" id="panel1d-header">
 
 <StyledFormGroup row className={classes.formGroupRow}>
 <DragHandle />
@@ -229,7 +221,6 @@ function KinWeblogo(props)
         {props.value.value}
       </Button>
       <NativeSelect
-      size="small"
                 value={selectedNumberingValue}
                 onChange={numberingChanged}
                 onClick={e => { e.stopPropagation(); }}
@@ -240,6 +231,8 @@ function KinWeblogo(props)
               >
                 {/* {renderOptions(props.numbers)} */}
                 {props.numbers? props.numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) }):""}
+              
+
               </NativeSelect>
 
         <FormControlLabel
@@ -254,13 +247,18 @@ function KinWeblogo(props)
           control={ <Switch size="small" id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
         />
       </StyledFormGroup>
-      </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </div>
-    <div className="right">
-  <Box>
+         
+       </ExpansionPanelSummary>
+       <ExpansionPanelDetails className={classes.details}>
+         {/* <div className={classes.leftside}>
+              <FormControl className={classes.formControl}>
+              <InputLabel shrink htmlFor="numbering-native-label-placeholder">
+                Alignments
+              </InputLabel>
+          
+            </FormControl>
+         </div> */}
+         <Box>
           <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
           
          </Box>
@@ -273,9 +271,6 @@ function KinWeblogo(props)
          <div className={numberingclass}>
               {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} className="v">{n}</span>):""}
               </div>
-  </div>
-</div>
-         
      
          
       
