@@ -12,10 +12,11 @@ def classification_csv_to_json():
     jsonPath = 'src/data/classification.json'
     groups = []
     interested_rows = []
+    pk = None #the first line
     #Filter CSV file, so we will have distinct Group, Family, and Subfamily rows
     with open(csvPath) as f:
         csvreader = csv.DictReader(f)
-        next(csvreader) #ignore the first group, because we don't need it in the treeview
+        pk = next(csvreader) #ignore the first group for now, because we don't need it in the treeview hierarchy, we'll use it later
         for row in csvreader:
             if not any(r['Group'] == row['Group'] and r['Family'] == row['Family'] and r['Subfamily'] == row['Subfamily'] for r in interested_rows): 
                 interested_rows.append(row)
@@ -63,6 +64,18 @@ def classification_csv_to_json():
                                     #'HasAlignment': row['HasAlignment'] 
                                     })
     
+    # add one row for all to the beginning of the file
+    groups.insert(0, {
+        "protein":pk['Protein'],
+        "path": pk['WebLogo'],
+        "nodes": [],
+        "value": "PK",
+        "id": "id@PK",
+        "members": pk['Members'].split(";")
+        
+    })
+       
+    
     with open(jsonPath, 'w') as f:
         f.write(json.dumps(groups, indent=4))
         print("Classification {0} created.".format(jsonPath))
@@ -109,5 +122,5 @@ def numbering_csv_to_json():
     print("Numbering {0} created.".format(jsonPath))
 
 if __name__ == "__main__":
-    #classification_csv_to_json()
-    numbering_csv_to_json()
+    classification_csv_to_json()
+    #numbering_csv_to_json()

@@ -145,7 +145,10 @@ const ExpansionPanelDetails = withStyles(theme => ({
 
 const StyledFormGroup = withStyles(theme => ({
   root: {
-    display:'block',
+    position:'sticky',
+    left:0,
+    display: 'flex',
+    placeItems: 'center'
   },
   
 }))(FormGroup);
@@ -219,54 +222,12 @@ function KinWeblogo(props)
      <div>
      <ExpansionPanel square defaultExpanded>
 
-       <ExpansionPanelDetails className={classes.details}>
-         {/* <div className={classes.leftside}>
-              <FormControl className={classes.formControl}>
-              <InputLabel shrink htmlFor="numbering-native-label-placeholder">
-                Alignments
-              </InputLabel>
-          
-            </FormControl>
-         </div> */}
-<div className="wrap">
-    <div className="left">
-    <Card className={classes.card}>
-          {/* <Typography gutterBottom variant="h6" component="h2">
-            Selections
-          </Typography> */}
-      <CardActionArea>
-      <CardContent>
-      
-      <StyledFormGroup row className={classes.formGroupRow}>
-
-      <Grid item xs={12}>
-        <Grid container justify="space-evenly" spacing={1}>
-            <Grid key="draghandle" item>
-            <DragHandle />
-            
-            </Grid>
-            <Grid key="itemname" item>
-            <Typography>{props.value.value}</Typography>
-            </Grid>
-            <Grid key="deleteicon" item>
-            <DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
-            </Grid>
-        
-        </Grid>
-      </Grid>
-
-
-<FormControlLabel
-          control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
-          label="Residue"
-        />
-        <FormControlLabel 
-          control={<Switch size="small" id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
-          label="Mutation"
-        />
-        <FormControlLabel
-          control={ <Switch size="small" id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
-        />  
+<StyledFormGroup row className={classes.formGroupRow}>
+<DragHandle />
+<DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
+<Button  size="small" variant="outlined" color="primary" className={classes.button}>
+        {props.value.value}
+      </Button>
       <NativeSelect
       size="small"
                 value={selectedNumberingValue}
@@ -281,7 +242,17 @@ function KinWeblogo(props)
                 {props.numbers? props.numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) }):""}
               </NativeSelect>
 
-      
+        <FormControlLabel
+          control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
+          label="Residue"
+        />
+        <FormControlLabel
+          control={<Switch size="small" id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
+          label="Mutation"
+        />
+        <FormControlLabel
+          control={ <Switch size="small" id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
+        />
       </StyledFormGroup>
       </CardContent>
       </CardActionArea>

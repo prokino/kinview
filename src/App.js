@@ -97,15 +97,12 @@ function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
-
   const [nodes,setNodes] = React.useState(tree.map((n)=>{n.checked=false;return n;}));
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
-
-
 
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
@@ -150,7 +147,6 @@ function App() {
         {selectedNodes.map((item, index) => (
           <SortableItem key={`item-${item.id}`} index={index} value={item} />
           //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
-
         ))}
       </ul>
     );
