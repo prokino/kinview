@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kinview/precache-manifest.e09c9a413b402e61dd361e9e3c582484.js"
+  "/kinview/precache-manifest.fd5a28ca8747bc0bc50f924cba4f0892.js"
 );
 
 self.addEventListener('message', (event) => {
