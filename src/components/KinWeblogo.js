@@ -259,14 +259,14 @@ function KinWeblogo(props)
             </FormControl>
          </div> */}
          <Box>
-          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
+          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
           
          </Box>
          <Box className={mutationChecked ? classes.visible: classes.hidden}>
-           <img id={`mutation-${props.value.id}`}  src={`mut_freq/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
+           <img id={`mutation-${props.value.id}`}  src={`mut_freq/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <Box className={ptmChecked ? classes.visible: classes.hidden}>
-           <img id={`ptm-${props.value.id}`}  src={`ptm/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4875"}  />
+           <img id={`ptm-${props.value.id}`}  src={`ptm/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <div className={numberingclass}>
               {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} className="v">{n}</span>):""}
