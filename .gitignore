@@ -7,3 +7,4 @@ helpers/__pycache__/
 .vscode/.ropeproject
 build/*
 dist/*
+*.7z
