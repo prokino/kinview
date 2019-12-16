@@ -1,345 +1,555 @@
 [
     {
         "protein": "",
-        "path": "PK_AGC.png",
-        "nodes": [
-            {
-                "protein": "",
-                "path": "PK_AGC_Akt.png",
-                "nodes": [],
-                "value": "Akt",
-                "members": [
-                    "PKA",
-                    "AKT1",
-                    "AKT2",
-                    "AKT3"
-                ],
-                "id": "id243@Akt"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_DMPK.png",
-                "nodes": [
-                    {
-                        "path": "PK_AGC_DMPK_GEK.png",
-                        "value": "GEK",
-                        "id": "id486@GEK",
-                        "members": [
-                            "PKA",
-                            "DMPK1",
-                            "DMPK2",
-                            "MRCKa",
-                            "MRCKb"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_DMPK_ROCK.png",
-                        "value": "ROCK",
-                        "id": "id487@ROCK",
-                        "members": [
-                            "PKA",
-                            "ROCK1",
-                            "ROCK2"
-                        ]
-                    }
-                ],
-                "value": "DMPK",
-                "members": [
-                    "PKA",
-                    "CRIK",
-                    "DMPK1",
-                    "DMPK2",
-                    "MRCKa",
-                    "MRCKb",
-                    "ROCK1",
-                    "ROCK2"
-                ],
-                "id": "id244@DMPK"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_GRK.png",
-                "nodes": [
-                    {
-                        "path": "PK_AGC_GRK_BARK.png",
-                        "value": "BARK",
-                        "id": "id489@BARK",
-                        "members": [
-                            "PKA",
-                            "BARK1",
-                            "BARK2"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_GRK_GRK.png",
-                        "value": "GRK",
-                        "id": "id490@GRK",
-                        "members": [
-                            "PKA",
-                            "GPRK4",
-                            "GPRK5",
-                            "GPRK6",
-                            "GPRK7",
-                            "RHOK"
-                        ]
-                    }
-                ],
-                "value": "GRK",
-                "members": [
-                    "PKA",
-                    "BARK1",
-                    "BARK2",
-                    "GPRK4",
-                    "GPRK5",
-                    "GPRK6",
-                    "GPRK7",
-                    "RHOK"
-                ],
-                "id": "id247@GRK"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_MAST.png",
-                "nodes": [],
-                "value": "MAST",
-                "members": [
-                    "PKA",
-                    "MAST1",
-                    "MAST2",
-                    "MAST3",
-                    "MAST4",
-                    "MASTL"
-                ],
-                "id": "id250@MAST"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_NDR.png",
-                "nodes": [],
-                "value": "NDR",
-                "members": [
-                    "PKA",
-                    "LATS1",
-                    "LATS2",
-                    "NDR1",
-                    "NDR2"
-                ],
-                "id": "id251@NDR"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_PDK1.png",
-                "nodes": [],
-                "value": "PDK1",
-                "members": [
-                    "PKA",
-                    "PDK1"
-                ],
-                "id": "id252@PDK1"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_PKA.png",
-                "nodes": [],
-                "value": "PKA",
-                "members": [
-                    "PKA",
-                    "PKACa",
-                    "PKACb",
-                    "PKACg",
-                    "PRKX",
-                    "PRKY"
-                ],
-                "id": "id253@PKA"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_PKC.png",
-                "nodes": [
-                    {
-                        "path": "PK_AGC_PKC_PKCa.png",
-                        "value": "PKCa",
-                        "id": "id496@PKCa",
-                        "members": [
-                            "PKA",
-                            "PKCa",
-                            "PKCb",
-                            "PKCg"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_PKC_PKCd.png",
-                        "value": "PKCd",
-                        "id": "id497@PKCd",
-                        "members": [
-                            "PKA",
-                            "PKCd",
-                            "PKCt"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_PKC_PKCh.png",
-                        "value": "PKCh",
-                        "id": "id498@PKCh",
-                        "members": [
-                            "PKA",
-                            "PKCe",
-                            "PKCh"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_PKC_PKCi.png",
-                        "value": "PKCi",
-                        "id": "id499@PKCi",
-                        "members": [
-                            "PKA",
-                            "PKCi",
-                            "PKCz"
-                        ]
-                    }
-                ],
-                "value": "PKC",
-                "members": [
-                    "PKA",
-                    "PKCa",
-                    "PKCb",
-                    "PKCd",
-                    "PKCe",
-                    "PKCg",
-                    "PKCh",
-                    "PKCi",
-                    "PKCt",
-                    "PKCz"
-                ],
-                "id": "id254@PKC"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_PKG.png",
-                "nodes": [],
-                "value": "PKG",
-                "members": [
-                    "PKA",
-                    "PKG1",
-                    "PKG2"
-                ],
-                "id": "id259@PKG"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_PKN.png",
-                "nodes": [],
-                "value": "PKN",
-                "members": [
-                    "PKA",
-                    "PKN1",
-                    "PKN2",
-                    "PKN3"
-                ],
-                "id": "id260@PKN"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_RSK.png",
-                "nodes": [
-                    {
-                        "path": "PK_AGC_RSK_MSK.png",
-                        "value": "MSK",
-                        "id": "id503@MSK",
-                        "members": [
-                            "PKA",
-                            "MSK1",
-                            "MSK2"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_RSK_RSKp70.png",
-                        "value": "RSKp70",
-                        "id": "id504@RSKp70",
-                        "members": [
-                            "PKA",
-                            "p70S6K",
-                            "p70S6Kb"
-                        ]
-                    },
-                    {
-                        "path": "PK_AGC_RSK_RSKp90.png",
-                        "value": "RSKp90",
-                        "id": "id505@RSKp90",
-                        "members": [
-                            "PKA",
-                            "RSK1",
-                            "RSK2",
-                            "RSK3",
-                            "RSK4"
-                        ]
-                    }
-                ],
-                "value": "RSK",
-                "members": [
-                    "PKA",
-                    "MSK1",
-                    "MSK2",
-                    "RSK1",
-                    "RSK2",
-                    "RSK3",
-                    "RSK4",
-                    "p70S6K",
-                    "p70S6Kb"
-                ],
-                "id": "id261@RSK"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_RSKL.png",
-                "nodes": [],
-                "value": "RSKL",
-                "members": [
-                    "PKA",
-                    "RSKL1",
-                    "RSKL2"
-                ],
-                "id": "id265@RSKL"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_RSKR.png",
-                "nodes": [],
-                "value": "RSKR",
-                "members": [
-                    "PKA",
-                    "SgK494"
-                ],
-                "id": "id266@RSKR"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_SGK.png",
-                "nodes": [],
-                "value": "SGK",
-                "members": [
-                    "PKA",
-                    "SGK1",
-                    "SGK2",
-                    "SGK3"
-                ],
-                "id": "id267@SGK"
-            },
-            {
-                "protein": "",
-                "path": "PK_AGC_YANK.png",
-                "nodes": [],
-                "value": "YANK",
-                "members": [
-                    "PKA",
-                    "YANK1",
-                    "YANK2",
-                    "YANK3"
-                ],
-                "id": "id268@YANK"
-            }
-        ],
+        "path": "PK.png",
+        "nodes": [],
+        "value": "PK",
+        "id": "id@PK",
+        "members": [
+            "PKA",
+            "AAK1",
+            "ABL1",
+            "ABL2",
+            "ABR",
+            "ACK",
+            "ACTR2",
+            "ACTR2B",
+            "ADCK1",
+            "ADCK2",
+            "ADCK3",
+            "ADCK4",
+            "ADCK5",
+            "AKT1",
+            "AKT2",
+            "AKT3",
+            "ALK",
+            "ALK1",
+            "ALK2",
+            "ALK4",
+            "ALK7",
+            "AMPKa1",
+            "AMPKa2",
+            "ANKRD3",
+            "ANPa",
+            "ANPb",
+            "ARAF",
+            "ATM",
+            "ATR",
+            "AXL",
+            "AlphaK1",
+            "AlphaK2",
+            "AlphaK3",
+            "AurA",
+            "AurB",
+            "AurC",
+            "BARK1",
+            "BARK2",
+            "BAZ1A",
+            "BAZ1B",
+            "BCKDK",
+            "BCR",
+            "BIKE",
+            "BLK",
+            "BLVRA",
+            "BMPR1A",
+            "BMPR1B",
+            "BMPR2",
+            "BMX",
+            "BRAF",
+            "BRD2",
+            "BRD3",
+            "BRD4",
+            "BRDT",
+            "BRK",
+            "BRSK1",
+            "BRSK2",
+            "BTK",
+            "BUB1",
+            "BUBR1",
+            "CASK",
+            "CCK4",
+            "CCRK",
+            "CDC2",
+            "CDC7",
+            "CDK10",
+            "CDK11",
+            "CDK2",
+            "CDK3",
+            "CDK4",
+            "CDK5",
+            "CDK6",
+            "CDK7",
+            "CDK8",
+            "CDK9",
+            "CDKL1",
+            "CDKL2",
+            "CDKL3",
+            "CDKL4",
+            "CDKL5",
+            "CHED",
+            "CHK1",
+            "CHK2",
+            "CK1a",
+            "CK1a2",
+            "CK1d",
+            "CK1e",
+            "CK1g1",
+            "CK1g2",
+            "CK1g3",
+            "CK2a1",
+            "CK2a2",
+            "CLIK1",
+            "CLIK1L",
+            "CLK1",
+            "CLK2",
+            "CLK3",
+            "CLK4",
+            "COT",
+            "CRIK",
+            "CRK7",
+            "CSK",
+            "CTK",
+            "CYGD",
+            "CYGF",
+            "CaMK1a",
+            "CaMK1b",
+            "CaMK1d",
+            "CaMK1g",
+            "CaMK2a",
+            "CaMK2b",
+            "CaMK2d",
+            "CaMK2g",
+            "CaMK4",
+            "CaMKK1",
+            "CaMKK2",
+            "ChaK1",
+            "ChaK2",
+            "Col4A3BP",
+            "DAPK1",
+            "DAPK2",
+            "DAPK3",
+            "DCAMKL1",
+            "DCAMKL2",
+            "DCAMKL3",
+            "DDR1",
+            "DDR2",
+            "DLK",
+            "DMPK1",
+            "DMPK2",
+            "DNAPK",
+            "DRAK1",
+            "DRAK2",
+            "DYRK1A",
+            "DYRK1B",
+            "DYRK2",
+            "DYRK3",
+            "DYRK4",
+            "EGFR",
+            "EphA1",
+            "EphA10",
+            "EphA2",
+            "EphA3",
+            "EphA4",
+            "EphA5",
+            "EphA6",
+            "EphA7",
+            "EphA8",
+            "EphB1",
+            "EphB2",
+            "EphB3",
+            "EphB4",
+            "EphB6",
+            "ErbB2",
+            "ErbB3",
+            "ErbB4",
+            "Erk1",
+            "Erk2",
+            "Erk3",
+            "Erk4",
+            "Erk5",
+            "Erk7",
+            "FAK",
+            "FASTK",
+            "FER",
+            "FES",
+            "FGFR1",
+            "FGFR2",
+            "FGFR3",
+            "FGFR4",
+            "FGR",
+            "FLT1",
+            "FLT3",
+            "FLT4",
+            "FMS",
+            "FRAP",
+            "FRK",
+            "FYN",
+            "Fused",
+            "G11",
+            "GAK",
+            "GCK",
+            "GCN2",
+            "GCN2_b",
+            "GPRK4",
+            "GPRK5",
+            "GPRK6",
+            "GPRK7",
+            "GSK3A",
+            "GSK3B",
+            "GTF2F1",
+            "HCK",
+            "HGK",
+            "HH498",
+            "HIPK1",
+            "HIPK2",
+            "HIPK3",
+            "HIPK4",
+            "HPK1",
+            "HRI",
+            "HSER",
+            "HUNK",
+            "Haspin",
+            "ICK",
+            "IGF1R",
+            "IKKa",
+            "IKKb",
+            "IKKe",
+            "ILK",
+            "INSR",
+            "IRAK1",
+            "IRAK2",
+            "IRAK3",
+            "IRAK4",
+            "IRE1",
+            "IRE2",
+            "IRR",
+            "ITK",
+            "JAK1",
+            "JAK1_b",
+            "JAK2",
+            "JAK2_b",
+            "JAK3",
+            "JAK3_b",
+            "JNK1",
+            "JNK2",
+            "JNK3",
+            "KDR",
+            "KHS1",
+            "KHS2",
+            "KIS",
+            "KIT",
+            "KSR1",
+            "KSR2",
+            "LATS1",
+            "LATS2",
+            "LCK",
+            "LIMK1",
+            "LIMK2",
+            "LKB1",
+            "LMR1",
+            "LMR2",
+            "LMR3",
+            "LOK",
+            "LRRK1",
+            "LRRK2",
+            "LTK",
+            "LYN",
+            "LZK",
+            "MAK",
+            "MAP2K1",
+            "MAP2K2",
+            "MAP2K3",
+            "MAP2K4",
+            "MAP2K5",
+            "MAP2K6",
+            "MAP2K7",
+            "MAP3K1",
+            "MAP3K19",
+            "MAP3K2",
+            "MAP3K3",
+            "MAP3K4",
+            "MAP3K5",
+            "MAP3K6",
+            "MAP3K7",
+            "MAPKAPK2",
+            "MAPKAPK3",
+            "MAPKAPK5",
+            "MARK1",
+            "MARK2",
+            "MARK3",
+            "MARK4",
+            "MAST1",
+            "MAST2",
+            "MAST3",
+            "MAST4",
+            "MASTL",
+            "MELK",
+            "MER",
+            "MET",
+            "MINK",
+            "MISR2",
+            "MLK1",
+            "MLK2",
+            "MLK3",
+            "MLK4",
+            "MLKL",
+            "MNK1",
+            "MNK2",
+            "MOK",
+            "MOS",
+            "MPSK1",
+            "MRCKa",
+            "MRCKb",
+            "MSK1",
+            "MSK1_b",
+            "MSK2",
+            "MSK2_b",
+            "MSSK1",
+            "MST1",
+            "MST2",
+            "MST3",
+            "MST4",
+            "MUSK",
+            "MYO3A",
+            "MYO3B",
+            "MYT1",
+            "NDR1",
+            "NDR2",
+            "NEK1",
+            "NEK10",
+            "NEK11",
+            "NEK2",
+            "NEK3",
+            "NEK4",
+            "NEK5",
+            "NEK6",
+            "NEK7",
+            "NEK8",
+            "NEK9",
+            "NIK",
+            "NIM1",
+            "NLK",
+            "NRBP1",
+            "NRBP2",
+            "NRK",
+            "NuaK1",
+            "NuaK2",
+            "OSR1",
+            "Obscn",
+            "Obscn_b",
+            "PAK1",
+            "PAK2",
+            "PAK3",
+            "PAK4",
+            "PAK5",
+            "PAK6",
+            "PAN3",
+            "PASK",
+            "PBK",
+            "PCTAIRE1",
+            "PCTAIRE2",
+            "PCTAIRE3",
+            "PDGFRa",
+            "PDGFRb",
+            "PDHK1",
+            "PDHK2",
+            "PDHK3",
+            "PDHK4",
+            "PDK1",
+            "PEK",
+            "PFTAIRE1",
+            "PFTAIRE2",
+            "PHKg1",
+            "PHKg2",
+            "PIK3R4",
+            "PIM1",
+            "PIM2",
+            "PIM3",
+            "PINK1",
+            "PITSLRE",
+            "PKACa",
+            "PKACb",
+            "PKACg",
+            "PKCa",
+            "PKCb",
+            "PKCd",
+            "PKCe",
+            "PKCg",
+            "PKCh",
+            "PKCi",
+            "PKCt",
+            "PKCz",
+            "PKD1",
+            "PKD2",
+            "PKD3",
+            "PKG1",
+            "PKG2",
+            "PKN1",
+            "PKN2",
+            "PKN3",
+            "PKR",
+            "PLK1",
+            "PLK2",
+            "PLK3",
+            "PLK4",
+            "PRKX",
+            "PRKY",
+            "PRP4",
+            "PRPK",
+            "PSKH1",
+            "PSKH2",
+            "PYK2",
+            "QIK",
+            "QSK",
+            "RAF1",
+            "RET",
+            "RHOK",
+            "RIOK1",
+            "RIOK2",
+            "RIOK3",
+            "RIPK1",
+            "RIPK2",
+            "RIPK3",
+            "RNAseL",
+            "ROCK1",
+            "ROCK2",
+            "RON",
+            "ROR1",
+            "ROR2",
+            "ROS",
+            "RSK1",
+            "RSK1_b",
+            "RSK2",
+            "RSK2_b",
+            "RSK3",
+            "RSK3_b",
+            "RSK4",
+            "RSK4_b",
+            "RSKL1",
+            "RSKL2",
+            "RYK",
+            "SBK",
+            "SCYL1",
+            "SCYL2",
+            "SCYL3",
+            "SGK1",
+            "SGK2",
+            "SGK3",
+            "SIK",
+            "SLK",
+            "SMG1",
+            "SNRK",
+            "SPEG",
+            "SPEG_b",
+            "SRC",
+            "SRM",
+            "SRPK1",
+            "SRPK2",
+            "SSTK",
+            "STK33",
+            "STLK3",
+            "STLK5",
+            "STLK6",
+            "SYK",
+            "SgK069",
+            "SgK071",
+            "SgK085",
+            "SgK110",
+            "SgK196",
+            "SgK223",
+            "SgK269",
+            "SgK288",
+            "SgK307",
+            "SgK396",
+            "SgK424",
+            "SgK493",
+            "SgK494",
+            "SgK495",
+            "SgK496",
+            "Slob",
+            "SuRTK106",
+            "TAF1",
+            "TAF1L",
+            "TAK1",
+            "TAO1",
+            "TAO2",
+            "TAO3",
+            "TBCK",
+            "TBK1",
+            "TEC",
+            "TESK1",
+            "TESK2",
+            "TGFbR1",
+            "TGFbR2",
+            "TIE1",
+            "TIE2",
+            "TIF1D",
+            "TIF1a",
+            "TIF1b",
+            "TIF1g",
+            "TLK1",
+            "TLK2",
+            "TNIK",
+            "TNK1",
+            "TRKA",
+            "TRKB",
+            "TRKC",
+            "TRRAP",
+            "TSSK1",
+            "TSSK2",
+            "TSSK3",
+            "TSSK4",
+            "TTBK1",
+            "TTBK2",
+            "TTK",
+            "TTN",
+            "TXK",
+            "TYK2",
+            "TYK2_b",
+            "TYRO3",
+            "Trad",
+            "Trb1",
+            "Trb2",
+            "Trb3",
+            "Trio",
+            "ULK1",
+            "ULK2",
+            "ULK3",
+            "ULK4",
+            "VACAMKL",
+            "VRK1",
+            "VRK2",
+            "VRK3",
+            "Wee1",
+            "Wee1B",
+            "Wnk1",
+            "Wnk2",
+            "Wnk3",
+            "Wnk4",
+            "YANK1",
+            "YANK2",
+            "YANK3",
+            "YES",
+            "YSK1",
+            "ZAK",
+            "ZAP70",
+            "caMLCK",
+            "eEF2K",
+            "p38a",
+            "p38b",
+            "p38d",
+            "p38g",
+            "p70S6K",
+            "p70S6Kb",
+            "skMLCK",
+            "smMLCK"
+        ]
+    },
+    {
+        "id": "id1@AGC",
         "value": "AGC",
+        "protein": "",
+        "path": "PK_AGC.png",
         "members": [
             "PKA",
             "AKT1",
@@ -406,466 +616,349 @@
             "p70S6K",
             "p70S6Kb"
         ],
-        "id": "id1@AGC"
-    },
-    {
-        "protein": "",
-        "path": "PK_CAMK.png",
         "nodes": [
             {
+                "id": "id243@Akt",
+                "value": "Akt",
                 "protein": "",
-                "path": "PK_CAMK_CAMK1.png",
-                "nodes": [],
-                "value": "CAMK1",
+                "path": "PK_AGC_Akt.png",
                 "members": [
                     "PKA",
-                    "CaMK1a",
-                    "CaMK1b",
-                    "CaMK1d",
-                    "CaMK1g",
-                    "CaMK4"
+                    "AKT1",
+                    "AKT2",
+                    "AKT3"
                 ],
-                "id": "id270@CAMK1"
+                "nodes": []
             },
             {
+                "id": "id244@DMPK",
+                "value": "DMPK",
                 "protein": "",
-                "path": "PK_CAMK_CAMK2.png",
-                "nodes": [],
-                "value": "CAMK2",
+                "path": "PK_AGC_DMPK.png",
                 "members": [
                     "PKA",
-                    "CaMK2a",
-                    "CaMK2b",
-                    "CaMK2d",
-                    "CaMK2g"
+                    "CRIK",
+                    "DMPK1",
+                    "DMPK2",
+                    "MRCKa",
+                    "MRCKb",
+                    "ROCK1",
+                    "ROCK2"
                 ],
-                "id": "id271@CAMK2"
-            },
-            {
-                "protein": "",
-                "path": "PK_CAMK_CAMKL.png",
                 "nodes": [
                     {
-                        "path": "PK_CAMK_CAMKL_AMPK.png",
-                        "value": "AMPK",
-                        "id": "id514@AMPK",
+                        "id": "id486@GEK",
+                        "value": "GEK",
                         "members": [
                             "PKA",
-                            "AMPKa1",
-                            "AMPKa2"
-                        ]
+                            "DMPK1",
+                            "DMPK2",
+                            "MRCKa",
+                            "MRCKb"
+                        ],
+                        "path": "PK_AGC_DMPK_GEK.png"
                     },
                     {
-                        "path": "PK_CAMK_CAMKL_BRSK.png",
-                        "value": "BRSK",
-                        "id": "id515@BRSK",
+                        "id": "id487@ROCK",
+                        "value": "ROCK",
                         "members": [
                             "PKA",
-                            "BRSK1",
-                            "BRSK2"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_CHK1.png",
-                        "value": "CHK1",
-                        "id": "id516@CHK1",
-                        "members": [
-                            "PKA",
-                            "CHK1"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_HUNK.png",
-                        "value": "HUNK",
-                        "id": "id517@HUNK",
-                        "members": [
-                            "PKA",
-                            "HUNK"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_LKB.png",
-                        "value": "LKB",
-                        "id": "id518@LKB",
-                        "members": [
-                            "PKA",
-                            "LKB1"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_MARK.png",
-                        "value": "MARK",
-                        "id": "id519@MARK",
-                        "members": [
-                            "PKA",
-                            "MARK1",
-                            "MARK2",
-                            "MARK3",
-                            "MARK4"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_MELK.png",
-                        "value": "MELK",
-                        "id": "id520@MELK",
-                        "members": [
-                            "PKA",
-                            "MELK"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_NIM1.png",
-                        "value": "NIM1",
-                        "id": "id521@NIM1",
-                        "members": [
-                            "PKA",
-                            "NIM1"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_NuaK.png",
-                        "value": "NuaK",
-                        "id": "id522@NuaK",
-                        "members": [
-                            "PKA",
-                            "NuaK1",
-                            "NuaK2"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_PASK.png",
-                        "value": "PASK",
-                        "id": "id523@PASK",
-                        "members": [
-                            "PKA",
-                            "PASK"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_QIK.png",
-                        "value": "QIK",
-                        "id": "id524@QIK",
-                        "members": [
-                            "PKA",
-                            "QIK",
-                            "QSK",
-                            "SIK"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_CAMKL_SNRK.png",
-                        "value": "SNRK",
-                        "id": "id525@SNRK",
-                        "members": [
-                            "PKA",
-                            "SNRK"
-                        ]
+                            "ROCK1",
+                            "ROCK2"
+                        ],
+                        "path": "PK_AGC_DMPK_ROCK.png"
                     }
-                ],
-                "value": "CAMKL",
-                "members": [
-                    "PKA",
-                    "AMPKa1",
-                    "AMPKa2",
-                    "BRSK1",
-                    "BRSK2",
-                    "CHK1",
-                    "HUNK",
-                    "LKB1",
-                    "MARK1",
-                    "MARK2",
-                    "MARK3",
-                    "MARK4",
-                    "MELK",
-                    "NIM1",
-                    "NuaK1",
-                    "NuaK2",
-                    "PASK",
-                    "QIK",
-                    "QSK",
-                    "SIK",
-                    "SNRK"
-                ],
-                "id": "id272@CAMKL"
+                ]
             },
             {
+                "id": "id247@GRK",
+                "value": "GRK",
                 "protein": "",
-                "path": "PK_CAMK_CASK.png",
-                "nodes": [],
-                "value": "CASK",
+                "path": "PK_AGC_GRK.png",
                 "members": [
                     "PKA",
-                    "CASK"
+                    "BARK1",
+                    "BARK2",
+                    "GPRK4",
+                    "GPRK5",
+                    "GPRK6",
+                    "GPRK7",
+                    "RHOK"
                 ],
-                "id": "id285@CASK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CAMK_DAPK.png",
-                "nodes": [],
-                "value": "DAPK",
-                "members": [
-                    "PKA",
-                    "DAPK1",
-                    "DAPK2",
-                    "DAPK3",
-                    "DRAK1",
-                    "DRAK2"
-                ],
-                "id": "id286@DAPK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CAMK_DCAMKL.png",
-                "nodes": [],
-                "value": "DCAMKL",
-                "members": [
-                    "PKA",
-                    "DCAMKL1",
-                    "DCAMKL2",
-                    "DCAMKL3"
-                ],
-                "id": "id287@DCAMKL"
-            },
-            {
-                "protein": "",
-                "path": "PK_CAMK_MAPKAPK.png",
                 "nodes": [
                     {
-                        "path": "PK_CAMK_MAPKAPK_MK2.png",
-                        "value": "MK2",
-                        "id": "id530@MK2",
+                        "id": "id489@BARK",
+                        "value": "BARK",
                         "members": [
                             "PKA",
-                            "MAPKAPK2",
-                            "MAPKAPK3"
-                        ]
+                            "BARK1",
+                            "BARK2"
+                        ],
+                        "path": "PK_AGC_GRK_BARK.png"
                     },
                     {
-                        "path": "PK_CAMK_MAPKAPK_MK5.png",
-                        "value": "MK5",
-                        "id": "id531@MK5",
+                        "id": "id490@GRK",
+                        "value": "GRK",
                         "members": [
                             "PKA",
-                            "MAPKAPK5"
-                        ]
-                    },
-                    {
-                        "path": "PK_CAMK_MAPKAPK_MNK.png",
-                        "value": "MNK",
-                        "id": "id532@MNK",
-                        "members": [
-                            "PKA",
-                            "MNK1",
-                            "MNK2"
-                        ]
+                            "GPRK4",
+                            "GPRK5",
+                            "GPRK6",
+                            "GPRK7",
+                            "RHOK"
+                        ],
+                        "path": "PK_AGC_GRK_GRK.png"
                     }
-                ],
-                "value": "MAPKAPK",
-                "members": [
-                    "PKA",
-                    "MAPKAPK2",
-                    "MAPKAPK3",
-                    "MAPKAPK5",
-                    "MNK1",
-                    "MNK2"
-                ],
-                "id": "id288@MAPKAPK"
+                ]
             },
             {
+                "id": "id250@MAST",
+                "value": "MAST",
                 "protein": "",
-                "path": "PK_CAMK_MLCK.png",
-                "nodes": [],
-                "value": "MLCK",
+                "path": "PK_AGC_MAST.png",
                 "members": [
                     "PKA",
-                    "SgK085",
-                    "TTN",
-                    "caMLCK",
-                    "skMLCK",
-                    "smMLCK"
+                    "MAST1",
+                    "MAST2",
+                    "MAST3",
+                    "MAST4",
+                    "MASTL"
                 ],
-                "id": "id292@MLCK"
+                "nodes": []
             },
             {
+                "id": "id251@NDR",
+                "value": "NDR",
                 "protein": "",
-                "path": "PK_CAMK_PHK.png",
-                "nodes": [],
-                "value": "PHK",
+                "path": "PK_AGC_NDR.png",
                 "members": [
                     "PKA",
-                    "PHKg1",
-                    "PHKg2"
+                    "LATS1",
+                    "LATS2",
+                    "NDR1",
+                    "NDR2"
                 ],
-                "id": "id293@PHK"
+                "nodes": []
             },
             {
+                "id": "id252@PDK1",
+                "value": "PDK1",
                 "protein": "",
-                "path": "PK_CAMK_PIM.png",
-                "nodes": [],
-                "value": "PIM",
+                "path": "PK_AGC_PDK1.png",
                 "members": [
                     "PKA",
-                    "PIM1",
-                    "PIM2",
-                    "PIM3"
+                    "PDK1"
                 ],
-                "id": "id294@PIM"
+                "nodes": []
             },
             {
+                "id": "id253@PKA",
+                "value": "PKA",
                 "protein": "",
-                "path": "PK_CAMK_PKD.png",
-                "nodes": [],
-                "value": "PKD",
+                "path": "PK_AGC_PKA.png",
                 "members": [
                     "PKA",
-                    "PKD1",
-                    "PKD2",
-                    "PKD3"
+                    "PKACa",
+                    "PKACb",
+                    "PKACg",
+                    "PRKX",
+                    "PRKY"
                 ],
-                "id": "id295@PKD"
+                "nodes": []
             },
             {
+                "id": "id254@PKC",
+                "value": "PKC",
                 "protein": "",
-                "path": "PK_CAMK_PSK.png",
-                "nodes": [],
-                "value": "PSK",
+                "path": "PK_AGC_PKC.png",
                 "members": [
                     "PKA",
-                    "PSKH1",
-                    "PSKH2"
+                    "PKCa",
+                    "PKCb",
+                    "PKCd",
+                    "PKCe",
+                    "PKCg",
+                    "PKCh",
+                    "PKCi",
+                    "PKCt",
+                    "PKCz"
                 ],
-                "id": "id296@PSK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CAMK_RAD53.png",
-                "nodes": [],
-                "value": "RAD53",
-                "members": [
-                    "PKA",
-                    "CHK2"
-                ],
-                "id": "id297@RAD53"
-            },
-            {
-                "protein": "",
-                "path": "PK_CAMK_RSKb.png",
                 "nodes": [
                     {
-                        "path": "PK_CAMK_RSKb_MSKb.png",
-                        "value": "MSKb",
-                        "id": "id540@MSKb",
+                        "id": "id496@PKCa",
+                        "value": "PKCa",
                         "members": [
                             "PKA",
-                            "MSK1_b",
-                            "MSK2_b"
-                        ]
+                            "PKCa",
+                            "PKCb",
+                            "PKCg"
+                        ],
+                        "path": "PK_AGC_PKC_PKCa.png"
                     },
                     {
-                        "path": "PK_CAMK_RSKb_RSKb.png",
-                        "value": "RSKb",
-                        "id": "id541@RSKb",
+                        "id": "id497@PKCd",
+                        "value": "PKCd",
                         "members": [
                             "PKA",
-                            "RSK1_b",
-                            "RSK2_b",
-                            "RSK3_b",
-                            "RSK4_b"
-                        ]
+                            "PKCd",
+                            "PKCt"
+                        ],
+                        "path": "PK_AGC_PKC_PKCd.png"
+                    },
+                    {
+                        "id": "id498@PKCh",
+                        "value": "PKCh",
+                        "members": [
+                            "PKA",
+                            "PKCe",
+                            "PKCh"
+                        ],
+                        "path": "PK_AGC_PKC_PKCh.png"
+                    },
+                    {
+                        "id": "id499@PKCi",
+                        "value": "PKCi",
+                        "members": [
+                            "PKA",
+                            "PKCi",
+                            "PKCz"
+                        ],
+                        "path": "PK_AGC_PKC_PKCi.png"
                     }
-                ],
-                "value": "RSKb",
-                "members": [
-                    "PKA",
-                    "MSK1_b",
-                    "MSK2_b",
-                    "RSK1_b",
-                    "RSK2_b",
-                    "RSK3_b",
-                    "RSK4_b"
-                ],
-                "id": "id298@RSKb"
+                ]
             },
             {
+                "id": "id259@PKG",
+                "value": "PKG",
                 "protein": "",
-                "path": "PK_CAMK_SgK495.png",
-                "nodes": [],
-                "value": "SgK495",
+                "path": "PK_AGC_PKG.png",
                 "members": [
                     "PKA",
-                    "SgK495"
+                    "PKG1",
+                    "PKG2"
                 ],
-                "id": "id301@SgK495"
+                "nodes": []
             },
             {
+                "id": "id260@PKN",
+                "value": "PKN",
                 "protein": "",
-                "path": "PK_CAMK_STK33.png",
-                "nodes": [],
-                "value": "STK33",
+                "path": "PK_AGC_PKN.png",
                 "members": [
                     "PKA",
-                    "STK33"
+                    "PKN1",
+                    "PKN2",
+                    "PKN3"
                 ],
-                "id": "id302@STK33"
+                "nodes": []
             },
             {
+                "id": "id261@RSK",
+                "value": "RSK",
                 "protein": "",
-                "path": "PK_CAMK_Trbl.png",
-                "nodes": [],
-                "value": "Trbl",
+                "path": "PK_AGC_RSK.png",
                 "members": [
                     "PKA",
-                    "Trb1",
-                    "Trb2",
-                    "Trb3"
+                    "MSK1",
+                    "MSK2",
+                    "RSK1",
+                    "RSK2",
+                    "RSK3",
+                    "RSK4",
+                    "p70S6K",
+                    "p70S6Kb"
                 ],
-                "id": "id303@Trbl"
+                "nodes": [
+                    {
+                        "id": "id503@MSK",
+                        "value": "MSK",
+                        "members": [
+                            "PKA",
+                            "MSK1",
+                            "MSK2"
+                        ],
+                        "path": "PK_AGC_RSK_MSK.png"
+                    },
+                    {
+                        "id": "id504@RSKp70",
+                        "value": "RSKp70",
+                        "members": [
+                            "PKA",
+                            "p70S6K",
+                            "p70S6Kb"
+                        ],
+                        "path": "PK_AGC_RSK_RSKp70.png"
+                    },
+                    {
+                        "id": "id505@RSKp90",
+                        "value": "RSKp90",
+                        "members": [
+                            "PKA",
+                            "RSK1",
+                            "RSK2",
+                            "RSK3",
+                            "RSK4"
+                        ],
+                        "path": "PK_AGC_RSK_RSKp90.png"
+                    }
+                ]
             },
             {
+                "id": "id265@RSKL",
+                "value": "RSKL",
                 "protein": "",
-                "path": "PK_CAMK_Trio.png",
-                "nodes": [],
-                "value": "Trio",
+                "path": "PK_AGC_RSKL.png",
                 "members": [
                     "PKA",
-                    "Obscn",
-                    "Obscn_b",
-                    "SPEG",
-                    "SPEG_b",
-                    "Trad",
-                    "Trio"
+                    "RSKL1",
+                    "RSKL2"
                 ],
-                "id": "id304@Trio"
+                "nodes": []
             },
             {
+                "id": "id266@RSKR",
+                "value": "RSKR",
                 "protein": "",
-                "path": "PK_CAMK_TSSK.png",
-                "nodes": [],
-                "value": "TSSK",
+                "path": "PK_AGC_RSKR.png",
                 "members": [
                     "PKA",
-                    "SSTK",
-                    "TSSK1",
-                    "TSSK2",
-                    "TSSK3",
-                    "TSSK4"
+                    "SgK494"
                 ],
-                "id": "id305@TSSK"
+                "nodes": []
             },
             {
+                "id": "id267@SGK",
+                "value": "SGK",
                 "protein": "",
-                "path": "PK_CAMK_CAMK-Unique.png",
-                "nodes": [],
-                "value": "CAMK-Unique",
+                "path": "PK_AGC_SGK.png",
                 "members": [
                     "PKA",
-                    "VACAMKL"
+                    "SGK1",
+                    "SGK2",
+                    "SGK3"
                 ],
-                "id": "id306@CAMK-Unique"
+                "nodes": []
+            },
+            {
+                "id": "id268@YANK",
+                "value": "YANK",
+                "protein": "",
+                "path": "PK_AGC_YANK.png",
+                "members": [
+                    "PKA",
+                    "YANK1",
+                    "YANK2",
+                    "YANK3"
+                ],
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id28@CAMK",
         "value": "CAMK",
+        "protein": "",
+        "path": "PK_CAMK.png",
         "members": [
             "PKA",
             "AMPKa1",
@@ -951,56 +1044,466 @@
             "skMLCK",
             "smMLCK"
         ],
-        "id": "id28@CAMK"
-    },
-    {
-        "protein": "",
-        "path": "PK_CK1.png",
         "nodes": [
             {
+                "id": "id270@CAMK1",
+                "value": "CAMK1",
                 "protein": "",
-                "path": "PK_CK1_CK1.png",
-                "nodes": [],
-                "value": "CK1",
+                "path": "PK_CAMK_CAMK1.png",
                 "members": [
                     "PKA",
-                    "CK1a",
-                    "CK1a2",
-                    "CK1d",
-                    "CK1e",
-                    "CK1g1",
-                    "CK1g2",
-                    "CK1g3"
+                    "CaMK1a",
+                    "CaMK1b",
+                    "CaMK1d",
+                    "CaMK1g",
+                    "CaMK4"
                 ],
-                "id": "id308@CK1"
+                "nodes": []
             },
             {
+                "id": "id271@CAMK2",
+                "value": "CAMK2",
                 "protein": "",
-                "path": "PK_CK1_TTBK.png",
-                "nodes": [],
-                "value": "TTBK",
+                "path": "PK_CAMK_CAMK2.png",
                 "members": [
                     "PKA",
-                    "TTBK1",
-                    "TTBK2"
+                    "CaMK2a",
+                    "CaMK2b",
+                    "CaMK2d",
+                    "CaMK2g"
                 ],
-                "id": "id309@TTBK"
+                "nodes": []
             },
             {
+                "id": "id272@CAMKL",
+                "value": "CAMKL",
                 "protein": "",
-                "path": "PK_CK1_VRK.png",
-                "nodes": [],
-                "value": "VRK",
+                "path": "PK_CAMK_CAMKL.png",
                 "members": [
                     "PKA",
-                    "VRK1",
-                    "VRK2",
-                    "VRK3"
+                    "AMPKa1",
+                    "AMPKa2",
+                    "BRSK1",
+                    "BRSK2",
+                    "CHK1",
+                    "HUNK",
+                    "LKB1",
+                    "MARK1",
+                    "MARK2",
+                    "MARK3",
+                    "MARK4",
+                    "MELK",
+                    "NIM1",
+                    "NuaK1",
+                    "NuaK2",
+                    "PASK",
+                    "QIK",
+                    "QSK",
+                    "SIK",
+                    "SNRK"
                 ],
-                "id": "id310@VRK"
+                "nodes": [
+                    {
+                        "id": "id514@AMPK",
+                        "value": "AMPK",
+                        "members": [
+                            "PKA",
+                            "AMPKa1",
+                            "AMPKa2"
+                        ],
+                        "path": "PK_CAMK_CAMKL_AMPK.png"
+                    },
+                    {
+                        "id": "id515@BRSK",
+                        "value": "BRSK",
+                        "members": [
+                            "PKA",
+                            "BRSK1",
+                            "BRSK2"
+                        ],
+                        "path": "PK_CAMK_CAMKL_BRSK.png"
+                    },
+                    {
+                        "id": "id516@CHK1",
+                        "value": "CHK1",
+                        "members": [
+                            "PKA",
+                            "CHK1"
+                        ],
+                        "path": "PK_CAMK_CAMKL_CHK1.png"
+                    },
+                    {
+                        "id": "id517@HUNK",
+                        "value": "HUNK",
+                        "members": [
+                            "PKA",
+                            "HUNK"
+                        ],
+                        "path": "PK_CAMK_CAMKL_HUNK.png"
+                    },
+                    {
+                        "id": "id518@LKB",
+                        "value": "LKB",
+                        "members": [
+                            "PKA",
+                            "LKB1"
+                        ],
+                        "path": "PK_CAMK_CAMKL_LKB.png"
+                    },
+                    {
+                        "id": "id519@MARK",
+                        "value": "MARK",
+                        "members": [
+                            "PKA",
+                            "MARK1",
+                            "MARK2",
+                            "MARK3",
+                            "MARK4"
+                        ],
+                        "path": "PK_CAMK_CAMKL_MARK.png"
+                    },
+                    {
+                        "id": "id520@MELK",
+                        "value": "MELK",
+                        "members": [
+                            "PKA",
+                            "MELK"
+                        ],
+                        "path": "PK_CAMK_CAMKL_MELK.png"
+                    },
+                    {
+                        "id": "id521@NIM1",
+                        "value": "NIM1",
+                        "members": [
+                            "PKA",
+                            "NIM1"
+                        ],
+                        "path": "PK_CAMK_CAMKL_NIM1.png"
+                    },
+                    {
+                        "id": "id522@NuaK",
+                        "value": "NuaK",
+                        "members": [
+                            "PKA",
+                            "NuaK1",
+                            "NuaK2"
+                        ],
+                        "path": "PK_CAMK_CAMKL_NuaK.png"
+                    },
+                    {
+                        "id": "id523@PASK",
+                        "value": "PASK",
+                        "members": [
+                            "PKA",
+                            "PASK"
+                        ],
+                        "path": "PK_CAMK_CAMKL_PASK.png"
+                    },
+                    {
+                        "id": "id524@QIK",
+                        "value": "QIK",
+                        "members": [
+                            "PKA",
+                            "QIK",
+                            "QSK",
+                            "SIK"
+                        ],
+                        "path": "PK_CAMK_CAMKL_QIK.png"
+                    },
+                    {
+                        "id": "id525@SNRK",
+                        "value": "SNRK",
+                        "members": [
+                            "PKA",
+                            "SNRK"
+                        ],
+                        "path": "PK_CAMK_CAMKL_SNRK.png"
+                    }
+                ]
+            },
+            {
+                "id": "id285@CASK",
+                "value": "CASK",
+                "protein": "",
+                "path": "PK_CAMK_CASK.png",
+                "members": [
+                    "PKA",
+                    "CASK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id286@DAPK",
+                "value": "DAPK",
+                "protein": "",
+                "path": "PK_CAMK_DAPK.png",
+                "members": [
+                    "PKA",
+                    "DAPK1",
+                    "DAPK2",
+                    "DAPK3",
+                    "DRAK1",
+                    "DRAK2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id287@DCAMKL",
+                "value": "DCAMKL",
+                "protein": "",
+                "path": "PK_CAMK_DCAMKL.png",
+                "members": [
+                    "PKA",
+                    "DCAMKL1",
+                    "DCAMKL2",
+                    "DCAMKL3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id288@MAPKAPK",
+                "value": "MAPKAPK",
+                "protein": "",
+                "path": "PK_CAMK_MAPKAPK.png",
+                "members": [
+                    "PKA",
+                    "MAPKAPK2",
+                    "MAPKAPK3",
+                    "MAPKAPK5",
+                    "MNK1",
+                    "MNK2"
+                ],
+                "nodes": [
+                    {
+                        "id": "id530@MK2",
+                        "value": "MK2",
+                        "members": [
+                            "PKA",
+                            "MAPKAPK2",
+                            "MAPKAPK3"
+                        ],
+                        "path": "PK_CAMK_MAPKAPK_MK2.png"
+                    },
+                    {
+                        "id": "id531@MK5",
+                        "value": "MK5",
+                        "members": [
+                            "PKA",
+                            "MAPKAPK5"
+                        ],
+                        "path": "PK_CAMK_MAPKAPK_MK5.png"
+                    },
+                    {
+                        "id": "id532@MNK",
+                        "value": "MNK",
+                        "members": [
+                            "PKA",
+                            "MNK1",
+                            "MNK2"
+                        ],
+                        "path": "PK_CAMK_MAPKAPK_MNK.png"
+                    }
+                ]
+            },
+            {
+                "id": "id292@MLCK",
+                "value": "MLCK",
+                "protein": "",
+                "path": "PK_CAMK_MLCK.png",
+                "members": [
+                    "PKA",
+                    "SgK085",
+                    "TTN",
+                    "caMLCK",
+                    "skMLCK",
+                    "smMLCK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id293@PHK",
+                "value": "PHK",
+                "protein": "",
+                "path": "PK_CAMK_PHK.png",
+                "members": [
+                    "PKA",
+                    "PHKg1",
+                    "PHKg2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id294@PIM",
+                "value": "PIM",
+                "protein": "",
+                "path": "PK_CAMK_PIM.png",
+                "members": [
+                    "PKA",
+                    "PIM1",
+                    "PIM2",
+                    "PIM3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id295@PKD",
+                "value": "PKD",
+                "protein": "",
+                "path": "PK_CAMK_PKD.png",
+                "members": [
+                    "PKA",
+                    "PKD1",
+                    "PKD2",
+                    "PKD3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id296@PSK",
+                "value": "PSK",
+                "protein": "",
+                "path": "PK_CAMK_PSK.png",
+                "members": [
+                    "PKA",
+                    "PSKH1",
+                    "PSKH2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id297@RAD53",
+                "value": "RAD53",
+                "protein": "",
+                "path": "PK_CAMK_RAD53.png",
+                "members": [
+                    "PKA",
+                    "CHK2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id298@RSKb",
+                "value": "RSKb",
+                "protein": "",
+                "path": "PK_CAMK_RSKb.png",
+                "members": [
+                    "PKA",
+                    "MSK1_b",
+                    "MSK2_b",
+                    "RSK1_b",
+                    "RSK2_b",
+                    "RSK3_b",
+                    "RSK4_b"
+                ],
+                "nodes": [
+                    {
+                        "id": "id540@MSKb",
+                        "value": "MSKb",
+                        "members": [
+                            "PKA",
+                            "MSK1_b",
+                            "MSK2_b"
+                        ],
+                        "path": "PK_CAMK_RSKb_MSKb.png"
+                    },
+                    {
+                        "id": "id541@RSKb",
+                        "value": "RSKb",
+                        "members": [
+                            "PKA",
+                            "RSK1_b",
+                            "RSK2_b",
+                            "RSK3_b",
+                            "RSK4_b"
+                        ],
+                        "path": "PK_CAMK_RSKb_RSKb.png"
+                    }
+                ]
+            },
+            {
+                "id": "id301@SgK495",
+                "value": "SgK495",
+                "protein": "",
+                "path": "PK_CAMK_SgK495.png",
+                "members": [
+                    "PKA",
+                    "SgK495"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id302@STK33",
+                "value": "STK33",
+                "protein": "",
+                "path": "PK_CAMK_STK33.png",
+                "members": [
+                    "PKA",
+                    "STK33"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id303@Trbl",
+                "value": "Trbl",
+                "protein": "",
+                "path": "PK_CAMK_Trbl.png",
+                "members": [
+                    "PKA",
+                    "Trb1",
+                    "Trb2",
+                    "Trb3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id304@Trio",
+                "value": "Trio",
+                "protein": "",
+                "path": "PK_CAMK_Trio.png",
+                "members": [
+                    "PKA",
+                    "Obscn",
+                    "Obscn_b",
+                    "SPEG",
+                    "SPEG_b",
+                    "Trad",
+                    "Trio"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id305@TSSK",
+                "value": "TSSK",
+                "protein": "",
+                "path": "PK_CAMK_TSSK.png",
+                "members": [
+                    "PKA",
+                    "SSTK",
+                    "TSSK1",
+                    "TSSK2",
+                    "TSSK3",
+                    "TSSK4"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id306@CAMK-Unique",
+                "value": "CAMK-Unique",
+                "protein": "",
+                "path": "PK_CAMK_CAMK-Unique.png",
+                "members": [
+                    "PKA",
+                    "VACAMKL"
+                ],
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id66@CK1",
         "value": "CK1",
+        "protein": "",
+        "path": "PK_CK1.png",
         "members": [
             "PKA",
             "CK1a",
@@ -1016,397 +1519,56 @@
             "VRK2",
             "VRK3"
         ],
-        "id": "id66@CK1"
-    },
-    {
-        "protein": "",
-        "path": "PK_CMGC.png",
         "nodes": [
             {
+                "id": "id308@CK1",
+                "value": "CK1",
                 "protein": "",
-                "path": "PK_CMGC_CDK.png",
-                "nodes": [
-                    {
-                        "path": "PK_CMGC_CDK_CDC2.png",
-                        "value": "CDC2",
-                        "id": "id554@CDC2",
-                        "members": [
-                            "PKA",
-                            "CDC2"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK2.png",
-                        "value": "CDK2",
-                        "id": "id555@CDK2",
-                        "members": [
-                            "PKA",
-                            "CDK2",
-                            "CDK3"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK4.png",
-                        "value": "CDK4",
-                        "id": "id556@CDK4",
-                        "members": [
-                            "PKA",
-                            "CDK4",
-                            "CDK6"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK5.png",
-                        "value": "CDK5",
-                        "id": "id557@CDK5",
-                        "members": [
-                            "PKA",
-                            "CDK5"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK7.png",
-                        "value": "CDK7",
-                        "id": "id558@CDK7",
-                        "members": [
-                            "PKA",
-                            "CDK7"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK8.png",
-                        "value": "CDK8",
-                        "id": "id559@CDK8",
-                        "members": [
-                            "PKA",
-                            "CDK11",
-                            "CDK8"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK9.png",
-                        "value": "CDK9",
-                        "id": "id560@CDK9",
-                        "members": [
-                            "PKA",
-                            "CDK9"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK10.png",
-                        "value": "CDK10",
-                        "id": "id561@CDK10",
-                        "members": [
-                            "PKA",
-                            "CDK10"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CDK11.png",
-                        "value": "CDK11",
-                        "id": "id562@CDK11",
-                        "members": [
-                            "PKA",
-                            "PITSLRE"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_CRK7.png",
-                        "value": "CRK7",
-                        "id": "id563@CRK7",
-                        "members": [
-                            "PKA",
-                            "CHED",
-                            "CRK7"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_PCTAIRE.png",
-                        "value": "PCTAIRE",
-                        "id": "id564@PCTAIRE",
-                        "members": [
-                            "PKA",
-                            "PCTAIRE1",
-                            "PCTAIRE2",
-                            "PCTAIRE3"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_CDK_PFTAIRE.png",
-                        "value": "PFTAIRE",
-                        "id": "id565@PFTAIRE",
-                        "members": [
-                            "PKA",
-                            "PFTAIRE1",
-                            "PFTAIRE2"
-                        ]
-                    }
-                ],
-                "value": "CDK",
+                "path": "PK_CK1_CK1.png",
                 "members": [
                     "PKA",
-                    "CCRK",
-                    "CDC2",
-                    "CDK10",
-                    "CDK11",
-                    "CDK2",
-                    "CDK3",
-                    "CDK4",
-                    "CDK5",
-                    "CDK6",
-                    "CDK7",
-                    "CDK8",
-                    "CDK9",
-                    "CHED",
-                    "CRK7",
-                    "PCTAIRE1",
-                    "PCTAIRE2",
-                    "PCTAIRE3",
-                    "PFTAIRE1",
-                    "PFTAIRE2",
-                    "PITSLRE"
+                    "CK1a",
+                    "CK1a2",
+                    "CK1d",
+                    "CK1e",
+                    "CK1g1",
+                    "CK1g2",
+                    "CK1g3"
                 ],
-                "id": "id312@CDK"
+                "nodes": []
             },
             {
+                "id": "id309@TTBK",
+                "value": "TTBK",
                 "protein": "",
-                "path": "PK_CMGC_CDKL.png",
-                "nodes": [],
-                "value": "CDKL",
+                "path": "PK_CK1_TTBK.png",
                 "members": [
                     "PKA",
-                    "CDKL1",
-                    "CDKL2",
-                    "CDKL3",
-                    "CDKL4",
-                    "CDKL5"
+                    "TTBK1",
+                    "TTBK2"
                 ],
-                "id": "id325@CDKL"
+                "nodes": []
             },
             {
+                "id": "id310@VRK",
+                "value": "VRK",
                 "protein": "",
-                "path": "PK_CMGC_CK2.png",
-                "nodes": [],
-                "value": "CK2",
+                "path": "PK_CK1_VRK.png",
                 "members": [
                     "PKA",
-                    "CK2a1",
-                    "CK2a2"
+                    "VRK1",
+                    "VRK2",
+                    "VRK3"
                 ],
-                "id": "id326@CK2"
-            },
-            {
-                "protein": "",
-                "path": "PK_CMGC_CLK.png",
-                "nodes": [],
-                "value": "CLK",
-                "members": [
-                    "PKA",
-                    "CLK1",
-                    "CLK2",
-                    "CLK3",
-                    "CLK4"
-                ],
-                "id": "id327@CLK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CMGC_DYRK.png",
-                "nodes": [
-                    {
-                        "path": "PK_CMGC_DYRK_DYRK1.png",
-                        "value": "DYRK1",
-                        "id": "id570@DYRK1",
-                        "members": [
-                            "PKA",
-                            "DYRK1A",
-                            "DYRK1B"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_DYRK_DYRK2.png",
-                        "value": "DYRK2",
-                        "id": "id571@DYRK2",
-                        "members": [
-                            "PKA",
-                            "DYRK2",
-                            "DYRK3",
-                            "DYRK4"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_DYRK_HIPK.png",
-                        "value": "HIPK",
-                        "id": "id572@HIPK",
-                        "members": [
-                            "PKA",
-                            "HIPK1",
-                            "HIPK2",
-                            "HIPK3",
-                            "HIPK4"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_DYRK_PRP4.png",
-                        "value": "PRP4",
-                        "id": "id573@PRP4",
-                        "members": [
-                            "PKA",
-                            "PRP4"
-                        ]
-                    }
-                ],
-                "value": "DYRK",
-                "members": [
-                    "PKA",
-                    "DYRK1A",
-                    "DYRK1B",
-                    "DYRK2",
-                    "DYRK3",
-                    "DYRK4",
-                    "HIPK1",
-                    "HIPK2",
-                    "HIPK3",
-                    "HIPK4",
-                    "PRP4"
-                ],
-                "id": "id328@DYRK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CMGC_GSK.png",
-                "nodes": [],
-                "value": "GSK",
-                "members": [
-                    "PKA",
-                    "GSK3A",
-                    "GSK3B"
-                ],
-                "id": "id333@GSK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CMGC_MAPK.png",
-                "nodes": [
-                    {
-                        "path": "PK_CMGC_MAPK_ERK1.png",
-                        "value": "ERK1",
-                        "id": "id576@ERK1",
-                        "members": [
-                            "PKA",
-                            "Erk1",
-                            "Erk2"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_MAPK_ERK3.png",
-                        "value": "ERK3",
-                        "id": "id577@ERK3",
-                        "members": [
-                            "PKA",
-                            "Erk3",
-                            "Erk4"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_MAPK_ERK5.png",
-                        "value": "ERK5",
-                        "id": "id578@ERK5",
-                        "members": [
-                            "PKA",
-                            "Erk5"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_MAPK_ERK7.png",
-                        "value": "ERK7",
-                        "id": "id579@ERK7",
-                        "members": [
-                            "PKA",
-                            "Erk7"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_MAPK_JNK.png",
-                        "value": "JNK",
-                        "id": "id580@JNK",
-                        "members": [
-                            "PKA",
-                            "JNK1",
-                            "JNK2",
-                            "JNK3"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_MAPK_nmo.png",
-                        "value": "nmo",
-                        "id": "id581@nmo",
-                        "members": [
-                            "PKA",
-                            "NLK"
-                        ]
-                    },
-                    {
-                        "path": "PK_CMGC_MAPK_p38.png",
-                        "value": "p38",
-                        "id": "id582@p38",
-                        "members": [
-                            "PKA",
-                            "p38a",
-                            "p38b",
-                            "p38d",
-                            "p38g"
-                        ]
-                    }
-                ],
-                "value": "MAPK",
-                "members": [
-                    "PKA",
-                    "Erk1",
-                    "Erk2",
-                    "Erk3",
-                    "Erk4",
-                    "Erk5",
-                    "Erk7",
-                    "JNK1",
-                    "JNK2",
-                    "JNK3",
-                    "NLK",
-                    "p38a",
-                    "p38b",
-                    "p38d",
-                    "p38g"
-                ],
-                "id": "id334@MAPK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CMGC_RCK.png",
-                "nodes": [],
-                "value": "RCK",
-                "members": [
-                    "PKA",
-                    "ICK",
-                    "MAK",
-                    "MOK"
-                ],
-                "id": "id342@RCK"
-            },
-            {
-                "protein": "",
-                "path": "PK_CMGC_SRPK.png",
-                "nodes": [],
-                "value": "SRPK",
-                "members": [
-                    "PKA",
-                    "MSSK1",
-                    "SRPK1",
-                    "SRPK2"
-                ],
-                "id": "id343@SRPK"
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id70@CMGC",
         "value": "CMGC",
+        "protein": "",
+        "path": "PK_CMGC.png",
         "members": [
             "PKA",
             "CCRK",
@@ -1473,29 +1635,397 @@
             "p38d",
             "p38g"
         ],
-        "id": "id70@CMGC"
-    },
-    {
-        "protein": "",
-        "path": "PK_RGC.png",
         "nodes": [
             {
+                "id": "id312@CDK",
+                "value": "CDK",
                 "protein": "",
-                "path": "PK_RGC_RGC.png",
-                "nodes": [],
-                "value": "RGC",
+                "path": "PK_CMGC_CDK.png",
                 "members": [
                     "PKA",
-                    "ANPa",
-                    "ANPb",
-                    "CYGD",
-                    "CYGF",
-                    "HSER"
+                    "CCRK",
+                    "CDC2",
+                    "CDK10",
+                    "CDK11",
+                    "CDK2",
+                    "CDK3",
+                    "CDK4",
+                    "CDK5",
+                    "CDK6",
+                    "CDK7",
+                    "CDK8",
+                    "CDK9",
+                    "CHED",
+                    "CRK7",
+                    "PCTAIRE1",
+                    "PCTAIRE2",
+                    "PCTAIRE3",
+                    "PFTAIRE1",
+                    "PFTAIRE2",
+                    "PITSLRE"
                 ],
-                "id": "id345@RGC"
+                "nodes": [
+                    {
+                        "id": "id554@CDC2",
+                        "value": "CDC2",
+                        "members": [
+                            "PKA",
+                            "CDC2"
+                        ],
+                        "path": "PK_CMGC_CDK_CDC2.png"
+                    },
+                    {
+                        "id": "id555@CDK2",
+                        "value": "CDK2",
+                        "members": [
+                            "PKA",
+                            "CDK2",
+                            "CDK3"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK2.png"
+                    },
+                    {
+                        "id": "id556@CDK4",
+                        "value": "CDK4",
+                        "members": [
+                            "PKA",
+                            "CDK4",
+                            "CDK6"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK4.png"
+                    },
+                    {
+                        "id": "id557@CDK5",
+                        "value": "CDK5",
+                        "members": [
+                            "PKA",
+                            "CDK5"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK5.png"
+                    },
+                    {
+                        "id": "id558@CDK7",
+                        "value": "CDK7",
+                        "members": [
+                            "PKA",
+                            "CDK7"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK7.png"
+                    },
+                    {
+                        "id": "id559@CDK8",
+                        "value": "CDK8",
+                        "members": [
+                            "PKA",
+                            "CDK11",
+                            "CDK8"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK8.png"
+                    },
+                    {
+                        "id": "id560@CDK9",
+                        "value": "CDK9",
+                        "members": [
+                            "PKA",
+                            "CDK9"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK9.png"
+                    },
+                    {
+                        "id": "id561@CDK10",
+                        "value": "CDK10",
+                        "members": [
+                            "PKA",
+                            "CDK10"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK10.png"
+                    },
+                    {
+                        "id": "id562@CDK11",
+                        "value": "CDK11",
+                        "members": [
+                            "PKA",
+                            "PITSLRE"
+                        ],
+                        "path": "PK_CMGC_CDK_CDK11.png"
+                    },
+                    {
+                        "id": "id563@CRK7",
+                        "value": "CRK7",
+                        "members": [
+                            "PKA",
+                            "CHED",
+                            "CRK7"
+                        ],
+                        "path": "PK_CMGC_CDK_CRK7.png"
+                    },
+                    {
+                        "id": "id564@PCTAIRE",
+                        "value": "PCTAIRE",
+                        "members": [
+                            "PKA",
+                            "PCTAIRE1",
+                            "PCTAIRE2",
+                            "PCTAIRE3"
+                        ],
+                        "path": "PK_CMGC_CDK_PCTAIRE.png"
+                    },
+                    {
+                        "id": "id565@PFTAIRE",
+                        "value": "PFTAIRE",
+                        "members": [
+                            "PKA",
+                            "PFTAIRE1",
+                            "PFTAIRE2"
+                        ],
+                        "path": "PK_CMGC_CDK_PFTAIRE.png"
+                    }
+                ]
+            },
+            {
+                "id": "id325@CDKL",
+                "value": "CDKL",
+                "protein": "",
+                "path": "PK_CMGC_CDKL.png",
+                "members": [
+                    "PKA",
+                    "CDKL1",
+                    "CDKL2",
+                    "CDKL3",
+                    "CDKL4",
+                    "CDKL5"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id326@CK2",
+                "value": "CK2",
+                "protein": "",
+                "path": "PK_CMGC_CK2.png",
+                "members": [
+                    "PKA",
+                    "CK2a1",
+                    "CK2a2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id327@CLK",
+                "value": "CLK",
+                "protein": "",
+                "path": "PK_CMGC_CLK.png",
+                "members": [
+                    "PKA",
+                    "CLK1",
+                    "CLK2",
+                    "CLK3",
+                    "CLK4"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id328@DYRK",
+                "value": "DYRK",
+                "protein": "",
+                "path": "PK_CMGC_DYRK.png",
+                "members": [
+                    "PKA",
+                    "DYRK1A",
+                    "DYRK1B",
+                    "DYRK2",
+                    "DYRK3",
+                    "DYRK4",
+                    "HIPK1",
+                    "HIPK2",
+                    "HIPK3",
+                    "HIPK4",
+                    "PRP4"
+                ],
+                "nodes": [
+                    {
+                        "id": "id570@DYRK1",
+                        "value": "DYRK1",
+                        "members": [
+                            "PKA",
+                            "DYRK1A",
+                            "DYRK1B"
+                        ],
+                        "path": "PK_CMGC_DYRK_DYRK1.png"
+                    },
+                    {
+                        "id": "id571@DYRK2",
+                        "value": "DYRK2",
+                        "members": [
+                            "PKA",
+                            "DYRK2",
+                            "DYRK3",
+                            "DYRK4"
+                        ],
+                        "path": "PK_CMGC_DYRK_DYRK2.png"
+                    },
+                    {
+                        "id": "id572@HIPK",
+                        "value": "HIPK",
+                        "members": [
+                            "PKA",
+                            "HIPK1",
+                            "HIPK2",
+                            "HIPK3",
+                            "HIPK4"
+                        ],
+                        "path": "PK_CMGC_DYRK_HIPK.png"
+                    },
+                    {
+                        "id": "id573@PRP4",
+                        "value": "PRP4",
+                        "members": [
+                            "PKA",
+                            "PRP4"
+                        ],
+                        "path": "PK_CMGC_DYRK_PRP4.png"
+                    }
+                ]
+            },
+            {
+                "id": "id333@GSK",
+                "value": "GSK",
+                "protein": "",
+                "path": "PK_CMGC_GSK.png",
+                "members": [
+                    "PKA",
+                    "GSK3A",
+                    "GSK3B"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id334@MAPK",
+                "value": "MAPK",
+                "protein": "",
+                "path": "PK_CMGC_MAPK.png",
+                "members": [
+                    "PKA",
+                    "Erk1",
+                    "Erk2",
+                    "Erk3",
+                    "Erk4",
+                    "Erk5",
+                    "Erk7",
+                    "JNK1",
+                    "JNK2",
+                    "JNK3",
+                    "NLK",
+                    "p38a",
+                    "p38b",
+                    "p38d",
+                    "p38g"
+                ],
+                "nodes": [
+                    {
+                        "id": "id576@ERK1",
+                        "value": "ERK1",
+                        "members": [
+                            "PKA",
+                            "Erk1",
+                            "Erk2"
+                        ],
+                        "path": "PK_CMGC_MAPK_ERK1.png"
+                    },
+                    {
+                        "id": "id577@ERK3",
+                        "value": "ERK3",
+                        "members": [
+                            "PKA",
+                            "Erk3",
+                            "Erk4"
+                        ],
+                        "path": "PK_CMGC_MAPK_ERK3.png"
+                    },
+                    {
+                        "id": "id578@ERK5",
+                        "value": "ERK5",
+                        "members": [
+                            "PKA",
+                            "Erk5"
+                        ],
+                        "path": "PK_CMGC_MAPK_ERK5.png"
+                    },
+                    {
+                        "id": "id579@ERK7",
+                        "value": "ERK7",
+                        "members": [
+                            "PKA",
+                            "Erk7"
+                        ],
+                        "path": "PK_CMGC_MAPK_ERK7.png"
+                    },
+                    {
+                        "id": "id580@JNK",
+                        "value": "JNK",
+                        "members": [
+                            "PKA",
+                            "JNK1",
+                            "JNK2",
+                            "JNK3"
+                        ],
+                        "path": "PK_CMGC_MAPK_JNK.png"
+                    },
+                    {
+                        "id": "id581@nmo",
+                        "value": "nmo",
+                        "members": [
+                            "PKA",
+                            "NLK"
+                        ],
+                        "path": "PK_CMGC_MAPK_nmo.png"
+                    },
+                    {
+                        "id": "id582@p38",
+                        "value": "p38",
+                        "members": [
+                            "PKA",
+                            "p38a",
+                            "p38b",
+                            "p38d",
+                            "p38g"
+                        ],
+                        "path": "PK_CMGC_MAPK_p38.png"
+                    }
+                ]
+            },
+            {
+                "id": "id342@RCK",
+                "value": "RCK",
+                "protein": "",
+                "path": "PK_CMGC_RCK.png",
+                "members": [
+                    "PKA",
+                    "ICK",
+                    "MAK",
+                    "MOK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id343@SRPK",
+                "value": "SRPK",
+                "protein": "",
+                "path": "PK_CMGC_SRPK.png",
+                "members": [
+                    "PKA",
+                    "MSSK1",
+                    "SRPK1",
+                    "SRPK2"
+                ],
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id103@RGC",
         "value": "RGC",
+        "protein": "",
+        "path": "PK_RGC.png",
         "members": [
             "PKA",
             "ANPa",
@@ -1504,221 +2034,29 @@
             "CYGF",
             "HSER"
         ],
-        "id": "id103@RGC"
-    },
-    {
-        "protein": "",
-        "path": "PK_STE.png",
         "nodes": [
             {
+                "id": "id345@RGC",
+                "value": "RGC",
                 "protein": "",
-                "path": "PK_STE_STE7.png",
-                "nodes": [],
-                "value": "STE7",
+                "path": "PK_RGC_RGC.png",
                 "members": [
                     "PKA",
-                    "MAP2K1",
-                    "MAP2K2",
-                    "MAP2K3",
-                    "MAP2K4",
-                    "MAP2K5",
-                    "MAP2K6",
-                    "MAP2K7"
+                    "ANPa",
+                    "ANPb",
+                    "CYGD",
+                    "CYGF",
+                    "HSER"
                 ],
-                "id": "id347@STE7"
-            },
-            {
-                "protein": "",
-                "path": "PK_STE_STE11.png",
-                "nodes": [],
-                "value": "STE11",
-                "members": [
-                    "PKA",
-                    "MAP3K1",
-                    "MAP3K19",
-                    "MAP3K2",
-                    "MAP3K3",
-                    "MAP3K4",
-                    "MAP3K5",
-                    "MAP3K6",
-                    "MAP3K7"
-                ],
-                "id": "id348@STE11"
-            },
-            {
-                "protein": "",
-                "path": "PK_STE_STE20.png",
-                "nodes": [
-                    {
-                        "path": "PK_STE_STE20_FRAY.png",
-                        "value": "FRAY",
-                        "id": "id591@FRAY",
-                        "members": [
-                            "PKA",
-                            "OSR1",
-                            "STLK3"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_KHS.png",
-                        "value": "KHS",
-                        "id": "id592@KHS",
-                        "members": [
-                            "PKA",
-                            "GCK",
-                            "HPK1",
-                            "KHS1",
-                            "KHS2"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_MSN.png",
-                        "value": "MSN",
-                        "id": "id593@MSN",
-                        "members": [
-                            "PKA",
-                            "HGK",
-                            "MINK",
-                            "NRK",
-                            "TNIK"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_MST.png",
-                        "value": "MST",
-                        "id": "id594@MST",
-                        "members": [
-                            "PKA",
-                            "MST1",
-                            "MST2"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_NinaC.png",
-                        "value": "NinaC",
-                        "id": "id595@NinaC",
-                        "members": [
-                            "PKA",
-                            "MYO3A",
-                            "MYO3B"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_PAKA.png",
-                        "value": "PAKA",
-                        "id": "id596@PAKA",
-                        "members": [
-                            "PKA",
-                            "PAK1",
-                            "PAK2",
-                            "PAK3"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_PAKB.png",
-                        "value": "PAKB",
-                        "id": "id597@PAKB",
-                        "members": [
-                            "PKA",
-                            "PAK4",
-                            "PAK5",
-                            "PAK6"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_SLK.png",
-                        "value": "SLK",
-                        "id": "id598@SLK",
-                        "members": [
-                            "PKA",
-                            "LOK",
-                            "SLK"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_STLK.png",
-                        "value": "STLK",
-                        "id": "id599@STLK",
-                        "members": [
-                            "PKA",
-                            "STLK5",
-                            "STLK6"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_TAO.png",
-                        "value": "TAO",
-                        "id": "id600@TAO",
-                        "members": [
-                            "PKA",
-                            "TAO1",
-                            "TAO2",
-                            "TAO3"
-                        ]
-                    },
-                    {
-                        "path": "PK_STE_STE20_YSK.png",
-                        "value": "YSK",
-                        "id": "id601@YSK",
-                        "members": [
-                            "PKA",
-                            "MST3",
-                            "MST4",
-                            "YSK1"
-                        ]
-                    }
-                ],
-                "value": "STE20",
-                "members": [
-                    "PKA",
-                    "GCK",
-                    "HGK",
-                    "HPK1",
-                    "KHS1",
-                    "KHS2",
-                    "LOK",
-                    "MINK",
-                    "MST1",
-                    "MST2",
-                    "MST3",
-                    "MST4",
-                    "MYO3A",
-                    "MYO3B",
-                    "NRK",
-                    "OSR1",
-                    "PAK1",
-                    "PAK2",
-                    "PAK3",
-                    "PAK4",
-                    "PAK5",
-                    "PAK6",
-                    "SLK",
-                    "STLK3",
-                    "STLK5",
-                    "STLK6",
-                    "TAO1",
-                    "TAO2",
-                    "TAO3",
-                    "TNIK",
-                    "YSK1"
-                ],
-                "id": "id349@STE20"
-            },
-            {
-                "protein": "",
-                "path": "PK_STE_STE-Unique.png",
-                "nodes": [],
-                "value": "STE-Unique",
-                "members": [
-                    "PKA",
-                    "COT",
-                    "GCN2_b",
-                    "NIK"
-                ],
-                "id": "id361@STE-Unique"
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id105@STE",
         "value": "STE",
+        "protein": "",
+        "path": "PK_STE.png",
         "members": [
             "PKA",
             "COT",
@@ -1770,408 +2108,221 @@
             "TNIK",
             "YSK1"
         ],
-        "id": "id105@STE"
-    },
-    {
-        "protein": "",
-        "path": "PK_TK.png",
         "nodes": [
             {
+                "id": "id347@STE7",
+                "value": "STE7",
                 "protein": "",
-                "path": "PK_TK_Abl.png",
-                "nodes": [],
-                "value": "Abl",
+                "path": "PK_STE_STE7.png",
                 "members": [
                     "PKA",
-                    "ABL1",
-                    "ABL2"
+                    "MAP2K1",
+                    "MAP2K2",
+                    "MAP2K3",
+                    "MAP2K4",
+                    "MAP2K5",
+                    "MAP2K6",
+                    "MAP2K7"
                 ],
-                "id": "id363@Abl"
+                "nodes": []
             },
             {
+                "id": "id348@STE11",
+                "value": "STE11",
                 "protein": "",
-                "path": "PK_TK_Ack.png",
-                "nodes": [],
-                "value": "Ack",
+                "path": "PK_STE_STE11.png",
                 "members": [
                     "PKA",
-                    "ACK",
-                    "TNK1"
+                    "MAP3K1",
+                    "MAP3K19",
+                    "MAP3K2",
+                    "MAP3K3",
+                    "MAP3K4",
+                    "MAP3K5",
+                    "MAP3K6",
+                    "MAP3K7"
                 ],
-                "id": "id364@Ack"
+                "nodes": []
             },
             {
+                "id": "id349@STE20",
+                "value": "STE20",
                 "protein": "",
-                "path": "PK_TK_ALK.png",
-                "nodes": [],
-                "value": "ALK",
+                "path": "PK_STE_STE20.png",
                 "members": [
                     "PKA",
-                    "ALK",
-                    "LTK"
+                    "GCK",
+                    "HGK",
+                    "HPK1",
+                    "KHS1",
+                    "KHS2",
+                    "LOK",
+                    "MINK",
+                    "MST1",
+                    "MST2",
+                    "MST3",
+                    "MST4",
+                    "MYO3A",
+                    "MYO3B",
+                    "NRK",
+                    "OSR1",
+                    "PAK1",
+                    "PAK2",
+                    "PAK3",
+                    "PAK4",
+                    "PAK5",
+                    "PAK6",
+                    "SLK",
+                    "STLK3",
+                    "STLK5",
+                    "STLK6",
+                    "TAO1",
+                    "TAO2",
+                    "TAO3",
+                    "TNIK",
+                    "YSK1"
                 ],
-                "id": "id365@ALK"
+                "nodes": [
+                    {
+                        "id": "id591@FRAY",
+                        "value": "FRAY",
+                        "members": [
+                            "PKA",
+                            "OSR1",
+                            "STLK3"
+                        ],
+                        "path": "PK_STE_STE20_FRAY.png"
+                    },
+                    {
+                        "id": "id592@KHS",
+                        "value": "KHS",
+                        "members": [
+                            "PKA",
+                            "GCK",
+                            "HPK1",
+                            "KHS1",
+                            "KHS2"
+                        ],
+                        "path": "PK_STE_STE20_KHS.png"
+                    },
+                    {
+                        "id": "id593@MSN",
+                        "value": "MSN",
+                        "members": [
+                            "PKA",
+                            "HGK",
+                            "MINK",
+                            "NRK",
+                            "TNIK"
+                        ],
+                        "path": "PK_STE_STE20_MSN.png"
+                    },
+                    {
+                        "id": "id594@MST",
+                        "value": "MST",
+                        "members": [
+                            "PKA",
+                            "MST1",
+                            "MST2"
+                        ],
+                        "path": "PK_STE_STE20_MST.png"
+                    },
+                    {
+                        "id": "id595@NinaC",
+                        "value": "NinaC",
+                        "members": [
+                            "PKA",
+                            "MYO3A",
+                            "MYO3B"
+                        ],
+                        "path": "PK_STE_STE20_NinaC.png"
+                    },
+                    {
+                        "id": "id596@PAKA",
+                        "value": "PAKA",
+                        "members": [
+                            "PKA",
+                            "PAK1",
+                            "PAK2",
+                            "PAK3"
+                        ],
+                        "path": "PK_STE_STE20_PAKA.png"
+                    },
+                    {
+                        "id": "id597@PAKB",
+                        "value": "PAKB",
+                        "members": [
+                            "PKA",
+                            "PAK4",
+                            "PAK5",
+                            "PAK6"
+                        ],
+                        "path": "PK_STE_STE20_PAKB.png"
+                    },
+                    {
+                        "id": "id598@SLK",
+                        "value": "SLK",
+                        "members": [
+                            "PKA",
+                            "LOK",
+                            "SLK"
+                        ],
+                        "path": "PK_STE_STE20_SLK.png"
+                    },
+                    {
+                        "id": "id599@STLK",
+                        "value": "STLK",
+                        "members": [
+                            "PKA",
+                            "STLK5",
+                            "STLK6"
+                        ],
+                        "path": "PK_STE_STE20_STLK.png"
+                    },
+                    {
+                        "id": "id600@TAO",
+                        "value": "TAO",
+                        "members": [
+                            "PKA",
+                            "TAO1",
+                            "TAO2",
+                            "TAO3"
+                        ],
+                        "path": "PK_STE_STE20_TAO.png"
+                    },
+                    {
+                        "id": "id601@YSK",
+                        "value": "YSK",
+                        "members": [
+                            "PKA",
+                            "MST3",
+                            "MST4",
+                            "YSK1"
+                        ],
+                        "path": "PK_STE_STE20_YSK.png"
+                    }
+                ]
             },
             {
+                "id": "id361@STE-Unique",
+                "value": "STE-Unique",
                 "protein": "",
-                "path": "PK_TK_Axl.png",
-                "nodes": [],
-                "value": "Axl",
+                "path": "PK_STE_STE-Unique.png",
                 "members": [
                     "PKA",
-                    "AXL",
-                    "MER",
-                    "TYRO3"
+                    "COT",
+                    "GCN2_b",
+                    "NIK"
                 ],
-                "id": "id366@Axl"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_CCK4.png",
-                "nodes": [],
-                "value": "CCK4",
-                "members": [
-                    "PKA",
-                    "CCK4"
-                ],
-                "id": "id367@CCK4"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Csk.png",
-                "nodes": [],
-                "value": "Csk",
-                "members": [
-                    "PKA",
-                    "CSK",
-                    "CTK"
-                ],
-                "id": "id368@Csk"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_DDR.png",
-                "nodes": [],
-                "value": "DDR",
-                "members": [
-                    "PKA",
-                    "DDR1",
-                    "DDR2"
-                ],
-                "id": "id369@DDR"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_EGFR.png",
-                "nodes": [],
-                "value": "EGFR",
-                "members": [
-                    "PKA",
-                    "EGFR",
-                    "ErbB2",
-                    "ErbB3",
-                    "ErbB4"
-                ],
-                "id": "id370@EGFR"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Eph.png",
-                "nodes": [],
-                "value": "Eph",
-                "members": [
-                    "PKA",
-                    "EphA1",
-                    "EphA10",
-                    "EphA2",
-                    "EphA3",
-                    "EphA4",
-                    "EphA5",
-                    "EphA6",
-                    "EphA7",
-                    "EphA8",
-                    "EphB1",
-                    "EphB2",
-                    "EphB3",
-                    "EphB4",
-                    "EphB6"
-                ],
-                "id": "id371@Eph"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_FAK.png",
-                "nodes": [],
-                "value": "FAK",
-                "members": [
-                    "PKA",
-                    "FAK",
-                    "PYK2"
-                ],
-                "id": "id372@FAK"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Fer.png",
-                "nodes": [],
-                "value": "Fer",
-                "members": [
-                    "PKA",
-                    "FER",
-                    "FES"
-                ],
-                "id": "id373@Fer"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_FGFR.png",
-                "nodes": [],
-                "value": "FGFR",
-                "members": [
-                    "PKA",
-                    "FGFR1",
-                    "FGFR2",
-                    "FGFR3",
-                    "FGFR4"
-                ],
-                "id": "id374@FGFR"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_InsR.png",
-                "nodes": [],
-                "value": "InsR",
-                "members": [
-                    "PKA",
-                    "IGF1R",
-                    "INSR",
-                    "IRR"
-                ],
-                "id": "id375@InsR"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Jak.png",
-                "nodes": [],
-                "value": "Jak",
-                "members": [
-                    "PKA",
-                    "JAK1",
-                    "JAK2",
-                    "JAK3",
-                    "TYK2"
-                ],
-                "id": "id376@Jak"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_JakB.png",
-                "nodes": [],
-                "value": "JakB",
-                "members": [
-                    "PKA",
-                    "JAK1_b",
-                    "JAK2_b",
-                    "JAK3_b",
-                    "TYK2_b"
-                ],
-                "id": "id377@JakB"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Lmr.png",
-                "nodes": [],
-                "value": "Lmr",
-                "members": [
-                    "PKA",
-                    "LMR1",
-                    "LMR2",
-                    "LMR3"
-                ],
-                "id": "id378@Lmr"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Met.png",
-                "nodes": [],
-                "value": "Met",
-                "members": [
-                    "PKA",
-                    "MET",
-                    "RON"
-                ],
-                "id": "id379@Met"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Musk.png",
-                "nodes": [],
-                "value": "Musk",
-                "members": [
-                    "PKA",
-                    "MUSK"
-                ],
-                "id": "id380@Musk"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_PDGFR.png",
-                "nodes": [],
-                "value": "PDGFR",
-                "members": [
-                    "PKA",
-                    "FLT3",
-                    "FMS",
-                    "KIT",
-                    "PDGFRa",
-                    "PDGFRb"
-                ],
-                "id": "id381@PDGFR"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Ret.png",
-                "nodes": [],
-                "value": "Ret",
-                "members": [
-                    "PKA",
-                    "RET"
-                ],
-                "id": "id382@Ret"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Ror.png",
-                "nodes": [],
-                "value": "Ror",
-                "members": [
-                    "PKA",
-                    "ROR1",
-                    "ROR2"
-                ],
-                "id": "id383@Ror"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Ryk.png",
-                "nodes": [],
-                "value": "Ryk",
-                "members": [
-                    "PKA",
-                    "RYK"
-                ],
-                "id": "id384@Ryk"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Sev.png",
-                "nodes": [],
-                "value": "Sev",
-                "members": [
-                    "PKA",
-                    "ROS"
-                ],
-                "id": "id385@Sev"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Src.png",
-                "nodes": [],
-                "value": "Src",
-                "members": [
-                    "PKA",
-                    "BLK",
-                    "BRK",
-                    "FGR",
-                    "FRK",
-                    "FYN",
-                    "HCK",
-                    "LCK",
-                    "LYN",
-                    "SRC",
-                    "SRM",
-                    "YES"
-                ],
-                "id": "id386@Src"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Syk.png",
-                "nodes": [],
-                "value": "Syk",
-                "members": [
-                    "PKA",
-                    "SYK",
-                    "ZAP70"
-                ],
-                "id": "id387@Syk"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Tec.png",
-                "nodes": [],
-                "value": "Tec",
-                "members": [
-                    "PKA",
-                    "BMX",
-                    "BTK",
-                    "ITK",
-                    "TEC",
-                    "TXK"
-                ],
-                "id": "id388@Tec"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Tie.png",
-                "nodes": [],
-                "value": "Tie",
-                "members": [
-                    "PKA",
-                    "TIE1",
-                    "TIE2"
-                ],
-                "id": "id389@Tie"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_Trk.png",
-                "nodes": [],
-                "value": "Trk",
-                "members": [
-                    "PKA",
-                    "TRKA",
-                    "TRKB",
-                    "TRKC"
-                ],
-                "id": "id390@Trk"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_VEGFR.png",
-                "nodes": [],
-                "value": "VEGFR",
-                "members": [
-                    "PKA",
-                    "FLT1",
-                    "FLT4",
-                    "KDR"
-                ],
-                "id": "id391@VEGFR"
-            },
-            {
-                "protein": "",
-                "path": "PK_TK_TK-Unique.png",
-                "nodes": [],
-                "value": "TK-Unique",
-                "members": [
-                    "PKA",
-                    "SuRTK106"
-                ],
-                "id": "id392@TK-Unique"
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id121@TK",
         "value": "TK",
+        "protein": "",
+        "path": "PK_TK.png",
         "members": [
             "PKA",
             "ABL1",
@@ -2269,256 +2420,408 @@
             "YES",
             "ZAP70"
         ],
-        "id": "id121@TK"
-    },
-    {
-        "protein": "",
-        "path": "PK_TKL.png",
         "nodes": [
             {
+                "id": "id363@Abl",
+                "value": "Abl",
                 "protein": "",
-                "path": "PK_TKL_IRAK.png",
-                "nodes": [],
-                "value": "IRAK",
+                "path": "PK_TK_Abl.png",
                 "members": [
                     "PKA",
-                    "IRAK1",
-                    "IRAK2",
-                    "IRAK3",
-                    "IRAK4"
+                    "ABL1",
+                    "ABL2"
                 ],
-                "id": "id394@IRAK"
+                "nodes": []
             },
             {
+                "id": "id364@Ack",
+                "value": "Ack",
                 "protein": "",
-                "path": "PK_TKL_LISK.png",
-                "nodes": [
-                    {
-                        "path": "PK_TKL_LISK_LIMK.png",
-                        "value": "LIMK",
-                        "id": "id637@LIMK",
-                        "members": [
-                            "PKA",
-                            "LIMK1",
-                            "LIMK2"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_LISK_TESK.png",
-                        "value": "TESK",
-                        "id": "id638@TESK",
-                        "members": [
-                            "PKA",
-                            "TESK1",
-                            "TESK2"
-                        ]
-                    }
-                ],
-                "value": "LISK",
+                "path": "PK_TK_Ack.png",
                 "members": [
                     "PKA",
-                    "LIMK1",
-                    "LIMK2",
-                    "TESK1",
-                    "TESK2"
+                    "ACK",
+                    "TNK1"
                 ],
-                "id": "id395@LISK"
+                "nodes": []
             },
             {
+                "id": "id365@ALK",
+                "value": "ALK",
                 "protein": "",
-                "path": "PK_TKL_LRRK.png",
-                "nodes": [],
-                "value": "LRRK",
+                "path": "PK_TK_ALK.png",
                 "members": [
                     "PKA",
-                    "LRRK1",
-                    "LRRK2"
+                    "ALK",
+                    "LTK"
                 ],
-                "id": "id398@LRRK"
+                "nodes": []
             },
             {
+                "id": "id366@Axl",
+                "value": "Axl",
                 "protein": "",
-                "path": "PK_TKL_MLK.png",
-                "nodes": [
-                    {
-                        "path": "PK_TKL_MLK_HH498.png",
-                        "value": "HH498",
-                        "id": "id641@HH498",
-                        "members": [
-                            "PKA",
-                            "HH498"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_MLK_ILK.png",
-                        "value": "ILK",
-                        "id": "id642@ILK",
-                        "members": [
-                            "PKA",
-                            "ILK"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_MLK_LZK.png",
-                        "value": "LZK",
-                        "id": "id643@LZK",
-                        "members": [
-                            "PKA",
-                            "DLK",
-                            "LZK"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_MLK_MLK.png",
-                        "value": "MLK",
-                        "id": "id644@MLK",
-                        "members": [
-                            "PKA",
-                            "MLK1",
-                            "MLK2",
-                            "MLK3",
-                            "MLK4"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_MLK_TAK1.png",
-                        "value": "TAK1",
-                        "id": "id645@TAK1",
-                        "members": [
-                            "PKA",
-                            "TAK1"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_MLK_ZAK.png",
-                        "value": "ZAK",
-                        "id": "id646@ZAK",
-                        "members": [
-                            "PKA",
-                            "ZAK"
-                        ]
-                    }
-                ],
-                "value": "MLK",
+                "path": "PK_TK_Axl.png",
                 "members": [
                     "PKA",
-                    "DLK",
-                    "HH498",
-                    "ILK",
-                    "LZK",
-                    "MLK1",
-                    "MLK2",
-                    "MLK3",
-                    "MLK4",
-                    "TAK1",
-                    "ZAK"
+                    "AXL",
+                    "MER",
+                    "TYRO3"
                 ],
-                "id": "id399@MLK"
+                "nodes": []
             },
             {
+                "id": "id367@CCK4",
+                "value": "CCK4",
                 "protein": "",
-                "path": "PK_TKL_RAF.png",
-                "nodes": [
-                    {
-                        "path": "PK_TKL_RAF_KSR.png",
-                        "value": "KSR",
-                        "id": "id648@KSR",
-                        "members": [
-                            "PKA",
-                            "KSR1"
-                        ]
-                    }
-                ],
-                "value": "RAF",
+                "path": "PK_TK_CCK4.png",
                 "members": [
                     "PKA",
-                    "ARAF",
-                    "BRAF",
-                    "KSR1",
-                    "KSR2",
-                    "RAF1"
+                    "CCK4"
                 ],
-                "id": "id406@RAF"
+                "nodes": []
             },
             {
+                "id": "id368@Csk",
+                "value": "Csk",
                 "protein": "",
-                "path": "PK_TKL_RIPK.png",
-                "nodes": [],
-                "value": "RIPK",
+                "path": "PK_TK_Csk.png",
                 "members": [
                     "PKA",
-                    "ANKRD3",
-                    "RIPK1",
-                    "RIPK2",
-                    "RIPK3",
-                    "SgK288"
+                    "CSK",
+                    "CTK"
                 ],
-                "id": "id408@RIPK"
+                "nodes": []
             },
             {
+                "id": "id369@DDR",
+                "value": "DDR",
                 "protein": "",
-                "path": "PK_TKL_STKR.png",
-                "nodes": [
-                    {
-                        "path": "PK_TKL_STKR_STKR1.png",
-                        "value": "STKR1",
-                        "id": "id651@STKR1",
-                        "members": [
-                            "PKA",
-                            "ALK1",
-                            "ALK2",
-                            "ALK4",
-                            "ALK7",
-                            "BMPR1A",
-                            "BMPR1B",
-                            "TGFbR1"
-                        ]
-                    },
-                    {
-                        "path": "PK_TKL_STKR_STKR2.png",
-                        "value": "STKR2",
-                        "id": "id652@STKR2",
-                        "members": [
-                            "PKA",
-                            "ACTR2",
-                            "ACTR2B",
-                            "BMPR2",
-                            "MISR2",
-                            "TGFbR2"
-                        ]
-                    }
-                ],
-                "value": "STKR",
+                "path": "PK_TK_DDR.png",
                 "members": [
                     "PKA",
-                    "ACTR2",
-                    "ACTR2B",
-                    "ALK1",
-                    "ALK2",
-                    "ALK4",
-                    "ALK7",
-                    "BMPR1A",
-                    "BMPR1B",
-                    "BMPR2",
-                    "MISR2",
-                    "TGFbR1",
-                    "TGFbR2"
+                    "DDR1",
+                    "DDR2"
                 ],
-                "id": "id409@STKR"
+                "nodes": []
             },
             {
+                "id": "id370@EGFR",
+                "value": "EGFR",
                 "protein": "",
-                "path": "PK_TKL_TKL-Unique.png",
-                "nodes": [],
-                "value": "TKL-Unique",
+                "path": "PK_TK_EGFR.png",
                 "members": [
                     "PKA",
-                    "MLKL"
+                    "EGFR",
+                    "ErbB2",
+                    "ErbB3",
+                    "ErbB4"
                 ],
-                "id": "id412@TKL-Unique"
+                "nodes": []
+            },
+            {
+                "id": "id371@Eph",
+                "value": "Eph",
+                "protein": "",
+                "path": "PK_TK_Eph.png",
+                "members": [
+                    "PKA",
+                    "EphA1",
+                    "EphA10",
+                    "EphA2",
+                    "EphA3",
+                    "EphA4",
+                    "EphA5",
+                    "EphA6",
+                    "EphA7",
+                    "EphA8",
+                    "EphB1",
+                    "EphB2",
+                    "EphB3",
+                    "EphB4",
+                    "EphB6"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id372@FAK",
+                "value": "FAK",
+                "protein": "",
+                "path": "PK_TK_FAK.png",
+                "members": [
+                    "PKA",
+                    "FAK",
+                    "PYK2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id373@Fer",
+                "value": "Fer",
+                "protein": "",
+                "path": "PK_TK_Fer.png",
+                "members": [
+                    "PKA",
+                    "FER",
+                    "FES"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id374@FGFR",
+                "value": "FGFR",
+                "protein": "",
+                "path": "PK_TK_FGFR.png",
+                "members": [
+                    "PKA",
+                    "FGFR1",
+                    "FGFR2",
+                    "FGFR3",
+                    "FGFR4"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id375@InsR",
+                "value": "InsR",
+                "protein": "",
+                "path": "PK_TK_InsR.png",
+                "members": [
+                    "PKA",
+                    "IGF1R",
+                    "INSR",
+                    "IRR"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id376@Jak",
+                "value": "Jak",
+                "protein": "",
+                "path": "PK_TK_Jak.png",
+                "members": [
+                    "PKA",
+                    "JAK1",
+                    "JAK2",
+                    "JAK3",
+                    "TYK2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id377@JakB",
+                "value": "JakB",
+                "protein": "",
+                "path": "PK_TK_JakB.png",
+                "members": [
+                    "PKA",
+                    "JAK1_b",
+                    "JAK2_b",
+                    "JAK3_b",
+                    "TYK2_b"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id378@Lmr",
+                "value": "Lmr",
+                "protein": "",
+                "path": "PK_TK_Lmr.png",
+                "members": [
+                    "PKA",
+                    "LMR1",
+                    "LMR2",
+                    "LMR3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id379@Met",
+                "value": "Met",
+                "protein": "",
+                "path": "PK_TK_Met.png",
+                "members": [
+                    "PKA",
+                    "MET",
+                    "RON"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id380@Musk",
+                "value": "Musk",
+                "protein": "",
+                "path": "PK_TK_Musk.png",
+                "members": [
+                    "PKA",
+                    "MUSK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id381@PDGFR",
+                "value": "PDGFR",
+                "protein": "",
+                "path": "PK_TK_PDGFR.png",
+                "members": [
+                    "PKA",
+                    "FLT3",
+                    "FMS",
+                    "KIT",
+                    "PDGFRa",
+                    "PDGFRb"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id382@Ret",
+                "value": "Ret",
+                "protein": "",
+                "path": "PK_TK_Ret.png",
+                "members": [
+                    "PKA",
+                    "RET"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id383@Ror",
+                "value": "Ror",
+                "protein": "",
+                "path": "PK_TK_Ror.png",
+                "members": [
+                    "PKA",
+                    "ROR1",
+                    "ROR2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id384@Ryk",
+                "value": "Ryk",
+                "protein": "",
+                "path": "PK_TK_Ryk.png",
+                "members": [
+                    "PKA",
+                    "RYK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id385@Sev",
+                "value": "Sev",
+                "protein": "",
+                "path": "PK_TK_Sev.png",
+                "members": [
+                    "PKA",
+                    "ROS"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id386@Src",
+                "value": "Src",
+                "protein": "",
+                "path": "PK_TK_Src.png",
+                "members": [
+                    "PKA",
+                    "BLK",
+                    "BRK",
+                    "FGR",
+                    "FRK",
+                    "FYN",
+                    "HCK",
+                    "LCK",
+                    "LYN",
+                    "SRC",
+                    "SRM",
+                    "YES"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id387@Syk",
+                "value": "Syk",
+                "protein": "",
+                "path": "PK_TK_Syk.png",
+                "members": [
+                    "PKA",
+                    "SYK",
+                    "ZAP70"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id388@Tec",
+                "value": "Tec",
+                "protein": "",
+                "path": "PK_TK_Tec.png",
+                "members": [
+                    "PKA",
+                    "BMX",
+                    "BTK",
+                    "ITK",
+                    "TEC",
+                    "TXK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id389@Tie",
+                "value": "Tie",
+                "protein": "",
+                "path": "PK_TK_Tie.png",
+                "members": [
+                    "PKA",
+                    "TIE1",
+                    "TIE2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id390@Trk",
+                "value": "Trk",
+                "protein": "",
+                "path": "PK_TK_Trk.png",
+                "members": [
+                    "PKA",
+                    "TRKA",
+                    "TRKB",
+                    "TRKC"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id391@VEGFR",
+                "value": "VEGFR",
+                "protein": "",
+                "path": "PK_TK_VEGFR.png",
+                "members": [
+                    "PKA",
+                    "FLT1",
+                    "FLT4",
+                    "KDR"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id392@TK-Unique",
+                "value": "TK-Unique",
+                "protein": "",
+                "path": "PK_TK_TK-Unique.png",
+                "members": [
+                    "PKA",
+                    "SuRTK106"
+                ],
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id152@TKL",
         "value": "TKL",
+        "protein": "",
+        "path": "PK_TKL.png",
         "members": [
             "PKA",
             "ACTR2",
@@ -2565,476 +2868,256 @@
             "TGFbR2",
             "ZAK"
         ],
-        "id": "id152@TKL"
-    },
-    {
-        "protein": "",
-        "path": "PK_Other.png",
         "nodes": [
             {
+                "id": "id394@IRAK",
+                "value": "IRAK",
                 "protein": "",
-                "path": "PK_Other_Aur.png",
-                "nodes": [],
-                "value": "Aur",
+                "path": "PK_TKL_IRAK.png",
                 "members": [
                     "PKA",
-                    "AurA",
-                    "AurB",
-                    "AurC"
+                    "IRAK1",
+                    "IRAK2",
+                    "IRAK3",
+                    "IRAK4"
                 ],
-                "id": "id414@Aur"
+                "nodes": []
             },
             {
+                "id": "id395@LISK",
+                "value": "LISK",
                 "protein": "",
-                "path": "PK_Other_BUB.png",
-                "nodes": [],
-                "value": "BUB",
+                "path": "PK_TKL_LISK.png",
                 "members": [
                     "PKA",
-                    "BUB1",
-                    "BUBR1"
+                    "LIMK1",
+                    "LIMK2",
+                    "TESK1",
+                    "TESK2"
                 ],
-                "id": "id415@BUB"
-            },
-            {
-                "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "Bud32",
-                "members": [
-                    "PKA",
-                    "PRPK"
-                ],
-                "id": "id416@Bud32"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_CAMKK.png",
                 "nodes": [
                     {
-                        "path": "PK_Other_CAMKK_CAMKK-Meta.png",
-                        "value": "CAMKK-Meta",
-                        "id": "id659@CAMKK-Meta",
+                        "id": "id637@LIMK",
+                        "value": "LIMK",
                         "members": [
                             "PKA",
-                            "CaMKK1",
-                            "CaMKK2"
-                        ]
-                    }
-                ],
-                "value": "CAMKK",
-                "members": [
-                    "PKA",
-                    "CaMKK1",
-                    "CaMKK2"
-                ],
-                "id": "id417@CAMKK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_CDC7.png",
-                "nodes": [],
-                "value": "CDC7",
-                "members": [
-                    "PKA",
-                    "CDC7"
-                ],
-                "id": "id419@CDC7"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_Dusty.png",
-                "nodes": [],
-                "value": "Dusty",
-                "members": [
-                    "PKA",
-                    "SgK496"
-                ],
-                "id": "id420@Dusty"
-            },
-            {
-                "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "Haspin",
-                "members": [
-                    "PKA",
-                    "Haspin"
-                ],
-                "id": "id421@Haspin"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_IKK.png",
-                "nodes": [],
-                "value": "IKK",
-                "members": [
-                    "PKA",
-                    "IKKa",
-                    "IKKb",
-                    "IKKe",
-                    "TBK1"
-                ],
-                "id": "id422@IKK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_IRE.png",
-                "nodes": [],
-                "value": "IRE",
-                "members": [
-                    "PKA",
-                    "IRE1",
-                    "IRE2"
-                ],
-                "id": "id423@IRE"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_KIS.png",
-                "nodes": [],
-                "value": "KIS",
-                "members": [
-                    "PKA",
-                    "KIS"
-                ],
-                "id": "id424@KIS"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_MOS.png",
-                "nodes": [],
-                "value": "MOS",
-                "members": [
-                    "PKA",
-                    "MOS"
-                ],
-                "id": "id425@MOS"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NAK.png",
-                "nodes": [],
-                "value": "NAK",
-                "members": [
-                    "PKA",
-                    "AAK1",
-                    "BIKE",
-                    "GAK",
-                    "MPSK1"
-                ],
-                "id": "id426@NAK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NEK.png",
-                "nodes": [],
-                "value": "NEK",
-                "members": [
-                    "PKA",
-                    "NEK1",
-                    "NEK10",
-                    "NEK11",
-                    "NEK2",
-                    "NEK3",
-                    "NEK4",
-                    "NEK5",
-                    "NEK6",
-                    "NEK7",
-                    "NEK8",
-                    "NEK9"
-                ],
-                "id": "id427@NEK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NKF1.png",
-                "nodes": [],
-                "value": "NKF1",
-                "members": [
-                    "PKA",
-                    "SBK",
-                    "SgK069",
-                    "SgK110"
-                ],
-                "id": "id428@NKF1"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NKF2.png",
-                "nodes": [],
-                "value": "NKF2",
-                "members": [
-                    "PKA",
-                    "PINK1"
-                ],
-                "id": "id429@NKF2"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NKF3.png",
-                "nodes": [],
-                "value": "NKF3",
-                "members": [
-                    "PKA",
-                    "SgK223",
-                    "SgK269"
-                ],
-                "id": "id430@NKF3"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NKF4.png",
-                "nodes": [],
-                "value": "NKF4",
-                "members": [
-                    "PKA",
-                    "CLIK1",
-                    "CLIK1L"
-                ],
-                "id": "id431@NKF4"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NKF5.png",
-                "nodes": [],
-                "value": "NKF5",
-                "members": [
-                    "PKA",
-                    "SgK307",
-                    "SgK424"
-                ],
-                "id": "id432@NKF5"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_NRBP.png",
-                "nodes": [],
-                "value": "NRBP",
-                "members": [
-                    "PKA",
-                    "NRBP1",
-                    "NRBP2"
-                ],
-                "id": "id433@NRBP"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_PAN3.png",
-                "nodes": [],
-                "value": "PAN3",
-                "members": [
-                    "PKA",
-                    "PAN3"
-                ],
-                "id": "id434@PAN3"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_PEK.png",
-                "nodes": [
-                    {
-                        "path": "PK_Other_PEK_GCN2.png",
-                        "value": "GCN2",
-                        "id": "id677@GCN2",
-                        "members": [
-                            "PKA",
-                            "GCN2"
-                        ]
+                            "LIMK1",
+                            "LIMK2"
+                        ],
+                        "path": "PK_TKL_LISK_LIMK.png"
                     },
                     {
-                        "path": "PK_Other_PEK_PEK.png",
-                        "value": "PEK",
-                        "id": "id678@PEK",
+                        "id": "id638@TESK",
+                        "value": "TESK",
                         "members": [
                             "PKA",
-                            "PEK"
-                        ]
+                            "TESK1",
+                            "TESK2"
+                        ],
+                        "path": "PK_TKL_LISK_TESK.png"
                     }
-                ],
-                "value": "PEK",
-                "members": [
-                    "PKA",
-                    "GCN2",
-                    "HRI",
-                    "PEK",
-                    "PKR"
-                ],
-                "id": "id435@PEK"
+                ]
             },
             {
+                "id": "id398@LRRK",
+                "value": "LRRK",
                 "protein": "",
-                "path": "PK_Other_PLK.png",
-                "nodes": [],
-                "value": "PLK",
+                "path": "PK_TKL_LRRK.png",
                 "members": [
                     "PKA",
-                    "PLK1",
-                    "PLK2",
-                    "PLK3",
-                    "PLK4"
+                    "LRRK1",
+                    "LRRK2"
                 ],
-                "id": "id438@PLK"
+                "nodes": []
             },
             {
+                "id": "id399@MLK",
+                "value": "MLK",
                 "protein": "",
-                "path": "PK_Other_SCY1.png",
-                "nodes": [],
-                "value": "SCY1",
+                "path": "PK_TKL_MLK.png",
                 "members": [
                     "PKA",
-                    "SCYL1",
-                    "SCYL2",
-                    "SCYL3"
+                    "DLK",
+                    "HH498",
+                    "ILK",
+                    "LZK",
+                    "MLK1",
+                    "MLK2",
+                    "MLK3",
+                    "MLK4",
+                    "TAK1",
+                    "ZAK"
                 ],
-                "id": "id439@SCY1"
+                "nodes": [
+                    {
+                        "id": "id641@HH498",
+                        "value": "HH498",
+                        "members": [
+                            "PKA",
+                            "HH498"
+                        ],
+                        "path": "PK_TKL_MLK_HH498.png"
+                    },
+                    {
+                        "id": "id642@ILK",
+                        "value": "ILK",
+                        "members": [
+                            "PKA",
+                            "ILK"
+                        ],
+                        "path": "PK_TKL_MLK_ILK.png"
+                    },
+                    {
+                        "id": "id643@LZK",
+                        "value": "LZK",
+                        "members": [
+                            "PKA",
+                            "DLK",
+                            "LZK"
+                        ],
+                        "path": "PK_TKL_MLK_LZK.png"
+                    },
+                    {
+                        "id": "id644@MLK",
+                        "value": "MLK",
+                        "members": [
+                            "PKA",
+                            "MLK1",
+                            "MLK2",
+                            "MLK3",
+                            "MLK4"
+                        ],
+                        "path": "PK_TKL_MLK_MLK.png"
+                    },
+                    {
+                        "id": "id645@TAK1",
+                        "value": "TAK1",
+                        "members": [
+                            "PKA",
+                            "TAK1"
+                        ],
+                        "path": "PK_TKL_MLK_TAK1.png"
+                    },
+                    {
+                        "id": "id646@ZAK",
+                        "value": "ZAK",
+                        "members": [
+                            "PKA",
+                            "ZAK"
+                        ],
+                        "path": "PK_TKL_MLK_ZAK.png"
+                    }
+                ]
             },
             {
+                "id": "id406@RAF",
+                "value": "RAF",
                 "protein": "",
-                "path": "PK_Other_SgK071.png",
-                "nodes": [],
-                "value": "SgK071",
+                "path": "PK_TKL_RAF.png",
                 "members": [
                     "PKA",
-                    "SgK071"
+                    "ARAF",
+                    "BRAF",
+                    "KSR1",
+                    "KSR2",
+                    "RAF1"
                 ],
-                "id": "id440@SgK071"
+                "nodes": [
+                    {
+                        "id": "id648@KSR",
+                        "value": "KSR",
+                        "members": [
+                            "PKA",
+                            "KSR1"
+                        ],
+                        "path": "PK_TKL_RAF_KSR.png"
+                    }
+                ]
             },
             {
+                "id": "id408@RIPK",
+                "value": "RIPK",
                 "protein": "",
-                "path": "PK_Other_SgK493.png",
-                "nodes": [],
-                "value": "SgK493",
+                "path": "PK_TKL_RIPK.png",
                 "members": [
                     "PKA",
-                    "SgK493"
+                    "ANKRD3",
+                    "RIPK1",
+                    "RIPK2",
+                    "RIPK3",
+                    "SgK288"
                 ],
-                "id": "id441@SgK493"
+                "nodes": []
             },
             {
+                "id": "id409@STKR",
+                "value": "STKR",
                 "protein": "",
-                "path": "PK_Other_Slob.png",
-                "nodes": [],
-                "value": "Slob",
+                "path": "PK_TKL_STKR.png",
                 "members": [
                     "PKA",
-                    "Slob"
+                    "ACTR2",
+                    "ACTR2B",
+                    "ALK1",
+                    "ALK2",
+                    "ALK4",
+                    "ALK7",
+                    "BMPR1A",
+                    "BMPR1B",
+                    "BMPR2",
+                    "MISR2",
+                    "TGFbR1",
+                    "TGFbR2"
                 ],
-                "id": "id442@Slob"
+                "nodes": [
+                    {
+                        "id": "id651@STKR1",
+                        "value": "STKR1",
+                        "members": [
+                            "PKA",
+                            "ALK1",
+                            "ALK2",
+                            "ALK4",
+                            "ALK7",
+                            "BMPR1A",
+                            "BMPR1B",
+                            "TGFbR1"
+                        ],
+                        "path": "PK_TKL_STKR_STKR1.png"
+                    },
+                    {
+                        "id": "id652@STKR2",
+                        "value": "STKR2",
+                        "members": [
+                            "PKA",
+                            "ACTR2",
+                            "ACTR2B",
+                            "BMPR2",
+                            "MISR2",
+                            "TGFbR2"
+                        ],
+                        "path": "PK_TKL_STKR_STKR2.png"
+                    }
+                ]
             },
             {
+                "id": "id412@TKL-Unique",
+                "value": "TKL-Unique",
                 "protein": "",
-                "path": "PK_Other_TBCK.png",
-                "nodes": [],
-                "value": "TBCK",
+                "path": "PK_TKL_TKL-Unique.png",
                 "members": [
                     "PKA",
-                    "TBCK"
+                    "MLKL"
                 ],
-                "id": "id443@TBCK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_TLK.png",
-                "nodes": [],
-                "value": "TLK",
-                "members": [
-                    "PKA",
-                    "TLK1",
-                    "TLK2"
-                ],
-                "id": "id444@TLK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_TOPK.png",
-                "nodes": [],
-                "value": "TOPK",
-                "members": [
-                    "PKA",
-                    "PBK"
-                ],
-                "id": "id445@TOPK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_TTK.png",
-                "nodes": [],
-                "value": "TTK",
-                "members": [
-                    "PKA",
-                    "TTK"
-                ],
-                "id": "id446@TTK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_ULK.png",
-                "nodes": [],
-                "value": "ULK",
-                "members": [
-                    "PKA",
-                    "Fused",
-                    "ULK1",
-                    "ULK2",
-                    "ULK3",
-                    "ULK4"
-                ],
-                "id": "id447@ULK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_VPS15.png",
-                "nodes": [],
-                "value": "VPS15",
-                "members": [
-                    "PKA",
-                    "PIK3R4"
-                ],
-                "id": "id448@VPS15"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_WEE.png",
-                "nodes": [],
-                "value": "WEE",
-                "members": [
-                    "PKA",
-                    "MYT1",
-                    "Wee1",
-                    "Wee1B"
-                ],
-                "id": "id449@WEE"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_WNK.png",
-                "nodes": [],
-                "value": "WNK",
-                "members": [
-                    "PKA",
-                    "Wnk1",
-                    "Wnk2",
-                    "Wnk3",
-                    "Wnk4"
-                ],
-                "id": "id450@WNK"
-            },
-            {
-                "protein": "",
-                "path": "PK_Other_Other-Unique.png",
-                "nodes": [],
-                "value": "Other-Unique",
-                "members": [
-                    "PKA",
-                    "RNAseL",
-                    "SgK196",
-                    "SgK396"
-                ],
-                "id": "id451@Other-Unique"
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id172@Other",
         "value": "Other",
+        "protein": "",
+        "path": "PK_Other.png",
         "members": [
             "PKA",
             "AAK1",
@@ -3120,349 +3203,476 @@
             "Wnk3",
             "Wnk4"
         ],
-        "id": "id172@Other"
-    },
-    {
-        "protein": "",
-        "path": "PK_Atypical.png",
         "nodes": [
             {
+                "id": "id414@Aur",
+                "value": "Aur",
                 "protein": "",
-                "path": "PK_Atypical_ABC1.png",
+                "path": "PK_Other_Aur.png",
+                "members": [
+                    "PKA",
+                    "AurA",
+                    "AurB",
+                    "AurC"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id415@BUB",
+                "value": "BUB",
+                "protein": "",
+                "path": "PK_Other_BUB.png",
+                "members": [
+                    "PKA",
+                    "BUB1",
+                    "BUBR1"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id416@Bud32",
+                "value": "Bud32",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "PRPK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id417@CAMKK",
+                "value": "CAMKK",
+                "protein": "",
+                "path": "PK_Other_CAMKK.png",
+                "members": [
+                    "PKA",
+                    "CaMKK1",
+                    "CaMKK2"
+                ],
                 "nodes": [
                     {
-                        "path": "",
-                        "value": "ABC1-A",
-                        "id": "id695@ABC1-A",
+                        "id": "id659@CAMKK-Meta",
+                        "value": "CAMKK-Meta",
                         "members": [
                             "PKA",
-                            "ADCK3",
-                            "ADCK4"
-                        ]
-                    },
-                    {
-                        "path": "PK_Atypical_ABC1_ABC1-B.png",
-                        "value": "ABC1-B",
-                        "id": "id696@ABC1-B",
-                        "members": [
-                            "PKA",
-                            "ADCK1"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "ABC1-C",
-                        "id": "id697@ABC1-C",
-                        "members": [
-                            "PKA",
-                            "ADCK2"
-                        ]
-                    },
-                    {
-                        "path": "PK_Atypical_ABC1_ABC1-D.png",
-                        "value": "ABC1-D",
-                        "id": "id698@ABC1-D",
-                        "members": [
-                            "PKA",
-                            "ADCK5"
-                        ]
+                            "CaMKK1",
+                            "CaMKK2"
+                        ],
+                        "path": "PK_Other_CAMKK_CAMKK-Meta.png"
                     }
-                ],
-                "value": "ABC1",
-                "members": [
-                    "PKA",
-                    "ADCK1",
-                    "ADCK2",
-                    "ADCK3",
-                    "ADCK4",
-                    "ADCK5"
-                ],
-                "id": "id453@ABC1"
+                ]
             },
             {
+                "id": "id419@CDC7",
+                "value": "CDC7",
+                "protein": "",
+                "path": "PK_Other_CDC7.png",
+                "members": [
+                    "PKA",
+                    "CDC7"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id420@Dusty",
+                "value": "Dusty",
+                "protein": "",
+                "path": "PK_Other_Dusty.png",
+                "members": [
+                    "PKA",
+                    "SgK496"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id421@Haspin",
+                "value": "Haspin",
                 "protein": "",
                 "path": "",
+                "members": [
+                    "PKA",
+                    "Haspin"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id422@IKK",
+                "value": "IKK",
+                "protein": "",
+                "path": "PK_Other_IKK.png",
+                "members": [
+                    "PKA",
+                    "IKKa",
+                    "IKKb",
+                    "IKKe",
+                    "TBK1"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id423@IRE",
+                "value": "IRE",
+                "protein": "",
+                "path": "PK_Other_IRE.png",
+                "members": [
+                    "PKA",
+                    "IRE1",
+                    "IRE2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id424@KIS",
+                "value": "KIS",
+                "protein": "",
+                "path": "PK_Other_KIS.png",
+                "members": [
+                    "PKA",
+                    "KIS"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id425@MOS",
+                "value": "MOS",
+                "protein": "",
+                "path": "PK_Other_MOS.png",
+                "members": [
+                    "PKA",
+                    "MOS"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id426@NAK",
+                "value": "NAK",
+                "protein": "",
+                "path": "PK_Other_NAK.png",
+                "members": [
+                    "PKA",
+                    "AAK1",
+                    "BIKE",
+                    "GAK",
+                    "MPSK1"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id427@NEK",
+                "value": "NEK",
+                "protein": "",
+                "path": "PK_Other_NEK.png",
+                "members": [
+                    "PKA",
+                    "NEK1",
+                    "NEK10",
+                    "NEK11",
+                    "NEK2",
+                    "NEK3",
+                    "NEK4",
+                    "NEK5",
+                    "NEK6",
+                    "NEK7",
+                    "NEK8",
+                    "NEK9"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id428@NKF1",
+                "value": "NKF1",
+                "protein": "",
+                "path": "PK_Other_NKF1.png",
+                "members": [
+                    "PKA",
+                    "SBK",
+                    "SgK069",
+                    "SgK110"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id429@NKF2",
+                "value": "NKF2",
+                "protein": "",
+                "path": "PK_Other_NKF2.png",
+                "members": [
+                    "PKA",
+                    "PINK1"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id430@NKF3",
+                "value": "NKF3",
+                "protein": "",
+                "path": "PK_Other_NKF3.png",
+                "members": [
+                    "PKA",
+                    "SgK223",
+                    "SgK269"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id431@NKF4",
+                "value": "NKF4",
+                "protein": "",
+                "path": "PK_Other_NKF4.png",
+                "members": [
+                    "PKA",
+                    "CLIK1",
+                    "CLIK1L"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id432@NKF5",
+                "value": "NKF5",
+                "protein": "",
+                "path": "PK_Other_NKF5.png",
+                "members": [
+                    "PKA",
+                    "SgK307",
+                    "SgK424"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id433@NRBP",
+                "value": "NRBP",
+                "protein": "",
+                "path": "PK_Other_NRBP.png",
+                "members": [
+                    "PKA",
+                    "NRBP1",
+                    "NRBP2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id434@PAN3",
+                "value": "PAN3",
+                "protein": "",
+                "path": "PK_Other_PAN3.png",
+                "members": [
+                    "PKA",
+                    "PAN3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id435@PEK",
+                "value": "PEK",
+                "protein": "",
+                "path": "PK_Other_PEK.png",
+                "members": [
+                    "PKA",
+                    "GCN2",
+                    "HRI",
+                    "PEK",
+                    "PKR"
+                ],
                 "nodes": [
                     {
-                        "path": "",
-                        "value": "ChaK",
-                        "id": "id700@ChaK",
+                        "id": "id677@GCN2",
+                        "value": "GCN2",
                         "members": [
                             "PKA",
-                            "ChaK1",
-                            "ChaK2"
-                        ]
+                            "GCN2"
+                        ],
+                        "path": "PK_Other_PEK_GCN2.png"
                     },
                     {
-                        "path": "",
-                        "value": "eEF2K",
-                        "id": "id701@eEF2K",
+                        "id": "id678@PEK",
+                        "value": "PEK",
                         "members": [
                             "PKA",
-                            "eEF2K"
-                        ]
+                            "PEK"
+                        ],
+                        "path": "PK_Other_PEK_PEK.png"
                     }
-                ],
-                "value": "Alpha",
-                "members": [
-                    "PKA",
-                    "AlphaK1",
-                    "AlphaK2",
-                    "AlphaK3",
-                    "ChaK1",
-                    "ChaK2",
-                    "eEF2K"
-                ],
-                "id": "id458@Alpha"
+                ]
             },
             {
+                "id": "id438@PLK",
+                "value": "PLK",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "BAZ",
+                "path": "PK_Other_PLK.png",
                 "members": [
                     "PKA",
-                    "BAZ1A",
-                    "BAZ1B"
+                    "PLK1",
+                    "PLK2",
+                    "PLK3",
+                    "PLK4"
                 ],
-                "id": "id461@BAZ"
+                "nodes": []
             },
             {
+                "id": "id439@SCY1",
+                "value": "SCY1",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "BCR",
+                "path": "PK_Other_SCY1.png",
                 "members": [
                     "PKA",
-                    "ABR",
-                    "BCR"
+                    "SCYL1",
+                    "SCYL2",
+                    "SCYL3"
                 ],
-                "id": "id462@BCR"
+                "nodes": []
             },
             {
+                "id": "id440@SgK071",
+                "value": "SgK071",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "BLVRA",
+                "path": "PK_Other_SgK071.png",
                 "members": [
                     "PKA",
-                    "BLVRA"
+                    "SgK071"
                 ],
-                "id": "id463@BLVRA"
+                "nodes": []
             },
             {
+                "id": "id441@SgK493",
+                "value": "SgK493",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "BRD",
+                "path": "PK_Other_SgK493.png",
                 "members": [
                     "PKA",
-                    "BRD2",
-                    "BRD3",
-                    "BRD4",
-                    "BRDT"
+                    "SgK493"
                 ],
-                "id": "id464@BRD"
+                "nodes": []
             },
             {
+                "id": "id442@Slob",
+                "value": "Slob",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "Col4A3BP",
+                "path": "PK_Other_Slob.png",
                 "members": [
                     "PKA",
-                    "Col4A3BP"
+                    "Slob"
                 ],
-                "id": "id465@Col4A3BP"
+                "nodes": []
             },
             {
+                "id": "id443@TBCK",
+                "value": "TBCK",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "FAST",
+                "path": "PK_Other_TBCK.png",
                 "members": [
                     "PKA",
-                    "FASTK"
+                    "TBCK"
                 ],
-                "id": "id466@FAST"
+                "nodes": []
             },
             {
+                "id": "id444@TLK",
+                "value": "TLK",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "G11",
+                "path": "PK_Other_TLK.png",
                 "members": [
                     "PKA",
-                    "G11"
+                    "TLK1",
+                    "TLK2"
                 ],
-                "id": "id467@G11"
+                "nodes": []
             },
             {
+                "id": "id445@TOPK",
+                "value": "TOPK",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "GTF2F1",
+                "path": "PK_Other_TOPK.png",
                 "members": [
                     "PKA",
-                    "GTF2F1"
+                    "PBK"
                 ],
-                "id": "id468@GTF2F1"
+                "nodes": []
             },
             {
+                "id": "id446@TTK",
+                "value": "TTK",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "PDHK",
+                "path": "PK_Other_TTK.png",
                 "members": [
                     "PKA",
-                    "BCKDK",
-                    "PDHK1",
-                    "PDHK2",
-                    "PDHK3",
-                    "PDHK4"
+                    "TTK"
                 ],
-                "id": "id469@PDHK"
+                "nodes": []
             },
             {
+                "id": "id447@ULK",
+                "value": "ULK",
                 "protein": "",
-                "path": "",
-                "nodes": [
-                    {
-                        "path": "",
-                        "value": "ATM",
-                        "id": "id712@ATM",
-                        "members": [
-                            "PKA",
-                            "ATM"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "ATR",
-                        "id": "id713@ATR",
-                        "members": [
-                            "PKA",
-                            "ATR"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "DNAPK",
-                        "id": "id714@DNAPK",
-                        "members": [
-                            "PKA",
-                            "DNAPK"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "FRAP",
-                        "id": "id715@FRAP",
-                        "members": [
-                            "PKA",
-                            "FRAP"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "SMG1",
-                        "id": "id716@SMG1",
-                        "members": [
-                            "PKA",
-                            "SMG1"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "TRRAP",
-                        "id": "id717@TRRAP",
-                        "members": [
-                            "PKA",
-                            "TRRAP"
-                        ]
-                    }
-                ],
-                "value": "PIKK",
+                "path": "PK_Other_ULK.png",
                 "members": [
                     "PKA",
-                    "ATM",
-                    "ATR",
-                    "DNAPK",
-                    "FRAP",
-                    "SMG1",
-                    "TRRAP"
+                    "Fused",
+                    "ULK1",
+                    "ULK2",
+                    "ULK3",
+                    "ULK4"
                 ],
-                "id": "id470@PIKK"
+                "nodes": []
             },
             {
+                "id": "id448@VPS15",
+                "value": "VPS15",
                 "protein": "",
-                "path": "",
-                "nodes": [
-                    {
-                        "path": "",
-                        "value": "RIO1",
-                        "id": "id719@RIO1",
-                        "members": [
-                            "PKA",
-                            "RIOK1"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "RIO2",
-                        "id": "id720@RIO2",
-                        "members": [
-                            "PKA",
-                            "RIOK2"
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "value": "RIO3",
-                        "id": "id721@RIO3",
-                        "members": [
-                            "PKA",
-                            "RIOK3"
-                        ]
-                    }
-                ],
-                "value": "RIO",
+                "path": "PK_Other_VPS15.png",
                 "members": [
                     "PKA",
-                    "RIOK1",
-                    "RIOK2",
-                    "RIOK3"
+                    "PIK3R4"
                 ],
-                "id": "id477@RIO"
+                "nodes": []
             },
             {
+                "id": "id449@WEE",
+                "value": "WEE",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "TAF1",
+                "path": "PK_Other_WEE.png",
                 "members": [
                     "PKA",
-                    "TAF1",
-                    "TAF1L"
+                    "MYT1",
+                    "Wee1",
+                    "Wee1B"
                 ],
-                "id": "id481@TAF1"
+                "nodes": []
             },
             {
+                "id": "id450@WNK",
+                "value": "WNK",
                 "protein": "",
-                "path": "",
-                "nodes": [],
-                "value": "TIF1",
+                "path": "PK_Other_WNK.png",
                 "members": [
                     "PKA",
-                    "TIF1D",
-                    "TIF1a",
-                    "TIF1b",
-                    "TIF1g"
+                    "Wnk1",
+                    "Wnk2",
+                    "Wnk3",
+                    "Wnk4"
                 ],
-                "id": "id482@TIF1"
+                "nodes": []
+            },
+            {
+                "id": "id451@Other-Unique",
+                "value": "Other-Unique",
+                "protein": "",
+                "path": "PK_Other_Other-Unique.png",
+                "members": [
+                    "PKA",
+                    "RNAseL",
+                    "SgK196",
+                    "SgK396"
+                ],
+                "nodes": []
             }
-        ],
+        ]
+    },
+    {
+        "id": "id211@Atypical",
         "value": "Atypical",
+        "protein": "",
+        "path": "PK_Atypical.png",
         "members": [
             "PKA",
             "ABR",
@@ -3510,6 +3720,342 @@
             "TRRAP",
             "eEF2K"
         ],
-        "id": "id211@Atypical"
+        "nodes": [
+            {
+                "id": "id453@ABC1",
+                "value": "ABC1",
+                "protein": "",
+                "path": "PK_Atypical_ABC1.png",
+                "members": [
+                    "PKA",
+                    "ADCK1",
+                    "ADCK2",
+                    "ADCK3",
+                    "ADCK4",
+                    "ADCK5"
+                ],
+                "nodes": [
+                    {
+                        "id": "id695@ABC1-A",
+                        "value": "ABC1-A",
+                        "members": [
+                            "PKA",
+                            "ADCK3",
+                            "ADCK4"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id696@ABC1-B",
+                        "value": "ABC1-B",
+                        "members": [
+                            "PKA",
+                            "ADCK1"
+                        ],
+                        "path": "PK_Atypical_ABC1_ABC1-B.png"
+                    },
+                    {
+                        "id": "id697@ABC1-C",
+                        "value": "ABC1-C",
+                        "members": [
+                            "PKA",
+                            "ADCK2"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id698@ABC1-D",
+                        "value": "ABC1-D",
+                        "members": [
+                            "PKA",
+                            "ADCK5"
+                        ],
+                        "path": "PK_Atypical_ABC1_ABC1-D.png"
+                    }
+                ]
+            },
+            {
+                "id": "id458@Alpha",
+                "value": "Alpha",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "AlphaK1",
+                    "AlphaK2",
+                    "AlphaK3",
+                    "ChaK1",
+                    "ChaK2",
+                    "eEF2K"
+                ],
+                "nodes": [
+                    {
+                        "id": "id700@ChaK",
+                        "value": "ChaK",
+                        "members": [
+                            "PKA",
+                            "ChaK1",
+                            "ChaK2"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id701@eEF2K",
+                        "value": "eEF2K",
+                        "members": [
+                            "PKA",
+                            "eEF2K"
+                        ],
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "id": "id461@BAZ",
+                "value": "BAZ",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "BAZ1A",
+                    "BAZ1B"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id462@BCR",
+                "value": "BCR",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "ABR",
+                    "BCR"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id463@BLVRA",
+                "value": "BLVRA",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "BLVRA"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id464@BRD",
+                "value": "BRD",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "BRD2",
+                    "BRD3",
+                    "BRD4",
+                    "BRDT"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id465@Col4A3BP",
+                "value": "Col4A3BP",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "Col4A3BP"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id466@FAST",
+                "value": "FAST",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "FASTK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id467@G11",
+                "value": "G11",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "G11"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id468@GTF2F1",
+                "value": "GTF2F1",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "GTF2F1"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id469@PDHK",
+                "value": "PDHK",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "BCKDK",
+                    "PDHK1",
+                    "PDHK2",
+                    "PDHK3",
+                    "PDHK4"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id470@PIKK",
+                "value": "PIKK",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "ATM",
+                    "ATR",
+                    "DNAPK",
+                    "FRAP",
+                    "SMG1",
+                    "TRRAP"
+                ],
+                "nodes": [
+                    {
+                        "id": "id712@ATM",
+                        "value": "ATM",
+                        "members": [
+                            "PKA",
+                            "ATM"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id713@ATR",
+                        "value": "ATR",
+                        "members": [
+                            "PKA",
+                            "ATR"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id714@DNAPK",
+                        "value": "DNAPK",
+                        "members": [
+                            "PKA",
+                            "DNAPK"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id715@FRAP",
+                        "value": "FRAP",
+                        "members": [
+                            "PKA",
+                            "FRAP"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id716@SMG1",
+                        "value": "SMG1",
+                        "members": [
+                            "PKA",
+                            "SMG1"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id717@TRRAP",
+                        "value": "TRRAP",
+                        "members": [
+                            "PKA",
+                            "TRRAP"
+                        ],
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "id": "id477@RIO",
+                "value": "RIO",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "RIOK1",
+                    "RIOK2",
+                    "RIOK3"
+                ],
+                "nodes": [
+                    {
+                        "id": "id719@RIO1",
+                        "value": "RIO1",
+                        "members": [
+                            "PKA",
+                            "RIOK1"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id720@RIO2",
+                        "value": "RIO2",
+                        "members": [
+                            "PKA",
+                            "RIOK2"
+                        ],
+                        "path": ""
+                    },
+                    {
+                        "id": "id721@RIO3",
+                        "value": "RIO3",
+                        "members": [
+                            "PKA",
+                            "RIOK3"
+                        ],
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "id": "id481@TAF1",
+                "value": "TAF1",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "TAF1",
+                    "TAF1L"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id482@TIF1",
+                "value": "TIF1",
+                "protein": "",
+                "path": "",
+                "members": [
+                    "PKA",
+                    "TIF1D",
+                    "TIF1a",
+                    "TIF1b",
+                    "TIF1g"
+                ],
+                "nodes": []
+            }
+        ]
     }
 ]

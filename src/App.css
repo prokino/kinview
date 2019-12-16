@@ -36,7 +36,7 @@
   color:#282c34;
   display:flex;
   float:left;
-  margin-left: 63px;
+  margin-left: 46px;
   margin-top: -4px;
   font-family: 'Lucida Console', Monaco, monospace;
   font-size: 10px;
@@ -45,7 +45,7 @@
 .numberingdiv .v
 {
   writing-mode: vertical-lr;
-  min-width: 19.94px;
+  min-width: 20px;
 }
 .hidden
 {
@@ -102,4 +102,52 @@
 .treeGroup
 {
   margin-left: 5px!important;
+}
+
+.settings
+{
+  width:240px;
+  border-radius: 5px;
+  /* border: 1px solid rgb(49, 49, 49); */
+  padding: 2px;
+}
+.wrap {
+  display: flex;
+  place-items: flex-end;
+  /* white-space: nowrap; */
+}
+
+.left {
+  background: red;
+  float:left;
+}
+
+.right {
+  background: green;
+  flex:none;
+  flex-basis: 80%;
+  float:right;
+  overflow-x: auto;
+}
+
+/* App.js */
+
+.treevisible
+{
+  display: 'inline-block';
+  float:left;  
+  background:Red; 
+  width:25%; 
+}
+.mainBoxVisible
+{
+  float:right; 
+  background:blue; 
+  width:75%; 
+  height:280px; 
+}
+
+.invisible
+{
+  display: 'none';
 }
