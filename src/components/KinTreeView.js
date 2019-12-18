@@ -79,7 +79,7 @@ function KinTreeView(props) {
             onChange={(e)=>handleNodeClick(e,node)}
             //onClick={e => (e.stopPropagation())}
           />
-      <TreeItem nodeId={ node.id } label={ node.value } classes={{group:'treeGroup'}}  >
+      <TreeItem nodeId={node.id} label={`${node.isDark ? "*":""}${node.value}`} classes={{group:'treeGroup'}}  >
           { children(node.nodes) }
         </TreeItem>
         </div>

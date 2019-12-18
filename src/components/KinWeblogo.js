@@ -154,7 +154,28 @@ function showlabel(prefix,lbl)
 //     return "N/A";
 //   return numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) });
 // }  
-  
+function highlightColumn(e)
+{
+    e.preventDefault();
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    var rect = document.createElementNS(svg.namespaceURI,'rect');
+
+    rect.setAttributeNS(null, 'x', 0);
+    rect.setAttributeNS(null, 'y', 0);
+    rect.setAttributeNS(null, 'height', e.screenY);
+    rect.setAttributeNS(null, 'width', '10');
+    rect.setAttributeNS(null, 'fill', '#ff0000');
+    rect.setAttributeNS(null,'style','position:absolute;z-index:1;opacity:0.33;top:40px;');
+
+    svg.appendChild(rect);
+    e.currentTarget.appendChild(svg);
+
+    // var h=document.createElement('a');
+    // h.setAttribute('href', 'http://www.google.com');
+    // var t=document.createTextNode('Hello World');
+    // h.appendChild(t);
+    // document.body.appendChild(h);
+}
 function KinWeblogo(props)
 {
     const [selectedNumbering, setNumbering] = React.useState(props && props.numbers?props.numbers[0]:'');
@@ -259,17 +280,16 @@ function KinWeblogo(props)
             </FormControl>
          </div> */}
          <Box>
-          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
-          
+          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.highres?"svg":"png"}/${props.value.path}.${props.highres?"svg":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <Box className={mutationChecked ? classes.visible: classes.hidden}>
-           <img id={`mutation-${props.value.id}`}  src={`mut_freq/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+           <img id={`mutation-${props.value.id}`}  src={`mutations/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <Box className={ptmChecked ? classes.visible: classes.hidden}>
-           <img id={`ptm-${props.value.id}`}  src={`ptm/${props.value.path}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+           <img id={`ptm-${props.value.id}`}  src={`ptm/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <div className={numberingclass}>
-              {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} className="v">{n}</span>):""}
+              {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} onClick={highlightColumn} className="v">{n}</span>):""}
               </div>
      
          

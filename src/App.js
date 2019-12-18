@@ -111,6 +111,7 @@ function App() {
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
+  const [switchHighResChecked, setHighResChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
 
   const [open, setOpen] = React.useState(false);
@@ -140,7 +141,8 @@ function App() {
   const SortableItem = SortableElement((item) =>
     <div>
       <KinWeblogo 
-          value={item.value} 
+          value={item.value}
+          highres={switchHighResChecked} 
           numbers={getCandidateNumbers(item.value)} 
           height={height} 
           onRemove={weblogoRemove(item.value)}
@@ -223,6 +225,10 @@ function App() {
   const handleTreeSwitchChange = () => {
     setSwitchShowTreeChecked(prev => !prev);
   };
+  const handleHighResChange = () => {
+    setHighResChecked(prev => !prev);
+  };
+  
   const handleDomainSwitchChange = () => {
     setSwitchDomainChecked(prev => !prev);
   };
@@ -288,6 +294,7 @@ function App() {
     <div className={classes.root}>
       <Grid item>
         <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
         <FormControlLabel label="Height" labelPlacement="start" control={
@@ -341,7 +348,7 @@ function App() {
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
-              <Paper className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
+              <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {

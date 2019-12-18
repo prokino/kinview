@@ -151,3 +151,11 @@
 {
   display: 'none';
 }
+
+/* .stick
+{
+  position:'sticky';
+  left:0;
+  display: 'flex';
+  place-items: 'center';
+} */
