@@ -21,6 +21,7 @@ import { withStyles } from '@material-ui/core/styles';
 import {sortableHandle} from 'react-sortable-hoc';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import DeleteIcon from '@material-ui/icons/Delete';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -280,7 +281,8 @@ function KinWeblogo(props)
             </FormControl>
          </div> */}
          <Box>
-          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`weblogos/${props.highres?"svg":"png"}/${props.value.path}.${props.highres?"svg":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+          {/* <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/${props.highres?"highres":"png"}/${props.value.path}.${props.highres?"png":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  /> */}
+          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <Box className={mutationChecked ? classes.visible: classes.hidden}>
            <img id={`mutation-${props.value.id}`}  src={`mutations/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
