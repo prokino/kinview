@@ -20,8 +20,8 @@ import ForumIcon from '@material-ui/icons/Forum';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import DarkIcon from '../img/kinase_dark.svg';
-import WellknownIcon from '../img/kinase_wellknown.svg';
+// import DarkIcon from '../img/kinase_dark.svg';
+// import WellknownIcon from '../img/kinase_wellknown.svg';
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
