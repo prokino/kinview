@@ -5,15 +5,13 @@
   "homepage": "https://prokino.github.io/kinview",
   "author": "Saber Soleymani",
   "dependencies": {
-    "@babel/runtime": "^7.7.2",
-    "@material-ui/core": "^4.5.2",
+    "@babel/runtime": "^7.7.7",
+    "@material-ui/core": "^4.8.2",
     "@material-ui/icons": "^4.5.1",
-    "@material-ui/lab": "^4.0.0-alpha.32",
+    "@material-ui/lab": "^4.0.0-alpha.38",
     "array-move": "^2.2.0",
     "classnames": "^2.2.6",
-    "d3": "^5.12.0",
     "electron-is-dev": "^1.1.0",
-    "material-ui-treeview": "^3.5.0",
     "react": "^16.11",
     "react-dom": "^16.11",
     "react-scripts": "^3.3.0",
@@ -48,8 +46,8 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^4.1.2",
-    "electron": "^6.1.4",
+    "concurrently": "^5.0.2",
+    "electron": "^7.1.7",
     "electron-builder": "^21.2.0",
     "gh-pages": "^2.1.1",
     "wait-on": "^3.3.0"
