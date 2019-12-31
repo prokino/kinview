@@ -2,24 +2,13 @@ import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Checkbox from '@material-ui/core/Checkbox';
-import Search from '@material-ui/icons/Search';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
-
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Label from '@material-ui/icons/Label';
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
-import InfoIcon from '@material-ui/icons/Info';
-import ForumIcon from '@material-ui/icons/Forum';
-import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+// import { ArrowRightIcon, ArrowDropDownIcon } from '@material-ui/icons';
 // import DarkIcon from '../img/kinase_dark.svg';
 // import WellknownIcon from '../img/kinase_wellknown.svg';
 
@@ -201,7 +190,18 @@ function KinTreeView(props) {
   return (
 
     <div>
-      <TextField autoFocus ref={filterInput} 
+          <Autocomplete
+          ref={filterInput}
+          id="input-with-icon-grid" 
+      options={nodes}
+      getOptionLabel={option => option.value}
+      style={{ width: 300 }}
+      renderInput={params => (
+        <TextField {...params} label="Select Dark Kinase" variant="outlined" fullWidth />
+      )}
+    />
+
+      {/* <TextField autoFocus ref={filterInput}
           id="input-with-icon-grid" 
           label="Filter" 
           onChange={handleFilterChange}
@@ -212,12 +212,12 @@ function KinTreeView(props) {
               </InputAdornment>
             ),
           }}
-      />
+      /> */}
 
       <TreeView
         className={classes.root}
-        defaultCollapseIcon={<ArrowDropDownIcon />}
-        defaultExpandIcon={<ArrowRightIcon />}
+        // defaultCollapseIcon={<ArrowDropDownIcon />}
+        // defaultExpandIcon={<ArrowRightIcon />}
       >
         {
           makeTree(nodes)
