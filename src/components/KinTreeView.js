@@ -174,8 +174,6 @@ function KinTreeView(props) {
       setNodes(props.nodes);
 
     filterInput.current.focus();
-    //  else
-    //    setNodes(props.nodes);
 
   }
   function makeTree(nodes) {
@@ -203,14 +201,17 @@ function KinTreeView(props) {
   return (
 
     <div>
-      <TextField autoFocus ref={filterInput} id="input-with-icon-grid" label="Filter" onChange={handleFilterChange}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <Search />
-            </InputAdornment>
-          ),
-        }}
+      <TextField autoFocus ref={filterInput} 
+          id="input-with-icon-grid" 
+          label="Filter" 
+          onChange={handleFilterChange}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search />
+              </InputAdornment>
+            ),
+          }}
       />
 
       <TreeView
