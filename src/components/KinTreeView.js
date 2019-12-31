@@ -20,8 +20,8 @@ import ForumIcon from '@material-ui/icons/Forum';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import DarkIcon from './img/kinase_dark.svg';
-import WellknownIcon from './img/kinase_wellknown.svg';
+import DarkIcon from '../img/kinase_dark.svg';
+import WellknownIcon from '../img/kinase_wellknown.svg';
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
@@ -89,12 +89,13 @@ function StyledTreeItem(props) {
         <div className={classes.labelRoot}>
           {
             nodeType == 'protein' && isDark?
-            <DarkIcon viewBox="0 0 600 476.6" className={classes.labelIcon} />
+            <img alt="Dark Kinase" src="img/kinase_dark.svg" width="20px" />
             :''
           }
           {
             nodeType == 'protein' && !isDark?
-            <WellknownIcon viewBox="0 0 600 476.6" className={classes.labelIcon} />
+            // <WellknownIcon className={classes.labelIcon} />
+            <img alt="Well-known Kinase" src="img/kinase_wellknown.svg" width="20px" />
             :''
           }
           <Typography variant="body2" className={classes.labelText}>

@@ -183,20 +183,25 @@ function KinWeblogo(props)
     const [selectedNumberingValue, setNumberingValue] = React.useState('');
     const [propChanged, setPropChanged] = React.useState(false);
     const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
-    const [mutationChecked, setMutationChecked] = React.useState(props.mutationChecked);
+    const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
+    const [mutationBarchartChecked, setmutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
     const [ptmChecked, setPtmChecked] = React.useState(props.ptmChecked);
     const DragHandle = sortableHandle(() => <ReorderIcon />);
     const numberingclass = classNames({
   "numberingdiv":true,
-  "hidden": !(residueChecked || mutationChecked || ptmChecked)
+  "hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmChecked)
 });
 
     function toggleResidue(event) {
       setResidueChecked(prev => !prev);
       props.onChange(event);
     };
-    function toggleMutation(event) {
-      setMutationChecked(prev => !prev);
+    function toggleMutationBarchart(event) {
+      setmutationBarchartChecked(prev => !prev);
+      props.onChange(event);
+    };
+    function toggleMutationWeblogos(event) {
+      setMutationWeblogosChecked(prev => !prev);
       props.onChange(event);
     };
     function togglePtm(event) {
@@ -262,8 +267,12 @@ function KinWeblogo(props)
           label="Residue"
         />
         <FormControlLabel
-          control={<Switch size="small" id={`mut-checkbox-${props.value.id}`} checked={mutationChecked} value="mutation" onClick={e => { e.stopPropagation(); }} onChange={toggleMutation}   />}
-          label="Mutation"
+          control={<Switch size="small" id={`mutw-checkbox-${props.value.id}`} checked={mutationWeblogosChecked} value="mutationw" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationWeblogos}   />}
+          label="Mutation (W)"
+        />
+        <FormControlLabel
+          control={<Switch size="small" id={`mutb-checkbox-${props.value.id}`} checked={mutationBarchartChecked} value="mutationb" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationBarchart}   />}
+          label="Mutation (B)"
         />
         <FormControlLabel
           control={ <Switch size="small" id={`ptm-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm}   /> }          label="PTM"
@@ -284,8 +293,11 @@ function KinWeblogo(props)
           {/* <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/${props.highres?"highres":"png"}/${props.value.path}.${props.highres?"png":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  /> */}
           <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
-         <Box className={mutationChecked ? classes.visible: classes.hidden}>
-           <img id={`mutation-${props.value.id}`}  src={`mutations/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+         <Box className={mutationWeblogosChecked ? classes.visible: classes.hidden}>
+           <img id={`mutationw-${props.value.id}`}  src={`mutations/weblogos/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+         </Box>
+         <Box className={mutationBarchartChecked ? classes.visible: classes.hidden}>
+           <img id={`mutationb-${props.value.id}`}  src={`mutations/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
          </Box>
          <Box className={ptmChecked ? classes.visible: classes.hidden}>
            <img id={`ptm-${props.value.id}`}  src={`ptm/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />

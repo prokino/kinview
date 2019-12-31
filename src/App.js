@@ -128,8 +128,10 @@ function App() {
     {
       if (e.target.id == "res-checkbox-" + item.id )
         item.residueChecked = e.target.checked;
-      if (e.target.id == "mut-checkbox-" + item.id )
-        item.mutationChecked = e.target.checked;
+      if (e.target.id == "mutw-checkbox-" + item.id )
+        item.mutationWeblogosChecked = e.target.checked;
+      if (e.target.id == "mutb-checkbox-" + item.id )
+        item.mutationBarchartChecked = e.target.checked;
       if (e.target.id == "ptm-checkbox-" + item.id )
         item.ptmChecked = e.target.checked;
       
@@ -148,7 +150,8 @@ function App() {
           onRemove={weblogoRemove(item.value)}
           onChange={weblogoCheckboxChanged}
           residueChecked={item.value.residueChecked} 
-          mutationChecked={item.value.mutationChecked}
+          mutationWeblogosChecked={item.value.mutationWeblogosChecked}
+          mutationBarchartChecked={item.value.mutationBarchartChecked}
           ptmChecked={item.value.ptmChecked} />
     </div>
   );
@@ -181,7 +184,8 @@ function App() {
       setSelectedNode(node);
       node.residueChecked = true;
       node.ptmChecked = false;
-      node.mutationChecked=false;
+      node.mutationWeblogosChecked=false;
+      node.mutationBarchart=false;
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
     }
     else //remvoe the Selection
