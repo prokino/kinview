@@ -8,7 +8,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-// import { ArrowRightIcon, ArrowDropDownIcon } from '@material-ui/icons';
+import { ArrowRight, ArrowDropDown, NoMeetingRoom } from '@material-ui/icons';
 // import DarkIcon from '../img/kinase_dark.svg';
 // import WellknownIcon from '../img/kinase_wellknown.svg';
 
@@ -130,6 +130,7 @@ StyledTreeItem.propTypes = {
 function KinTreeView(props) {
   const classes = useStyles();
   const [nodes, setNodes] = React.useState(props.nodes);
+  const [darkKinase, setDarkKinase] = React.useState(props.darkKinase);
   const filterInput = useRef(null);
   function handleNodeClick(e, node) {
     props.onCheckBoxesChanged(node, e.target.checked);
@@ -138,12 +139,15 @@ function KinTreeView(props) {
   function checkInSelectedNodes(node) {
     return props.selectedNodes.filter(n => n.id == node.id).length > 0;
   }
+
   function handleFilterChange(e) {
     let filtered;
-    if (e.target.value) {
+    //const val = e.target.value; //TextField
+    const val = e.currentTarget.innerText; //AutoComplete
+    if (val) {
       filtered = props.nodes.filter(function iter(o) {
         var temp;
-        if (o.value.toLowerCase().includes(e.target.value.toLowerCase())) {
+        if (o.value.toLowerCase().includes(val.toLowerCase())) {
           return true;
         }
         if (!Array.isArray(o.nodes)) {
@@ -162,7 +166,7 @@ function KinTreeView(props) {
     else
       setNodes(props.nodes);
 
-    filterInput.current.focus();
+    //filterInput.current.focus();
 
   }
   function makeTree(nodes) {
@@ -191,13 +195,15 @@ function KinTreeView(props) {
 
     <div>
           <Autocomplete
-          ref={filterInput}
+           size="small"
+          //ref={filterInput}
           id="input-with-icon-grid" 
-      options={nodes}
-      getOptionLabel={option => option.value}
-      style={{ width: 300 }}
-      renderInput={params => (
-        <TextField {...params} label="Select Dark Kinase" variant="outlined" fullWidth />
+          options={darkKinase}
+          getOptionLabel={option => option.value}
+          onInputChange={handleFilterChange}
+          style={{ width: 300 }}
+          renderInput={params => (
+        <TextField {...params} label="Dark Kinase" variant="outlined" style = {{width: 150}}  />
       )}
     />
 
@@ -216,8 +222,8 @@ function KinTreeView(props) {
 
       <TreeView
         className={classes.root}
-        // defaultCollapseIcon={<ArrowDropDownIcon />}
-        // defaultExpandIcon={<ArrowRightIcon />}
+        defaultCollapseIcon={<ArrowDropDown />}
+        defaultExpandIcon={<ArrowRight />}
       >
         {
           makeTree(nodes)

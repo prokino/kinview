@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
 import tree from './data/classification.json';
+import darkKinase from './data/dark_list.json'
 import numberingjson from './data/numbering.json';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -346,7 +347,7 @@ function App() {
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+            <KinTreeView nodes={nodes} darkKinase={darkKinase} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>

@@ -1,0 +1,618 @@
+[
+    {
+        "uniprotId": "UniProt-O00418",
+        "value": "EEF2K"
+    },
+    {
+        "uniprotId": "UniProt-O14730",
+        "value": "RIOK3"
+    },
+    {
+        "uniprotId": "UniProt-O14874",
+        "value": "BCKDK"
+    },
+    {
+        "uniprotId": "UniProt-O15021",
+        "value": "MAST4"
+    },
+    {
+        "uniprotId": "UniProt-O43781",
+        "value": "DYRK3"
+    },
+    {
+        "uniprotId": "UniProt-O60307",
+        "value": "MAST3"
+    },
+    {
+        "uniprotId": "UniProt-O75914",
+        "value": "PAK3"
+    },
+    {
+        "uniprotId": "UniProt-O76039",
+        "value": "CDKL5"
+    },
+    {
+        "uniprotId": "UniProt-O94768",
+        "value": "DRAK2"
+    },
+    {
+        "uniprotId": "UniProt-O94921",
+        "value": "PFTAIRE1"
+    },
+    {
+        "uniprotId": "UniProt-P0C1S8",
+        "value": "WEE1B"
+    },
+    {
+        "uniprotId": "UniProt-P0C263",
+        "value": "SGK069"
+    },
+    {
+        "uniprotId": "UniProt-P0C264",
+        "value": "SGK110"
+    },
+    {
+        "uniprotId": "UniProt-P11801",
+        "value": "PSKH1"
+    },
+    {
+        "uniprotId": "UniProt-P15735",
+        "value": "PHKG2"
+    },
+    {
+        "uniprotId": "UniProt-P19784",
+        "value": "CK2A2"
+    },
+    {
+        "uniprotId": "UniProt-P21127",
+        "value": "CDK11B"
+    },
+    {
+        "uniprotId": "UniProt-P22612",
+        "value": "PKACG"
+    },
+    {
+        "uniprotId": "UniProt-P22694",
+        "value": "PKACB"
+    },
+    {
+        "uniprotId": "UniProt-P27448",
+        "value": "MARK3"
+    },
+    {
+        "uniprotId": "UniProt-P29376",
+        "value": "LTK"
+    },
+    {
+        "uniprotId": "UniProt-P31152",
+        "value": "ERK4"
+    },
+    {
+        "uniprotId": "UniProt-P49761",
+        "value": "CLK3"
+    },
+    {
+        "uniprotId": "UniProt-P49842",
+        "value": "G11"
+    },
+    {
+        "uniprotId": "UniProt-P51956",
+        "value": "NEK3"
+    },
+    {
+        "uniprotId": "UniProt-P51957",
+        "value": "NEK4"
+    },
+    {
+        "uniprotId": "UniProt-P78368",
+        "value": "CK1G2"
+    },
+    {
+        "uniprotId": "UniProt-Q00532",
+        "value": "CDKL1"
+    },
+    {
+        "uniprotId": "UniProt-Q00536",
+        "value": "PCTAIRE1"
+    },
+    {
+        "uniprotId": "UniProt-Q00537",
+        "value": "PCTAIRE2"
+    },
+    {
+        "uniprotId": "UniProt-Q02779",
+        "value": "MLK2"
+    },
+    {
+        "uniprotId": "UniProt-Q04759",
+        "value": "PKCT"
+    },
+    {
+        "uniprotId": "UniProt-Q05823",
+        "value": "RNASEL"
+    },
+    {
+        "uniprotId": "UniProt-Q07002",
+        "value": "PCTAIRE3"
+    },
+    {
+        "uniprotId": "UniProt-Q13188",
+        "value": "MST2"
+    },
+    {
+        "uniprotId": "UniProt-Q13523",
+        "value": "PRP4"
+    },
+    {
+        "uniprotId": "UniProt-Q14004",
+        "value": "CHED"
+    },
+    {
+        "uniprotId": "UniProt-Q15131",
+        "value": "CDK10"
+    },
+    {
+        "uniprotId": "UniProt-Q15569",
+        "value": "TESK1"
+    },
+    {
+        "uniprotId": "UniProt-Q16816",
+        "value": "PHKG1"
+    },
+    {
+        "uniprotId": "UniProt-Q38SD2",
+        "value": "LRRK1"
+    },
+    {
+        "uniprotId": "UniProt-Q3MIX3",
+        "value": "ADCK5"
+    },
+    {
+        "uniprotId": "UniProt-Q52WX2",
+        "value": "SBK"
+    },
+    {
+        "uniprotId": "UniProt-Q58A45",
+        "value": "PAN3"
+    },
+    {
+        "uniprotId": "UniProt-Q5MAI5",
+        "value": "CDKL4"
+    },
+    {
+        "uniprotId": "UniProt-Q5TCX8",
+        "value": "MLK4"
+    },
+    {
+        "uniprotId": "UniProt-Q5TCY1",
+        "value": "TTBK1"
+    },
+    {
+        "uniprotId": "UniProt-Q5VST9",
+        "value": "OBSCN"
+    },
+    {
+        "uniprotId": "UniProt-Q5VT25",
+        "value": "MRCKA"
+    },
+    {
+        "uniprotId": "UniProt-Q6DT37",
+        "value": "DMPK2"
+    },
+    {
+        "uniprotId": "UniProt-Q6IQ55",
+        "value": "TTBK2"
+    },
+    {
+        "uniprotId": "UniProt-Q6P0Q8",
+        "value": "MAST2"
+    },
+    {
+        "uniprotId": "UniProt-Q6P2M8",
+        "value": "CAMK1B"
+    },
+    {
+        "uniprotId": "UniProt-Q6P3R8",
+        "value": "NEK5"
+    },
+    {
+        "uniprotId": "UniProt-Q6P3W7",
+        "value": "SCYL2"
+    },
+    {
+        "uniprotId": "UniProt-Q6P5Z2",
+        "value": "PKN3"
+    },
+    {
+        "uniprotId": "UniProt-Q6SA08",
+        "value": "TSSK4"
+    },
+    {
+        "uniprotId": "UniProt-Q6XUX3",
+        "value": "DUSTY"
+    },
+    {
+        "uniprotId": "UniProt-Q6ZN16",
+        "value": "MAP3K7"
+    },
+    {
+        "uniprotId": "UniProt-Q6ZWH5",
+        "value": "NEK10"
+    },
+    {
+        "uniprotId": "UniProt-Q76MJ5",
+        "value": "IRE2"
+    },
+    {
+        "uniprotId": "UniProt-Q7L7X3",
+        "value": "TAO1"
+    },
+    {
+        "uniprotId": "UniProt-Q7Z2Y5",
+        "value": "NRK"
+    },
+    {
+        "uniprotId": "UniProt-Q7Z695",
+        "value": "ADCK2"
+    },
+    {
+        "uniprotId": "UniProt-Q7Z7A4",
+        "value": "SLOB"
+    },
+    {
+        "uniprotId": "UniProt-Q86SG6",
+        "value": "NEK8"
+    },
+    {
+        "uniprotId": "UniProt-Q86TB3",
+        "value": "ALPHAK2"
+    },
+    {
+        "uniprotId": "UniProt-Q86TW2",
+        "value": "ADCK1"
+    },
+    {
+        "uniprotId": "UniProt-Q86UE8",
+        "value": "TLK2"
+    },
+    {
+        "uniprotId": "UniProt-Q86UX6",
+        "value": "YANK3"
+    },
+    {
+        "uniprotId": "UniProt-Q86Y07",
+        "value": "VRK2"
+    },
+    {
+        "uniprotId": "UniProt-Q86YV5",
+        "value": "SGK223"
+    },
+    {
+        "uniprotId": "UniProt-Q86Z02",
+        "value": "HIPK1"
+    },
+    {
+        "uniprotId": "UniProt-Q8IU85",
+        "value": "CAMK1D"
+    },
+    {
+        "uniprotId": "UniProt-Q8IV63",
+        "value": "VRK3"
+    },
+    {
+        "uniprotId": "UniProt-Q8IVW4",
+        "value": "CDKL3"
+    },
+    {
+        "uniprotId": "UniProt-Q8IWQ3",
+        "value": "BRSK2"
+    },
+    {
+        "uniprotId": "UniProt-Q8IWU2",
+        "value": "LMR2"
+    },
+    {
+        "uniprotId": "UniProt-Q8IY84",
+        "value": "NIM1"
+    },
+    {
+        "uniprotId": "UniProt-Q8IZE3",
+        "value": "SCYL3"
+    },
+    {
+        "uniprotId": "UniProt-Q8IZL9",
+        "value": "CCRK"
+    },
+    {
+        "uniprotId": "UniProt-Q8N165",
+        "value": "CLIK1L"
+    },
+    {
+        "uniprotId": "UniProt-Q8N2I9",
+        "value": "SGK495"
+    },
+    {
+        "uniprotId": "UniProt-Q8N5S9",
+        "value": "CAMKK1"
+    },
+    {
+        "uniprotId": "UniProt-Q8N752",
+        "value": "CK1A2"
+    },
+    {
+        "uniprotId": "UniProt-Q8NCB2",
+        "value": "VACAMKL"
+    },
+    {
+        "uniprotId": "UniProt-Q8NE28",
+        "value": "SGK071"
+    },
+    {
+        "uniprotId": "UniProt-Q8NE63",
+        "value": "HIPK4"
+    },
+    {
+        "uniprotId": "UniProt-Q8NG66",
+        "value": "NEK11"
+    },
+    {
+        "uniprotId": "UniProt-Q8NI60",
+        "value": "ADCK3"
+    },
+    {
+        "uniprotId": "UniProt-Q8TD08",
+        "value": "ERK7"
+    },
+    {
+        "uniprotId": "UniProt-Q8TD19",
+        "value": "NEK9"
+    },
+    {
+        "uniprotId": "UniProt-Q8TDC3",
+        "value": "BRSK1"
+    },
+    {
+        "uniprotId": "UniProt-Q8TDX7",
+        "value": "NEK7"
+    },
+    {
+        "uniprotId": "UniProt-Q8TEA7",
+        "value": "TBCK"
+    },
+    {
+        "uniprotId": "UniProt-Q8WU08",
+        "value": "YANK1"
+    },
+    {
+        "uniprotId": "UniProt-Q92630",
+        "value": "DYRK2"
+    },
+    {
+        "uniprotId": "UniProt-Q92772",
+        "value": "CDKL2"
+    },
+    {
+        "uniprotId": "UniProt-Q96C45",
+        "value": "ULK4"
+    },
+    {
+        "uniprotId": "UniProt-Q96D53",
+        "value": "ADCK4"
+    },
+    {
+        "uniprotId": "UniProt-Q96KG9",
+        "value": "SCYL1"
+    },
+    {
+        "uniprotId": "UniProt-Q96L34",
+        "value": "MARK4"
+    },
+    {
+        "uniprotId": "UniProt-Q96L96",
+        "value": "ALPHAK3"
+    },
+    {
+        "uniprotId": "UniProt-Q96LW2",
+        "value": "SGK494"
+    },
+    {
+        "uniprotId": "UniProt-Q96NX5",
+        "value": "CAMK1G"
+    },
+    {
+        "uniprotId": "UniProt-Q96PF2",
+        "value": "TSSK2"
+    },
+    {
+        "uniprotId": "UniProt-Q96PN8",
+        "value": "TSSK3"
+    },
+    {
+        "uniprotId": "UniProt-Q96PY6",
+        "value": "NEK1"
+    },
+    {
+        "uniprotId": "UniProt-Q96Q04",
+        "value": "LMR3"
+    },
+    {
+        "uniprotId": "UniProt-Q96Q40",
+        "value": "PFTAIRE2"
+    },
+    {
+        "uniprotId": "UniProt-Q96QS6",
+        "value": "PSKH2"
+    },
+    {
+        "uniprotId": "UniProt-Q96RR4",
+        "value": "CAMKK2"
+    },
+    {
+        "uniprotId": "UniProt-Q96S38",
+        "value": "RSKL1"
+    },
+    {
+        "uniprotId": "UniProt-Q96S44",
+        "value": "PRPK"
+    },
+    {
+        "uniprotId": "UniProt-Q96S53",
+        "value": "TESK2"
+    },
+    {
+        "uniprotId": "UniProt-Q99558",
+        "value": "NIK"
+    },
+    {
+        "uniprotId": "UniProt-Q99640",
+        "value": "MYT1"
+    },
+    {
+        "uniprotId": "UniProt-Q9BRS2",
+        "value": "RIOK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9BUB5",
+        "value": "MNK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9BVS4",
+        "value": "RIOK2"
+    },
+    {
+        "uniprotId": "UniProt-Q9BWU1",
+        "value": "CDK19"
+    },
+    {
+        "uniprotId": "UniProt-Q9BXA6",
+        "value": "SSTK"
+    },
+    {
+        "uniprotId": "UniProt-Q9BXA7",
+        "value": "TSSK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9BXU1",
+        "value": "SGK396"
+    },
+    {
+        "uniprotId": "UniProt-Q9BYP7",
+        "value": "WNK3"
+    },
+    {
+        "uniprotId": "UniProt-Q9BYT3",
+        "value": "STK33"
+    },
+    {
+        "uniprotId": "UniProt-Q9C098",
+        "value": "DCLK3"
+    },
+    {
+        "uniprotId": "UniProt-Q9H093",
+        "value": "NUAK2"
+    },
+    {
+        "uniprotId": "UniProt-Q9H422",
+        "value": "HIPK3"
+    },
+    {
+        "uniprotId": "UniProt-Q9H5K3",
+        "value": "SGK196"
+    },
+    {
+        "uniprotId": "UniProt-Q9HAZ1",
+        "value": "CLK4"
+    },
+    {
+        "uniprotId": "UniProt-Q9HBH9",
+        "value": "MNK2"
+    },
+    {
+        "uniprotId": "UniProt-Q9HC98",
+        "value": "NEK6"
+    },
+    {
+        "uniprotId": "UniProt-Q9HCP0",
+        "value": "CK1G1"
+    },
+    {
+        "uniprotId": "UniProt-Q9NQU5",
+        "value": "PAK6"
+    },
+    {
+        "uniprotId": "UniProt-Q9NR20",
+        "value": "DYRK4"
+    },
+    {
+        "uniprotId": "UniProt-Q9NRP7",
+        "value": "FUSED"
+    },
+    {
+        "uniprotId": "UniProt-Q9NSY0",
+        "value": "NRBP2"
+    },
+    {
+        "uniprotId": "UniProt-Q9NY57",
+        "value": "YANK2"
+    },
+    {
+        "uniprotId": "UniProt-Q9NYV4",
+        "value": "CRK7"
+    },
+    {
+        "uniprotId": "UniProt-Q9P0L2",
+        "value": "MARK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9P286",
+        "value": "PAK5"
+    },
+    {
+        "uniprotId": "UniProt-Q9UEE5",
+        "value": "DRAK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9UKI8",
+        "value": "TLK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9UL54",
+        "value": "TAO2"
+    },
+    {
+        "uniprotId": "UniProt-Q9UPE1",
+        "value": "MSSK1"
+    },
+    {
+        "uniprotId": "UniProt-Q9UPZ9",
+        "value": "ICK"
+    },
+    {
+        "uniprotId": "UniProt-Q9UQ88",
+        "value": "CDK11A"
+    },
+    {
+        "uniprotId": "UniProt-Q9Y2H1",
+        "value": "NDR2"
+    },
+    {
+        "uniprotId": "UniProt-Q9Y3S1",
+        "value": "WNK2"
+    },
+    {
+        "uniprotId": "UniProt-Q9Y463",
+        "value": "DYRK1B"
+    },
+    {
+        "uniprotId": "UniProt-Q9Y5S2",
+        "value": "MRCKB"
+    },
+    {
+        "uniprotId": "UniProt-Q9Y6M4",
+        "value": "CK1G3"
+    },
+    {
+        "uniprotId": "UniProt-Q9Y6S9",
+        "value": "RSKL2"
+    }
+]
