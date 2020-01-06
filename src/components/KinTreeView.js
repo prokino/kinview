@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
@@ -132,6 +132,11 @@ function KinTreeView(props) {
   const [nodes, setNodes] = React.useState(props.nodes);
   const [darkKinase, setDarkKinase] = React.useState(props.darkKinase);
   const filterInput = useRef(null);
+
+  // useEffect(() => {
+  //   setNodes(props.nodes)
+  // }, [props.nodes]);
+
   function handleNodeClick(e, node) {
     props.onCheckBoxesChanged(node, e.target.checked);
   }
@@ -140,10 +145,13 @@ function KinTreeView(props) {
     return props.selectedNodes.filter(n => n.id == node.id).length > 0;
   }
 
-  function handleFilterChange(e) {
+  function handleFilterChange(e,val) {
+    console.log("val="+ val);
+    //setNodes(props.nodes); //reset
+
     let filtered;
     //const val = e.target.value; //TextField
-    const val = e.currentTarget.innerText; //AutoComplete
+    //const val = e.currentTarget.innerText; //AutoComplete
     if (val) {
       filtered = props.nodes.filter(function iter(o) {
         var temp;
@@ -161,10 +169,12 @@ function KinTreeView(props) {
           return true;
         }
       });
-      setNodes(filtered);
+      console.log(val);
+      console.log(filtered);
+      //setNodes(filtered);
     }
-    else
-      setNodes(props.nodes);
+     else
+       setNodes(props.nodes);
 
     //filterInput.current.focus();
 
@@ -176,7 +186,7 @@ function KinTreeView(props) {
       }
     }
 
-    return nodes.map((node, index) => {
+if (nodes)    return nodes.map((node, index) => {
       return <div key={`node-${index}`} style={{ display: 'flex', alignItems: 'baseline' }}>
         <Checkbox
           id={`checkbox-${node.id}`}
@@ -201,7 +211,8 @@ function KinTreeView(props) {
           options={darkKinase}
           getOptionLabel={option => option.value}
           onInputChange={handleFilterChange}
-          style={{ width: 300 }}
+          style={{ width: 150 }}
+          freeSolo
           renderInput={params => (
         <TextField {...params} label="Dark Kinase" variant="outlined" style = {{width: 150}}  />
       )}
