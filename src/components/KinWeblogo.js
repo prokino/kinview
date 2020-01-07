@@ -291,16 +291,16 @@ function KinWeblogo(props)
          </div> */}
          <Box>
           {/* <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/${props.highres?"highres":"png"}/${props.value.path}.${props.highres?"png":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  /> */}
-          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+          <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4840"}  />
          </Box>
          <Box className={mutationWeblogosChecked ? classes.visible: classes.hidden}>
-           <img id={`mutationw-${props.value.id}`}  src={`mutations/weblogos/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+           <img id={`mutationw-${props.value.id}`}  src={`mutations/weblogos/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4840"}  />
          </Box>
          <Box className={mutationBarchartChecked ? classes.visible: classes.hidden}>
-           <img id={`mutationb-${props.value.id}`}  src={`mutations/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+           <img id={`mutationb-${props.value.id}`}  src={`mutations/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4840"}  />
          </Box>
          <Box className={ptmChecked ? classes.visible: classes.hidden}>
-           <img id={`ptm-${props.value.id}`}  src={`ptm/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  />
+           <img id={`ptm-${props.value.id}`}  src={`ptm/barchart/png/${props.value.path}.png`} height={props.height?props.height:"188"} width={props.width ? props.width:"4840"}  />
          </Box>
          <div className={numberingclass}>
               {selectedNumbering?selectedNumbering.value.map((n,index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} onClick={highlightColumn} className="v">{n}</span>):""}
