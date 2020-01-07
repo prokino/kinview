@@ -11,7 +11,6 @@
     "@material-ui/lab": "^4.0.0-alpha.38",
     "array-move": "^2.2.0",
     "classnames": "^2.2.6",
-    "deepdash-es": "^4.4.2",
     "electron-is-dev": "^1.1.0",
     "handlebars": "^4.5.3",
     "react": "^16.11",

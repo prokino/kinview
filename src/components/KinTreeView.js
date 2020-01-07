@@ -11,9 +11,7 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { ArrowRight, ArrowDropDown, NoMeetingRoom } from '@material-ui/icons';
 import { getNodeMajorVersion } from 'typescript';
-import { filterDeep } from 'deepdash-es/standalone';
-// import DarkIcon from '../img/kinase_dark.svg';
-// import WellknownIcon from '../img/kinase_wellknown.svg';
+
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
@@ -132,6 +130,7 @@ StyledTreeItem.propTypes = {
 
 function KinTreeView(props) {
   const originalNodes = tree.map((n)=>{n.checked=false;return n;}); 
+  const nodesCopy = JSON.parse(JSON.stringify(originalNodes));
   
   const classes = useStyles();
   
@@ -154,55 +153,27 @@ function KinTreeView(props) {
 
   function handleFilterChange(e,val) {
     console.log("val="+ val);
-    //setNodes(props.nodes); //reset
-    setNodes([...originalNodes]);
-    //let filtered;
+    let filtered;
+    if (val) {
+      filtered = nodesCopy.filter(function iter(o) {
+        if (o.value.toLowerCase().includes(val.toLowerCase())) {
+          return true;
+        }
+        if (!Array.isArray(o.nodes)) {
+          return false;
+        }
+        let temp = o.nodes.filter(iter);
+        if (temp.length) {
+          o.nodes = temp;
+          filtered = temp;
 
-    let filtered = filterDeep(
-      originalNodes,
-      (value, key, parent) => {
-        return (key == 'value' && 
-            Object.prototype.toString.call(value) === "[object String]" && 
-            value.toLowerCase().includes(val.toLowerCase())
-           )? true:undefined;
-      },
-      // {
-      //   // childrenPath:'nodes',
-      //   leavesOnly:false,
-      //   onTrue: {
-      //     skipChildren: true,   // false if childrenPath
-      //     cloneDeep: true,      // true if childrenPath
-      //     keepIfEmpty: true },
-      // }
-    );
-    console.log(filtered);
-    setNodes(filtered)
-
-    //const val = e.target.value; //TextField
-    //const val = e.currentTarget.innerText; //AutoComplete
-    // if (val) {
-    //   filtered = originalNodes.filter(function iter(o) {
-    //     if (o.value.toLowerCase().includes(val.toLowerCase())) {
-    //       return true;
-    //     }
-    //     if (!Array.isArray(o.nodes)) {
-    //       return false;
-    //     }
-    //     let temp = o.nodes.filter(iter);
-    //     if (temp.length) {
-    //       o.nodes = temp;
-    //       filtered = temp;
-
-    //       return true;
-    //     }
-    //   });
-    //   console.log(val);
-    //   console.log(filtered);
-    //   setNodes([...filtered]);
-    // }
-    //  else
-    //    setNodes(originalNodes);
-
+          return true;
+        }
+      });
+      setNodes([...filtered]);
+    }
+    else
+      setNodes(originalNodes);
     //filterInput.current.focus();
 
   }
