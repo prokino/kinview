@@ -5,10 +5,13 @@ import TreeItem from '@material-ui/lab/TreeItem';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import tree from '../data/classification.json';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { ArrowRight, ArrowDropDown, NoMeetingRoom } from '@material-ui/icons';
+import { getNodeMajorVersion } from 'typescript';
+import { filterDeep } from 'deepdash-es/standalone';
 // import DarkIcon from '../img/kinase_dark.svg';
 // import WellknownIcon from '../img/kinase_wellknown.svg';
 
@@ -128,14 +131,18 @@ StyledTreeItem.propTypes = {
 // });
 
 function KinTreeView(props) {
+  const originalNodes = tree.map((n)=>{n.checked=false;return n;}); 
+  
   const classes = useStyles();
-  const [nodes, setNodes] = React.useState(props.nodes);
+  
+  //const [nodes, setNodes] = React.useState(props.nodes);
+  const [nodes,setNodes] = React.useState(originalNodes);
   const [darkKinase, setDarkKinase] = React.useState(props.darkKinase);
   const filterInput = useRef(null);
 
   // useEffect(() => {
-  //   setNodes(props.nodes)
-  // }, [props.nodes]);
+  //   setNodes(getNodes());
+  // }, [nodes]);
 
   function handleNodeClick(e, node) {
     props.onCheckBoxesChanged(node, e.target.checked);
@@ -148,33 +155,53 @@ function KinTreeView(props) {
   function handleFilterChange(e,val) {
     console.log("val="+ val);
     //setNodes(props.nodes); //reset
+    setNodes([...originalNodes]);
+    //let filtered;
 
-    let filtered;
+    let filtered = filterDeep(
+      originalNodes,
+      (value, key, parent) => {
+        return (key == 'value' && 
+            Object.prototype.toString.call(value) === "[object String]" && 
+            value.toLowerCase().includes(val.toLowerCase())
+           )? true:undefined;
+      },
+      // {
+      //   // childrenPath:'nodes',
+      //   leavesOnly:false,
+      //   onTrue: {
+      //     skipChildren: true,   // false if childrenPath
+      //     cloneDeep: true,      // true if childrenPath
+      //     keepIfEmpty: true },
+      // }
+    );
+    console.log(filtered);
+    setNodes(filtered)
+
     //const val = e.target.value; //TextField
     //const val = e.currentTarget.innerText; //AutoComplete
-    if (val) {
-      filtered = props.nodes.filter(function iter(o) {
-        var temp;
-        if (o.value.toLowerCase().includes(val.toLowerCase())) {
-          return true;
-        }
-        if (!Array.isArray(o.nodes)) {
-          return false;
-        }
-        temp = o.nodes.filter(iter);
-        if (temp.length) {
-          o.nodes = temp;
-          filtered = temp;
+    // if (val) {
+    //   filtered = originalNodes.filter(function iter(o) {
+    //     if (o.value.toLowerCase().includes(val.toLowerCase())) {
+    //       return true;
+    //     }
+    //     if (!Array.isArray(o.nodes)) {
+    //       return false;
+    //     }
+    //     let temp = o.nodes.filter(iter);
+    //     if (temp.length) {
+    //       o.nodes = temp;
+    //       filtered = temp;
 
-          return true;
-        }
-      });
-      console.log(val);
-      console.log(filtered);
-      //setNodes(filtered);
-    }
-     else
-       setNodes(props.nodes);
+    //       return true;
+    //     }
+    //   });
+    //   console.log(val);
+    //   console.log(filtered);
+    //   setNodes([...filtered]);
+    // }
+    //  else
+    //    setNodes(originalNodes);
 
     //filterInput.current.focus();
 

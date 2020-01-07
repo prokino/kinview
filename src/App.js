@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
-import tree from './data/classification.json';
+
 import darkKinase from './data/dark_list.json'
 import numberingjson from './data/numbering.json';
 import Paper from '@material-ui/core/Paper';
@@ -107,7 +107,7 @@ function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
-  const [nodes,setNodes] = React.useState(tree.map((n)=>{n.checked=false;return n;}));
+  
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
@@ -347,7 +347,7 @@ function App() {
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView nodes={nodes} darkKinase={darkKinase} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+            <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
