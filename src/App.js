@@ -158,12 +158,12 @@ function App() {
   );
   const SortableList = SortableContainer(({ items }) => {
     return (
-      <ul>
+      <div>
         {selectedNodes.map((item, index) => (
           <SortableItem key={`item-${item.id}`} index={index} value={item} />
           //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
         ))}
-      </ul>
+      </div>
     );
   });
   const onSortEnd = ({ oldIndex, newIndex }) => {
@@ -298,23 +298,6 @@ function App() {
   return (
     <div className={classes.root}>
       <Grid item>
-        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
-        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
-        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
-        <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
-        <FormControlLabel label="Height" labelPlacement="start" control={
-        <div style={{width:100}}>
-            <Slider
-            onChange={heightChanged}
-            defaultValue={height}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            step={5}
-            min={50}
-            max={150}
-          />
-       </div>
-        } />
         
 
         <Dialog
@@ -354,6 +337,30 @@ function App() {
 
               <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
+              <div class="settings">
+        <fieldset>
+                <legend>Settings</legend>
+
+        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
+        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel label="Height " labelPlacement="start" control={
+        <div class="sliderHeight">
+            <Slider
+            onChange={heightChanged}
+            defaultValue={height}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={5}
+            min={50}
+            max={150}
+          />
+       </div>
+        } />
+        <FormControlLabel style={{float:'right'}} control={<Button size="small" color="secondary" onClick={handleResetClick}>Reset</Button>} />
+
+        </fieldset>
+        </div>
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {

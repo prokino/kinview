@@ -5,12 +5,15 @@ import TreeItem from '@material-ui/lab/TreeItem';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 import tree from '../data/classification.json';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { ArrowRight, ArrowDropDown, NoMeetingRoom } from '@material-ui/icons';
 import { getNodeMajorVersion } from 'typescript';
+import Switch from '@material-ui/core/Switch';
 
 
 const useTreeItemStyles = makeStyles(theme => ({
@@ -79,7 +82,7 @@ function StyledTreeItem(props) {
         <div className={classes.labelRoot}>
           {
             nodeType == 'protein' && isDark?
-            <img alt="Dark Kinase" src="img/kinase_dark.svg" width="20px" />
+            <img alt="Select Dark Kinase" src="img/kinase_dark.svg" width="20px" />
             :''
           }
           {
@@ -137,6 +140,8 @@ function KinTreeView(props) {
   //const [nodes, setNodes] = React.useState(props.nodes);
   const [nodes,setNodes] = React.useState(originalNodes);
   const [darkKinase, setDarkKinase] = React.useState(props.darkKinase);
+  const [switchOnlyDark, setSwitchOnlyDark] = React.useState(false);
+
   const filterInput = useRef(null);
 
   // useEffect(() => {
@@ -146,7 +151,9 @@ function KinTreeView(props) {
   function handleNodeClick(e, node) {
     props.onCheckBoxesChanged(node, e.target.checked);
   }
-
+  const handleOnlyDark = () => {
+    setSwitchOnlyDark(prev => !prev);
+  };
   function checkInSelectedNodes(node) {
     return props.selectedNodes.filter(n => n.id == node.id).length > 0;
   }
@@ -202,17 +209,17 @@ if (nodes)    return nodes.map((node, index) => {
   return (
 
     <div>
+        <FormControlLabel style={{width:'max-content'}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
           <Autocomplete
            size="small"
           //ref={filterInput}
           id="input-with-icon-grid" 
-          options={darkKinase}
+          options={switchOnlyDark?darkKinase:undefined}
           getOptionLabel={option => option.value}
           onInputChange={handleFilterChange}
-          style={{ width: 150 }}
-          freeSolo
+          { ...( !switchOnlyDark && { freeSolo: true } ) } 
           renderInput={params => (
-        <TextField {...params} label="Dark Kinase" variant="outlined" style = {{width: 150}}  />
+          <TextField {...params} label={`${switchOnlyDark? "Select Dark Kinas":"Search Kinaese"}`} variant="outlined" style = {{width:170}}  />
       )}
     />
 
