@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
   },
   structure:
   {
-    marginLeft: 55,
+    marginLeft: -20,
     width: 4863
   }
 }));
@@ -340,7 +340,6 @@ function App() {
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
-              <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
               <div class="settings">
         <fieldset>
@@ -366,6 +365,8 @@ function App() {
 
         </fieldset>
         </div>
+        <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {
