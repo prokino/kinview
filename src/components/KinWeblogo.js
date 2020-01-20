@@ -181,12 +181,13 @@ function KinWeblogo(props) {
   const [propChanged, setPropChanged] = React.useState(false);
   const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
   const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
-  const [mutationBarchartChecked, setmutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
-  const [ptmChecked, setPtmChecked] = React.useState(props.ptmChecked);
+  const [mutationBarchartChecked, setMutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
+  const [ptmWeblogosChecked, setPtmWeblogosChecked] = React.useState(props.ptmWeblogosChecked);
+  const [ptmBarchartChecked, setPtmBarchartChecked] = React.useState(props.ptmBarchartChecked);
   const DragHandle = sortableHandle(() => <ReorderIcon />);
   const numberingclass = classNames({
     "numberingdiv": true,
-    "hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmChecked)
+    "hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmWeblogosChecked || ptmBarchartChecked)
   });
 
   function toggleResidue(event) {
@@ -194,17 +195,21 @@ function KinWeblogo(props) {
     props.onChange(event);
   };
   function toggleMutationBarchart(event) {
-    setmutationBarchartChecked(prev => !prev);
+    setMutationBarchartChecked(prev => !prev);
     props.onChange(event);
   };
   function toggleMutationWeblogos(event) {
     setMutationWeblogosChecked(prev => !prev);
     props.onChange(event);
   };
-  function togglePtm(event) {
-    setPtmChecked(prev => !prev);
+  function togglePtmWeblogos(event) {
+    setPtmWeblogosChecked(prev => !prev);
     props.onChange(event);
   };
+  function togglePtmBarchart(event) {
+    setPtmBarchartChecked(prev => !prev);
+    props.onChange(event);
+  }; 
   //componentDidMount
 
   useEffect(() => {
@@ -276,9 +281,9 @@ function KinWeblogo(props) {
             <fieldset>
               <legend>PTM</legend>
               <FormControlLabel
-                control={<Switch size="small" id={`ptmw-checkbox-${props.value.id}`} checked={ptmChecked} value="ptm" onClick={e => { e.stopPropagation(); }} onChange={togglePtm} />}
-                label="Weblogo" disabled />
-              <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={false} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtm} />}
+                control={<Switch size="small" id={`ptmw-checkbox-${props.value.id}`} checked={ptmWeblogosChecked} value="ptmw" onClick={e => { e.stopPropagation(); }} onChange={togglePtmWeblogos} />}
+                label="Weblogo" />
+              <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
                 label="Barchart" />
             </fieldset>
             </div>
@@ -304,9 +309,14 @@ function KinWeblogo(props) {
           <Box className={mutationBarchartChecked ? classes.visible : classes.hidden}>
             <img id={`mutationb-${props.value.id}`} src={`mutations/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box>
-          <Box className={ptmChecked ? classes.visible : classes.hidden}>
+          <Box className={ptmWeblogosChecked ? classes.visible : classes.hidden}>
+            <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
+          </Box>
+          <Box className={ptmBarchartChecked ? classes.visible : classes.hidden}>
             <img id={`ptm-${props.value.id}`} src={`ptm/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box>
+
+          
           <div className={numberingclass}>
             {selectedNumbering ? selectedNumbering.value.map((n, index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} onClick={highlightColumn} className="v">{n}</span>) : ""}
           </div>

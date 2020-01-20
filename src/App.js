@@ -133,8 +133,11 @@ function App() {
         item.mutationWeblogosChecked = e.target.checked;
       if (e.target.id == "mutb-checkbox-" + item.id )
         item.mutationBarchartChecked = e.target.checked;
-      if (e.target.id == "ptm-checkbox-" + item.id )
-        item.ptmChecked = e.target.checked;
+      if (e.target.id == "ptmw-checkbox-" + item.id )
+        item.ptmWeblogosChecked = e.target.checked;
+      if (e.target.id == "ptmb-checkbox-" + item.id )
+        item.ptmBarchartChecked = e.target.checked;
+      
       
       return item;
     });
@@ -153,7 +156,9 @@ function App() {
           residueChecked={item.value.residueChecked} 
           mutationWeblogosChecked={item.value.mutationWeblogosChecked}
           mutationBarchartChecked={item.value.mutationBarchartChecked}
-          ptmChecked={item.value.ptmChecked} />
+          ptmWeblogosChecked={item.value.ptmWeblogosChecked}
+          ptmBarchartChecked={item.value.ptmBarchartChecked}
+           />
     </div>
   );
   const SortableList = SortableContainer(({ items }) => {
