@@ -238,8 +238,8 @@ function KinWeblogo(props) {
     //<div className={classes.root}>
     <div>
       <ExpansionPanel square defaultExpanded>
-        <ExpansionPanelSummary
-          //expandIcon={<ExpandMoreIcon />}
+        <ExpansionPanelSummary className={props.viewMode? classes.hidden:''}
+          //expandIcon={<ExpandMoreIcon />} 
           aria-controls="panel1d-content" id="panel1d-header">
 
           <StyledFormGroup row className={classes.formGroupRow}>

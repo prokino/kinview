@@ -82,13 +82,13 @@ function StyledTreeItem(props) {
         <div className={classes.labelRoot}>
           {
             nodeType == 'protein' && isDark?
-            <img alt="Select Dark Kinase" src="img/kinase_dark.svg" width="20px" />
+            <img alt="Select Dark Kinase" src="img/kinase_dark.svg" width="22px" />
             :''
           }
           {
             nodeType == 'protein' && !isDark?
             // <WellknownIcon className={classes.labelIcon} />
-            <img alt="Well-known Kinase" src="img/kinase_wellknown.svg" width="20px" />
+            <img alt="Well-known Kinase" src="img/kinase_wellknown.svg" width="22px" />
             :''
           }
           <Typography variant="body2" className={classes.labelText}>

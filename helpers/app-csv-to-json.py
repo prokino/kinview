@@ -176,6 +176,7 @@ def dark_csv_to_json():
             # data['value'] = rows["value"]
             # data['uniprotId'] = rows["uniprotId"]
 
+    data = sorted(data, key=lambda k: k['value'], reverse=False)
     with open('src/data/dark_list.json', 'w') as jsonfile:
         jsonfile.write(json.dumps(data,indent=4))
 

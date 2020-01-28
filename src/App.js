@@ -23,6 +23,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import Slider from '@material-ui/core/Slider';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -114,7 +116,7 @@ function App() {
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
   const [switchHighResChecked, setHighResChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
-
+  const [viewMode, setViewMode] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
   const [height, setHeight] = React.useState("100");
@@ -158,6 +160,7 @@ function App() {
           mutationBarchartChecked={item.value.mutationBarchartChecked}
           ptmWeblogosChecked={item.value.ptmWeblogosChecked}
           ptmBarchartChecked={item.value.ptmBarchartChecked}
+          viewMode = {viewMode}
            />
     </div>
   );
@@ -238,6 +241,10 @@ function App() {
   const handleHighResChange = () => {
     setHighResChecked(prev => !prev);
   };
+  const handleViewModechange = () => {
+    setViewMode(prev => !prev);
+  };
+  
   
   const handleDomainSwitchChange = () => {
     setSwitchDomainChecked(prev => !prev);
@@ -290,6 +297,7 @@ function App() {
   const handleCloseYes = () => {
     setOpenResetDialog(false);
     setSelectedNodes([]);
+    viewMode = false;
   };
 
   const handleCloseNo = () => {
@@ -346,8 +354,11 @@ function App() {
                 <legend>Settings</legend>
 
         <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+        
+         {/* <Switch checked={viewMode} onChange={handleViewModechange} />} /> */}
         {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel label="View Mode" control={<VisibilityIcon color={viewMode? "primary":"action"} fontSize="small" onClick={handleViewModechange} style={{ cursor: "pointer" }} />} />
         <FormControlLabel label="Height " labelPlacement="start" control={
         <div class="sliderHeight">
             <Slider
