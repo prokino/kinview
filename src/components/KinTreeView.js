@@ -15,14 +15,14 @@ import { getNodeMajorVersion } from 'typescript';
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
     '&:focus > $content': {
       backgroundColor: `var(--tree-view-bg-color, ${theme.palette.grey[400]})`,
       color: 'var(--tree-view-color)',
     },
   },
   content: {
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
     borderTopRightRadius: theme.spacing(2),
     borderBottomRightRadius: theme.spacing(2),
     paddingRight: theme.spacing(1),
