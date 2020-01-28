@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
   },
   structure:
   {
-    marginLeft: 55,
+    marginLeft: -20,
     width: 4863
   }
 }));
@@ -133,8 +133,11 @@ function App() {
         item.mutationWeblogosChecked = e.target.checked;
       if (e.target.id == "mutb-checkbox-" + item.id )
         item.mutationBarchartChecked = e.target.checked;
-      if (e.target.id == "ptm-checkbox-" + item.id )
-        item.ptmChecked = e.target.checked;
+      if (e.target.id == "ptmw-checkbox-" + item.id )
+        item.ptmWeblogosChecked = e.target.checked;
+      if (e.target.id == "ptmb-checkbox-" + item.id )
+        item.ptmBarchartChecked = e.target.checked;
+      
       
       return item;
     });
@@ -153,17 +156,19 @@ function App() {
           residueChecked={item.value.residueChecked} 
           mutationWeblogosChecked={item.value.mutationWeblogosChecked}
           mutationBarchartChecked={item.value.mutationBarchartChecked}
-          ptmChecked={item.value.ptmChecked} />
+          ptmWeblogosChecked={item.value.ptmWeblogosChecked}
+          ptmBarchartChecked={item.value.ptmBarchartChecked}
+           />
     </div>
   );
   const SortableList = SortableContainer(({ items }) => {
     return (
-      <ul>
+      <div>
         {selectedNodes.map((item, index) => (
           <SortableItem key={`item-${item.id}`} index={index} value={item} />
           //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
         ))}
-      </ul>
+      </div>
     );
   });
   const onSortEnd = ({ oldIndex, newIndex }) => {
@@ -298,23 +303,6 @@ function App() {
   return (
     <div className={classes.root}>
       <Grid item>
-        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
-        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
-        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
-        <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
-        <FormControlLabel label="Height" labelPlacement="start" control={
-        <div style={{width:100}}>
-            <Slider
-            onChange={heightChanged}
-            defaultValue={height}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            step={5}
-            min={50}
-            max={150}
-          />
-       </div>
-        } />
         
 
         <Dialog
@@ -352,8 +340,33 @@ function App() {
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
-              <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
+              <div class="settings">
+        <fieldset>
+                <legend>Settings</legend>
+
+        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
+        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel label="Height " labelPlacement="start" control={
+        <div class="sliderHeight">
+            <Slider
+            onChange={heightChanged}
+            defaultValue={height}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={5}
+            min={50}
+            max={150}
+          />
+       </div>
+        } />
+        <FormControlLabel style={{float:'right'}} control={<Button size="small" color="secondary" onClick={handleResetClick}>Reset</Button>} />
+
+        </fieldset>
+        </div>
+        <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {
