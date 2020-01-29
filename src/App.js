@@ -297,7 +297,7 @@ function App() {
   const handleCloseYes = () => {
     setOpenResetDialog(false);
     setSelectedNodes([]);
-    viewMode = false;
+    setViewMode(false);
   };
 
   const handleCloseNo = () => {
