@@ -138,7 +138,9 @@ const StyledFormGroup = withStyles(theme => ({
     position: 'sticky',
     left: 0,
     display: 'flex',
-    placeItems: 'center'
+    placeItems: 'center',
+    width: '900px',
+    justifyContent: 'space-between',
   },
 
 }))(FormGroup);
