@@ -79,7 +79,6 @@ const useStyles = makeStyles(theme => ({
   structure:
   {
     marginLeft: -20,
-    width: 4863
   }
 }));
 // console.log(tree);
