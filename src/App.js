@@ -135,8 +135,8 @@ function App() {
         item.mutationWeblogosChecked = e.target.checked;
       if (e.target.id == "mutb-checkbox-" + item.id )
         item.mutationBarchartChecked = e.target.checked;
-      if (e.target.id == "ptmw-checkbox-" + item.id )
-        item.ptmWeblogosChecked = e.target.checked;
+      // if (e.target.id == "ptmw-checkbox-" + item.id )
+      //   item.ptmWeblogosChecked = e.target.checked;
       if (e.target.id == "ptmb-checkbox-" + item.id )
         item.ptmBarchartChecked = e.target.checked;
       
@@ -158,7 +158,7 @@ function App() {
           residueChecked={item.value.residueChecked} 
           mutationWeblogosChecked={item.value.mutationWeblogosChecked}
           mutationBarchartChecked={item.value.mutationBarchartChecked}
-          ptmWeblogosChecked={item.value.ptmWeblogosChecked}
+          //ptmWeblogosChecked={item.value.ptmWeblogosChecked}
           ptmBarchartChecked={item.value.ptmBarchartChecked}
           viewMode = {viewMode}
            />

@@ -139,7 +139,7 @@ const StyledFormGroup = withStyles(theme => ({
     left: 0,
     display: 'flex',
     placeItems: 'center',
-    width: '900px',
+    width: '745px',
     justifyContent: 'space-between',
   },
 
@@ -184,12 +184,12 @@ function KinWeblogo(props) {
   const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
   const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
   const [mutationBarchartChecked, setMutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
-  const [ptmWeblogosChecked, setPtmWeblogosChecked] = React.useState(props.ptmWeblogosChecked);
+  // const [ptmWeblogosChecked, setPtmWeblogosChecked] = React.useState(props.ptmWeblogosChecked);
   const [ptmBarchartChecked, setPtmBarchartChecked] = React.useState(props.ptmBarchartChecked);
   const DragHandle = sortableHandle(() => <ReorderIcon />);
   const numberingclass = classNames({
     "numberingdiv": true,
-    "hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmWeblogosChecked || ptmBarchartChecked)
+    "hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmBarchartChecked) // || ptmWeblogosChecked
   });
 
   function toggleResidue(event) {
@@ -204,10 +204,10 @@ function KinWeblogo(props) {
     setMutationWeblogosChecked(prev => !prev);
     props.onChange(event);
   };
-  function togglePtmWeblogos(event) {
-    setPtmWeblogosChecked(prev => !prev);
-    props.onChange(event);
-  };
+  // function togglePtmWeblogos(event) {
+  //   setPtmWeblogosChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
   function togglePtmBarchart(event) {
     setPtmBarchartChecked(prev => !prev);
     props.onChange(event);
@@ -268,6 +268,8 @@ function KinWeblogo(props) {
             <FormControlLabel
               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
               label="Residue" />
+              <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
+                label="PTM" />
             <div class="weblogo">
               <fieldset>
                 <legend>Mutant Type</legend>
@@ -279,7 +281,7 @@ function KinWeblogo(props) {
               </fieldset>
             </div>
 
-            <div class="weblogo">
+            {/* <div class="weblogo">
             <fieldset>
               <legend>PTM</legend>
               <FormControlLabel
@@ -288,7 +290,7 @@ function KinWeblogo(props) {
               <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
                 label="Barchart" />
             </fieldset>
-            </div>
+            </div> */}
           </StyledFormGroup>
 
         </ExpansionPanelSummary>
@@ -308,15 +310,16 @@ function KinWeblogo(props) {
           <Box className={mutationWeblogosChecked ? classes.visible : classes.hidden}>
             <img id={`mutationw-${props.value.id}`} src={`mutations/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box>
-          <Box className={mutationBarchartChecked ? classes.visible : classes.hidden}>
-            <img id={`mutationb-${props.value.id}`} src={`mutations/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
-          </Box>
-          <Box className={ptmWeblogosChecked ? classes.visible : classes.hidden}>
-            <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
-          </Box>
           <Box className={ptmBarchartChecked ? classes.visible : classes.hidden}>
             <img id={`ptm-${props.value.id}`} src={`ptm/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box>
+          <Box className={mutationBarchartChecked ? classes.visible : classes.hidden}>
+            <img id={`mutationb-${props.value.id}`} src={`mutations/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
+          </Box>
+          {/* <Box className={ptmWeblogosChecked ? classes.visible : classes.hidden}>
+            <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
+          </Box> */}
+   
 
           
           <div className={numberingclass}>
