@@ -108,7 +108,6 @@ function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
-  
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
@@ -179,7 +178,7 @@ function App() {
   };
 
   // useEffect(() => {
-  //   alert('han');
+  //   setSelectedNodes(originalNodes.filter(x=>x.id=="id@PK"));
   // }, [selectedNodes]);
 
 
@@ -195,6 +194,7 @@ function App() {
       node.mutationWeblogosChecked=false;
       node.mutationBarchart=false;
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
+      console.log(selectedNodes);
     }
     else //remvoe the Selection
     {
