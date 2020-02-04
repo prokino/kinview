@@ -132,24 +132,27 @@ StyledTreeItem.propTypes = {
 // });
 
 function KinTreeView(props) {
-  const originalNodes = tree.map((n)=>{n.checked=false;return n;}); 
+  const originalNodes = tree.map((n)=>{n.checked=false;return n;});
   const nodesCopy = JSON.parse(JSON.stringify(originalNodes));
   
   const classes = useStyles();
   
   //const [nodes, setNodes] = React.useState(props.nodes);
   const [nodes,setNodes] = React.useState(originalNodes);
-  const [darkKinase, setDarkKinase] = React.useState(props.darkKinase);
+  const [darkKinase] = React.useState(props.darkKinase);
   const [switchOnlyDark, setSwitchOnlyDark] = React.useState(false);
 
   const filterInput = useRef(null);
 
-  // useEffect(() => {
-  //   setNodes(getNodes());
-  // }, [nodes]);
+  useEffect(() => {
+    let node = originalNodes.filter(x=>x.id=="id@PK")[0];
+    node.id="id@PK";
+    node.checked=true;    
+    handleNodeClick(node,true);
+  },[nodes]);
 
-  function handleNodeClick(e, node) {
-    props.onCheckBoxesChanged(node, e.target.checked);
+  function handleNodeClick(node,checked) {
+    props.onCheckBoxesChanged(node, checked);
   }
   const handleOnlyDark = () => {
     setSwitchOnlyDark(prev => !prev);
@@ -198,7 +201,7 @@ if (nodes)    return nodes.map((node, index) => {
           size='small'
           color="primary"
           checked={checkInSelectedNodes(node)}
-          onChange={(e) => handleNodeClick(e, node)}/>
+          onChange={(e) => handleNodeClick(node,e.target.checked)}/>
           <StyledTreeItem nodeId={node.id} labelText={node.value} isDark={node.isDark} nodeType={node.type} >
             {children(node.nodes)}
           </StyledTreeItem>
