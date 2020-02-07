@@ -187,7 +187,9 @@ function App() {
     console.log("checked=" + checked);
     console.log("treeCheckboxChanged:" + selectedNodes.length);
 
-    if (checked) { //add the selection to selectedNodes
+    let alreadyAdded =selectedNodes.some(item => item.id === node.id);
+    
+    if (checked && !alreadyAdded) { //add the selection to selectedNodes
       setSelectedNode(node);
       node.residueChecked = true;
       node.ptmChecked = false;
@@ -196,7 +198,7 @@ function App() {
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
       console.log(selectedNodes);
     }
-    else //remvoe the Selection
+    else if(!checked) //remvoe the Selection
     {
       //setSelectedNode('');
       handleDelete(node);
