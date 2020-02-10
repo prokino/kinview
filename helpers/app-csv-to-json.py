@@ -110,7 +110,6 @@ def classification_csv_to_json():
             #elif not any(x for x in family['nodes'] if x['value'] == protein):
                 family['nodes'].append(entity)
 
-
     # add one row for all to the beginning of the file
     groups.insert(0, {
         "protein":pk['Protein'],
@@ -166,6 +165,22 @@ def numbering_csv_to_json():
 
     print("Numbering {0} created.".format(jsonPath))
 
+def dark_csv_to_json():
+    
+    fieldnames = ("value","uniprotId")
+    data=[]
+    with open('src/data/dark_kinase_list_curated.csv', 'r') as f:
+        reader = csv.DictReader(f, fieldnames)
+        for rows in reader:
+            data.append({'uniprotId':rows["uniprotId"],'value':rows["value"].split("_")[1]})
+            # data['value'] = rows["value"]
+            # data['uniprotId'] = rows["uniprotId"]
+
+    data = sorted(data, key=lambda k: k['value'], reverse=False)
+    with open('src/data/dark_list.json', 'w') as jsonfile:
+        jsonfile.write(json.dumps(data,indent=4))
+
 if __name__ == "__main__":
-    classification_csv_to_json()
+    #classification_csv_to_json()
     #numbering_csv_to_json()
+    dark_csv_to_json()

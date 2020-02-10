@@ -8,3 +8,4 @@ helpers/__pycache__/
 build/*
 dist/*
 *.7z
+node_modules

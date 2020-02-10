@@ -2,7 +2,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
-import tree from './data/classification.json';
+
+import darkKinase from './data/dark_list.json'
 import numberingjson from './data/numbering.json';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -22,6 +23,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import Slider from '@material-ui/core/Slider';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,8 +78,7 @@ const useStyles = makeStyles(theme => ({
   },
   structure:
   {
-    marginLeft: 55,
-    width: 4863
+    marginLeft: -20,
   }
 }));
 // console.log(tree);
@@ -106,14 +108,13 @@ function App() {
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
-  const [nodes,setNodes] = React.useState(tree.map((n)=>{n.checked=false;return n;}));
   const [selectedNode, setSelectedNode] = React.useState('');
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
   const [switchHighResChecked, setHighResChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
-
+  const [viewMode, setViewMode] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
   const [height, setHeight] = React.useState("100");
@@ -128,10 +129,15 @@ function App() {
     {
       if (e.target.id == "res-checkbox-" + item.id )
         item.residueChecked = e.target.checked;
-      if (e.target.id == "mut-checkbox-" + item.id )
-        item.mutationChecked = e.target.checked;
-      if (e.target.id == "ptm-checkbox-" + item.id )
-        item.ptmChecked = e.target.checked;
+      if (e.target.id == "mutw-checkbox-" + item.id )
+        item.mutationWeblogosChecked = e.target.checked;
+      if (e.target.id == "mutb-checkbox-" + item.id )
+        item.mutationBarchartChecked = e.target.checked;
+      // if (e.target.id == "ptmw-checkbox-" + item.id )
+      //   item.ptmWeblogosChecked = e.target.checked;
+      if (e.target.id == "ptmb-checkbox-" + item.id )
+        item.ptmBarchartChecked = e.target.checked;
+      
       
       return item;
     });
@@ -148,18 +154,22 @@ function App() {
           onRemove={weblogoRemove(item.value)}
           onChange={weblogoCheckboxChanged}
           residueChecked={item.value.residueChecked} 
-          mutationChecked={item.value.mutationChecked}
-          ptmChecked={item.value.ptmChecked} />
+          mutationWeblogosChecked={item.value.mutationWeblogosChecked}
+          mutationBarchartChecked={item.value.mutationBarchartChecked}
+          //ptmWeblogosChecked={item.value.ptmWeblogosChecked}
+          ptmBarchartChecked={item.value.ptmBarchartChecked}
+          viewMode = {viewMode}
+           />
     </div>
   );
   const SortableList = SortableContainer(({ items }) => {
     return (
-      <ul>
+      <div>
         {selectedNodes.map((item, index) => (
           <SortableItem key={`item-${item.id}`} index={index} value={item} />
           //     <KinWeblogo src={'weblogos/' + item.path} label={item.value} numbers={getCandidateNumbers(item)}/>
         ))}
-      </ul>
+      </div>
     );
   });
   const onSortEnd = ({ oldIndex, newIndex }) => {
@@ -168,7 +178,7 @@ function App() {
   };
 
   // useEffect(() => {
-  //   alert('han');
+  //   setSelectedNodes(originalNodes.filter(x=>x.id=="id@PK"));
   // }, [selectedNodes]);
 
 
@@ -177,14 +187,18 @@ function App() {
     console.log("checked=" + checked);
     console.log("treeCheckboxChanged:" + selectedNodes.length);
 
-    if (checked) { //add the selection to selectedNodes
+    let alreadyAdded =selectedNodes.some(item => item.id === node.id);
+    
+    if (checked && !alreadyAdded) { //add the selection to selectedNodes
       setSelectedNode(node);
       node.residueChecked = true;
       node.ptmChecked = false;
-      node.mutationChecked=false;
+      node.mutationWeblogosChecked=false;
+      node.mutationBarchart=false;
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
+      console.log(selectedNodes);
     }
-    else //remvoe the Selection
+    else if(!checked) //remvoe the Selection
     {
       //setSelectedNode('');
       handleDelete(node);
@@ -228,6 +242,10 @@ function App() {
   const handleHighResChange = () => {
     setHighResChecked(prev => !prev);
   };
+  const handleViewModechange = () => {
+    setViewMode(prev => !prev);
+  };
+  
   
   const handleDomainSwitchChange = () => {
     setSwitchDomainChecked(prev => !prev);
@@ -280,6 +298,7 @@ function App() {
   const handleCloseYes = () => {
     setOpenResetDialog(false);
     setSelectedNodes([]);
+    setViewMode(false);
   };
 
   const handleCloseNo = () => {
@@ -293,23 +312,6 @@ function App() {
   return (
     <div className={classes.root}>
       <Grid item>
-        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
-        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
-        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
-        <FormControlLabel control={<Button variant="outlined" color="secondary" onClick={handleResetClick}>Reset</Button>} />
-        <FormControlLabel label="Height" labelPlacement="start" control={
-        <div style={{width:100}}>
-            <Slider
-            onChange={heightChanged}
-            defaultValue={height}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            step={5}
-            min={50}
-            max={150}
-          />
-       </div>
-        } />
         
 
         <Dialog
@@ -342,13 +344,41 @@ function App() {
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView nodes={nodes} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+            <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
-              <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
+              <div class="settings">
+        <fieldset>
+                <legend>Settings</legend>
+
+        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
+        
+         {/* <Switch checked={viewMode} onChange={handleViewModechange} />} /> */}
+        {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
+        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel label="View Mode" control={<VisibilityIcon color={viewMode? "primary":"action"} fontSize="small" onClick={handleViewModechange} style={{ cursor: "pointer" }} />} />
+        <FormControlLabel label="Height " labelPlacement="start" control={
+        <div class="sliderHeight">
+            <Slider
+            onChange={heightChanged}
+            defaultValue={height}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={5}
+            min={50}
+            max={150}
+          />
+       </div>
+        } />
+        <FormControlLabel style={{float:'right'}} control={<Button size="small" color="secondary" onClick={handleResetClick}>Reset</Button>} />
+
+        </fieldset>
+        </div>
+        <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
                   // selectedNodes.map(function (item, idx) {
