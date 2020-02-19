@@ -41,6 +41,7 @@
   font-family: 'Lucida Console', Monaco, monospace;
   font-size: 10px;
   line-height: 0;
+  position: absolute;
 }
 .numberingdiv .v
 {

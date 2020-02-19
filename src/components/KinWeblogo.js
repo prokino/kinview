@@ -157,25 +157,22 @@ function showlabel(prefix, lbl) {
 //   return numbers.map((item,i) => { return (<option key={i} value={item.name}>{item.name}</option>) });
 // }  
 function highlightColumn(e) {
-  e.preventDefault();
-  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  var rect = document.createElementNS(svg.namespaceURI, 'rect');
+//todo: fix and uncomment
+  // e.preventDefault();
+  // let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  // let rect = document.createElementNS(svg.namespaceURI, 'rect');
+  // let x = e.clientX;
+  // let y = e.clientY;
+  // rect.setAttributeNS(null, 'x', 0);
+  // rect.setAttributeNS(null, 'y', 0);
+  // rect.setAttributeNS(null, 'height', e.screenY);
+  // rect.setAttributeNS(null, 'width', '10');
+  // rect.setAttributeNS(null, 'fill', '#ff0000');
+  // rect.setAttributeNS(null, 'style', 'position:absolute;z-index:1;opacity:0.33;');
 
-  rect.setAttributeNS(null, 'x', 0);
-  rect.setAttributeNS(null, 'y', 0);
-  rect.setAttributeNS(null, 'height', e.screenY);
-  rect.setAttributeNS(null, 'width', '10');
-  rect.setAttributeNS(null, 'fill', '#ff0000');
-  rect.setAttributeNS(null, 'style', 'position:absolute;z-index:1;opacity:0.33;top:40px;');
+  // svg.appendChild(rect);
+  // e.currentTarget.appendChild(svg);
 
-  svg.appendChild(rect);
-  e.currentTarget.appendChild(svg);
-
-  // var h=document.createElement('a');
-  // h.setAttribute('href', 'http://www.google.com');
-  // var t=document.createTextNode('Hello World');
-  // h.appendChild(t);
-  // document.body.appendChild(h);
 }
 function KinWeblogo(props) {
   const [selectedNumbering, setNumbering] = React.useState(props && props.numbers ? props.numbers[0] : '');

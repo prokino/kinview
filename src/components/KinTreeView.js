@@ -146,7 +146,6 @@ function KinTreeView(props) {
 
   useEffect(() => {
     let node = originalNodes.filter(x=>x.id=="id@PK")[0];
-    node.id="id@PK";
     node.checked=true;    
     handleNodeClick(node,true);
   },[nodes]);
