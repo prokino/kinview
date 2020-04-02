@@ -312,8 +312,6 @@ function App() {
   return (
     <div className={classes.root}>
       <Grid item>
-        
-
         <Dialog
           open={openResetDialog}
           onClose={handleCloseNo}

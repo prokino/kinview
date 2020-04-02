@@ -1,6 +1,10 @@
 import csv, json
 #from treestruct import Tree
 
+csvPath = 'src/data/KinaseTree.csv'
+jsonPath = 'src/data/classification.json'
+darkPath = 'src/data/dark_kinase_list_curated.csv'
+
 def getvalue(s):
     return s.split('@')[1]
 
@@ -9,11 +13,56 @@ def fixProtein(p):
     return p.split(" ")[0]
 
 
-def classification_csv_to_json():
+def classification_csv_to_json(root_name):
+    def create_entity(entity_type,value,row):
+        entity = None
+        if entity_type == "group":
+            entity ={'id': "id" + str(idx) + "@" + value, 
+                    'uniprot' : row['UniProt'],
+                    'type' : entity_type,
+                    'value':value,
+                    'aligend_seq':row['Aligned_Seq'],
+                    'path': row['WebLogo'][:-4], 
+                    'members':row['Members'].split(";"),
+                    'nodes': []}
+        elif entity_type == "family":
+            entity = {'id':"id" + str(idx) + "@" + value, 
+                    'uniprot' : row['UniProt'],
+                    'type' : entity_type,
+                    'value':value,
+                    'aligend_seq':row['Aligned_Seq'],
+                    #'protein':fixProtein(row['Protein']), 
+                    'path': row['WebLogo'][:-4],
+                    'members':row['Members'].split(";"),
+                    'nodes': []}
+        elif entity_type == "subfamily":
+            entity ={'id':"id" + str(idx) + "@" + value,
+                    'uniprot' : row['UniProt'],
+                    'type' : entity_type,
+                    'value': value,
+                    'aligend_seq':row['Aligned_Seq'],
+                    'members':row['Members'].split(";"),
+                    'path':row['WebLogo'][:-4],
+                    'nodes':[]
+                    #'path':"{0}_{1}_{2}".format(group['value'],family['value'],subfamily),
+                    #'HasAlignment': row['HasAlignment'] 
+                    }
+        elif entity_type == "protein":
+            entity ={'id':"id" + str(idx) + "@" + value,
+                    'uniprot' : row['UniProt'],
+                    'type' : entity_type,
+                    'value': fixProtein(value),
+                    'aligend_seq':row['Aligned_Seq'],
+                    'isDark': row['UniProt'] in dark_list,
+                    'members':row['Members'].split(";"),
+                    'path':row['WebLogo'][:-4] # remove extension
+                    }
+        else:
+            ValueError(entity_type)
+        return entity
+
     #csvPath = 'src/data/classification_july1_hasAln.csv'
-    csvPath = 'src/data/KinaseTree.csv'
-    jsonPath = 'src/data/classification.json'
-    darkPath = 'src/data/dark_kinase_list_curated.csv'
+    
     dark_list = []
     with open(darkPath) as f:
         csvreader = csv.DictReader(f, fieldnames=['gene','uniprotId'])
@@ -22,14 +71,28 @@ def classification_csv_to_json():
 
     groups = []
     interested_rows = []
-    pk = None #the first line
+    root = None #the first line
     #Filter CSV file, so we will have distinct Group, Family, and Subfamily rows
-    with open(csvPath) as f:
-        csvreader = csv.DictReader(f)
-        pk = next(csvreader) #ignore the first group for now, because we don't need it in the treeview hierarchy, we'll use it later
-        for row in csvreader:
-            #if not any(r['Group'] == row['Group'] and r['Family'] == row['Family'] and r['Subfamily'] == row['Subfamily'] for r in interested_rows): 
-            interested_rows.append(row)
+    if root_name == "PK":
+        with open(csvPath) as f:
+            csvreader = csv.DictReader(f)
+            root = next(csvreader) #ignore the first group for now, because we don't need it in the treeview hierarchy, we'll use it later
+            for row in csvreader:
+                #if not any(r['Group'] == row['Group'] and r['Family'] == row['Family'] and r['Subfamily'] == row['Subfamily'] for r in interested_rows): 
+                if row["WebLogo"] == "PKL.png":
+                    break
+                interested_rows.append(row)
+    elif root_name == "PKL":
+        with open(csvPath) as f:
+            csvreader = csv.DictReader(f)
+            pk = next(csvreader) #ignore the first group for now, because we don't need it in the treeview hierarchy, we'll use it later
+            start = False
+            for row in csvreader:
+                if start:
+                    interested_rows.append(row)
+                elif row["WebLogo"] == "PKL.png":
+                    root = row
+                    start = True
 
     #Group
     idx = 0
@@ -37,13 +100,8 @@ def classification_csv_to_json():
         idx += 1
         group = row['Group']
         if not any(g['value'] == group for g in groups): #if group not already added to the groups
-            groups.append({'id': "id" + str(idx) + "@" + group, 
-                          'type' : 'group',
-                           'value':group,
-                           #'protein':fixProtein(row['Protein']),
-                           'path': row['WebLogo'][:-4], 
-                           'members':row['Members'].split(";"),
-                           'nodes': []})
+            entity = create_entity("group",group,row)
+            groups.append(entity)
         
     #Family
     idx = 0
@@ -53,13 +111,7 @@ def classification_csv_to_json():
         if family != '': #and not family in group.nodes:
             group = next(x for x in groups if x['value'] == row['Group']) #find the first (and the only) group having the group name
             if not any(x for x in group['nodes'] if x['value'] == family): #in group['nodes']['text']:
-                entity = {'id':"id" + str(idx) + "@" + family, 
-                          'type' : 'family',
-                          'value':family,
-                          #'protein':fixProtein(row['Protein']), 
-                          'path': row['WebLogo'][:-4],
-                          'members':row['Members'].split(";"),
-                          'nodes': []}
+                entity = create_entity("family",family,row)
                 group['nodes'].append(entity)
                 
     #Subfamily
@@ -71,15 +123,7 @@ def classification_csv_to_json():
             group = next(x for x in groups if x['value'] == row['Group'])
             family = next(x for x in group['nodes'] if x['value'] == row['Family'])
             if not any(x for x in family['nodes'] if x['value'] == subfamily):
-                entity = {'id':"id" + str(idx) + "@" + subfamily,
-                                    'type' : 'subfamily',
-                                    'value': subfamily,
-                                    'members':row['Members'].split(";"),
-                                    'path':row['WebLogo'][:-4],
-                                    'nodes':[]
-                                    #'path':"{0}_{1}_{2}".format(group['value'],family['value'],subfamily),
-                                    #'HasAlignment': row['HasAlignment'] 
-                                    }
+                entity = create_entity("subfamily",subfamily,row)
                 family['nodes'].append(entity)
     # Protein
     idx = 0
@@ -88,40 +132,45 @@ def classification_csv_to_json():
         protein = row['Protein']
         if protein!= '':
             group = next(x for x in groups if x['value'] == row['Group'])
-            family = next(x for x in group['nodes'] if x['value'] == row['Family'])
-            subfamily = None
+            
+            family = None
             try:
-                subfamily = next(x for x in family['nodes'] if x['value'] == row['Subfamily'])
+                family = next(x for x in group['nodes'] if x['value'] == row['Family'])
             except StopIteration:
                 pass
-            entity = {'id':"id" + str(idx) + "@" + protein,
-                                    'type' : 'protein',
-                                    'value': fixProtein(protein),
-                                    'isDark': row['UniProt'] in dark_list,
-                                    'members':row['Members'].split(";"),
-                                    'path':row['WebLogo'][:-4] # remove extension
-                                    #'path':"{0}_{1}_{2}".format(group['value'],family['value'],subfamily),
-                                    #'HasAlignment': row['HasAlignment'] 
-                                    }
+            
+            subfamily = None
+            if family:
+                try:
+                    subfamily = next(x for x in family['nodes'] if x['value'] == row['Subfamily'])
+                except StopIteration:
+                    pass
+
+            entity = create_entity("protein",protein,row)
             # A protein's parent might be a subfamily, or a family
             if subfamily and not any(x for x in subfamily['nodes'] if x['value'] == protein):
                 subfamily['nodes'].append(entity)
-            else:
-            #elif not any(x for x in family['nodes'] if x['value'] == protein):
+            elif family and not any(x for x in family['nodes'] if x['value'] == protein):
                 family['nodes'].append(entity)
+            #elif group and not any(x for x in group['nodes'] if x['value'] == protein):
+            else:
+                group['nodes'].append(entity)
 
     # add one row for all to the beginning of the file
     groups.insert(0, {
-        "protein":pk['Protein'],
-        "path": pk['WebLogo'],
+        "id": "id@" + root_name,
+        "value": root_name,
+        "protein":root['Protein'],
+        "path": root['WebLogo'],
+        'aligend_seq':root['Aligned_Seq'],
+        "members": root['Members'].split(";"),
         "nodes": [],
-        "value": "PK",
-        "id": "id@PK",
-        "members": pk['Members'].split(";")        
     })
-           
+    return groups
+
+def write_classification(data):
     with open(jsonPath, 'w') as f:
-        f.write(json.dumps(groups, indent=4))
+        f.write(json.dumps(data, indent=4))
         print("Classification {0} created.".format(jsonPath))
 
 def prettyjson(cols,jsonPath):
@@ -181,6 +230,9 @@ def dark_csv_to_json():
         jsonfile.write(json.dumps(data,indent=4))
 
 if __name__ == "__main__":
-    #classification_csv_to_json()
+    pk = classification_csv_to_json("PK")
+    pkl = classification_csv_to_json("PKL")
+    merged = [pk,pkl]
+    write_classification(merged)
     #numbering_csv_to_json()
-    dark_csv_to_json()
+    #dark_csv_to_json()

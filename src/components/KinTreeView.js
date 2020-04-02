@@ -132,7 +132,8 @@ StyledTreeItem.propTypes = {
 // });
 
 function KinTreeView(props) {
-  const originalNodes = tree.map((n)=>{n.checked=false;return n;});
+  const mod_tree = tree[0].concat(tree[1])
+  const originalNodes = mod_tree.map((n)=>{n.checked=false;return n;});
   const nodesCopy = JSON.parse(JSON.stringify(originalNodes));
   
   const classes = useStyles();
@@ -144,11 +145,11 @@ function KinTreeView(props) {
 
   const filterInput = useRef(null);
 
-  useEffect(() => {
-    let node = originalNodes.filter(x=>x.id=="id@PK")[0];
-    node.checked=true;    
-    handleNodeClick(node,true);
-  },[nodes]);
+  // useEffect(() => {
+  //   let node = originalNodes.filter(x=>x.id=="id@PK")[0];
+  //   node.checked=true;    
+  //   handleNodeClick(node,true);
+  // },[nodes]);
 
   function handleNodeClick(node,checked) {
     props.onCheckBoxesChanged(node, checked);

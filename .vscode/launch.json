@@ -22,7 +22,15 @@
             "request": "launch",
             "name": "Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "/home/saber/workspace/kinview-react/src"
+            "webRoot": "/home/saber/workspace/kinview/src"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome Windows",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
         }
+        
     ]
 }

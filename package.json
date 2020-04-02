@@ -2,7 +2,7 @@
   "name": "kinview-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://prokino.github.io/kinview",
+  "homepage": "http://vulcan.cs.uga.edu/prokino/kinview",
   "author": "Saber Soleymani",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
