@@ -10,7 +10,8 @@ def getvalue(s):
 
 #removes space parantheses. For example, return DMPK1 in 'DMPK1 (DMPK)'
 def fixProtein(p):
-    return p.split(" ")[0]
+    #return p.split(" ")[0]
+    return p # decided to show name with synonym
 
 
 def classification_csv_to_json(root_name):
@@ -161,7 +162,7 @@ def classification_csv_to_json(root_name):
         "id": "id@" + root_name,
         "value": root_name,
         "protein":root['Protein'],
-        "path": root['WebLogo'],
+        "path": root_name,
         'aligend_seq':root['Aligned_Seq'],
         "members": root['Members'].split(";"),
         "nodes": [],

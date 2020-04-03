@@ -22,6 +22,8 @@ import { sortableHandle } from 'react-sortable-hoc';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import { Label } from '@material-ui/icons';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -247,6 +249,14 @@ function KinWeblogo(props) {
             <Button size="small" variant="outlined" color="primary" className={classes.button}>
               {props.value.value}
             </Button>
+            <Tooltip title="Aligned Sequences">
+              <Button size="small" variant="outlined" color="primary" className={classes.button}>
+                {props.value.aligend_seq}
+              </Button>
+              {/* <Typography variant="body2" gutterBottom>
+                {props.value.aligend_seq}
+                </Typography> */}
+            </Tooltip>
             <NativeSelect
               value={selectedNumberingValue}
               onChange={numberingChanged}

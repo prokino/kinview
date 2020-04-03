@@ -4,7 +4,7 @@
             "id": "id@PK",
             "value": "PK",
             "protein": "",
-            "path": "PK.png",
+            "path": "PK",
             "aligend_seq": "95735",
             "members": [
                 "PKA",
@@ -600,7 +600,7 @@
                             "id": "id3@AKT1 (PKB\u03b1)",
                             "uniprot": "P31749",
                             "type": "protein",
-                            "value": "AKT1",
+                            "value": "AKT1 (PKB\u03b1)",
                             "aligend_seq": "90",
                             "isDark": false,
                             "members": [
@@ -613,7 +613,7 @@
                             "id": "id4@AKT2 (PKB\u03b2)",
                             "uniprot": "P31751",
                             "type": "protein",
-                            "value": "AKT2",
+                            "value": "AKT2 (PKB\u03b2)",
                             "aligend_seq": "36",
                             "isDark": false,
                             "members": [
@@ -626,7 +626,7 @@
                             "id": "id5@AKT3 (PKB\u03b3)",
                             "uniprot": "Q9Y243",
                             "type": "protein",
-                            "value": "AKT3",
+                            "value": "AKT3 (PKB\u03b3)",
                             "aligend_seq": "159",
                             "isDark": false,
                             "members": [
@@ -671,7 +671,7 @@
                                     "id": "id8@CIT (CRIK)",
                                     "uniprot": "O14578",
                                     "type": "protein",
-                                    "value": "CIT",
+                                    "value": "CIT (CRIK)",
                                     "aligend_seq": "169",
                                     "isDark": false,
                                     "members": [
@@ -701,7 +701,7 @@
                                     "id": "id10@CDC42BPA (MRCK\u03b1)",
                                     "uniprot": "Q5VT25",
                                     "type": "protein",
-                                    "value": "CDC42BPA",
+                                    "value": "CDC42BPA (MRCK\u03b1)",
                                     "aligend_seq": "113",
                                     "isDark": true,
                                     "members": [
@@ -714,7 +714,7 @@
                                     "id": "id11@CDC42BPB (MRCK\u03b2)",
                                     "uniprot": "Q9Y5S2",
                                     "type": "protein",
-                                    "value": "CDC42BPB",
+                                    "value": "CDC42BPB (MRCK\u03b2)",
                                     "aligend_seq": "141",
                                     "isDark": true,
                                     "members": [
@@ -727,7 +727,7 @@
                                     "id": "id12@CDC42BPG (DMPK2)",
                                     "uniprot": "Q6DT37",
                                     "type": "protein",
-                                    "value": "CDC42BPG",
+                                    "value": "CDC42BPG (DMPK2)",
                                     "aligend_seq": "55",
                                     "isDark": true,
                                     "members": [
@@ -829,7 +829,7 @@
                                     "id": "id19@GRK2 (BARK1)",
                                     "uniprot": "P25098",
                                     "type": "protein",
-                                    "value": "GRK2",
+                                    "value": "GRK2 (BARK1)",
                                     "aligend_seq": "143",
                                     "isDark": false,
                                     "members": [
@@ -842,7 +842,7 @@
                                     "id": "id20@GRK3 (BARK2)",
                                     "uniprot": "P35626",
                                     "type": "protein",
-                                    "value": "GRK3",
+                                    "value": "GRK3 (BARK2)",
                                     "aligend_seq": "180",
                                     "isDark": false,
                                     "members": [
@@ -873,7 +873,7 @@
                                     "id": "id22@GRK1 (RHOK)",
                                     "uniprot": "Q15835",
                                     "type": "protein",
-                                    "value": "GRK1",
+                                    "value": "GRK1 (RHOK)",
                                     "aligend_seq": "0",
                                     "isDark": false,
                                     "members": [
@@ -1125,7 +1125,7 @@
                                     "id": "id40@STK38 (NDR1)",
                                     "uniprot": "Q15208",
                                     "type": "protein",
-                                    "value": "STK38",
+                                    "value": "STK38 (NDR1)",
                                     "aligend_seq": "175",
                                     "isDark": false,
                                     "members": [
@@ -1138,7 +1138,7 @@
                                     "id": "id41@STK38L (NDR2)",
                                     "uniprot": "Q9Y2H1",
                                     "type": "protein",
-                                    "value": "STK38L",
+                                    "value": "STK38L (NDR2)",
                                     "aligend_seq": "638",
                                     "isDark": true,
                                     "members": [
@@ -1212,7 +1212,7 @@
                             "id": "id46@PRKACA (PKA\u03b1)",
                             "uniprot": "P17612",
                             "type": "protein",
-                            "value": "PRKACA",
+                            "value": "PRKACA (PKA\u03b1)",
                             "aligend_seq": "41",
                             "isDark": false,
                             "members": [
@@ -1225,7 +1225,7 @@
                             "id": "id47@PRKACB (PKA\u03b2)",
                             "uniprot": "P22694",
                             "type": "protein",
-                            "value": "PRKACB",
+                            "value": "PRKACB (PKA\u03b2)",
                             "aligend_seq": "547",
                             "isDark": true,
                             "members": [
@@ -1238,7 +1238,7 @@
                             "id": "id48@PRKACG (PKA\u03b3)",
                             "uniprot": "P22612",
                             "type": "protein",
-                            "value": "PRKACG",
+                            "value": "PRKACG (PKA\u03b3)",
                             "aligend_seq": "4",
                             "isDark": true,
                             "members": [
@@ -1313,7 +1313,7 @@
                                     "id": "id53@PRKCA (PKC\u03b1)",
                                     "uniprot": "P17252",
                                     "type": "protein",
-                                    "value": "PRKCA",
+                                    "value": "PRKCA (PKC\u03b1)",
                                     "aligend_seq": "156",
                                     "isDark": false,
                                     "members": [
@@ -1326,7 +1326,7 @@
                                     "id": "id54@PRKCB (PKC\u03b2)",
                                     "uniprot": "P05771",
                                     "type": "protein",
-                                    "value": "PRKCB",
+                                    "value": "PRKCB (PKC\u03b2)",
                                     "aligend_seq": "58",
                                     "isDark": false,
                                     "members": [
@@ -1339,7 +1339,7 @@
                                     "id": "id55@PRKCG (PKC\u03b3)",
                                     "uniprot": "P05129",
                                     "type": "protein",
-                                    "value": "PRKCG",
+                                    "value": "PRKCG (PKC\u03b3)",
                                     "aligend_seq": "52",
                                     "isDark": false,
                                     "members": [
@@ -1367,7 +1367,7 @@
                                     "id": "id57@PRKCD (PKC\u03b4)",
                                     "uniprot": "Q05655",
                                     "type": "protein",
-                                    "value": "PRKCD",
+                                    "value": "PRKCD (PKC\u03b4)",
                                     "aligend_seq": "136",
                                     "isDark": false,
                                     "members": [
@@ -1380,7 +1380,7 @@
                                     "id": "id58@PRKCQ (PKC\u03b8)",
                                     "uniprot": "Q04759",
                                     "type": "protein",
-                                    "value": "PRKCQ",
+                                    "value": "PRKCQ (PKC\u03b8)",
                                     "aligend_seq": "131",
                                     "isDark": true,
                                     "members": [
@@ -1408,7 +1408,7 @@
                                     "id": "id60@PRKCE (PKC\u03b5)",
                                     "uniprot": "Q02156",
                                     "type": "protein",
-                                    "value": "PRKCE",
+                                    "value": "PRKCE (PKC\u03b5)",
                                     "aligend_seq": "103",
                                     "isDark": false,
                                     "members": [
@@ -1421,7 +1421,7 @@
                                     "id": "id61@PRKCH (PKC\u03b7)",
                                     "uniprot": "P24723",
                                     "type": "protein",
-                                    "value": "PRKCH",
+                                    "value": "PRKCH (PKC\u03b7)",
                                     "aligend_seq": "84",
                                     "isDark": false,
                                     "members": [
@@ -1449,7 +1449,7 @@
                                     "id": "id63@PRKCI (PKC\u03b9)",
                                     "uniprot": "P41743",
                                     "type": "protein",
-                                    "value": "PRKCI",
+                                    "value": "PRKCI (PKC\u03b9)",
                                     "aligend_seq": "296",
                                     "isDark": false,
                                     "members": [
@@ -1462,7 +1462,7 @@
                                     "id": "id64@PRKCZ (PKC\u03b6)",
                                     "uniprot": "Q05513",
                                     "type": "protein",
-                                    "value": "PRKCZ",
+                                    "value": "PRKCZ (PKC\u03b6)",
                                     "aligend_seq": "121",
                                     "isDark": false,
                                     "members": [
@@ -1492,7 +1492,7 @@
                             "id": "id66@PRKG1 (PKG1)",
                             "uniprot": "Q13976",
                             "type": "protein",
-                            "value": "PRKG1",
+                            "value": "PRKG1 (PKG1)",
                             "aligend_seq": "277",
                             "isDark": false,
                             "members": [
@@ -1505,7 +1505,7 @@
                             "id": "id67@PRKG2 (PKG2)",
                             "uniprot": "Q13237",
                             "type": "protein",
-                            "value": "PRKG2",
+                            "value": "PRKG2 (PKG2)",
                             "aligend_seq": "82",
                             "isDark": false,
                             "members": [
@@ -1534,7 +1534,7 @@
                             "id": "id69@PKN1 (PRK1)",
                             "uniprot": "Q16512",
                             "type": "protein",
-                            "value": "PKN1",
+                            "value": "PKN1 (PRK1)",
                             "aligend_seq": "34",
                             "isDark": false,
                             "members": [
@@ -1547,7 +1547,7 @@
                             "id": "id70@PKN2 (PRK2)",
                             "uniprot": "Q16513",
                             "type": "protein",
-                            "value": "PKN2",
+                            "value": "PKN2 (PRK2)",
                             "aligend_seq": "180",
                             "isDark": false,
                             "members": [
@@ -1607,7 +1607,7 @@
                                     "id": "id74@RPS6KA4 (MSK2)",
                                     "uniprot": "O75676",
                                     "type": "protein",
-                                    "value": "RPS6KA4",
+                                    "value": "RPS6KA4 (MSK2)",
                                     "aligend_seq": "62",
                                     "isDark": false,
                                     "members": [
@@ -1620,7 +1620,7 @@
                                     "id": "id75@RPS6KA5 (MSK1)",
                                     "uniprot": "O75582",
                                     "type": "protein",
-                                    "value": "RPS6KA5",
+                                    "value": "RPS6KA5 (MSK1)",
                                     "aligend_seq": "190",
                                     "isDark": false,
                                     "members": [
@@ -1648,7 +1648,7 @@
                                     "id": "id77@RPS6KB1 (p70S6K)",
                                     "uniprot": "P23443",
                                     "type": "protein",
-                                    "value": "RPS6KB1",
+                                    "value": "RPS6KB1 (p70S6K)",
                                     "aligend_seq": "39",
                                     "isDark": false,
                                     "members": [
@@ -1661,7 +1661,7 @@
                                     "id": "id78@RPS6KB2 (p70S6K\u03b2)",
                                     "uniprot": "Q9UBS0",
                                     "type": "protein",
-                                    "value": "RPS6KB2",
+                                    "value": "RPS6KB2 (p70S6K\u03b2)",
                                     "aligend_seq": "93",
                                     "isDark": false,
                                     "members": [
@@ -1691,7 +1691,7 @@
                                     "id": "id80@RPS6KA1 (RSK1)",
                                     "uniprot": "Q15418",
                                     "type": "protein",
-                                    "value": "RPS6KA1",
+                                    "value": "RPS6KA1 (RSK1)",
                                     "aligend_seq": "125",
                                     "isDark": false,
                                     "members": [
@@ -1704,7 +1704,7 @@
                                     "id": "id81@RPS6KA2 (RSK3)",
                                     "uniprot": "Q15349",
                                     "type": "protein",
-                                    "value": "RPS6KA2",
+                                    "value": "RPS6KA2 (RSK3)",
                                     "aligend_seq": "72",
                                     "isDark": false,
                                     "members": [
@@ -1717,7 +1717,7 @@
                                     "id": "id82@RPS6KA3 (RSK2)",
                                     "uniprot": "P51812",
                                     "type": "protein",
-                                    "value": "RPS6KA3",
+                                    "value": "RPS6KA3 (RSK2)",
                                     "aligend_seq": "190",
                                     "isDark": false,
                                     "members": [
@@ -1730,7 +1730,7 @@
                                     "id": "id83@RPS6KA6 (RSK4)",
                                     "uniprot": "Q9UK32",
                                     "type": "protein",
-                                    "value": "RPS6KA6",
+                                    "value": "RPS6KA6 (RSK4)",
                                     "aligend_seq": "45",
                                     "isDark": false,
                                     "members": [
@@ -1760,7 +1760,7 @@
                             "id": "id85@RPS6KC1 (RSKL1)",
                             "uniprot": "Q96S38",
                             "type": "protein",
-                            "value": "RPS6KC1",
+                            "value": "RPS6KC1 (RSKL1)",
                             "aligend_seq": "189",
                             "isDark": true,
                             "members": [
@@ -1773,7 +1773,7 @@
                             "id": "id86@RPS6KL1 (RSKL2)",
                             "uniprot": "Q9Y6S9",
                             "type": "protein",
-                            "value": "RPS6KL1",
+                            "value": "RPS6KL1 (RSKL2)",
                             "aligend_seq": "121",
                             "isDark": true,
                             "members": [
@@ -1800,7 +1800,7 @@
                             "id": "id88@RSKR (SgK494)",
                             "uniprot": "Q96LW2",
                             "type": "protein",
-                            "value": "RSKR",
+                            "value": "RSKR (SgK494)",
                             "aligend_seq": "172",
                             "isDark": true,
                             "members": [
@@ -1884,7 +1884,7 @@
                             "id": "id94@STK32A (YANK1)",
                             "uniprot": "Q8WU08",
                             "type": "protein",
-                            "value": "STK32A",
+                            "value": "STK32A (YANK1)",
                             "aligend_seq": "321",
                             "isDark": true,
                             "members": [
@@ -1897,7 +1897,7 @@
                             "id": "id95@STK32B (YANK2)",
                             "uniprot": "Q9NY57",
                             "type": "protein",
-                            "value": "STK32B",
+                            "value": "STK32B (YANK2)",
                             "aligend_seq": "173",
                             "isDark": true,
                             "members": [
@@ -1910,7 +1910,7 @@
                             "id": "id96@STK32C (YANK3)",
                             "uniprot": "Q86UX6",
                             "type": "protein",
-                            "value": "STK32C",
+                            "value": "STK32C (YANK3)",
                             "aligend_seq": "185",
                             "isDark": true,
                             "members": [
@@ -2037,7 +2037,7 @@
                             "id": "id99@CAMK1 (CaMK1\u03b1)",
                             "uniprot": "Q14012",
                             "type": "protein",
-                            "value": "CAMK1",
+                            "value": "CAMK1 (CaMK1\u03b1)",
                             "aligend_seq": "213",
                             "isDark": false,
                             "members": [
@@ -2050,7 +2050,7 @@
                             "id": "id100@CAMK1D (CaMK1\u03b4)",
                             "uniprot": "Q8IU85",
                             "type": "protein",
-                            "value": "CAMK1D",
+                            "value": "CAMK1D (CaMK1\u03b4)",
                             "aligend_seq": "297",
                             "isDark": true,
                             "members": [
@@ -2063,7 +2063,7 @@
                             "id": "id101@CAMK1G (CaMK1\u03b3)",
                             "uniprot": "Q96NX5",
                             "type": "protein",
-                            "value": "CAMK1G",
+                            "value": "CAMK1G (CaMK1\u03b3)",
                             "aligend_seq": "135",
                             "isDark": true,
                             "members": [
@@ -2089,7 +2089,7 @@
                             "id": "id103@PNCK (CaMK1\u03b2)",
                             "uniprot": "Q6P2M8",
                             "type": "protein",
-                            "value": "PNCK",
+                            "value": "PNCK (CaMK1\u03b2)",
                             "aligend_seq": "132",
                             "isDark": true,
                             "members": [
@@ -2119,7 +2119,7 @@
                             "id": "id105@CAMK2A (CaMK2\u03b1)",
                             "uniprot": "Q9UQM7",
                             "type": "protein",
-                            "value": "CAMK2A",
+                            "value": "CAMK2A (CaMK2\u03b1)",
                             "aligend_seq": "79",
                             "isDark": false,
                             "members": [
@@ -2132,7 +2132,7 @@
                             "id": "id106@CAMK2B (CaMK2\u03b2)",
                             "uniprot": "Q13554",
                             "type": "protein",
-                            "value": "CAMK2B",
+                            "value": "CAMK2B (CaMK2\u03b2)",
                             "aligend_seq": "7",
                             "isDark": false,
                             "members": [
@@ -2145,7 +2145,7 @@
                             "id": "id107@CAMK2D (CaMK2\u03b4)",
                             "uniprot": "Q13557",
                             "type": "protein",
-                            "value": "CAMK2D",
+                            "value": "CAMK2D (CaMK2\u03b4)",
                             "aligend_seq": "225",
                             "isDark": false,
                             "members": [
@@ -2158,7 +2158,7 @@
                             "id": "id108@CAMK2G (CaMK2\u03b3)",
                             "uniprot": "Q13555",
                             "type": "protein",
-                            "value": "CAMK2G",
+                            "value": "CAMK2G (CaMK2\u03b3)",
                             "aligend_seq": "54",
                             "isDark": false,
                             "members": [
@@ -2218,7 +2218,7 @@
                                     "id": "id111@PRKAA1 (AMPK\u03b11)",
                                     "uniprot": "Q13131",
                                     "type": "protein",
-                                    "value": "PRKAA1",
+                                    "value": "PRKAA1 (AMPK\u03b11)",
                                     "aligend_seq": "61",
                                     "isDark": false,
                                     "members": [
@@ -2231,7 +2231,7 @@
                                     "id": "id112@PRKAA2 (AMPK\u03b12)",
                                     "uniprot": "P54646",
                                     "type": "protein",
-                                    "value": "PRKAA2",
+                                    "value": "PRKAA2 (AMPK\u03b12)",
                                     "aligend_seq": "934",
                                     "isDark": false,
                                     "members": [
@@ -2299,7 +2299,7 @@
                                     "id": "id117@CHEK1 (CHK1)",
                                     "uniprot": "O14757",
                                     "type": "protein",
-                                    "value": "CHEK1",
+                                    "value": "CHEK1 (CHK1)",
                                     "aligend_seq": "741",
                                     "isDark": false,
                                     "members": [
@@ -2353,7 +2353,7 @@
                                     "id": "id121@STK11 (Lkb1)",
                                     "uniprot": "Q15831",
                                     "type": "protein",
-                                    "value": "STK11",
+                                    "value": "STK11 (Lkb1)",
                                     "aligend_seq": "352",
                                     "isDark": false,
                                     "members": [
@@ -2476,7 +2476,7 @@
                                     "id": "id130@NIM1K (NIM1)",
                                     "uniprot": "Q8IY84",
                                     "type": "protein",
-                                    "value": "NIM1K",
+                                    "value": "NIM1K (NIM1)",
                                     "aligend_seq": "257",
                                     "isDark": true,
                                     "members": [
@@ -2574,7 +2574,7 @@
                                     "id": "id137@SIK1 (SIK)",
                                     "uniprot": "P57059",
                                     "type": "protein",
-                                    "value": "SIK1",
+                                    "value": "SIK1 (SIK)",
                                     "aligend_seq": "127",
                                     "isDark": false,
                                     "members": [
@@ -2600,7 +2600,7 @@
                                     "id": "id139@SIK2 (QIK)",
                                     "uniprot": "Q9H0K1",
                                     "type": "protein",
-                                    "value": "SIK2",
+                                    "value": "SIK2 (QIK)",
                                     "aligend_seq": "207",
                                     "isDark": false,
                                     "members": [
@@ -2613,7 +2613,7 @@
                                     "id": "id140@SIK3 (QSK)",
                                     "uniprot": "Q9Y2K2",
                                     "type": "protein",
-                                    "value": "SIK3",
+                                    "value": "SIK3 (QSK)",
                                     "aligend_seq": "178",
                                     "isDark": false,
                                     "members": [
@@ -2768,7 +2768,7 @@
                                     "id": "id151@STK17A (DRAK1)",
                                     "uniprot": "Q9UEE5",
                                     "type": "protein",
-                                    "value": "STK17A",
+                                    "value": "STK17A (DRAK1)",
                                     "aligend_seq": "206",
                                     "isDark": true,
                                     "members": [
@@ -2781,7 +2781,7 @@
                                     "id": "id152@STK17B (DRAK2)",
                                     "uniprot": "O94768",
                                     "type": "protein",
-                                    "value": "STK17B",
+                                    "value": "STK17B (DRAK2)",
                                     "aligend_seq": "90",
                                     "isDark": true,
                                     "members": [
@@ -2812,7 +2812,7 @@
                             "id": "id154@DCLK1 (DCAMKL1)",
                             "uniprot": "O15075",
                             "type": "protein",
-                            "value": "DCLK1",
+                            "value": "DCLK1 (DCAMKL1)",
                             "aligend_seq": "44",
                             "isDark": false,
                             "members": [
@@ -2825,7 +2825,7 @@
                             "id": "id155@DCLK2 (DCAMKL2)",
                             "uniprot": "Q8N568",
                             "type": "protein",
-                            "value": "DCLK2",
+                            "value": "DCLK2 (DCAMKL2)",
                             "aligend_seq": "180",
                             "isDark": false,
                             "members": [
@@ -2838,7 +2838,7 @@
                             "id": "id156@DCLK3 (DCAMKL3)",
                             "uniprot": "Q9C098",
                             "type": "protein",
-                            "value": "DCLK3",
+                            "value": "DCLK3 (DCAMKL3)",
                             "aligend_seq": "106",
                             "isDark": true,
                             "members": [
@@ -2950,7 +2950,7 @@
                                     "id": "id164@MKNK1 (MNK1)",
                                     "uniprot": "Q9BUB5",
                                     "type": "protein",
-                                    "value": "MKNK1",
+                                    "value": "MKNK1 (MNK1)",
                                     "aligend_seq": "193",
                                     "isDark": true,
                                     "members": [
@@ -2963,7 +2963,7 @@
                                     "id": "id165@MKNK2 (MNK2)",
                                     "uniprot": "Q9HBH9",
                                     "type": "protein",
-                                    "value": "MKNK2",
+                                    "value": "MKNK2 (MNK2)",
                                     "aligend_seq": "100",
                                     "isDark": true,
                                     "members": [
@@ -2996,7 +2996,7 @@
                             "id": "id167@MYLK (smMLCK)",
                             "uniprot": "Q15746",
                             "type": "protein",
-                            "value": "MYLK",
+                            "value": "MYLK (smMLCK)",
                             "aligend_seq": "201",
                             "isDark": false,
                             "members": [
@@ -3009,7 +3009,7 @@
                             "id": "id168@MYLK2 (skMLCK)",
                             "uniprot": "Q9H1R3",
                             "type": "protein",
-                            "value": "MYLK2",
+                            "value": "MYLK2 (skMLCK)",
                             "aligend_seq": "81",
                             "isDark": false,
                             "members": [
@@ -3022,7 +3022,7 @@
                             "id": "id169@MYLK3 (caMLCK)",
                             "uniprot": "Q32MK0",
                             "type": "protein",
-                            "value": "MYLK3",
+                            "value": "MYLK3 (caMLCK)",
                             "aligend_seq": "92",
                             "isDark": false,
                             "members": [
@@ -3035,7 +3035,7 @@
                             "id": "id170@MYLK4 (SgK085)",
                             "uniprot": "Q86YV6",
                             "type": "protein",
-                            "value": "MYLK4",
+                            "value": "MYLK4 (SgK085)",
                             "aligend_seq": "121",
                             "isDark": false,
                             "members": [
@@ -3076,7 +3076,7 @@
                             "id": "id173@PHKG1 (PhK\u03b31)",
                             "uniprot": "Q16816",
                             "type": "protein",
-                            "value": "PHKG1",
+                            "value": "PHKG1 (PhK\u03b31)",
                             "aligend_seq": "131",
                             "isDark": true,
                             "members": [
@@ -3089,7 +3089,7 @@
                             "id": "id174@PHKG2 (PhK\u03b32)",
                             "uniprot": "P15735",
                             "type": "protein",
-                            "value": "PHKG2",
+                            "value": "PHKG2 (PhK\u03b32)",
                             "aligend_seq": "178",
                             "isDark": true,
                             "members": [
@@ -3173,7 +3173,7 @@
                             "id": "id180@PRKD1 (PKD1)",
                             "uniprot": "Q15139",
                             "type": "protein",
-                            "value": "PRKD1",
+                            "value": "PRKD1 (PKD1)",
                             "aligend_seq": "113",
                             "isDark": false,
                             "members": [
@@ -3186,7 +3186,7 @@
                             "id": "id181@PRKD2 (PKD2)",
                             "uniprot": "Q9BZL6",
                             "type": "protein",
-                            "value": "PRKD2",
+                            "value": "PRKD2 (PKD2)",
                             "aligend_seq": "87",
                             "isDark": false,
                             "members": [
@@ -3199,7 +3199,7 @@
                             "id": "id182@PRKD3 (PKD3)",
                             "uniprot": "O94806",
                             "type": "protein",
-                            "value": "PRKD3",
+                            "value": "PRKD3 (PKD3)",
                             "aligend_seq": "48",
                             "isDark": false,
                             "members": [
@@ -3267,7 +3267,7 @@
                             "id": "id187@CHEK2 (CHK2)",
                             "uniprot": "O96017",
                             "type": "protein",
-                            "value": "CHEK2",
+                            "value": "CHEK2 (CHK2)",
                             "aligend_seq": "200",
                             "isDark": false,
                             "members": [
@@ -3312,7 +3312,7 @@
                                     "id": "id190@RPS6KA4-b (MSK2~b)",
                                     "uniprot": "O75676",
                                     "type": "protein",
-                                    "value": "RPS6KA4-b",
+                                    "value": "RPS6KA4-b (MSK2~b)",
                                     "aligend_seq": "49",
                                     "isDark": false,
                                     "members": [
@@ -3325,7 +3325,7 @@
                                     "id": "id191@RPS6KA5-b (MSK1~b)",
                                     "uniprot": "O75582",
                                     "type": "protein",
-                                    "value": "RPS6KA5-b",
+                                    "value": "RPS6KA5-b (MSK1~b)",
                                     "aligend_seq": "204",
                                     "isDark": false,
                                     "members": [
@@ -3355,7 +3355,7 @@
                                     "id": "id193@RPS6KA1-b (RSK1~b)",
                                     "uniprot": "Q15418",
                                     "type": "protein",
-                                    "value": "RPS6KA1-b",
+                                    "value": "RPS6KA1-b (RSK1~b)",
                                     "aligend_seq": "140",
                                     "isDark": false,
                                     "members": [
@@ -3368,7 +3368,7 @@
                                     "id": "id194@RPS6KA2-b (RSK3~b)",
                                     "uniprot": "Q15349",
                                     "type": "protein",
-                                    "value": "RPS6KA2-b",
+                                    "value": "RPS6KA2-b (RSK3~b)",
                                     "aligend_seq": "84",
                                     "isDark": false,
                                     "members": [
@@ -3381,7 +3381,7 @@
                                     "id": "id195@RPS6KA3-b (RSK2~b)",
                                     "uniprot": "P51812",
                                     "type": "protein",
-                                    "value": "RPS6KA3-b",
+                                    "value": "RPS6KA3-b (RSK2~b)",
                                     "aligend_seq": "193",
                                     "isDark": false,
                                     "members": [
@@ -3394,7 +3394,7 @@
                                     "id": "id196@RPS6KA6-b (RSK4~b)",
                                     "uniprot": "Q9UK32",
                                     "type": "protein",
-                                    "value": "RPS6KA6-b",
+                                    "value": "RPS6KA6-b (RSK4~b)",
                                     "aligend_seq": "122",
                                     "isDark": false,
                                     "members": [
@@ -3423,7 +3423,7 @@
                             "id": "id198@STK40 (SgK495)",
                             "uniprot": "Q8N2I9",
                             "type": "protein",
-                            "value": "STK40",
+                            "value": "STK40 (SgK495)",
                             "aligend_seq": "215",
                             "isDark": true,
                             "members": [
@@ -3479,7 +3479,7 @@
                             "id": "id202@TRIB1 (Trb1)",
                             "uniprot": "Q96RU8",
                             "type": "protein",
-                            "value": "TRIB1",
+                            "value": "TRIB1 (Trb1)",
                             "aligend_seq": "85",
                             "isDark": false,
                             "members": [
@@ -3492,7 +3492,7 @@
                             "id": "id203@TRIB2 (Trb2)",
                             "uniprot": "Q92519",
                             "type": "protein",
-                            "value": "TRIB2",
+                            "value": "TRIB2 (Trb2)",
                             "aligend_seq": "225",
                             "isDark": false,
                             "members": [
@@ -3505,7 +3505,7 @@
                             "id": "id204@TRIB3 (Trb3)",
                             "uniprot": "Q96RU7",
                             "type": "protein",
-                            "value": "TRIB3",
+                            "value": "TRIB3 (Trb3)",
                             "aligend_seq": "64",
                             "isDark": false,
                             "members": [
@@ -3537,7 +3537,7 @@
                             "id": "id206@KALRN (Trad)",
                             "uniprot": "O60229",
                             "type": "protein",
-                            "value": "KALRN",
+                            "value": "KALRN (Trad)",
                             "aligend_seq": "77",
                             "isDark": false,
                             "members": [
@@ -3563,7 +3563,7 @@
                             "id": "id208@OBSCN-b (Obscn~b)",
                             "uniprot": "Q5VST9",
                             "type": "protein",
-                            "value": "OBSCN-b",
+                            "value": "OBSCN-b (Obscn~b)",
                             "aligend_seq": "40",
                             "isDark": true,
                             "members": [
@@ -3589,7 +3589,7 @@
                             "id": "id210@SPEG-b (SPEG~b)",
                             "uniprot": "Q15772",
                             "type": "protein",
-                            "value": "SPEG-b",
+                            "value": "SPEG-b (SPEG~b)",
                             "aligend_seq": "107",
                             "isDark": false,
                             "members": [
@@ -3633,7 +3633,7 @@
                             "id": "id213@TSSK1B (TSSK1)",
                             "uniprot": "Q9BXA7",
                             "type": "protein",
-                            "value": "TSSK1B",
+                            "value": "TSSK1B (TSSK1)",
                             "aligend_seq": "55",
                             "isDark": true,
                             "members": [
@@ -3685,7 +3685,7 @@
                             "id": "id217@TSSK6 (SSTK)",
                             "uniprot": "Q9BXA6",
                             "type": "protein",
-                            "value": "TSSK6",
+                            "value": "TSSK6 (SSTK)",
                             "aligend_seq": "117",
                             "isDark": true,
                             "members": [
@@ -3712,7 +3712,7 @@
                             "id": "id219@CAMKV (VACAMKL)",
                             "uniprot": "Q8NCB2",
                             "type": "protein",
-                            "value": "CAMKV",
+                            "value": "CAMKV (VACAMKL)",
                             "aligend_seq": "130",
                             "isDark": true,
                             "members": [
@@ -3783,7 +3783,7 @@
                                     "id": "id223@CSNK1A1 (CK1\u03b1)",
                                     "uniprot": "P48729",
                                     "type": "protein",
-                                    "value": "CSNK1A1",
+                                    "value": "CSNK1A1 (CK1\u03b1)",
                                     "aligend_seq": "211",
                                     "isDark": false,
                                     "members": [
@@ -3796,7 +3796,7 @@
                                     "id": "id224@CSNK1A1L (CK1\u03b12)",
                                     "uniprot": "Q8N752",
                                     "type": "protein",
-                                    "value": "CSNK1A1L",
+                                    "value": "CSNK1A1L (CK1\u03b12)",
                                     "aligend_seq": "8",
                                     "isDark": true,
                                     "members": [
@@ -3824,7 +3824,7 @@
                                     "id": "id226@CSNK1D (CK1\u03b4)",
                                     "uniprot": "P48730",
                                     "type": "protein",
-                                    "value": "CSNK1D",
+                                    "value": "CSNK1D (CK1\u03b4)",
                                     "aligend_seq": "668",
                                     "isDark": false,
                                     "members": [
@@ -3837,7 +3837,7 @@
                                     "id": "id227@CSNK1E (CK1\u03b5)",
                                     "uniprot": "P49674",
                                     "type": "protein",
-                                    "value": "CSNK1E",
+                                    "value": "CSNK1E (CK1\u03b5)",
                                     "aligend_seq": "265",
                                     "isDark": false,
                                     "members": [
@@ -3866,7 +3866,7 @@
                                     "id": "id229@CSNK1G1 (CK1\u03b31)",
                                     "uniprot": "Q9HCP0",
                                     "type": "protein",
-                                    "value": "CSNK1G1",
+                                    "value": "CSNK1G1 (CK1\u03b31)",
                                     "aligend_seq": "109",
                                     "isDark": true,
                                     "members": [
@@ -3879,7 +3879,7 @@
                                     "id": "id230@CSNK1G2 (CK1\u03b32)",
                                     "uniprot": "P78368",
                                     "type": "protein",
-                                    "value": "CSNK1G2",
+                                    "value": "CSNK1G2 (CK1\u03b32)",
                                     "aligend_seq": "626",
                                     "isDark": true,
                                     "members": [
@@ -3892,7 +3892,7 @@
                                     "id": "id231@CSNK1G3 (CK1\u03b33)",
                                     "uniprot": "Q9Y6M4",
                                     "type": "protein",
-                                    "value": "CSNK1G3",
+                                    "value": "CSNK1G3 (CK1\u03b33)",
                                     "aligend_seq": "140",
                                     "isDark": true,
                                     "members": [
@@ -4127,7 +4127,7 @@
                                     "id": "id242@CDK20 (CCRK)",
                                     "uniprot": "Q8IZL9",
                                     "type": "protein",
-                                    "value": "CDK20",
+                                    "value": "CDK20 (CCRK)",
                                     "aligend_seq": "241",
                                     "isDark": true,
                                     "members": [
@@ -4154,7 +4154,7 @@
                                     "id": "id244@CDK1 (CDC2)",
                                     "uniprot": "P06493",
                                     "type": "protein",
-                                    "value": "CDK1",
+                                    "value": "CDK1 (CDC2)",
                                     "aligend_seq": "305",
                                     "isDark": false,
                                     "members": [
@@ -4318,7 +4318,7 @@
                                     "id": "id256@CDK19 (CDK11)",
                                     "uniprot": "Q9BWU1",
                                     "type": "protein",
-                                    "value": "CDK19",
+                                    "value": "CDK19 (CDK11)",
                                     "aligend_seq": "929",
                                     "isDark": true,
                                     "members": [
@@ -4426,7 +4426,7 @@
                                     "id": "id264@CDK11B (PITSLRE)",
                                     "uniprot": "P21127",
                                     "type": "protein",
-                                    "value": "CDK11B",
+                                    "value": "CDK11B (PITSLRE)",
                                     "aligend_seq": "959",
                                     "isDark": true,
                                     "members": [
@@ -4454,7 +4454,7 @@
                                     "id": "id266@CDK12 (CRK7)",
                                     "uniprot": "Q9NYV4",
                                     "type": "protein",
-                                    "value": "CDK12",
+                                    "value": "CDK12 (CRK7)",
                                     "aligend_seq": "335",
                                     "isDark": true,
                                     "members": [
@@ -4467,7 +4467,7 @@
                                     "id": "id267@CDK13 (CHED)",
                                     "uniprot": "Q14004",
                                     "type": "protein",
-                                    "value": "CDK13",
+                                    "value": "CDK13 (CHED)",
                                     "aligend_seq": "445",
                                     "isDark": true,
                                     "members": [
@@ -4496,7 +4496,7 @@
                                     "id": "id269@CDK16 (PCTAIRE1)",
                                     "uniprot": "Q00536",
                                     "type": "protein",
-                                    "value": "CDK16",
+                                    "value": "CDK16 (PCTAIRE1)",
                                     "aligend_seq": "84",
                                     "isDark": true,
                                     "members": [
@@ -4509,7 +4509,7 @@
                                     "id": "id270@CDK17 (PCTAIRE2)",
                                     "uniprot": "Q00537",
                                     "type": "protein",
-                                    "value": "CDK17",
+                                    "value": "CDK17 (PCTAIRE2)",
                                     "aligend_seq": "99",
                                     "isDark": true,
                                     "members": [
@@ -4522,7 +4522,7 @@
                                     "id": "id271@CDK18 (PCTAIRE3)",
                                     "uniprot": "Q07002",
                                     "type": "protein",
-                                    "value": "CDK18",
+                                    "value": "CDK18 (PCTAIRE3)",
                                     "aligend_seq": "114",
                                     "isDark": true,
                                     "members": [
@@ -4550,7 +4550,7 @@
                                     "id": "id273@CDK14 (PFTAIRE1)",
                                     "uniprot": "O94921",
                                     "type": "protein",
-                                    "value": "CDK14",
+                                    "value": "CDK14 (PFTAIRE1)",
                                     "aligend_seq": "257",
                                     "isDark": true,
                                     "members": [
@@ -4563,7 +4563,7 @@
                                     "id": "id274@CDK15 (PFTAIRE2)",
                                     "uniprot": "Q96Q40",
                                     "type": "protein",
-                                    "value": "CDK15",
+                                    "value": "CDK15 (PFTAIRE2)",
                                     "aligend_seq": "97",
                                     "isDark": true,
                                     "members": [
@@ -4677,7 +4677,7 @@
                             "id": "id282@CSNK2A1 (CK2\u03b11)",
                             "uniprot": "P68400",
                             "type": "protein",
-                            "value": "CSNK2A1",
+                            "value": "CSNK2A1 (CK2\u03b11)",
                             "aligend_seq": "1033",
                             "isDark": false,
                             "members": [
@@ -4690,7 +4690,7 @@
                             "id": "id283@CSNK2A2 (CK2\u03b12)",
                             "uniprot": "P19784",
                             "type": "protein",
-                            "value": "CSNK2A2",
+                            "value": "CSNK2A2 (CK2\u03b12)",
                             "aligend_seq": "76",
                             "isDark": true,
                             "members": [
@@ -4985,7 +4985,7 @@
                                     "id": "id304@PRPF4B (PRP4)",
                                     "uniprot": "Q13523",
                                     "type": "protein",
-                                    "value": "PRPF4B",
+                                    "value": "PRPF4B (PRP4)",
                                     "aligend_seq": "970",
                                     "isDark": true,
                                     "members": [
@@ -5015,7 +5015,7 @@
                             "id": "id306@GSK3A (GSK3\u03b1)",
                             "uniprot": "P49840",
                             "type": "protein",
-                            "value": "GSK3A",
+                            "value": "GSK3A (GSK3\u03b1)",
                             "aligend_seq": "50",
                             "isDark": false,
                             "members": [
@@ -5028,7 +5028,7 @@
                             "id": "id307@GSK3B (GSK3\u03b2)",
                             "uniprot": "P49841",
                             "type": "protein",
-                            "value": "GSK3B",
+                            "value": "GSK3B (GSK3\u03b2)",
                             "aligend_seq": "840",
                             "isDark": false,
                             "members": [
@@ -5081,7 +5081,7 @@
                                     "id": "id310@MAPK1 (Erk2)",
                                     "uniprot": "P28482",
                                     "type": "protein",
-                                    "value": "MAPK1",
+                                    "value": "MAPK1 (Erk2)",
                                     "aligend_seq": "603",
                                     "isDark": false,
                                     "members": [
@@ -5094,7 +5094,7 @@
                                     "id": "id311@MAPK3 (Erk1)",
                                     "uniprot": "P27361",
                                     "type": "protein",
-                                    "value": "MAPK3",
+                                    "value": "MAPK3 (Erk1)",
                                     "aligend_seq": "120",
                                     "isDark": false,
                                     "members": [
@@ -5122,7 +5122,7 @@
                                     "id": "id313@MAPK4 (Erk4)",
                                     "uniprot": "P31152",
                                     "type": "protein",
-                                    "value": "MAPK4",
+                                    "value": "MAPK4 (Erk4)",
                                     "aligend_seq": "83",
                                     "isDark": true,
                                     "members": [
@@ -5135,7 +5135,7 @@
                                     "id": "id314@MAPK6 (Erk3)",
                                     "uniprot": "Q16659",
                                     "type": "protein",
-                                    "value": "MAPK6",
+                                    "value": "MAPK6 (Erk3)",
                                     "aligend_seq": "153",
                                     "isDark": false,
                                     "members": [
@@ -5162,7 +5162,7 @@
                                     "id": "id316@MAPK7 (Erk5)",
                                     "uniprot": "Q13164",
                                     "type": "protein",
-                                    "value": "MAPK7",
+                                    "value": "MAPK7 (Erk5)",
                                     "aligend_seq": "144",
                                     "isDark": false,
                                     "members": [
@@ -5189,7 +5189,7 @@
                                     "id": "id318@MAPK15 (Erk7)",
                                     "uniprot": "Q8TD08",
                                     "type": "protein",
-                                    "value": "MAPK15",
+                                    "value": "MAPK15 (Erk7)",
                                     "aligend_seq": "342",
                                     "isDark": true,
                                     "members": [
@@ -5218,7 +5218,7 @@
                                     "id": "id320@MAPK8 (JNK1)",
                                     "uniprot": "P45983",
                                     "type": "protein",
-                                    "value": "MAPK8",
+                                    "value": "MAPK8 (JNK1)",
                                     "aligend_seq": "97",
                                     "isDark": false,
                                     "members": [
@@ -5231,7 +5231,7 @@
                                     "id": "id321@MAPK9 (JNK2)",
                                     "uniprot": "P45984",
                                     "type": "protein",
-                                    "value": "MAPK9",
+                                    "value": "MAPK9 (JNK2)",
                                     "aligend_seq": "106",
                                     "isDark": false,
                                     "members": [
@@ -5244,7 +5244,7 @@
                                     "id": "id322@MAPK10 (JNK3)",
                                     "uniprot": "P53779",
                                     "type": "protein",
-                                    "value": "MAPK10",
+                                    "value": "MAPK10 (JNK3)",
                                     "aligend_seq": "246",
                                     "isDark": false,
                                     "members": [
@@ -5301,7 +5301,7 @@
                                     "id": "id326@MAPK11 (p38\u03b2)",
                                     "uniprot": "Q15759",
                                     "type": "protein",
-                                    "value": "MAPK11",
+                                    "value": "MAPK11 (p38\u03b2)",
                                     "aligend_seq": "77",
                                     "isDark": false,
                                     "members": [
@@ -5314,7 +5314,7 @@
                                     "id": "id327@MAPK12 (p38\u03b3)",
                                     "uniprot": "P53778",
                                     "type": "protein",
-                                    "value": "MAPK12",
+                                    "value": "MAPK12 (p38\u03b3)",
                                     "aligend_seq": "95",
                                     "isDark": false,
                                     "members": [
@@ -5327,7 +5327,7 @@
                                     "id": "id328@MAPK13 (p38\u03b4)",
                                     "uniprot": "O15264",
                                     "type": "protein",
-                                    "value": "MAPK13",
+                                    "value": "MAPK13 (p38\u03b4)",
                                     "aligend_seq": "123",
                                     "isDark": false,
                                     "members": [
@@ -5340,7 +5340,7 @@
                                     "id": "id329@MAPK14 (p38\u03b1)",
                                     "uniprot": "Q16539",
                                     "type": "protein",
-                                    "value": "MAPK14",
+                                    "value": "MAPK14 (p38\u03b1)",
                                     "aligend_seq": "740",
                                     "isDark": false,
                                     "members": [
@@ -5481,7 +5481,7 @@
                             "id": "id339@SRPK3 (MSSK1)",
                             "uniprot": "Q9UPE1",
                             "type": "protein",
-                            "value": "SRPK3",
+                            "value": "SRPK3 (MSSK1)",
                             "aligend_seq": "345",
                             "isDark": true,
                             "members": [
@@ -5588,7 +5588,7 @@
                                     "id": "id343@MAP2K1 (MEK1)",
                                     "uniprot": "Q02750",
                                     "type": "protein",
-                                    "value": "MAP2K1",
+                                    "value": "MAP2K1 (MEK1)",
                                     "aligend_seq": "769",
                                     "isDark": false,
                                     "members": [
@@ -5601,7 +5601,7 @@
                                     "id": "id344@MAP2K2 (MEK2)",
                                     "uniprot": "P36507",
                                     "type": "protein",
-                                    "value": "MAP2K2",
+                                    "value": "MAP2K2 (MEK2)",
                                     "aligend_seq": "254",
                                     "isDark": false,
                                     "members": [
@@ -5629,7 +5629,7 @@
                                     "id": "id346@MAP2K3 (MKK3)",
                                     "uniprot": "P46734",
                                     "type": "protein",
-                                    "value": "MAP2K3",
+                                    "value": "MAP2K3 (MKK3)",
                                     "aligend_seq": "73",
                                     "isDark": false,
                                     "members": [
@@ -5642,7 +5642,7 @@
                                     "id": "id347@MAP2K6 (MKK6)",
                                     "uniprot": "P52564",
                                     "type": "protein",
-                                    "value": "MAP2K6",
+                                    "value": "MAP2K6 (MKK6)",
                                     "aligend_seq": "183",
                                     "isDark": false,
                                     "members": [
@@ -5669,7 +5669,7 @@
                                     "id": "id349@MAP2K4 (SEK1)",
                                     "uniprot": "P45985",
                                     "type": "protein",
-                                    "value": "MAP2K4",
+                                    "value": "MAP2K4 (SEK1)",
                                     "aligend_seq": "148",
                                     "isDark": false,
                                     "members": [
@@ -5773,7 +5773,7 @@
                                     "id": "id356@MAP3K5 (ASK)",
                                     "uniprot": "Q99683",
                                     "type": "protein",
-                                    "value": "MAP3K5",
+                                    "value": "MAP3K5 (ASK)",
                                     "aligend_seq": "102",
                                     "isDark": false,
                                     "members": [
@@ -5786,7 +5786,7 @@
                                     "id": "id357@MAP3K6 (MEKK6)",
                                     "uniprot": "O95382",
                                     "type": "protein",
-                                    "value": "MAP3K6",
+                                    "value": "MAP3K6 (MEKK6)",
                                     "aligend_seq": "59",
                                     "isDark": false,
                                     "members": [
@@ -5826,7 +5826,7 @@
                                     "id": "id360@MAP3K1 (MEKK1)",
                                     "uniprot": "Q13233",
                                     "type": "protein",
-                                    "value": "MAP3K1",
+                                    "value": "MAP3K1 (MEKK1)",
                                     "aligend_seq": "143",
                                     "isDark": false,
                                     "members": [
@@ -5854,7 +5854,7 @@
                                     "id": "id362@MAP3K2 (MEKK2)",
                                     "uniprot": "Q9Y2U5",
                                     "type": "protein",
-                                    "value": "MAP3K2",
+                                    "value": "MAP3K2 (MEKK2)",
                                     "aligend_seq": "83",
                                     "isDark": false,
                                     "members": [
@@ -5867,7 +5867,7 @@
                                     "id": "id363@MAP3K3 (MEKK3)",
                                     "uniprot": "Q99759",
                                     "type": "protein",
-                                    "value": "MAP3K3",
+                                    "value": "MAP3K3 (MEKK3)",
                                     "aligend_seq": "543",
                                     "isDark": false,
                                     "members": [
@@ -5921,7 +5921,7 @@
                                     "id": "id367@MAP3K19 (MEKK15)",
                                     "uniprot": "Q56UN5",
                                     "type": "protein",
-                                    "value": "MAP3K19",
+                                    "value": "MAP3K19 (MEKK15)",
                                     "aligend_seq": "45",
                                     "isDark": false,
                                     "members": [
@@ -5992,7 +5992,7 @@
                                     "id": "id370@OXSR1 (OSR1)",
                                     "uniprot": "O95747",
                                     "type": "protein",
-                                    "value": "OXSR1",
+                                    "value": "OXSR1 (OSR1)",
                                     "aligend_seq": "341",
                                     "isDark": false,
                                     "members": [
@@ -6005,7 +6005,7 @@
                                     "id": "id371@STK39 (STLK3)",
                                     "uniprot": "Q9UEW8",
                                     "type": "protein",
-                                    "value": "STK39",
+                                    "value": "STK39 (STLK3)",
                                     "aligend_seq": "37",
                                     "isDark": false,
                                     "members": [
@@ -6035,7 +6035,7 @@
                                     "id": "id373@MAP4K1 (HPK1)",
                                     "uniprot": "Q92918",
                                     "type": "protein",
-                                    "value": "MAP4K1",
+                                    "value": "MAP4K1 (HPK1)",
                                     "aligend_seq": "57",
                                     "isDark": false,
                                     "members": [
@@ -6048,7 +6048,7 @@
                                     "id": "id374@MAP4K2 (GCK)",
                                     "uniprot": "Q12851",
                                     "type": "protein",
-                                    "value": "MAP4K2",
+                                    "value": "MAP4K2 (GCK)",
                                     "aligend_seq": "47",
                                     "isDark": false,
                                     "members": [
@@ -6061,7 +6061,7 @@
                                     "id": "id375@MAP4K3 (KHS2)",
                                     "uniprot": "Q8IVH8",
                                     "type": "protein",
-                                    "value": "MAP4K3",
+                                    "value": "MAP4K3 (KHS2)",
                                     "aligend_seq": "198",
                                     "isDark": false,
                                     "members": [
@@ -6074,7 +6074,7 @@
                                     "id": "id376@MAP4K5 (KHS1)",
                                     "uniprot": "Q9Y4K4",
                                     "type": "protein",
-                                    "value": "MAP4K5",
+                                    "value": "MAP4K5 (KHS1)",
                                     "aligend_seq": "60",
                                     "isDark": false,
                                     "members": [
@@ -6104,7 +6104,7 @@
                                     "id": "id378@MAP4K4 (HGK)",
                                     "uniprot": "O95819",
                                     "type": "protein",
-                                    "value": "MAP4K4",
+                                    "value": "MAP4K4 (HGK)",
                                     "aligend_seq": "5",
                                     "isDark": false,
                                     "members": [
@@ -6117,7 +6117,7 @@
                                     "id": "id379@MINK1 (MINK)",
                                     "uniprot": "Q8N4C8",
                                     "type": "protein",
-                                    "value": "MINK1",
+                                    "value": "MINK1 (MINK)",
                                     "aligend_seq": "28",
                                     "isDark": false,
                                     "members": [
@@ -6130,7 +6130,7 @@
                                     "id": "id380@NRK (ZC4)",
                                     "uniprot": "Q7Z2Y5",
                                     "type": "protein",
-                                    "value": "NRK",
+                                    "value": "NRK (ZC4)",
                                     "aligend_seq": "58",
                                     "isDark": true,
                                     "members": [
@@ -6143,7 +6143,7 @@
                                     "id": "id381@TNIK (ZC2)",
                                     "uniprot": "Q9UKE5",
                                     "type": "protein",
-                                    "value": "TNIK",
+                                    "value": "TNIK (ZC2)",
                                     "aligend_seq": "190",
                                     "isDark": false,
                                     "members": [
@@ -6171,7 +6171,7 @@
                                     "id": "id383@STK3 (MST2)",
                                     "uniprot": "Q13188",
                                     "type": "protein",
-                                    "value": "STK3",
+                                    "value": "STK3 (MST2)",
                                     "aligend_seq": "167",
                                     "isDark": true,
                                     "members": [
@@ -6184,7 +6184,7 @@
                                     "id": "id384@STK4 (MST1)",
                                     "uniprot": "Q13043",
                                     "type": "protein",
-                                    "value": "STK4",
+                                    "value": "STK4 (MST1)",
                                     "aligend_seq": "178",
                                     "isDark": false,
                                     "members": [
@@ -6376,7 +6376,7 @@
                                     "id": "id398@STK10 (LOK)",
                                     "uniprot": "O94804",
                                     "type": "protein",
-                                    "value": "STK10",
+                                    "value": "STK10 (LOK)",
                                     "aligend_seq": "80",
                                     "isDark": false,
                                     "members": [
@@ -6404,7 +6404,7 @@
                                     "id": "id400@STRADA (STLK5)",
                                     "uniprot": "Q7RTN6",
                                     "type": "protein",
-                                    "value": "STRADA",
+                                    "value": "STRADA (STLK5)",
                                     "aligend_seq": "248",
                                     "isDark": false,
                                     "members": [
@@ -6417,7 +6417,7 @@
                                     "id": "id401@STRADB (STLK6)",
                                     "uniprot": "Q9C0K7",
                                     "type": "protein",
-                                    "value": "STRADB",
+                                    "value": "STRADB (STLK6)",
                                     "aligend_seq": "144",
                                     "isDark": false,
                                     "members": [
@@ -6446,7 +6446,7 @@
                                     "id": "id403@TAOK1 (TAO1)",
                                     "uniprot": "Q7L7X3",
                                     "type": "protein",
-                                    "value": "TAOK1",
+                                    "value": "TAOK1 (TAO1)",
                                     "aligend_seq": "252",
                                     "isDark": true,
                                     "members": [
@@ -6459,7 +6459,7 @@
                                     "id": "id404@TAOK2 (TAO2)",
                                     "uniprot": "Q9UL54",
                                     "type": "protein",
-                                    "value": "TAOK2",
+                                    "value": "TAOK2 (TAO2)",
                                     "aligend_seq": "50",
                                     "isDark": true,
                                     "members": [
@@ -6472,7 +6472,7 @@
                                     "id": "id405@TAOK3 (TAO3)",
                                     "uniprot": "Q9H2K8",
                                     "type": "protein",
-                                    "value": "TAOK3",
+                                    "value": "TAOK3 (TAO3)",
                                     "aligend_seq": "109",
                                     "isDark": false,
                                     "members": [
@@ -6501,7 +6501,7 @@
                                     "id": "id407@STK24 (MST3)",
                                     "uniprot": "Q9Y6E0",
                                     "type": "protein",
-                                    "value": "STK24",
+                                    "value": "STK24 (MST3)",
                                     "aligend_seq": "249",
                                     "isDark": false,
                                     "members": [
@@ -6514,7 +6514,7 @@
                                     "id": "id408@STK25 (YSK1)",
                                     "uniprot": "O00506",
                                     "type": "protein",
-                                    "value": "STK25",
+                                    "value": "STK25 (YSK1)",
                                     "aligend_seq": "516",
                                     "isDark": false,
                                     "members": [
@@ -6527,7 +6527,7 @@
                                     "id": "id409@STK26 (MST4)",
                                     "uniprot": "Q9P289",
                                     "type": "protein",
-                                    "value": "STK26",
+                                    "value": "STK26 (MST4)",
                                     "aligend_seq": "175",
                                     "isDark": false,
                                     "members": [
@@ -6558,7 +6558,7 @@
                             "id": "id411@EIF2AK4-b (GCN2~b)",
                             "uniprot": "Q9P2K8",
                             "type": "protein",
-                            "value": "EIF2AK4-b",
+                            "value": "EIF2AK4-b (GCN2~b)",
                             "aligend_seq": "919",
                             "isDark": false,
                             "members": [
@@ -6571,7 +6571,7 @@
                             "id": "id412@MAP3K14 (NIK)",
                             "uniprot": "Q99558",
                             "type": "protein",
-                            "value": "MAP3K14",
+                            "value": "MAP3K14 (NIK)",
                             "aligend_seq": "147",
                             "isDark": true,
                             "members": [
@@ -6584,7 +6584,7 @@
                             "id": "id413@MAP3K8 (COT)",
                             "uniprot": "P41279",
                             "type": "protein",
-                            "value": "MAP3K8",
+                            "value": "MAP3K8 (COT)",
                             "aligend_seq": "150",
                             "isDark": false,
                             "members": [
@@ -6719,7 +6719,7 @@
                             "id": "id416@ABL1 (Abl)",
                             "uniprot": "P00519",
                             "type": "protein",
-                            "value": "ABL1",
+                            "value": "ABL1 (Abl)",
                             "aligend_seq": "289",
                             "isDark": false,
                             "members": [
@@ -6732,7 +6732,7 @@
                             "id": "id417@ABL2 (Arg)",
                             "uniprot": "P42684",
                             "type": "protein",
-                            "value": "ABL2",
+                            "value": "ABL2 (Arg)",
                             "aligend_seq": "133",
                             "isDark": false,
                             "members": [
@@ -6773,7 +6773,7 @@
                             "id": "id420@TNK2 (Ack)",
                             "uniprot": "Q07912",
                             "type": "protein",
-                            "value": "TNK2",
+                            "value": "TNK2 (Ack)",
                             "aligend_seq": "249",
                             "isDark": false,
                             "members": [
@@ -6856,7 +6856,7 @@
                             "id": "id426@MERTK (Mer)",
                             "uniprot": "Q12866",
                             "type": "protein",
-                            "value": "MERTK",
+                            "value": "MERTK (Mer)",
                             "aligend_seq": "136",
                             "isDark": false,
                             "members": [
@@ -6869,7 +6869,7 @@
                             "id": "id427@TYRO3 (Sky)",
                             "uniprot": "Q06418",
                             "type": "protein",
-                            "value": "TYRO3",
+                            "value": "TYRO3 (Sky)",
                             "aligend_seq": "132",
                             "isDark": false,
                             "members": [
@@ -6896,7 +6896,7 @@
                             "id": "id429@PTK7 (CCK4)",
                             "uniprot": "Q13308",
                             "type": "protein",
-                            "value": "PTK7",
+                            "value": "PTK7 (CCK4)",
                             "aligend_seq": "220",
                             "isDark": false,
                             "members": [
@@ -6937,7 +6937,7 @@
                             "id": "id432@MATK (CTK)",
                             "uniprot": "P42679",
                             "type": "protein",
-                            "value": "MATK",
+                            "value": "MATK (CTK)",
                             "aligend_seq": "140",
                             "isDark": false,
                             "members": [
@@ -7021,7 +7021,7 @@
                             "id": "id438@ERBB2 (HER2)",
                             "uniprot": "P04626",
                             "type": "protein",
-                            "value": "ERBB2",
+                            "value": "ERBB2 (HER2)",
                             "aligend_seq": "119",
                             "isDark": false,
                             "members": [
@@ -7034,7 +7034,7 @@
                             "id": "id439@ERBB3 (HER3)",
                             "uniprot": "P21860",
                             "type": "protein",
-                            "value": "ERBB3",
+                            "value": "ERBB3 (HER3)",
                             "aligend_seq": "92",
                             "isDark": false,
                             "members": [
@@ -7047,7 +7047,7 @@
                             "id": "id440@ERBB4 (HER4)",
                             "uniprot": "Q15303",
                             "type": "protein",
-                            "value": "ERBB4",
+                            "value": "ERBB4 (HER4)",
                             "aligend_seq": "124",
                             "isDark": false,
                             "members": [
@@ -7284,7 +7284,7 @@
                             "id": "id457@PTK2 (FAK)",
                             "uniprot": "Q05397",
                             "type": "protein",
-                            "value": "PTK2",
+                            "value": "PTK2 (FAK)",
                             "aligend_seq": "207",
                             "isDark": false,
                             "members": [
@@ -7297,7 +7297,7 @@
                             "id": "id458@PTK2B (PYK2)",
                             "uniprot": "Q14289",
                             "type": "protein",
-                            "value": "PTK2B",
+                            "value": "PTK2B (PYK2)",
                             "aligend_seq": "118",
                             "isDark": false,
                             "members": [
@@ -7462,7 +7462,7 @@
                             "id": "id470@INSRR (IRR)",
                             "uniprot": "P14616",
                             "type": "protein",
-                            "value": "INSRR",
+                            "value": "INSRR (IRR)",
                             "aligend_seq": "56",
                             "isDark": false,
                             "members": [
@@ -7561,7 +7561,7 @@
                             "id": "id477@JAK1-b (JAK1~b)",
                             "uniprot": "P23458",
                             "type": "protein",
-                            "value": "JAK1-b",
+                            "value": "JAK1-b (JAK1~b)",
                             "aligend_seq": "132",
                             "isDark": false,
                             "members": [
@@ -7574,7 +7574,7 @@
                             "id": "id478@JAK2-b (JAK2~b)",
                             "uniprot": "O60674",
                             "type": "protein",
-                            "value": "JAK2-b",
+                            "value": "JAK2-b (JAK2~b)",
                             "aligend_seq": "157",
                             "isDark": false,
                             "members": [
@@ -7587,7 +7587,7 @@
                             "id": "id479@JAK3-b (JAK3~b)",
                             "uniprot": "P52333",
                             "type": "protein",
-                            "value": "JAK3-b",
+                            "value": "JAK3-b (JAK3~b)",
                             "aligend_seq": "55",
                             "isDark": false,
                             "members": [
@@ -7600,7 +7600,7 @@
                             "id": "id480@TYK2-b (Tyk2~b)",
                             "uniprot": "P29597",
                             "type": "protein",
-                            "value": "TYK2-b",
+                            "value": "TYK2-b (Tyk2~b)",
                             "aligend_seq": "115",
                             "isDark": false,
                             "members": [
@@ -7629,7 +7629,7 @@
                             "id": "id482@AATK (Lmr1)",
                             "uniprot": "Q6ZMQ8",
                             "type": "protein",
-                            "value": "AATK",
+                            "value": "AATK (Lmr1)",
                             "aligend_seq": "98",
                             "isDark": false,
                             "members": [
@@ -7642,7 +7642,7 @@
                             "id": "id483@LMTK2 (Lmr2)",
                             "uniprot": "Q8IWU2",
                             "type": "protein",
-                            "value": "LMTK2",
+                            "value": "LMTK2 (Lmr2)",
                             "aligend_seq": "132",
                             "isDark": true,
                             "members": [
@@ -7655,7 +7655,7 @@
                             "id": "id484@LMTK3 (Lmr3)",
                             "uniprot": "Q96Q04",
                             "type": "protein",
-                            "value": "LMTK3",
+                            "value": "LMTK3 (Lmr3)",
                             "aligend_seq": "71",
                             "isDark": true,
                             "members": [
@@ -7696,7 +7696,7 @@
                             "id": "id487@MST1R (Ron)",
                             "uniprot": "Q04912",
                             "type": "protein",
-                            "value": "MST1R",
+                            "value": "MST1R (Ron)",
                             "aligend_seq": "43",
                             "isDark": false,
                             "members": [
@@ -7754,7 +7754,7 @@
                             "id": "id491@CSF1R (FmS)",
                             "uniprot": "P07333",
                             "type": "protein",
-                            "value": "CSF1R",
+                            "value": "CSF1R (FmS)",
                             "aligend_seq": "132",
                             "isDark": false,
                             "members": [
@@ -7793,7 +7793,7 @@
                             "id": "id494@PDGFRA (PDGFR\u03b1)",
                             "uniprot": "P16234",
                             "type": "protein",
-                            "value": "PDGFRA",
+                            "value": "PDGFRA (PDGFR\u03b1)",
                             "aligend_seq": "143",
                             "isDark": false,
                             "members": [
@@ -7806,7 +7806,7 @@
                             "id": "id495@PDGFRB (PDGFR\u03b2)",
                             "uniprot": "P09619",
                             "type": "protein",
-                            "value": "PDGFRB",
+                            "value": "PDGFRB (PDGFR\u03b2)",
                             "aligend_seq": "139",
                             "isDark": false,
                             "members": [
@@ -7928,7 +7928,7 @@
                             "id": "id504@ROS1 (Ros)",
                             "uniprot": "P08922",
                             "type": "protein",
-                            "value": "ROS1",
+                            "value": "ROS1 (Ros)",
                             "aligend_seq": "191",
                             "isDark": false,
                             "members": [
@@ -8046,7 +8046,7 @@
                                     "id": "id512@YES1 (Yes)",
                                     "uniprot": "P07947",
                                     "type": "protein",
-                                    "value": "YES1",
+                                    "value": "YES1 (Yes)",
                                     "aligend_seq": "62",
                                     "isDark": false,
                                     "members": [
@@ -8143,7 +8143,7 @@
                                     "id": "id519@PTK6 (Brk)",
                                     "uniprot": "Q13882",
                                     "type": "protein",
-                                    "value": "PTK6",
+                                    "value": "PTK6 (Brk)",
                                     "aligend_seq": "97",
                                     "isDark": false,
                                     "members": [
@@ -8156,7 +8156,7 @@
                                     "id": "id520@SRMS (Srm)",
                                     "uniprot": "Q9H3Y6",
                                     "type": "protein",
-                                    "value": "SRMS",
+                                    "value": "SRMS (Srm)",
                                     "aligend_seq": "118",
                                     "isDark": false,
                                     "members": [
@@ -8230,7 +8230,7 @@
                             "id": "id525@BMX (Etk)",
                             "uniprot": "P51813",
                             "type": "protein",
-                            "value": "BMX",
+                            "value": "BMX (Etk)",
                             "aligend_seq": "82",
                             "isDark": false,
                             "members": [
@@ -8310,7 +8310,7 @@
                             "id": "id531@TEK (TIE2)",
                             "uniprot": "Q02763",
                             "type": "protein",
-                            "value": "TEK",
+                            "value": "TEK (TIE2)",
                             "aligend_seq": "94",
                             "isDark": false,
                             "members": [
@@ -8352,7 +8352,7 @@
                             "id": "id534@NTRK1 (TRKA)",
                             "uniprot": "P04629",
                             "type": "protein",
-                            "value": "NTRK1",
+                            "value": "NTRK1 (TRKA)",
                             "aligend_seq": "115",
                             "isDark": false,
                             "members": [
@@ -8365,7 +8365,7 @@
                             "id": "id535@NTRK2 (TRKB)",
                             "uniprot": "Q16620",
                             "type": "protein",
-                            "value": "NTRK2",
+                            "value": "NTRK2 (TRKB)",
                             "aligend_seq": "101",
                             "isDark": false,
                             "members": [
@@ -8378,7 +8378,7 @@
                             "id": "id536@NTRK3 (TRKC)",
                             "uniprot": "Q16288",
                             "type": "protein",
-                            "value": "NTRK3",
+                            "value": "NTRK3 (TRKC)",
                             "aligend_seq": "110",
                             "isDark": false,
                             "members": [
@@ -8460,7 +8460,7 @@
                             "id": "id542@STYK1 (SuRTK106)",
                             "uniprot": "Q6J9G0",
                             "type": "protein",
-                            "value": "STYK1",
+                            "value": "STYK1 (SuRTK106)",
                             "aligend_seq": "99",
                             "isDark": false,
                             "members": [
@@ -8773,7 +8773,7 @@
                                     "id": "id561@TNNI3K (HH498)",
                                     "uniprot": "Q59H18",
                                     "type": "protein",
-                                    "value": "TNNI3K",
+                                    "value": "TNNI3K (HH498)",
                                     "aligend_seq": "218",
                                     "isDark": false,
                                     "members": [
@@ -8828,7 +8828,7 @@
                                     "id": "id565@MAP3K12 (DLK)",
                                     "uniprot": "Q12852",
                                     "type": "protein",
-                                    "value": "MAP3K12",
+                                    "value": "MAP3K12 (DLK)",
                                     "aligend_seq": "185",
                                     "isDark": false,
                                     "members": [
@@ -8841,7 +8841,7 @@
                                     "id": "id566@MAP3K13 (LZK)",
                                     "uniprot": "O43283",
                                     "type": "protein",
-                                    "value": "MAP3K13",
+                                    "value": "MAP3K13 (LZK)",
                                     "aligend_seq": "62",
                                     "isDark": false,
                                     "members": [
@@ -8871,7 +8871,7 @@
                                     "id": "id568@MAP3K9 (MLK1)",
                                     "uniprot": "P80192",
                                     "type": "protein",
-                                    "value": "MAP3K9",
+                                    "value": "MAP3K9 (MLK1)",
                                     "aligend_seq": "128",
                                     "isDark": false,
                                     "members": [
@@ -8884,7 +8884,7 @@
                                     "id": "id569@MAP3K10 (MLK2)",
                                     "uniprot": "Q02779",
                                     "type": "protein",
-                                    "value": "MAP3K10",
+                                    "value": "MAP3K10 (MLK2)",
                                     "aligend_seq": "128",
                                     "isDark": true,
                                     "members": [
@@ -8897,7 +8897,7 @@
                                     "id": "id570@MAP3K11 (MLK3)",
                                     "uniprot": "Q16584",
                                     "type": "protein",
-                                    "value": "MAP3K11",
+                                    "value": "MAP3K11 (MLK3)",
                                     "aligend_seq": "75",
                                     "isDark": false,
                                     "members": [
@@ -8910,7 +8910,7 @@
                                     "id": "id571@MAP3K21 (MLK4)",
                                     "uniprot": "Q5TCX8",
                                     "type": "protein",
-                                    "value": "MAP3K21",
+                                    "value": "MAP3K21 (MLK4)",
                                     "aligend_seq": "54",
                                     "isDark": true,
                                     "members": [
@@ -8937,7 +8937,7 @@
                                     "id": "id573@MAP3K7 (TAK1)",
                                     "uniprot": "O43318",
                                     "type": "protein",
-                                    "value": "MAP3K7",
+                                    "value": "MAP3K7 (TAK1)",
                                     "aligend_seq": "307",
                                     "isDark": false,
                                     "members": [
@@ -8964,7 +8964,7 @@
                                     "id": "id575@MAP3K20 (ZAK)",
                                     "uniprot": "Q9NYL2",
                                     "type": "protein",
-                                    "value": "MAP3K20",
+                                    "value": "MAP3K20 (ZAK)",
                                     "aligend_seq": "135",
                                     "isDark": false,
                                     "members": [
@@ -9010,7 +9010,7 @@
                                     "id": "id578@KSR1 (KSR)",
                                     "uniprot": "Q8IVT5",
                                     "type": "protein",
-                                    "value": "KSR1",
+                                    "value": "KSR1 (KSR)",
                                     "aligend_seq": "106",
                                     "isDark": false,
                                     "members": [
@@ -9111,7 +9111,7 @@
                             "id": "id585@ANKK1 (SgK288)",
                             "uniprot": "Q8NFD2",
                             "type": "protein",
-                            "value": "ANKK1",
+                            "value": "ANKK1 (SgK288)",
                             "aligend_seq": "78",
                             "isDark": false,
                             "members": [
@@ -9163,7 +9163,7 @@
                             "id": "id589@RIPK4 (ANKRD3)",
                             "uniprot": "P57078",
                             "type": "protein",
-                            "value": "RIPK4",
+                            "value": "RIPK4 (ANKRD3)",
                             "aligend_seq": "135",
                             "isDark": false,
                             "members": [
@@ -9219,7 +9219,7 @@
                                     "id": "id592@ACVR1 (ALK2)",
                                     "uniprot": "Q04771",
                                     "type": "protein",
-                                    "value": "ACVR1",
+                                    "value": "ACVR1 (ALK2)",
                                     "aligend_seq": "207",
                                     "isDark": false,
                                     "members": [
@@ -9232,7 +9232,7 @@
                                     "id": "id593@ACVR1B (ALK4)",
                                     "uniprot": "P36896",
                                     "type": "protein",
-                                    "value": "ACVR1B",
+                                    "value": "ACVR1B (ALK4)",
                                     "aligend_seq": "124",
                                     "isDark": false,
                                     "members": [
@@ -9245,7 +9245,7 @@
                                     "id": "id594@ACVR1C (ALK7)",
                                     "uniprot": "Q8NER5",
                                     "type": "protein",
-                                    "value": "ACVR1C",
+                                    "value": "ACVR1C (ALK7)",
                                     "aligend_seq": "71",
                                     "isDark": false,
                                     "members": [
@@ -9258,7 +9258,7 @@
                                     "id": "id595@ACVRL1 (ALK1)",
                                     "uniprot": "P37023",
                                     "type": "protein",
-                                    "value": "ACVRL1",
+                                    "value": "ACVRL1 (ALK1)",
                                     "aligend_seq": "73",
                                     "isDark": false,
                                     "members": [
@@ -9297,7 +9297,7 @@
                                     "id": "id598@TGFBR1 (TGF\u03b2R1)",
                                     "uniprot": "P36897",
                                     "type": "protein",
-                                    "value": "TGFBR1",
+                                    "value": "TGFBR1 (TGF\u03b2R1)",
                                     "aligend_seq": "258",
                                     "isDark": false,
                                     "members": [
@@ -9328,7 +9328,7 @@
                                     "id": "id600@ACVR2A (ACtR2)",
                                     "uniprot": "P27037",
                                     "type": "protein",
-                                    "value": "ACVR2A",
+                                    "value": "ACVR2A (ACtR2)",
                                     "aligend_seq": "139",
                                     "isDark": false,
                                     "members": [
@@ -9341,7 +9341,7 @@
                                     "id": "id601@ACVR2B (ACtR2B)",
                                     "uniprot": "Q13705",
                                     "type": "protein",
-                                    "value": "ACVR2B",
+                                    "value": "ACVR2B (ACtR2B)",
                                     "aligend_seq": "207",
                                     "isDark": false,
                                     "members": [
@@ -9354,7 +9354,7 @@
                                     "id": "id602@AMHR2 (MISR2)",
                                     "uniprot": "Q16671",
                                     "type": "protein",
-                                    "value": "AMHR2",
+                                    "value": "AMHR2 (MISR2)",
                                     "aligend_seq": "65",
                                     "isDark": false,
                                     "members": [
@@ -9380,7 +9380,7 @@
                                     "id": "id604@TGFBR2 (TGF\u03b2R2)",
                                     "uniprot": "P37173",
                                     "type": "protein",
-                                    "value": "TGFBR2",
+                                    "value": "TGFBR2 (TGF\u03b2R2)",
                                     "aligend_seq": "146",
                                     "isDark": false,
                                     "members": [
@@ -9442,7 +9442,7 @@
                     "id": "id608@GUCY2C (HSER)",
                     "uniprot": "P25092",
                     "type": "protein",
-                    "value": "GUCY2C",
+                    "value": "GUCY2C (HSER)",
                     "aligend_seq": "138",
                     "isDark": false,
                     "members": [
@@ -9455,7 +9455,7 @@
                     "id": "id609@GUCY2D (CYGD)",
                     "uniprot": "Q02846",
                     "type": "protein",
-                    "value": "GUCY2D",
+                    "value": "GUCY2D (CYGD)",
                     "aligend_seq": "62",
                     "isDark": false,
                     "members": [
@@ -9468,7 +9468,7 @@
                     "id": "id610@GUCY2F (CYGF)",
                     "uniprot": "P51841",
                     "type": "protein",
-                    "value": "GUCY2F",
+                    "value": "GUCY2F (CYGF)",
                     "aligend_seq": "160",
                     "isDark": false,
                     "members": [
@@ -9481,7 +9481,7 @@
                     "id": "id611@NPR1 (ANP\u03b1)",
                     "uniprot": "P16066",
                     "type": "protein",
-                    "value": "NPR1",
+                    "value": "NPR1 (ANP\u03b1)",
                     "aligend_seq": "102",
                     "isDark": false,
                     "members": [
@@ -9494,7 +9494,7 @@
                     "id": "id612@NPR2 (ANP\u03b2)",
                     "uniprot": "P20594",
                     "type": "protein",
-                    "value": "NPR2",
+                    "value": "NPR2 (ANP\u03b2)",
                     "aligend_seq": "120",
                     "isDark": false,
                     "members": [
@@ -9616,7 +9616,7 @@
                             "id": "id615@AURKA (AurA)",
                             "uniprot": "O14965",
                             "type": "protein",
-                            "value": "AURKA",
+                            "value": "AURKA (AurA)",
                             "aligend_seq": "1115",
                             "isDark": false,
                             "members": [
@@ -9629,7 +9629,7 @@
                             "id": "id616@AURKB (AurB)",
                             "uniprot": "Q96GD4",
                             "type": "protein",
-                            "value": "AURKB",
+                            "value": "AURKB (AurB)",
                             "aligend_seq": "21",
                             "isDark": false,
                             "members": [
@@ -9642,7 +9642,7 @@
                             "id": "id617@AURKC (AurC)",
                             "uniprot": "Q9UQB9",
                             "type": "protein",
-                            "value": "AURKC",
+                            "value": "AURKC (AurC)",
                             "aligend_seq": "76",
                             "isDark": false,
                             "members": [
@@ -9683,7 +9683,7 @@
                             "id": "id620@BUB1B (BubR1)",
                             "uniprot": "O60566",
                             "type": "protein",
-                            "value": "BUB1B",
+                            "value": "BUB1B (BubR1)",
                             "aligend_seq": "95",
                             "isDark": false,
                             "members": [
@@ -9793,7 +9793,7 @@
                             "id": "id628@DSTYK (SgK496)",
                             "uniprot": "Q6XUX3",
                             "type": "protein",
-                            "value": "DSTYK",
+                            "value": "DSTYK (SgK496)",
                             "aligend_seq": "217",
                             "isDark": true,
                             "members": [
@@ -9850,7 +9850,7 @@
                             "id": "id632@CHUK (IKK\u03b1)",
                             "uniprot": "O15111",
                             "type": "protein",
-                            "value": "CHUK",
+                            "value": "CHUK (IKK\u03b1)",
                             "aligend_seq": "136",
                             "isDark": false,
                             "members": [
@@ -9863,7 +9863,7 @@
                             "id": "id633@IKBKB (IKK\u03b2)",
                             "uniprot": "O14920",
                             "type": "protein",
-                            "value": "IKBKB",
+                            "value": "IKBKB (IKK\u03b2)",
                             "aligend_seq": "224",
                             "isDark": false,
                             "members": [
@@ -9876,7 +9876,7 @@
                             "id": "id634@IKBKE (IKK\u03b5)",
                             "uniprot": "Q14164",
                             "type": "protein",
-                            "value": "IKBKE",
+                            "value": "IKBKE (IKK\u03b5)",
                             "aligend_seq": "96",
                             "isDark": false,
                             "members": [
@@ -9917,7 +9917,7 @@
                             "id": "id637@ERN1 (IRE1)",
                             "uniprot": "O75460",
                             "type": "protein",
-                            "value": "ERN1",
+                            "value": "ERN1 (IRE1)",
                             "aligend_seq": "533",
                             "isDark": false,
                             "members": [
@@ -9930,7 +9930,7 @@
                             "id": "id638@ERN2 (IRE2)",
                             "uniprot": "Q76MJ5",
                             "type": "protein",
-                            "value": "ERN2",
+                            "value": "ERN2 (IRE2)",
                             "aligend_seq": "416",
                             "isDark": true,
                             "members": [
@@ -9957,7 +9957,7 @@
                             "id": "id640@UHMK1 (KIS)",
                             "uniprot": "Q8TAS1",
                             "type": "protein",
-                            "value": "UHMK1",
+                            "value": "UHMK1 (KIS)",
                             "aligend_seq": "156",
                             "isDark": false,
                             "members": [
@@ -10040,7 +10040,7 @@
                                     "id": "id646@BMP2K (BIKE)",
                                     "uniprot": "Q9NSY1",
                                     "type": "protein",
-                                    "value": "BMP2K",
+                                    "value": "BMP2K (BIKE)",
                                     "aligend_seq": "62",
                                     "isDark": false,
                                     "members": [
@@ -10094,7 +10094,7 @@
                                     "id": "id650@STK16 (MPSK1)",
                                     "uniprot": "O75716",
                                     "type": "protein",
-                                    "value": "STK16",
+                                    "value": "STK16 (MPSK1)",
                                     "aligend_seq": "397",
                                     "isDark": false,
                                     "members": [
@@ -10407,7 +10407,7 @@
                             "id": "id672@SBK1 (SBK)",
                             "uniprot": "Q52WX2",
                             "type": "protein",
-                            "value": "SBK1",
+                            "value": "SBK1 (SBK)",
                             "aligend_seq": "140",
                             "isDark": true,
                             "members": [
@@ -10420,7 +10420,7 @@
                             "id": "id673@SBK2 (SgK069)",
                             "uniprot": "P0C263",
                             "type": "protein",
-                            "value": "SBK2",
+                            "value": "SBK2 (SgK069)",
                             "aligend_seq": "93",
                             "isDark": true,
                             "members": [
@@ -10433,7 +10433,7 @@
                             "id": "id674@SBK3 (SgK110)",
                             "uniprot": "P0C264",
                             "type": "protein",
-                            "value": "SBK3",
+                            "value": "SBK3 (SgK110)",
                             "aligend_seq": "51",
                             "isDark": true,
                             "members": [
@@ -10489,7 +10489,7 @@
                             "id": "id678@PEAK1 (SgK269)",
                             "uniprot": "Q9H792",
                             "type": "protein",
-                            "value": "PEAK1",
+                            "value": "PEAK1 (SgK269)",
                             "aligend_seq": "151",
                             "isDark": false,
                             "members": [
@@ -10515,7 +10515,7 @@
                             "id": "id680@PRAG1 (SgK223)",
                             "uniprot": "Q86YV5",
                             "type": "protein",
-                            "value": "PRAG1",
+                            "value": "PRAG1 (SgK223)",
                             "aligend_seq": "122",
                             "isDark": true,
                             "members": [
@@ -10543,7 +10543,7 @@
                             "id": "id682@PDIK1L (CLIK1L)",
                             "uniprot": "Q8N165",
                             "type": "protein",
-                            "value": "PDIK1L",
+                            "value": "PDIK1L (CLIK1L)",
                             "aligend_seq": "160",
                             "isDark": true,
                             "members": [
@@ -10556,7 +10556,7 @@
                             "id": "id683@STK35 (CLIK1)",
                             "uniprot": "Q8TDR2",
                             "type": "protein",
-                            "value": "STK35",
+                            "value": "STK35 (CLIK1)",
                             "aligend_seq": "125",
                             "isDark": false,
                             "members": [
@@ -10583,7 +10583,7 @@
                             "id": "id685@TEX14 (SgK307)",
                             "uniprot": "Q8IWB6",
                             "type": "protein",
-                            "value": "TEX14",
+                            "value": "TEX14 (SgK307)",
                             "aligend_seq": "104",
                             "isDark": false,
                             "members": [
@@ -10693,7 +10693,7 @@
                                     "id": "id693@EIF2AK4 (GCN2)",
                                     "uniprot": "Q9P2K8",
                                     "type": "protein",
-                                    "value": "EIF2AK4",
+                                    "value": "EIF2AK4 (GCN2)",
                                     "aligend_seq": "133",
                                     "isDark": false,
                                     "members": [
@@ -10720,7 +10720,7 @@
                                     "id": "id695@EIF2AK1 (HRI)",
                                     "uniprot": "Q9BQI3",
                                     "type": "protein",
-                                    "value": "EIF2AK1",
+                                    "value": "EIF2AK1 (HRI)",
                                     "aligend_seq": "273",
                                     "isDark": false,
                                     "members": [
@@ -10747,7 +10747,7 @@
                                     "id": "id697@EIF2AK3 (PEK)",
                                     "uniprot": "Q9NZJ5",
                                     "type": "protein",
-                                    "value": "EIF2AK3",
+                                    "value": "EIF2AK3 (PEK)",
                                     "aligend_seq": "289",
                                     "isDark": false,
                                     "members": [
@@ -10774,7 +10774,7 @@
                                     "id": "id699@EIF2AK2 (PKR)",
                                     "uniprot": "P19525",
                                     "type": "protein",
-                                    "value": "EIF2AK2",
+                                    "value": "EIF2AK2 (PKR)",
                                     "aligend_seq": "137",
                                     "isDark": false,
                                     "members": [
@@ -10985,7 +10985,7 @@
                             "id": "id714@STKLD1 (SgK071)",
                             "uniprot": "Q8NE28",
                             "type": "protein",
-                            "value": "STKLD1",
+                            "value": "STKLD1 (SgK071)",
                             "aligend_seq": "111",
                             "isDark": true,
                             "members": [
@@ -11012,7 +11012,7 @@
                             "id": "id716@PKDCC (SgK493)",
                             "uniprot": "Q504Y2",
                             "type": "protein",
-                            "value": "PKDCC",
+                            "value": "PKDCC (SgK493)",
                             "aligend_seq": "178",
                             "isDark": false,
                             "members": [
@@ -11039,7 +11039,7 @@
                             "id": "id718@PXK (Slob)",
                             "uniprot": "Q7Z7A4",
                             "type": "protein",
-                            "value": "PXK",
+                            "value": "PXK (Slob)",
                             "aligend_seq": "278",
                             "isDark": true,
                             "members": [
@@ -11204,7 +11204,7 @@
                                     "id": "id730@STK36 (Fused)",
                                     "uniprot": "Q9NRP7",
                                     "type": "protein",
-                                    "value": "STK36",
+                                    "value": "STK36 (Fused)",
                                     "aligend_seq": "904",
                                     "isDark": true,
                                     "members": [
@@ -11343,7 +11343,7 @@
                                     "id": "id740@PKMYT1 (MYT1)",
                                     "uniprot": "Q99640",
                                     "type": "protein",
-                                    "value": "PKMYT1",
+                                    "value": "PKMYT1 (MYT1)",
                                     "aligend_seq": "226",
                                     "isDark": true,
                                     "members": [
@@ -11384,7 +11384,7 @@
                                     "id": "id743@WEE2 (Wee1B)",
                                     "uniprot": "P0C1S8",
                                     "type": "protein",
-                                    "value": "WEE2",
+                                    "value": "WEE2 (Wee1B)",
                                     "aligend_seq": "57",
                                     "isDark": true,
                                     "members": [
@@ -11484,7 +11484,7 @@
                             "id": "id750@POMK (SgK196)",
                             "uniprot": "Q9H5K3",
                             "type": "protein",
-                            "value": "POMK",
+                            "value": "POMK (SgK196)",
                             "aligend_seq": "168",
                             "isDark": true,
                             "members": [
@@ -11510,7 +11510,7 @@
                             "id": "id752@STK31 (SgK396)",
                             "uniprot": "Q9BXU1",
                             "type": "protein",
-                            "value": "STK31",
+                            "value": "STK31 (SgK396)",
                             "aligend_seq": "110",
                             "isDark": true,
                             "members": [
@@ -11529,7 +11529,7 @@
             "id": "id@PKL",
             "value": "PKL",
             "protein": "",
-            "path": "PKL.png",
+            "path": "PKL",
             "aligend_seq": "8255",
             "members": [
                 "PKA",
@@ -11686,7 +11686,7 @@
                                     "id": "id4@TRPM6 (Chak2)",
                                     "uniprot": "Q9BX84",
                                     "type": "protein",
-                                    "value": "TRPM6",
+                                    "value": "TRPM6 (Chak2)",
                                     "aligend_seq": "0",
                                     "isDark": false,
                                     "members": [
@@ -11699,7 +11699,7 @@
                                     "id": "id5@TRPM7 (Chak1)",
                                     "uniprot": "Q96QT4",
                                     "type": "protein",
-                                    "value": "TRPM7",
+                                    "value": "TRPM7 (Chak1)",
                                     "aligend_seq": "0",
                                     "isDark": false,
                                     "members": [
@@ -11741,7 +11741,7 @@
                             "id": "id8@ALPK1 (AlphaK1)",
                             "uniprot": "Q96QP1",
                             "type": "protein",
-                            "value": "ALPK1",
+                            "value": "ALPK1 (AlphaK1)",
                             "aligend_seq": "0",
                             "isDark": false,
                             "members": [
@@ -11754,7 +11754,7 @@
                             "id": "id9@ALPK2 (AlphaK2)",
                             "uniprot": "Q86TB3",
                             "type": "protein",
-                            "value": "ALPK2",
+                            "value": "ALPK2 (AlphaK2)",
                             "aligend_seq": "0",
                             "isDark": true,
                             "members": [
@@ -11767,7 +11767,7 @@
                             "id": "id10@ALPK3 (AlphaK3)",
                             "uniprot": "Q96L96",
                             "type": "protein",
-                            "value": "ALPK3",
+                            "value": "ALPK3 (AlphaK3)",
                             "aligend_seq": "0",
                             "isDark": true,
                             "members": [
@@ -12142,7 +12142,7 @@
                                     "id": "id37@PRKDC (DNAPK)",
                                     "uniprot": "P78527",
                                     "type": "protein",
-                                    "value": "PRKDC",
+                                    "value": "PRKDC (DNAPK)",
                                     "aligend_seq": "0",
                                     "isDark": false,
                                     "members": [
@@ -12169,7 +12169,7 @@
                                     "id": "id39@MTOR (FRAP)",
                                     "uniprot": "P42345",
                                     "type": "protein",
-                                    "value": "MTOR",
+                                    "value": "MTOR (FRAP)",
                                     "aligend_seq": "0",
                                     "isDark": false,
                                     "members": [
@@ -12510,7 +12510,7 @@
                                     "id": "id62@COQ8A (ADCK3)",
                                     "uniprot": "Q8NI60",
                                     "type": "protein",
-                                    "value": "COQ8A",
+                                    "value": "COQ8A (ADCK3)",
                                     "aligend_seq": "580",
                                     "isDark": true,
                                     "members": [
@@ -12523,7 +12523,7 @@
                                     "id": "id63@COQ8B (ADCK4)",
                                     "uniprot": "Q96D53",
                                     "type": "protein",
-                                    "value": "COQ8B",
+                                    "value": "COQ8B (ADCK4)",
                                     "aligend_seq": "232",
                                     "isDark": true,
                                     "members": [
@@ -12633,7 +12633,7 @@
                             "id": "id71@TP53RK (PRPK)",
                             "uniprot": "Q96S44",
                             "type": "protein",
-                            "value": "TP53RK",
+                            "value": "TP53RK (PRPK)",
                             "aligend_seq": "1340",
                             "isDark": true,
                             "members": [

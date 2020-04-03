@@ -79,6 +79,10 @@ const useStyles = makeStyles(theme => ({
   structure:
   {
     marginLeft: -20,
+  },
+  motif:
+  {
+    marginLeft: 15,
   }
 }));
 // console.log(tree);
@@ -112,6 +116,7 @@ function App() {
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
+  const [switchMotifChecked, setSwitchMotifChecked] = React.useState(false);
   const [switchHighResChecked, setHighResChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
   const [viewMode, setViewMode] = React.useState(false);
@@ -176,10 +181,6 @@ function App() {
 
     setSelectedNodes(arrayMove(selectedNodes, oldIndex, newIndex));
   };
-
-  // useEffect(() => {
-  //   setSelectedNodes(originalNodes.filter(x=>x.id=="id@PK"));
-  // }, [selectedNodes]);
 
 
   function treeCheckboxChanged(node, checked) {
@@ -250,6 +251,10 @@ function App() {
   const handleDomainSwitchChange = () => {
     setSwitchDomainChecked(prev => !prev);
   };
+  const handleMotifSwitchChange = () => {
+    setSwitchMotifChecked(prev => !prev);
+  };
+
   const handleResetClick = () => {
     setOpenResetDialog(true);
   }
@@ -357,6 +362,7 @@ function App() {
          {/* <Switch checked={viewMode} onChange={handleViewModechange} />} /> */}
         {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel label="Motif" control={<Switch checked={switchMotifChecked} onChange={handleMotifSwitchChange} />} />
         <FormControlLabel label="View Mode" control={<VisibilityIcon color={viewMode? "primary":"action"} fontSize="small" onClick={handleViewModechange} style={{ cursor: "pointer" }} />} />
         <FormControlLabel label="Height " labelPlacement="start" control={
         <div class="sliderHeight">
@@ -375,6 +381,7 @@ function App() {
 
         </fieldset>
         </div>
+        <img src={'img/KinView_Motif.png'} className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
         <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
 
                 {

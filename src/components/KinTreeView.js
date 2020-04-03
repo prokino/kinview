@@ -145,11 +145,11 @@ function KinTreeView(props) {
 
   const filterInput = useRef(null);
 
-  // useEffect(() => {
-  //   let node = originalNodes.filter(x=>x.id=="id@PK")[0];
-  //   node.checked=true;    
-  //   handleNodeClick(node,true);
-  // },[nodes]);
+  useEffect(() => {
+    let node = originalNodes.filter(x=>x.id=="id@PK")[0];
+    node.checked=true;    
+    handleNodeClick(node,true);
+  },[nodes]);
 
   function handleNodeClick(node,checked) {
     props.onCheckBoxesChanged(node, checked);
