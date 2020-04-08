@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     margin: theme.spacing(1),
+    textTransform: 'none',
   },
   visible:
   {
