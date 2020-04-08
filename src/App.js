@@ -24,7 +24,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import Slider from '@material-ui/core/Slider';
 import VisibilityIcon from '@material-ui/icons/Visibility';
-
+import Box from '@material-ui/core/Box';
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -354,15 +354,18 @@ function App() {
 
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
               <div class="settings">
-        <fieldset>
+        
+        <Box  display="flex" alignItems="flex-start" p={1} m={1}>
+          <Box>
+          <fieldset>
                 <legend>Settings</legend>
 
         <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
         
          {/* <Switch checked={viewMode} onChange={handleViewModechange} />} /> */}
         {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
-        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel label="Motif" control={<Switch checked={switchMotifChecked} onChange={handleMotifSwitchChange} />} />
+        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel label="View Mode" control={<VisibilityIcon color={viewMode? "primary":"action"} fontSize="small" onClick={handleViewModechange} style={{ cursor: "pointer" }} />} />
         <FormControlLabel label="Height " labelPlacement="start" control={
         <div class="sliderHeight">
@@ -377,12 +380,39 @@ function App() {
           />
        </div>
         } />
-        <FormControlLabel style={{float:'right'}} control={<Button size="small" color="secondary" onClick={handleResetClick}>Reset</Button>} />
+        <FormControlLabel style={{float:'right', marginLeft: '30px'}} control={<Button size="small" color="secondary" onClick={handleResetClick}>Reset</Button>} />
 
         </fieldset>
+          </Box>
+          <Box className={switchDomainChecked || switchMotifChecked ? "" : classes.hidden}>
+          <fieldset>
+          <legend>Legend</legend>
+          <Box display="flex" alignItems="flex-start">
+            <Box className={switchMotifChecked ? "motif-legend" : classes.hidden}>
+              <FormControlLabel labelPlacement='end' label="Lysine" control={<img alt="betasheet" src="img/legend/lysine.png" />} />
+              <FormControlLabel labelPlacement='end' label="Glutamic acid" control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
+              <FormControlLabel labelPlacement='end' label="C-spine" control={<img alt="betasheet" src="img/legend/cspine.png" />} />
+              <FormControlLabel labelPlacement='end' label="R-spine" control={<img alt="betasheet" src="img/legend/rspine.png" />} />
+              <FormControlLabel labelPlacement='end' label="RD pocket" control={<img alt="betasheet" src="img/legend/rdpocket.png" />} />
+              <FormControlLabel labelPlacement='end' label="Shell" control={<img alt="betasheet" src="img/legend/shell.png" />} />
+              <FormControlLabel labelPlacement='end' label="Gatekeeper" control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
+
+            </Box>
+            <Box className={switchDomainChecked ? "domainstructure-legend" : classes.hidden}>
+              <FormControlLabel labelPlacement='end' label="&alpha;-helix" control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
+              <FormControlLabel labelPlacement='end' label="&beta;-sheet" control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
+            </Box>
+          </Box>
+          
+        </fieldset>
+          </Box>
+        </Box>
+        
+        
         </div>
-        <img src={'img/KinView_Motif.png'} className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
-        <img src={'img/KinView_Structure.png'} className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+
+        <img src={'img/KinView_Motif.png'} alt="Motif" className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
+        <img src={'img/KinView_Structure.png'} alt="Domain Structure" className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
 
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />

@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     margin: theme.spacing(1),
+    textTransform: 'none',
   },
   visible:
   {
@@ -141,7 +142,7 @@ const StyledFormGroup = withStyles(theme => ({
     left: 0,
     display: 'flex',
     placeItems: 'center',
-    width: '745px',
+    width: '790px',
     justifyContent: 'space-between',
   },
 
