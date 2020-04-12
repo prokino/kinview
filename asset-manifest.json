@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/kinview/static/css/main.d0b6f5dc.chunk.css",
-    "main.js": "/kinview/static/js/main.fd02e6d1.chunk.js",
-    "main.js.map": "/kinview/static/js/main.fd02e6d1.chunk.js.map",
+    "main.css": "/kinview/static/css/main.6fa4da42.chunk.css",
+    "main.js": "/kinview/static/js/main.eecaf701.chunk.js",
+    "main.js.map": "/kinview/static/js/main.eecaf701.chunk.js.map",
     "runtime-main.js": "/kinview/static/js/runtime-main.23872cbf.js",
     "runtime-main.js.map": "/kinview/static/js/runtime-main.23872cbf.js.map",
-    "static/js/2.dc63f4f9.chunk.js": "/kinview/static/js/2.dc63f4f9.chunk.js",
-    "static/js/2.dc63f4f9.chunk.js.map": "/kinview/static/js/2.dc63f4f9.chunk.js.map",
+    "static/js/2.410639da.chunk.js": "/kinview/static/js/2.410639da.chunk.js",
+    "static/js/2.410639da.chunk.js.map": "/kinview/static/js/2.410639da.chunk.js.map",
     "index.html": "/kinview/index.html",
-    "precache-manifest.e559f754aa2df7a3a935daccf7d31718.js": "/kinview/precache-manifest.e559f754aa2df7a3a935daccf7d31718.js",
+    "precache-manifest.f80c28e4c2c3f24a5310b9a3db569c93.js": "/kinview/precache-manifest.f80c28e4c2c3f24a5310b9a3db569c93.js",
     "service-worker.js": "/kinview/service-worker.js",
-    "static/css/main.d0b6f5dc.chunk.css.map": "/kinview/static/css/main.d0b6f5dc.chunk.css.map",
-    "static/js/2.dc63f4f9.chunk.js.LICENSE": "/kinview/static/js/2.dc63f4f9.chunk.js.LICENSE"
+    "static/css/main.6fa4da42.chunk.css.map": "/kinview/static/css/main.6fa4da42.chunk.css.map",
+    "static/js/2.410639da.chunk.js.LICENSE": "/kinview/static/js/2.410639da.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.23872cbf.js",
-    "static/js/2.dc63f4f9.chunk.js",
-    "static/css/main.d0b6f5dc.chunk.css",
-    "static/js/main.fd02e6d1.chunk.js"
+    "static/js/2.410639da.chunk.js",
+    "static/css/main.6fa4da42.chunk.css",
+    "static/js/main.eecaf701.chunk.js"
   ]
 }
