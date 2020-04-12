@@ -178,13 +178,7 @@
 }
 
 
-.settings legend { 
-  display: block;
-  padding-left: 7px;
-  padding-right: 7px;
-  font-size:15px;
-  border: none;
-}
+
 .settings fieldset
 {
   font-size: 12px;
@@ -205,4 +199,11 @@
 {
 width:100px;
 padding-left:8px;
+}
+
+.settings .legend-motif { 
+  margin-right: 0.1rem;
+}
+.settings .legend-domain { 
+  margin-top:5px;
 }

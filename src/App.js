@@ -16,6 +16,7 @@ import Switch from '@material-ui/core/Switch';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -83,6 +84,10 @@ const useStyles = makeStyles(theme => ({
   motif:
   {
     marginLeft: 15,
+  },
+  legendLabel:
+  {
+    fontSize: '0.8rem',
   }
 }));
 // console.log(tree);
@@ -387,22 +392,22 @@ function App() {
           <Box className={switchDomainChecked || switchMotifChecked ? "" : classes.hidden}>
           <fieldset>
           <legend>Legend</legend>
-          <Box display="flex" alignItems="flex-start">
-            <Box className={switchMotifChecked ? "motif-legend" : classes.hidden}>
-              <FormControlLabel labelPlacement='end' label="Lysine" control={<img alt="betasheet" src="img/legend/lysine.png" />} />
-              <FormControlLabel labelPlacement='end' label="Glutamic acid" control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
-              <FormControlLabel labelPlacement='end' label="C-spine" control={<img alt="betasheet" src="img/legend/cspine.png" />} />
-              <FormControlLabel labelPlacement='end' label="R-spine" control={<img alt="betasheet" src="img/legend/rspine.png" />} />
-              <FormControlLabel labelPlacement='end' label="RD pocket" control={<img alt="betasheet" src="img/legend/rdpocket.png" />} />
-              <FormControlLabel labelPlacement='end' label="Shell" control={<img alt="betasheet" src="img/legend/shell.png" />} />
-              <FormControlLabel labelPlacement='end' label="Gatekeeper" control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
+            <Box display="flex" alignItems="flex-start">
+              <Box component="span" className={switchMotifChecked ? "legend-motif" : classes.hidden}>
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Lysine</Typography>} control={<img alt="betasheet" src="img/legend/lysine.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Glutamic acid</Typography>} control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>C-spine</Typography>} control={<img alt="betasheet" src="img/legend/cspine.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>R-spine</Typography>} control={<img alt="betasheet" src="img/legend/rspine.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>RD pocket</Typography>} control={<img alt="betasheet" src="img/legend/rdpocket.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Shell</Typography>} control={<img alt="betasheet" src="img/legend/shell.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Gatekeeper</Typography>} control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
 
+              </Box>
+              <Box component="span" className={switchDomainChecked ? "legend-domain" : classes.hidden}>
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&alpha;-helix</Typography>} control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
+                <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&beta;-sheet</Typography>} control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
+              </Box>
             </Box>
-            <Box className={switchDomainChecked ? "domainstructure-legend" : classes.hidden}>
-              <FormControlLabel labelPlacement='end' label="&alpha;-helix" control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
-              <FormControlLabel labelPlacement='end' label="&beta;-sheet" control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
-            </Box>
-          </Box>
           
         </fieldset>
           </Box>
