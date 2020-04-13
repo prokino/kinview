@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+LATS1	Q8BYR2	S908	PHOSPHORYLATION	152

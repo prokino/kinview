@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+CDKL1	Q00532	K34	UBIQUITINATION	30

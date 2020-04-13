@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+VRK3	Q66HC2	Y386	PHOSPHORYLATION	204

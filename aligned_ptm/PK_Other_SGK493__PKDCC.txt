@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+PKDCC	Q5RJI4	Y148	PHOSPHORYLATION	11

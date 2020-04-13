@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+LCK	P06240	T395	PHOSPHORYLATION	148

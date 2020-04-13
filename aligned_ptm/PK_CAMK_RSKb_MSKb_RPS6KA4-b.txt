@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+RPS6KA4-b	Q9Z2B9	S672	PHOSPHORYLATION	239

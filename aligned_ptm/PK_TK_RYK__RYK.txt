@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+RYK	Q01887	R446	METHYLATION	113

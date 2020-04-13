@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+BUB1B	Q9Z1S0	S873	PHOSPHORYLATION	121

@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+MAP3K6	Q9WTR2	T807	PHOSPHORYLATION	152

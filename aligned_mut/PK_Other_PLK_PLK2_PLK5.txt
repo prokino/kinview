@@ -1,0 +1,2 @@
+Tissue	Tumor_Sample	Kinase	MutationAA	Aligned_Position
+UCEC	TCGA-AX-A1C4-01A-11D-A135-09	PLK5	p.R39H	215

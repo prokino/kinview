@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+MAP3K8	Q07174	T290	PHOSPHORYLATION	156

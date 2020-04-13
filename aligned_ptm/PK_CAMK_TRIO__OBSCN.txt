@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+OBSCN	Q5VST9	T6560	PHOSPHORYLATION	92

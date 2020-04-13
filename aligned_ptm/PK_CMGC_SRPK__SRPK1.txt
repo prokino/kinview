@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+SRPK1	O70551	T507	PHOSPHORYLATION	156

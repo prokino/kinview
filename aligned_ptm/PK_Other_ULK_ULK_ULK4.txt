@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+ULK4	Q96C45	S177	PHOSPHORYLATION	151

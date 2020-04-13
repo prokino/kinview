@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+RPS6KC1	Q96S38	T378	PHOSPHORYLATION	47

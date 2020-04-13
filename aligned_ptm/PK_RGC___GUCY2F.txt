@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+GUCY2F	P51841	S649	PHOSPHORYLATION	98

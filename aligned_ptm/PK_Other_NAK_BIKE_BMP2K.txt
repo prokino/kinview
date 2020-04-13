@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+BMP2K	Q9NSY1-2	Y257	PHOSPHORYLATION	184
