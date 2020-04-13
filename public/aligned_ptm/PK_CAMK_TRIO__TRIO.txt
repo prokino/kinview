@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+TRIO	Q0KL02	S2929	PHOSPHORYLATION	129

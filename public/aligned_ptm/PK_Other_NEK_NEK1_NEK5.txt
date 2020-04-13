@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+NEK5	Q7TSC3	Y177	PHOSPHORYLATION	170

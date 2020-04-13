@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+AKT2	P47197	T309	PHOSPHORYLATION	152

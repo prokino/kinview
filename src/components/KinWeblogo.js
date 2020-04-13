@@ -5,7 +5,7 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
@@ -19,11 +19,15 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import { withStyles } from '@material-ui/core/styles';
 import { sortableHandle } from 'react-sortable-hoc';
+
 import ReorderIcon from '@material-ui/icons/Reorder';
 import DeleteIcon from '@material-ui/icons/Delete';
-import SvgIcon from '@material-ui/core/SvgIcon';
 import { Label } from '@material-ui/icons';
+
+import SvgIcon from '@material-ui/core/SvgIcon';
 import Tooltip from '@material-ui/core/Tooltip';
+import DropDownButton from '../components/DropDownButton'
+import ExpandLessOrMore from '../components/ExpandLessOrMore'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -142,7 +146,7 @@ const StyledFormGroup = withStyles(theme => ({
     left: 0,
     display: 'flex',
     placeItems: 'center',
-    width: '790px',
+    width: '1300px',
     justifyContent: 'space-between',
   },
 
@@ -181,6 +185,7 @@ function KinWeblogo(props) {
   const [selectedNumbering, setNumbering] = React.useState(props && props.numbers ? props.numbers[0] : '');
   const [selectedNumberingValue, setNumberingValue] = React.useState('');
   const [propChanged, setPropChanged] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(true);
   const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
   const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
   const [mutationBarchartChecked, setMutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
@@ -214,6 +219,9 @@ function KinWeblogo(props) {
   }; 
   //componentDidMount
 
+  function toggleExpanded(event) {
+    setIsExpanded(!isExpanded);
+  };
   useEffect(() => {
     //alert(selectedNumbering);
     //numberingChanged('init',props.numbers);
@@ -234,49 +242,47 @@ function KinWeblogo(props) {
     }
   };
 
+  function getAlignedSequences()
+  {
+    const val= props.value.value;
+    return [{text:'Alignment', value:'/aligned_aln/' + val + '.aln'}, 
+            {text:'Full-length seq', value:'/aligned_full/' + val + '.fasta'},
+            {text:'Kinase domain', value:'/aligned_kd/' + val + '.fasta'},
+            {text:'Mutation', value:'/aligned_mut/' + val + '.txt'},
+            {text:'PTM', value:'/aligned_ptm/' + val + '.txt'},
+          ];
+  }
+  
+  function getOrthologSequences()
+  {
+    const val= props.value.value;
+    return [{text:'Alignment', value:'/ortholog_full/' + val + '.fasta'}, 
+            {text:'Full-length seq', value:'/ortholog_kd/' + val + '.fasta'},];
+  }
+  
+
   const classes = useStyles();
 
   return (
     //<div className={classes.root}>
     <div>
-      <ExpansionPanel square defaultExpanded>
+      <ExpansionPanel square expanded={isExpanded}>
         <ExpansionPanelSummary className={props.viewMode? classes.hidden:''}
           //expandIcon={<ExpandMoreIcon />} 
           aria-controls="panel1d-content" id="panel1d-header">
 
           <StyledFormGroup row className={classes.formGroupRow}>
+            <ExpandLessOrMore isExpanded={isExpanded} onClick={toggleExpanded}  />
             <DragHandle />
             <DeleteIcon fontSize="small" onClick={props.onRemove} style={{ cursor: "pointer" }} />
             <Button size="small" variant="outlined" color="primary" className={classes.button}>
               {props.value.value}
             </Button>
-            <Tooltip title="Aligned Sequences">
-              <Button size="small" variant="outlined" color="primary" className={classes.button}>
-                {props.value.aligend_seq}
-              </Button>
-              {/* <Typography variant="body2" gutterBottom>
-                {props.value.aligend_seq}
-                </Typography> */}
-            </Tooltip>
-            <NativeSelect
-              value={selectedNumberingValue}
-              onChange={numberingChanged}
-              onClick={e => { e.stopPropagation(); }}
-              inputProps={{
-                name: 'numbering',
-                id: 'numbering-native-label-placeholder',
-              }}
-            >
-              {/* {renderOptions(props.numbers)} */}
-              {props.numbers ? props.numbers.map((item, i) => { return (<option key={i} value={item.name}>{item.name}</option>) }) : ""}
-
-
-            </NativeSelect>
-
             <FormControlLabel
               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
               label="Residue" />
-              <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
+
+            <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
                 label="PTM" />
             <div class="weblogo">
               <fieldset>
@@ -289,16 +295,28 @@ function KinWeblogo(props) {
               </fieldset>
             </div>
 
-            {/* <div class="weblogo">
-            <fieldset>
-              <legend>PTM</legend>
-              <FormControlLabel
-                control={<Switch size="small" id={`ptmw-checkbox-${props.value.id}`} checked={ptmWeblogosChecked} value="ptmw" onClick={e => { e.stopPropagation(); }} onChange={togglePtmWeblogos} />}
-                label="Weblogo" />
-              <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
-                label="Barchart" />
-            </fieldset>
-            </div> */}
+
+            <Typography>Reference Position</Typography>
+            <NativeSelect
+              value={selectedNumberingValue}
+              onChange={numberingChanged}
+              onClick={e => { e.stopPropagation(); }}
+              inputProps={{
+                name: 'numbering',
+                id: 'numbering-native-label-placeholder',
+              }}
+            >
+              {/* {renderOptions(props.numbers)} */}
+              {props.numbers ? props.numbers.map((item, i) => { return (<option key={i} value={item.name}>{item.name}</option>) }) : ""}
+            </NativeSelect>
+
+            <Typography>Aligned Sequences</Typography>
+            
+              <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
+              
+              <Typography>Ortholog Sequences</Typography>
+              <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />
+              
           </StyledFormGroup>
 
         </ExpansionPanelSummary>

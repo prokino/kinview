@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+TXK	P42681	S307	PHOSPHORYLATION	38

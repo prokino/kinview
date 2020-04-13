@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+PEAK3	Q6ZS72	S354	PHOSPHORYLATION	181

@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+MAP3K21	Q8VDG6	S287	PHOSPHORYLATION	152

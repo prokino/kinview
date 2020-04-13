@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+RPS6KA6-b	Q7TPS0	K590	UBIQUITINATION	142

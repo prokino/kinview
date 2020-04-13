@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+BMPR2	O35607	S375	PHOSPHORYLATION	152

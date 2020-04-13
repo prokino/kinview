@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+NEK3	Q9R0A5	K237	ACETYLATION	223

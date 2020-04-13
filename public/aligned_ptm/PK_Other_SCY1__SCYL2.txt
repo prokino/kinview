@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+SCYL2	Q6P3W7	K79	UBIQUITINATION	38

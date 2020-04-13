@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+NIM1K	Q8IY84	T229	PHOSPHORYLATION	152

@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+MOS	P00540	Y263	PHOSPHORYLATION	177

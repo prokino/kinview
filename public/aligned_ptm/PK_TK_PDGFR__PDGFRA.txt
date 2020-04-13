@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+PDGFRA	P20786	Y612	PHOSPHORYLATION	21

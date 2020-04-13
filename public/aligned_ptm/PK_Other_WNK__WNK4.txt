@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+WNK4	Q7TPK6	S332	PHOSPHORYLATION	152

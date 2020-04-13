@@ -1,0 +1,2 @@
+Protein	Ortholog_ID	Position	PTM	Aligned_Position
+STK33	Q924X7	S150	PHOSPHORYLATION	37

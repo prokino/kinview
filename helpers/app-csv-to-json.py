@@ -23,6 +23,7 @@ def classification_csv_to_json(root_name):
                     'type' : entity_type,
                     'value':value,
                     'aligend_seq':row['Aligned_Seq'],
+                    'ortholog_seq':row['Ortholog_Seq'],
                     'path': row['WebLogo'][:-4], 
                     'members':row['Members'].split(";"),
                     'nodes': []}
@@ -32,6 +33,7 @@ def classification_csv_to_json(root_name):
                     'type' : entity_type,
                     'value':value,
                     'aligend_seq':row['Aligned_Seq'],
+                    'ortholog_seq':row['Ortholog_Seq'],
                     #'protein':fixProtein(row['Protein']), 
                     'path': row['WebLogo'][:-4],
                     'members':row['Members'].split(";"),
@@ -42,6 +44,7 @@ def classification_csv_to_json(root_name):
                     'type' : entity_type,
                     'value': value,
                     'aligend_seq':row['Aligned_Seq'],
+                    'ortholog_seq':row['Ortholog_Seq'],
                     'members':row['Members'].split(";"),
                     'path':row['WebLogo'][:-4],
                     'nodes':[]
@@ -54,6 +57,7 @@ def classification_csv_to_json(root_name):
                     'type' : entity_type,
                     'value': fixProtein(value),
                     'aligend_seq':row['Aligned_Seq'],
+                    'ortholog_seq':row['Ortholog_Seq'],
                     'isDark': row['UniProt'] in dark_list,
                     'members':row['Members'].split(";"),
                     'path':row['WebLogo'][:-4] # remove extension
@@ -164,6 +168,7 @@ def classification_csv_to_json(root_name):
         "protein":root['Protein'],
         "path": root_name,
         'aligend_seq':root['Aligned_Seq'],
+        'ortholog_seq':root['Ortholog_Seq'],
         "members": root['Members'].split(";"),
         "nodes": [],
     })
