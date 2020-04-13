@@ -228,6 +228,7 @@ function KinWeblogo(props) {
     // setNumberingValue('AKT1');
   }, []);
 
+  const baseUrl = `${window.location.origin.toString()}/`
 
   const numberingChanged = event => {
     if (props.numbers && event.target) {
@@ -245,19 +246,19 @@ function KinWeblogo(props) {
   function getAlignedSequences()
   {
     const val= props.value.value;
-    return [{text:'Alignment', value:'/aligned_aln/' + val + '.aln'}, 
-            {text:'Full-length seq', value:'/aligned_full/' + val + '.fasta'},
-            {text:'Kinase domain', value:'/aligned_kd/' + val + '.fasta'},
-            {text:'Mutation', value:'/aligned_mut/' + val + '.txt'},
-            {text:'PTM', value:'/aligned_ptm/' + val + '.txt'},
+    return [{text:'Alignment', value: baseUrl + 'aligned_aln/' + val + '.aln'}, 
+            {text:'Full-length seq', value:baseUrl + 'aligned_full/' + val + '.fasta'},
+            {text:'Kinase domain', value:baseUrl + 'aligned_kd/' + val + '.fasta'},
+            {text:'Mutation', value:baseUrl + 'aligned_mut/' + val + '.txt'},
+            {text:'PTM', value:baseUrl + 'aligned_ptm/' + val + '.txt'},
           ];
   }
   
   function getOrthologSequences()
   {
     const val= props.value.value;
-    return [{text:'Alignment', value:'/ortholog_full/' + val + '.fasta'}, 
-            {text:'Full-length seq', value:'/ortholog_kd/' + val + '.fasta'},];
+    return [{text:'Alignment', value:baseUrl + 'ortholog_full/' + val + '.fasta'}, 
+            {text:'Full-length seq', value:baseUrl + 'ortholog_kd/' + val + '.fasta'},];
   }
   
 
