@@ -1,9 +1,9 @@
 import csv, json
 #from treestruct import Tree
 
-csvPath = 'src/data/KinaseTree.csv'
-jsonPath = 'src/data/classification.json'
-darkPath = 'src/data/dark_kinase_list_curated.csv'
+csvPath = 'src/kinase/data/KinaseTree.csv'
+jsonPath = 'src/kinase/data/classification.json'
+darkPath = 'src/kinase/data/dark_kinase_list_curated.csv'
 
 def getvalue(s):
     return s.split('@')[1]
@@ -12,7 +12,6 @@ def getvalue(s):
 def fixProtein(p):
     #return p.split(" ")[0]
     return p # decided to show name with synonym
-
 
 def classification_csv_to_json(root_name):
     def create_entity(entity_type,value,row):
@@ -224,7 +223,7 @@ def dark_csv_to_json():
     
     fieldnames = ("value","uniprotId")
     data=[]
-    with open('src/data/dark_kinase_list_curated.csv', 'r') as f:
+    with open('src/kinase/data/dark_kinase_list_curated.csv', 'r') as f:
         reader = csv.DictReader(f, fieldnames)
         for rows in reader:
             data.append({'uniprotId':rows["uniprotId"],'value':rows["value"].split("_")[1]})
@@ -232,7 +231,7 @@ def dark_csv_to_json():
             # data['uniprotId'] = rows["uniprotId"]
 
     data = sorted(data, key=lambda k: k['value'], reverse=False)
-    with open('src/data/dark_list.json', 'w') as jsonfile:
+    with open('src/kinase/data/dark_list.json', 'w') as jsonfile:
         jsonfile.write(json.dumps(data,indent=4))
 
 if __name__ == "__main__":

@@ -3,8 +3,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
 
-import darkKinase from './data/dark_list.json'
-import numberingjson from './data/numbering.json';
+import darkKinase from './kinase/data/dark_list.json'
+import numberingjson from './kinase/data/numbering.json';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -114,6 +114,7 @@ const imgUgaLogoStyle = {
 
 
 function App() {
+  const appname= process.env.REACT_APP_NAME;
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
@@ -127,7 +128,7 @@ function App() {
   const [viewMode, setViewMode] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
-  const [height, setHeight] = React.useState("100");
+  const [height, setHeight] = React.useState(100);
   const weblogoRemove= node => e =>
   {
     handleDelete(node);
@@ -352,13 +353,14 @@ function App() {
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
           <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
-            <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} onCheckBoxesChanged={treeCheckboxChanged} />
+            <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} 
+            onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
           <Grid key="rightContents" item>
             <div className={selectedNodes.length > 0 ? classes.mainBoxVisible : classes.mainBoxInvisible}>
 
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
-              <div class="settings">
+              <div className="settings">
         
         <Box  display="flex" alignItems="flex-start" p={1} m={1}>
           <Box>
@@ -373,7 +375,7 @@ function App() {
         <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
         <FormControlLabel label="View Mode" control={<VisibilityIcon color={viewMode? "primary":"action"} fontSize="small" onClick={handleViewModechange} style={{ cursor: "pointer" }} />} />
         <FormControlLabel label="Height " labelPlacement="start" control={
-        <div class="sliderHeight">
+        <div className="sliderHeight">
             <Slider
             onChange={heightChanged}
             defaultValue={height}
@@ -416,8 +418,8 @@ function App() {
         
         </div>
 
-        <img src={'img/KinView_Motif.png'} alt="Motif" className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
-        <img src={'img/KinView_Structure.png'} alt="Domain Structure" className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+        <img src={`${appname}/img/motif.png`} alt="Motif" className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
+        <img src={`${appname}/img/structure.png`} alt="Domain Structure" className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
 
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />

@@ -7,7 +7,9 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-import tree from '../data/classification.json';
+import treeKinase from '../kinase/data/classification.json';
+import treeGta from '../gta/data/classification.json';
+
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
@@ -132,8 +134,12 @@ StyledTreeItem.propTypes = {
 // });
 
 function KinTreeView(props) {
-  const mod_tree = tree[0].concat(tree[1])
-  const originalNodes = mod_tree.map((n)=>{n.checked=false;return n;});
+  const appname= process.env.REACT_APP_NAME;
+  const rootid = appname === "kinase" ? "id@PK":"id@GTA";
+  let tree = appname === "kinase" ? treeKinase:treeGta;
+  if (appname === "kinase")
+    tree = tree[0].concat(tree[1]);
+  const originalNodes = tree.map((n)=>{n.checked=false;return n;});
   const nodesCopy = JSON.parse(JSON.stringify(originalNodes));
   
   const classes = useStyles();
@@ -146,7 +152,7 @@ function KinTreeView(props) {
   const filterInput = useRef(null);
 
   useEffect(() => {
-    let node = originalNodes.filter(x=>x.id=="id@PK")[0];
+    let node = originalNodes.filter(x=> x.id === rootid)[0];
     node.checked=true;    
     handleNodeClick(node,true);
   },[nodes]);
