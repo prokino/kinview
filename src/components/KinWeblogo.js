@@ -146,7 +146,7 @@ const StyledFormGroup = withStyles(theme => ({
     left: 0,
     display: 'flex',
     placeItems: 'center',
-    width: '1300px',
+    //width: '1300px',
     justifyContent: 'space-between',
   },
 
@@ -281,13 +281,13 @@ function KinWeblogo(props) {
             <Button size="small" variant="outlined" color="primary" className={classes.button}>
               {props.value.value}
             </Button>
-            <FormControlLabel
+            <FormControlLabel style={{marginLeft:5}}
               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
               label="Residue" />
-
-            <FormControlLabel control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
+            
+            <FormControlLabel style={{display: appname === "kinase"? "block":"none"}} control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
                 label="PTM" />
-            <div className="weblogo">
+            <div className="weblogo" style={{display: appname === "kinase"? "block":"none"}}>
               <fieldset>
                 <legend>Mutant Type</legend>
                 <FormControlLabel
@@ -299,7 +299,7 @@ function KinWeblogo(props) {
             </div>
 
 
-            <Typography>Reference Position</Typography>
+            <Typography style={{marginRight:5}}>Reference Position</Typography>
             <NativeSelect
               value={selectedNumberingValue}
               onChange={numberingChanged}
@@ -313,11 +313,10 @@ function KinWeblogo(props) {
               {props.numbers ? props.numbers.map((item, i) => { return (<option key={i} value={item.name}>{item.name}</option>) }) : ""}
             </NativeSelect>
 
-            <Typography>Aligned Sequences</Typography>
-            
+              <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Aligned Sequences`:`Nr sequences`}</Typography>
               <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
-              
-              <Typography>Ortholog Sequences</Typography>
+
+              <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Ortholog Sequences`:`UniProt sequences`}</Typography>
               <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />
               
           </StyledFormGroup>
@@ -335,6 +334,7 @@ function KinWeblogo(props) {
           <Box>
             {/* <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/${props.highres?"highres":"png"}/${props.value.path}.${props.highres?"png":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  /> */}
             <img
+              alt="weblogo"
               id={`weblogo-${props.value.id}`}
               className={residueChecked ? classes.visible : classes.hidden}
               src={`${appname}/sequences/png/${props.value.path}.png`}
@@ -342,13 +342,13 @@ function KinWeblogo(props) {
               width={props.width || "4840"}></img>
           </Box>
           <Box className={mutationWeblogosChecked ? classes.visible : classes.hidden}>
-            <img id={`mutationw-${props.value.id}`} src={`${appname}/mutations/weblogos/png/${props.value.path}.png`} height={props.height || "188"} width={props.width ? props.width : "4840"} />
+            <img alt="mutation weblogo" id={`mutationw-${props.value.id}`} src={`${appname}/mutations/weblogos/png/${props.value.path}.png`} height={props.height || "188"} width={props.width ? props.width : "4840"} />
           </Box>
           <Box className={ptmBarchartChecked ? classes.visible : classes.hidden}>
-            <img id={`ptm-${props.value.id}`} src={`${appname}/ptm/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
+            <img alt="ptm" id={`ptm-${props.value.id}`} src={`${appname}/ptm/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box>
           <Box className={mutationBarchartChecked ? classes.visible : classes.hidden}>
-            <img id={`mutationb-${props.value.id}`} src={`${appname}/mutations/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
+            <img alt="mutation barchart" id={`mutationb-${props.value.id}`} src={`${appname}/mutations/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box>
           {/* <Box className={ptmWeblogosChecked ? classes.visible : classes.hidden}>
             <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />

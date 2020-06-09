@@ -4,7 +4,8 @@ import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
 
 import darkKinase from './kinase/data/dark_list.json'
-import numberingjson from './kinase/data/numbering.json';
+import numberingKinase from './kinase/data/numbering.json';
+import numberingGta from './gta/data/numbering.json';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -115,6 +116,8 @@ const imgUgaLogoStyle = {
 
 function App() {
   const appname= process.env.REACT_APP_NAME;
+  let numberingjson = appname === "kinase" ? numberingKinase:numberingGta;
+  
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
@@ -418,8 +421,8 @@ function App() {
         
         </div>
 
-        <img src={`${appname}/img/motif.png`} alt="Motif" className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
-        <img src={`${appname}/img/structure.png`} alt="Domain Structure" className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+        <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
+        <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
 
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />

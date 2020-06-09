@@ -122,8 +122,8 @@ def prettyjson(cols,jsonPath):
         f_write.write(all_json[:-2] + "}")
 
 def numbering_csv_to_json():
-    csvPath = 'src/data/KinView_Numbering.csv'
-    jsonPath = 'src/data/numbering.json'
+    csvPath = 'src/gta/data/GTView_Numbering.csv'
+    jsonPath = 'src/gta/data/numbering.json'
     cols = dict()
     
     #Build Columns
@@ -135,14 +135,16 @@ def numbering_csv_to_json():
         #cols = cols[1:] 
         del cols['Align_Position'] #Remove the first column (alignment)
 
+    with open(csvPath) as f:
+        csvreader = csv.DictReader(f)
+        for row in csvreader:
+            for el in cols:
+                cols.setdefault(el,[]).append(None if not row[el] else int(row[el]))
     prettyjson(cols,jsonPath)
-    # with open(jsonPath, 'w') as f:
-    #     f.write(json.dumps(cols, indent=2))
-
     print("Numbering {0} created.".format(jsonPath))
 
 
 if __name__ == "__main__":
-    gta = classification_csv_to_json()
-    write_classification(gta)
-    #numbering_csv_to_json()
+    # gta = classification_csv_to_json()
+    # write_classification(gta)
+    numbering_csv_to_json()

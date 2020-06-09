@@ -218,7 +218,7 @@ if (nodes)    return nodes.map((node, index) => {
   return (
 
     <div>
-        <FormControlLabel style={{width:'max-content'}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
+        <FormControlLabel style={{width:'max-content', display: appname === "kinase"? "block":"none"}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
           <Autocomplete
            size="small"
           //ref={filterInput}
@@ -228,7 +228,7 @@ if (nodes)    return nodes.map((node, index) => {
           onInputChange={handleFilterChange}
           { ...( !switchOnlyDark && { freeSolo: true } ) } 
           renderInput={params => (
-          <TextField {...params} label={`${switchOnlyDark? "Select Dark Kinas":"Search Kinaese"}`} variant="outlined" style = {{width:170}}  />
+          <TextField {...params} label={`${switchOnlyDark? "Select Dark Kinaeses":"Search"}`} variant="outlined" style = {{width:170, marginTop:10}}  />
       )}
     />
 
