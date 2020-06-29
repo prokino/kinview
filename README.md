@@ -1,78 +1,40 @@
-# Prokino kinview
+# Prokino's Protein Family Browser
 
-## Usage
+## Build Status
 
-### Requirements
+|  Application 	|  Status 	|
+|---	|---	|
+|   KinView	|   [![Netlify Status](https://api.netlify.com/api/v1/badges/b4c08ab1-96fd-4caf-ab62-54bd1fe3bd1b/deploy-status)](https://app.netlify.com/sites/uga-kinview/deploys)	|
+|   GTA Explorer	|   [![Netlify Status](https://api.netlify.com/api/v1/badges/08f203b3-bdd8-4931-b464-86d37e51acf4/deploy-status)](https://app.netlify.com/sites/uga-gta/deploys)	|
+|   	|   	|
+#### KinView 
+A sample application using the Protein Family Browser. KinView description..
+
+#### GTA Explorer 
+A sample application using the Protein Family Browser. GTA description..
+
+## Installation
+You might build and run this project on your local machine. Your application will work offline without internet connection anfter building. Or, you can follow the Publish Online section to publish your application on netlify.com. Of course, you can use other CI/CD platform or a web server (e.g., nginx, apache) to host the application.
+
+### Offline Setup
+The offline setup means no internet connection required after the building process. However, you can still access your application on a local network or host it on your own web server.
+
+#### Pre-requirements
 - Install [Node JS](https://nodejs.org/en/download/)
-- `npm install` in the source code directory (it takes a few minutes)
-- `npm start` to run the program
+#### Steps
+- Modify package.json by adding a new line in the scripts section to start the application. For example: 
+`"start_ApplicationName": "env REACT_APP_NAME=ApplicationName react-scripts start HOST=0.0.0.0"`
+- `npm install` to install npm packages in the source code directory (it takes a few minutes)
+- Run the script added to package.json using npm. For example: `npm start_ApplicationName`
+
+### Online Setup
+- Clone this repository
+- Create an account on netlify.com
+- Connect Netlify to your GitHub account
+- Choose a website name, and after each change you make on the repository the website is updated.
+
 
 ## Development
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Available Scripts
 
-In the project directory, you can run:
-
-#### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-#### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-#### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-#### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-#### Code Splitting
-
-Visit https://facebook.github.io/create-react-app/docs/code-splitting
-
-#### Analyzing the Bundle Size
-
-Visit https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-#### Making a Progressive Web App
-
-Visit https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-#### Advanced Configuration
-
-Visit https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-#### Deployment
-
-Visit https://facebook.github.io/create-react-app/docs/deployment
-
-#### `npm run build` fails to minify
-
-Visit https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
