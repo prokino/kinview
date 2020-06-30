@@ -9,3 +9,6 @@ build/*
 dist/*
 *.7z
 node_modules
+
+# Local Netlify folder
+.netlify

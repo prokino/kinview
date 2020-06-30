@@ -27,9 +27,9 @@
   "scripts": {
     "start_gta": "env REACT_APP_NAME=gta react-scripts start HOST=0.0.0.0",
     "build": "react-scripts build",
-    "build_gta": "env REACT_APP_NAME=gta react-scripts build",
+    "build_gta": "env REACT_APP_NAME=gta node ./helpers/create-env.js && npm run build",
     "start_kinview": "env REACT_APP_NAME=kinase react-scripts start HOST=0.0.0.0",
-    "build_kinview": "env REACT_APP_NAME=kinase react-scripts build",
+    "build_kinview": "env REACT_APP_NAME=kinase node ./helpers/create-env.js && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
