@@ -4,8 +4,9 @@ import './App.css';
 //import MuiTreeView from 'material-ui-treeview';
 
 import darkKinase from './kinase/data/dark_list.json'
-import numberingKinase from './kinase/data/numbering.json';
-import numberingGta from './gta/data/numbering.json';
+//import numberingjson from "./%appname%/data/numbering.json";
+// import numberingKinase from './kinase/data/numbering.json';
+// import numberingGta from './gta/data/numbering.json';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -116,7 +117,8 @@ const imgUgaLogoStyle = {
 
 function App() {
   const appname= process.env.REACT_APP_NAME;
-  let numberingjson = appname === "kinase" ? numberingKinase:numberingGta;
+  //let numberingjson = appname === "kinase" ? numberingKinase:numberingGta;
+  let numberingjson = require(`./${appname}/data/numbering.json`);
   
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
