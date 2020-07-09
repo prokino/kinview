@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+    
         {
             "name": "Python: Current File",
             "type": "python",
@@ -15,21 +16,18 @@
             "name": "Chromium",
             "url": "http://localhost:3000",
             "runtimeExecutable": "/usr/bin/chromium",
-            "webRoot": "/home/saber/workspace/kinview-react/src"
+            "webRoot": "/home/saber/workspace/prokino/kinview"
         },
+
         {
             "type": "chrome",
             "request": "launch",
             "name": "Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "/home/saber/workspace/kinview/src"
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Chrome Windows",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceRoot}",
+            "sourceMapPathOverrides": {
+              "/mnt/c/*": "/__vscode-remote-uri__/mnt/c/*",
+            },
         }
         
     ]
