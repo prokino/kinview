@@ -25,8 +25,9 @@
   },
   "main": "public/electron.js",
   "scripts": {
-    "start_gta": "env REACT_APP_NAME=gta react-scripts start HOST=0.0.0.0",
+    "start":"react-scripts start HOST=0.0.0.0",
     "build": "react-scripts build",
+    "start_gta": "env REACT_APP_NAME=gta react-scripts start HOST=0.0.0.0",
     "build_gta": "env REACT_APP_NAME=gta node ./helpers/create-env.js && npm run build",
     "start_kinview": "env REACT_APP_NAME=kinase react-scripts start HOST=0.0.0.0",
     "build_kinview": "env REACT_APP_NAME=kinase node ./helpers/create-env.js && npm run build",

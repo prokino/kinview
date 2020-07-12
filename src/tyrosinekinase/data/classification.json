@@ -1,0 +1,524 @@
+[
+    {
+        "id": "id@FPVR",
+        "value": "FPVR",
+        "path": "FPVR",
+        "members": [
+            "RET",
+            "FGFR1",
+            "FGFR2",
+            "FGFR4",
+            "FGFR3",
+            "FLT1",
+            "FLT4",
+            "KDR",
+            "FMS",
+            "KIT",
+            "FLT3",
+            "PDGFRb",
+            "PDGFRa"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id1@FPVR",
+        "type": "subgroup",
+        "value": "FPVR",
+        "path": "FPVR",
+        "members": [
+            "RET"
+        ],
+        "nodes": [
+            {
+                "id": "id1@Ret",
+                "type": "family",
+                "value": "Ret",
+                "path": "Ret",
+                "members": [
+                    "RET"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id2@FGFR",
+                "type": "family",
+                "value": "FGFR",
+                "path": "FGFR",
+                "members": [
+                    "FGFR1",
+                    "FGFR2",
+                    "FGFR4",
+                    "FGFR3"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id3@PVR",
+                "type": "family",
+                "value": "PVR",
+                "path": "PVR",
+                "members": [
+                    "FLT1",
+                    "FLT4",
+                    "KDR",
+                    "FMS",
+                    "KIT",
+                    "FLT3",
+                    "PDGFRb",
+                    "PDGFRa"
+                ],
+                "nodes": [
+                    {
+                        "id": "id4@VEGFR",
+                        "type": "subfamily",
+                        "value": "VEGFR",
+                        "members": [
+                            "FLT1",
+                            "FLT4",
+                            "KDR"
+                        ],
+                        "path": "VEGFR",
+                        "nodes": []
+                    },
+                    {
+                        "id": "id5@PDGFR",
+                        "type": "subfamily",
+                        "value": "PDGFR",
+                        "members": [
+                            "PDGFRb",
+                            "PDGFRa"
+                        ],
+                        "path": "PDGFR",
+                        "nodes": []
+                    },
+                    {
+                        "id": "id6@Kit",
+                        "type": "subfamily",
+                        "value": "Kit",
+                        "members": [
+                            "KIT"
+                        ],
+                        "path": "Kit",
+                        "nodes": []
+                    },
+                    {
+                        "id": "id7@CSF1R",
+                        "type": "subfamily",
+                        "value": "CSF1R",
+                        "members": [
+                            "FMS"
+                        ],
+                        "path": "CSF1R",
+                        "nodes": []
+                    },
+                    {
+                        "id": "id8@Flt3",
+                        "type": "subfamily",
+                        "value": "Flt3",
+                        "members": [
+                            "FLT3"
+                        ],
+                        "path": "Flt3",
+                        "nodes": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "id9@Tie",
+        "type": "subgroup",
+        "value": "Tie",
+        "path": "Tie",
+        "members": [
+            "TIE1",
+            "TIE2"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id10@EGFR",
+        "type": "subgroup",
+        "value": "EGFR",
+        "path": "EGFR",
+        "members": [
+            "EGFR",
+            "HER2",
+            "HER3",
+            "HER4"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id11@Axl",
+        "type": "subgroup",
+        "value": "Axl",
+        "path": "Axl",
+        "members": [
+            "AXL",
+            "TYRO3",
+            "MER"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id12@Met",
+        "type": "subgroup",
+        "value": "Met",
+        "path": "Met",
+        "members": [
+            "MET",
+            "RON"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id13@Ryk",
+        "type": "subgroup",
+        "value": "Ryk",
+        "path": "Ryk",
+        "members": [
+            "RYK"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id14@IRKL",
+        "type": "subgroup",
+        "value": "IRKL",
+        "path": "IRKL",
+        "members": [
+            "CCK4",
+            "LTK",
+            "ALK",
+            "ROS",
+            "INSR",
+            "IGF1R",
+            "IRR",
+            "DDR1",
+            "DDR2",
+            "MUSK",
+            "TRKA",
+            "TRKC",
+            "TRKB",
+            "ROR1",
+            "ROR2",
+            "LMR1",
+            "LMR2",
+            "LMR3"
+        ],
+        "nodes": [
+            {
+                "id": "id15@Ror",
+                "type": "family",
+                "value": "Ror",
+                "path": "Ror",
+                "members": [
+                    "ROR1",
+                    "ROR2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id16@Trk",
+                "type": "family",
+                "value": "Trk",
+                "path": "Trk",
+                "members": [
+                    "TRKA",
+                    "TRKC",
+                    "TRKB"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id17@Musk",
+                "type": "family",
+                "value": "Musk",
+                "path": "Musk",
+                "members": [
+                    "MUSK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id18@DDR",
+                "type": "family",
+                "value": "DDR",
+                "path": "DDR",
+                "members": [
+                    "DDR1",
+                    "DDR2"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id19@InsR",
+                "type": "family",
+                "value": "InsR",
+                "path": "InsR",
+                "members": [
+                    "INSR",
+                    "IGF1R",
+                    "IRR"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id20@Sev",
+                "type": "family",
+                "value": "Sev",
+                "path": "Sev",
+                "members": [
+                    "ROS"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id21@ALK",
+                "type": "family",
+                "value": "ALK",
+                "path": "ALK",
+                "members": [
+                    "LTK",
+                    "ALK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id22@CCK4",
+                "type": "family",
+                "value": "CCK4",
+                "path": "CCK4",
+                "members": [
+                    "CCK4"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id23@Lmr",
+                "type": "family",
+                "value": "Lmr",
+                "path": "Lmr",
+                "members": [
+                    "LMR1",
+                    "LMR2",
+                    "LMR3"
+                ],
+                "nodes": []
+            }
+        ]
+    },
+    {
+        "id": "id24@Eph",
+        "type": "subgroup",
+        "value": "Eph",
+        "path": "Eph",
+        "members": [
+            "EphA5",
+            "EphA3",
+            "EphA4",
+            "EphA6",
+            "EphA7",
+            "EphB2",
+            "EphB1",
+            "EphB3",
+            "EphB4",
+            "EphA8",
+            "EphA2",
+            "EphA1",
+            "EphB6",
+            "EphA10"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id25@SrcM",
+        "type": "subgroup",
+        "value": "SrcM",
+        "path": "SrcM",
+        "members": [
+            "FYN",
+            "YES",
+            "FGR",
+            "SRC",
+            "LCK",
+            "LYN",
+            "HCK",
+            "BLK",
+            "TEC",
+            "TXK",
+            "BMX",
+            "BTK",
+            "ITK",
+            "ABL",
+            "ARG",
+            "FRK"
+        ],
+        "nodes": [
+            {
+                "id": "id26@SrcA",
+                "type": "family",
+                "value": "SrcA",
+                "path": "SrcA",
+                "members": [
+                    "FYN",
+                    "YES",
+                    "FGR",
+                    "SRC"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id27@SrcB",
+                "type": "family",
+                "value": "SrcB",
+                "path": "SrcB",
+                "members": [
+                    "LCK",
+                    "LYN",
+                    "HCK",
+                    "BLK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id28@Frk",
+                "type": "family",
+                "value": "Frk",
+                "path": "Frk",
+                "members": [
+                    "FRK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id29@Tec",
+                "type": "family",
+                "value": "Tec",
+                "path": "Tec",
+                "members": [
+                    "TEC",
+                    "TXK",
+                    "BMX",
+                    "BTK",
+                    "ITK"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id30@Abl",
+                "type": "family",
+                "value": "Abl",
+                "path": "Abl",
+                "members": [
+                    "ABL",
+                    "ARG"
+                ],
+                "nodes": []
+            }
+        ]
+    },
+    {
+        "id": "id31@SRM",
+        "type": "subgroup",
+        "value": "SRM",
+        "path": "SRM",
+        "members": [
+            "BRK",
+            "SRM"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id32@Csk",
+        "type": "subgroup",
+        "value": "Csk",
+        "path": "Csk",
+        "members": [
+            "CSK",
+            "CTK"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id33@Fer",
+        "type": "subgroup",
+        "value": "Fer",
+        "path": "Fer",
+        "members": [
+            "FES",
+            "FER"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id34@FAK",
+        "type": "subgroup",
+        "value": "FAK",
+        "path": "FAK",
+        "members": [
+            "FAK",
+            "PYK2"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id35@Syk",
+        "type": "subgroup",
+        "value": "Syk",
+        "path": "Syk",
+        "members": [
+            "ZAP70",
+            "SYK"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id36@Jak",
+        "type": "subgroup",
+        "value": "Jak",
+        "path": "Jak",
+        "members": [
+            "TYK2",
+            "JAK1",
+            "JAK2",
+            "JAK3"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id37@JakB",
+        "type": "subgroup",
+        "value": "JakB",
+        "path": "JakB",
+        "members": [
+            "TYK2b",
+            "JAK1b",
+            "JAK2b",
+            "JAK3b"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id38@Ack",
+        "type": "subgroup",
+        "value": "Ack",
+        "path": "Ack",
+        "members": [
+            "ACK",
+            "TNK1"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id39@STYK1",
+        "type": "subgroup",
+        "value": "STYK1",
+        "path": "STYK1",
+        "members": [
+            "SuRTK106"
+        ],
+        "nodes": []
+    }
+]

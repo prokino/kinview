@@ -6,10 +6,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-
-import treeKinase from '../kinase/data/classification.json';
-import treeGta from '../gta/data/classification.json';
-
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
@@ -134,9 +130,11 @@ StyledTreeItem.propTypes = {
 // });
 
 function KinTreeView(props) {
+
   const appname= process.env.REACT_APP_NAME;
-  const rootid = appname === "kinase" ? "id@PK":"id@GTA";
-  let tree = appname === "kinase" ? treeKinase:treeGta;
+  let tree = require(`../${appname}/data/classification.json`);
+  const rootid = tree[0]["id"]; //const rootid = appname === "kinase" ? "id@PK":"id@GTA";
+  console.log(rootid);
   if (appname === "kinase")
     tree = tree[0].concat(tree[1]);
   const originalNodes = tree.map((n)=>{n.checked=false;return n;});
