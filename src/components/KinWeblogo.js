@@ -28,6 +28,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import Tooltip from '@material-ui/core/Tooltip';
 import DropDownButton from '../components/DropDownButton'
 import ExpandLessOrMore from '../components/ExpandLessOrMore'
+import { settings } from '../settings.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -265,6 +266,38 @@ function KinWeblogo(props) {
   
 
   const classes = useStyles();
+  let ptmb_checkbox = '';
+  if (settings['ptmb_checkbox'].includes(appname))
+      ptmb_checkbox = <FormControlLabel
+                      control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
+                      label="PTM" />
+
+  let weblogo_div = '';
+  if (settings['weblogo_div'].includes(appname))
+      weblogo_div = <div className="weblogo">
+      <fieldset>
+        <legend>Mutant Type</legend>
+        <FormControlLabel
+          control={<Switch size="small" id={`mutw-checkbox-${props.value.id}`} checked={mutationWeblogosChecked} value="mutationw" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationWeblogos} />}
+          label="Weblogo" />
+        <FormControlLabel control={<Switch lable="Barchart" size="small" id={`mutb-checkbox-${props.value.id}`} checked={mutationBarchartChecked} value="mutationb" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationBarchart} />}
+          label="Barchart" />
+      </fieldset>
+    </div>;
+
+  let aligend_seq_dropdown = '';
+  if (settings['aligend_seq_dropdown'].includes(appname))
+      aligend_seq_dropdown = <>
+      <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Aligned Sequences`:`Nr sequences`}</Typography>
+      <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
+      </>;
+
+  let ortholog_seq_dropdown = '';
+  if (settings['ortholog_seq_dropdown'].includes(appname))
+      ortholog_seq_dropdown = <>
+      <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Ortholog Sequences`:`UniProt sequences`}</Typography>
+      <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />      
+      </>;
 
   return (
     //<div className={classes.root}>
@@ -285,18 +318,8 @@ function KinWeblogo(props) {
               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
               label="Residue" />
             
-            <FormControlLabel style={{display: appname === "kinase"? "block":"none"}} control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
-                label="PTM" />
-            <div className="weblogo" style={{display: appname === "kinase"? "block":"none"}}>
-              <fieldset>
-                <legend>Mutant Type</legend>
-                <FormControlLabel
-                  control={<Switch size="small" id={`mutw-checkbox-${props.value.id}`} checked={mutationWeblogosChecked} value="mutationw" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationWeblogos} />}
-                  label="Weblogo" />
-                <FormControlLabel control={<Switch lable="Barchart" size="small" id={`mutb-checkbox-${props.value.id}`} checked={mutationBarchartChecked} value="mutationb" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationBarchart} />}
-                  label="Barchart" />
-              </fieldset>
-            </div>
+            {ptmb_checkbox}
+            {weblogo_div}
 
 
             <Typography style={{marginRight:5}}>Reference Position</Typography>
@@ -312,13 +335,9 @@ function KinWeblogo(props) {
               {/* {renderOptions(props.numbers)} */}
               {props.numbers ? props.numbers.map((item, i) => { return (<option key={i} value={item.name}>{item.name}</option>) }) : ""}
             </NativeSelect>
+              {aligend_seq_dropdown} 
+              {ortholog_seq_dropdown}
 
-              <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Aligned Sequences`:`Nr sequences`}</Typography>
-              <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
-
-              <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Ortholog Sequences`:`UniProt sequences`}</Typography>
-              <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />
-              
           </StyledFormGroup>
 
         </ExpansionPanelSummary>

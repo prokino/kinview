@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { ArrowRight, ArrowDropDown, NoMeetingRoom } from '@material-ui/icons';
 import { getNodeMajorVersion } from 'typescript';
 import Switch from '@material-ui/core/Switch';
-
+import { settings } from '../settings.js';
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
@@ -213,10 +213,15 @@ if (nodes)    return nodes.map((node, index) => {
     })
   }
 
+  let showOnlyDark='';
+  if (settings['treeview_only_dark'].includes(appname))
+      showOnlyDark = <FormControlLabel style={{width:'max-content'}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
+  
+
   return (
 
     <div>
-        <FormControlLabel style={{width:'max-content', display: appname === "kinase"? "block":"none"}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
+        {showOnlyDark}
           <Autocomplete
            size="small"
           //ref={filterInput}
