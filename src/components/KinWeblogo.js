@@ -28,7 +28,6 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import Tooltip from '@material-ui/core/Tooltip';
 import DropDownButton from '../components/DropDownButton'
 import ExpandLessOrMore from '../components/ExpandLessOrMore'
-import { settings } from '../settings.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -230,6 +229,7 @@ function KinWeblogo(props) {
   }, []);
 
   const appname= process.env.REACT_APP_NAME;
+  const settings = require(`../${appname}.settings.js`).settings;
   let baseUrl = `${window.location.origin.toString()}`;
   baseUrl = baseUrl + "/" + appname;
 
@@ -267,13 +267,15 @@ function KinWeblogo(props) {
 
   const classes = useStyles();
   let ptmb_checkbox = '';
-  if (settings['ptmb_checkbox'].includes(appname))
+  console.log(settings);
+  console.log(settings.controls);
+  if (settings.controls.includes('ptmb_checkbox'))
       ptmb_checkbox = <FormControlLabel
                       control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
                       label="PTM" />
 
   let weblogo_div = '';
-  if (settings['weblogo_div'].includes(appname))
+  if (settings.controls.includes('weblogo_div'))
       weblogo_div = <div className="weblogo">
       <fieldset>
         <legend>Mutant Type</legend>
@@ -286,14 +288,14 @@ function KinWeblogo(props) {
     </div>;
 
   let aligend_seq_dropdown = '';
-  if (settings['aligend_seq_dropdown'].includes(appname))
+  if (settings.controls.includes('aligend_seq_dropdown'))
       aligend_seq_dropdown = <>
       <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Aligned Sequences`:`Nr sequences`}</Typography>
       <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
       </>;
 
   let ortholog_seq_dropdown = '';
-  if (settings['ortholog_seq_dropdown'].includes(appname))
+  if (settings.controls.includes('ortholog_seq_dropdown'))
       ortholog_seq_dropdown = <>
       <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Ortholog Sequences`:`UniProt sequences`}</Typography>
       <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />      

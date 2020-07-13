@@ -12,7 +12,6 @@ import Typography from '@material-ui/core/Typography';
 import { ArrowRight, ArrowDropDown, NoMeetingRoom } from '@material-ui/icons';
 import { getNodeMajorVersion } from 'typescript';
 import Switch from '@material-ui/core/Switch';
-import { settings } from '../settings.js';
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
@@ -132,6 +131,7 @@ StyledTreeItem.propTypes = {
 function KinTreeView(props) {
 
   const appname= process.env.REACT_APP_NAME;
+  const settings = require(`../${appname}.settings.js`).settings;
   let tree = require(`../${appname}/data/classification.json`);
   const rootid = tree[0]["id"]; //const rootid = appname === "kinase" ? "id@PK":"id@GTA";
   console.log(rootid);
@@ -214,7 +214,7 @@ if (nodes)    return nodes.map((node, index) => {
   }
 
   let showOnlyDark='';
-  if (settings['treeview_only_dark'].includes(appname))
+  if (settings.controls.includes('treeview_only_dark'))
       showOnlyDark = <FormControlLabel style={{width:'max-content'}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
   
 
