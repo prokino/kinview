@@ -1,6 +1,6 @@
 export const settings = {
+    title:"GTExplorer",
     content: {
-        title:"GTExplorer",
         elements: [{
                 id: "weblogo",
                 type: "checkbox",

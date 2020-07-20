@@ -1,4 +1,5 @@
 export const settings = {
+    title:"KinView",
     controls: 
             [
                 "residue_checkbox",

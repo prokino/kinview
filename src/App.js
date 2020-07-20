@@ -25,6 +25,7 @@ import TextField from '@material-ui/core/TextField';
 import Slider from '@material-ui/core/Slider';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import Box from '@material-ui/core/Box';
+import {Helmet} from "react-helmet";
 // const rowWidth = 30, rowHeight = 120;
 const useStyles = makeStyles(theme => ({
   root: {
@@ -338,6 +339,11 @@ function App() {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{settings.title?settings.title:"AppGen"}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Grid item>
         <Dialog
           open={openResetDialog}

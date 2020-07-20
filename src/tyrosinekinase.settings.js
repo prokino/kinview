@@ -1,5 +1,5 @@
 export const settings = {
-
+    title:"Tyrosine Kinase Explorer",
     content: {
         elements: [
             {
