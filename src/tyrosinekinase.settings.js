@@ -1,6 +1,5 @@
 export const settings = {
 
-    controls: ["constraint_checkbox", "positive_checkbox", "negative_checkbox"],
     content: {
         elements: [
             {

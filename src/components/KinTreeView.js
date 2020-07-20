@@ -235,7 +235,7 @@ if (nodes)    return nodes.map((node, index) => {
   }
 
   let showOnlyDark='';
-  if (settings.controls.includes('treeview_only_dark'))
+  if (settings.controls && settings.controls.includes('treeview_only_dark'))
       showOnlyDark = <FormControlLabel style={{width:'max-content'}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
   
   let autoComplete='';

@@ -188,11 +188,15 @@ function KinWeblogo(props) {
   const [propChanged, setPropChanged] = React.useState(false);
   const [isExpanded, setIsExpanded] = React.useState(true);
   const [checkboxes, setCheckboxes] = React.useState([]);
+  const [dropdowns, setDropdowns] = React.useState([]);
+
   
   const appname= process.env.REACT_APP_NAME;
   let settings = require(`../${appname}.settings.js`).settings;
   if (checkboxes.length === 0)
     setCheckboxes(settings.content.elements.filter(x=>x.type==="checkbox"));
+  if (dropdowns.length === 0)
+    setDropdowns(settings.content.elements.filter(x=>x.type==="dropdown"));
 
   // const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
   // const [constraintChecked, setConstraintChecked] = React.useState(true);
@@ -302,6 +306,18 @@ function KinWeblogo(props) {
             {text:'PTM', value:baseUrl + 'aligned_ptm/' + val + '.txt'},
           ];
   }
+
+  function getDropdownItems(options)
+  {
+    const val= props.value.value;
+    let items = [];
+    options.forEach(option =>
+      {
+        items.push({text:option.name, value: `${baseUrl}${option.dir}/${val}.${option.ext}`});
+      }
+      );
+    return items;
+  }
   
   function getOrthologSequences()
   {
@@ -339,26 +355,25 @@ function KinWeblogo(props) {
   //     </fieldset>
   //   </div>;
 
-  let aligend_seq_dropdown = '';
-  if (settings.controls.includes('aligend_seq_dropdown'))
-      aligend_seq_dropdown = <>
-      <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Aligned Sequences`:`Nr sequences`}</Typography>
-      <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
-      </>;
+  // let aligend_seq_dropdown = '';
+  // if (settings.controls.includes('aligend_seq_dropdown'))
+  //     aligend_seq_dropdown = <>
+  //     <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Aligned Sequences`:`Nr sequences`}</Typography>
+  //     <DropDownButton items={getAlignedSequences()} value={props.value.aligend_seq} />
+  //     </>;
 
-  let ortholog_seq_dropdown = '';
-  if (settings.controls.includes('ortholog_seq_dropdown'))
-      ortholog_seq_dropdown = <>
-      <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Ortholog Sequences`:`UniProt sequences`}</Typography>
-      <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />      
-      </>;
-
+  // let ortholog_seq_dropdown = '';
+  // if (settings.controls.includes('ortholog_seq_dropdown'))
+  //     ortholog_seq_dropdown = <>
+  //     <Typography style={{marginLeft:15,marginRight:5}}>{appname === "kinase" ? `Ortholog Sequences`:`UniProt sequences`}</Typography>
+  //     <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />      
+  //     </>;
   
 
 let rendered_checkboxes = [];
 checkboxes.forEach((element, index) => 
 {
-  if (element.switchable) 
+  if (element.visible) 
   {
     let checkbox = <FormControlLabel style={{marginLeft:5}} control={
     <Switch size="small" 
@@ -373,11 +388,20 @@ checkboxes.forEach((element, index) =>
 }
 );
 
-   
-
-
-
-   
+let rendered_dropdowns = [];
+dropdowns.forEach((element,index) =>
+{
+  if (element.visible) 
+  {
+    let dropdown = 
+        <>
+          <Typography style={{marginLeft:15,marginRight:5}}>{element.name}</Typography>
+          <DropDownButton items={getDropdownItems(element.options)} value={props.value.aligend_seq} />
+        </>;
+    rendered_dropdowns.push(dropdown);
+  }
+}
+);
             
   return (
     //<div className={classes.root}>
@@ -418,8 +442,9 @@ checkboxes.forEach((element, index) =>
               {/* {renderOptions(props.numbers)} */}
               {props.numbers ? props.numbers.map((item, i) => { return (<option key={i} value={item.name}>{item.name}</option>) }) : ""}
             </NativeSelect>
-              {aligend_seq_dropdown} 
-              {ortholog_seq_dropdown}
+              {/* {aligend_seq_dropdown} 
+              {ortholog_seq_dropdown} */}
+              {rendered_dropdowns}
           </StyledFormGroup>
 
         </ExpansionPanelSummary>
