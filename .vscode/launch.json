@@ -16,7 +16,8 @@
             "name": "Chromium",
             "url": "http://localhost:3000",
             "runtimeExecutable": "/usr/bin/chromium",
-            "webRoot": "/home/saber/workspace/prokino/kinview"
+            "webRoot": "/home/saber/workspace/prokino/kinview",
+
         },
 
         {
@@ -28,6 +29,8 @@
             "sourceMapPathOverrides": {
               "/mnt/c/*": "/__vscode-remote-uri__/mnt/c/*",
             },
+            "env": { "CI": true },
+            "disableOptimisticBPs": true,
         }
         
     ]

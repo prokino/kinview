@@ -22,12 +22,13 @@ import { sortableHandle } from 'react-sortable-hoc';
 
 import ReorderIcon from '@material-ui/icons/Reorder';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { Label } from '@material-ui/icons';
+import { Label, SentimentSatisfied } from '@material-ui/icons';
 
 import SvgIcon from '@material-ui/core/SvgIcon';
 import Tooltip from '@material-ui/core/Tooltip';
 import DropDownButton from '../components/DropDownButton'
 import ExpandLessOrMore from '../components/ExpandLessOrMore'
+import { setSyntheticLeadingComments } from 'typescript';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -186,7 +187,21 @@ function KinWeblogo(props) {
   const [selectedNumberingValue, setNumberingValue] = React.useState('');
   const [propChanged, setPropChanged] = React.useState(false);
   const [isExpanded, setIsExpanded] = React.useState(true);
-  const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
+  const [elements, setElements] = React.useState([]);
+  
+  const appname= process.env.REACT_APP_NAME;
+  let settings = require(`../${appname}.settings.js`).settings;
+  if (elements.length === 0)
+    setElements(settings.content.elements);
+
+  // const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
+  // const [constraintChecked, setConstraintChecked] = React.useState(true);
+  // const [positiveChecked, setPositiveChecked] = React.useState(true);
+  // const [negativeChecked, setNegativeChecked] = React.useState(false);
+  const [swiches, setSwitches] = React.useState([]);
+  //if (swiches.length === 0)
+
+
   const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
   const [mutationBarchartChecked, setMutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
   // const [ptmWeblogosChecked, setPtmWeblogosChecked] = React.useState(props.ptmWeblogosChecked);
@@ -194,13 +209,40 @@ function KinWeblogo(props) {
   const DragHandle = sortableHandle(() => <ReorderIcon />);
   const numberingclass = classNames({
     "numberingdiv": true,
-    "hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmBarchartChecked) // || ptmWeblogosChecked
+    //"hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmBarchartChecked) // || ptmWeblogosChecked
+    "hidden": !swiches.some(x => x.visible)
   });
 
-  function toggleResidue(event) {
-    setResidueChecked(prev => !prev);
+  function toggleVisibility(event,name)
+  {
+    var item = elements.find(x => x.name === name);
+    if (item) 
+      item.visible = !item.visible;
+    setElements(elements);
+  }
+
+  // function toggleResidue(event) {
+  //   setResidueChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
+
+  // function toggleConstraint(event) {
+  //   setConstraintChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
+  // function togglePositive(event) {
+  //   setPositiveChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
+  // function toggleNegative(event) {
+  //   setNegativeChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
+  function toggleCheckbox(event)
+  {
+    //setResidueChecked(prev => !prev);
     props.onChange(event);
-  };
+  }
   function toggleMutationBarchart(event) {
     setMutationBarchartChecked(prev => !prev);
     props.onChange(event);
@@ -228,8 +270,8 @@ function KinWeblogo(props) {
     // setNumberingValue('AKT1');
   }, []);
 
-  const appname= process.env.REACT_APP_NAME;
-  const settings = require(`../${appname}.settings.js`).settings;
+
+  
   let baseUrl = `${window.location.origin.toString()}`;
   baseUrl = baseUrl + "/" + appname;
 
@@ -266,26 +308,33 @@ function KinWeblogo(props) {
   
 
   const classes = useStyles();
-  let ptmb_checkbox = '';
+  
   console.log(settings);
   console.log(settings.controls);
-  if (settings.controls.includes('ptmb_checkbox'))
-      ptmb_checkbox = <FormControlLabel
-                      control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
-                      label="PTM" />
+  // let ptmb_checkbox = '';
+  // if (settings.controls.includes('ptmb_checkbox'))
+  //     ptmb_checkbox = <FormControlLabel
+  //                     control={<Switch size="small" id={`ptmb-checkbox-${props.value.id}`} checked={ptmBarchartChecked} value="ptmb" onClick={e => { e.stopPropagation(); }} onChange={togglePtmBarchart} />}
+  //                     label="PTM" />
 
-  let weblogo_div = '';
-  if (settings.controls.includes('weblogo_div'))
-      weblogo_div = <div className="weblogo">
-      <fieldset>
-        <legend>Mutant Type</legend>
-        <FormControlLabel
-          control={<Switch size="small" id={`mutw-checkbox-${props.value.id}`} checked={mutationWeblogosChecked} value="mutationw" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationWeblogos} />}
-          label="Weblogo" />
-        <FormControlLabel control={<Switch lable="Barchart" size="small" id={`mutb-checkbox-${props.value.id}`} checked={mutationBarchartChecked} value="mutationb" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationBarchart} />}
-          label="Barchart" />
-      </fieldset>
-    </div>;
+  // let residue_checkbox = '';
+  // if (settings.controls.includes('residue_checkbox'))
+  // residue_checkbox = <FormControlLabel style={{marginLeft:5}}
+  //             control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
+  //             label="Residue" />;
+
+  // let weblogo_div = '';
+  // if (settings.controls.includes('weblogo_div'))
+  //     weblogo_div = <div className="weblogo">
+  //     <fieldset>
+  //       <legend>Mutant Type</legend>
+  //       <FormControlLabel
+  //         control={<Switch size="small" id={`mutw-checkbox-${props.value.id}`} checked={mutationWeblogosChecked} value="mutationw" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationWeblogos} />}
+  //         label="Weblogo" />
+  //       <FormControlLabel control={<Switch lable="Barchart" size="small" id={`mutb-checkbox-${props.value.id}`} checked={mutationBarchartChecked} value="mutationb" onClick={e => { e.stopPropagation(); }} onChange={toggleMutationBarchart} />}
+  //         label="Barchart" />
+  //     </fieldset>
+  //   </div>;
 
   let aligend_seq_dropdown = '';
   if (settings.controls.includes('aligend_seq_dropdown'))
@@ -301,6 +350,50 @@ function KinWeblogo(props) {
       <DropDownButton items={getOrthologSequences()} value={props.value.ortholog_seq} />      
       </>;
 
+  
+
+
+// let constraint_checkbox = '';
+//   if (settings.controls.includes('constraint_checkbox'))
+//   constraint_checkbox = <FormControlLabel style={{marginLeft:5}}
+//               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={constraintChecked} value="constraint" onClick={e => { e.stopPropagation(); }} onChange={toggleConstraint} />}
+//               label="constraint" />;
+
+//   let positive_checkbox = '';
+//   if (settings.controls.includes('positive_checkbox'))
+//   positive_checkbox = <FormControlLabel style={{marginLeft:5}}
+//               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={positiveChecked} value="positive" onClick={e => { e.stopPropagation(); }} onChange={togglePositive} />}
+//               label="positive" />;
+
+//   let negative_checkbox = '';
+//   if (settings.controls.includes('negative_checkbox'))
+//   negative_checkbox = <FormControlLabel style={{marginLeft:5}}
+//               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={negativeChecked} value="negative" onClick={e => { e.stopPropagation(); }} onChange={toggleNegative} />}
+//               label="negative" />;
+let checkboxes = [];
+elements.forEach((element, index) => 
+{
+  if (element.switchable) 
+  {
+    let checkbox = <FormControlLabel style={{marginLeft:5}} control={
+    <Switch size="small" 
+      id={`${element.id}-checkbox-${props.value.id}`} 
+      //checked={swiches[x=>x.id === ""].visible} 
+      checked={true} 
+      value={element.id} 
+    onClick={e => { e.stopPropagation(); }} 
+    onChange={toggleCheckbox} />} label={element.name} />
+    checkboxes.push(checkbox);
+  }
+}
+);
+
+   
+
+
+
+   
+            
   return (
     //<div className={classes.root}>
     <div>
@@ -316,12 +409,15 @@ function KinWeblogo(props) {
             <Button size="small" variant="outlined" color="primary" className={classes.button}>
               {props.value.value}
             </Button>
-            <FormControlLabel style={{marginLeft:5}}
-              control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={residueChecked} value="residue" onClick={e => { e.stopPropagation(); }} onChange={toggleResidue} />}
-              label="Residue" />
             
+            {/* {residue_checkbox}
             {ptmb_checkbox}
-            {weblogo_div}
+            {constraint_checkbox}
+            {positive_checkbox}
+            {negative_checkbox}
+            {weblogo_div} */}
+
+            {checkboxes}
 
 
             <Typography style={{marginRight:5}}>Reference Position</Typography>
@@ -339,30 +435,30 @@ function KinWeblogo(props) {
             </NativeSelect>
               {aligend_seq_dropdown} 
               {ortholog_seq_dropdown}
-
           </StyledFormGroup>
 
         </ExpansionPanelSummary>
+        
         <ExpansionPanelDetails className={classes.details}>
-          {/* <div className={classes.leftside}>
-              <FormControl className={classes.formControl}>
-              <InputLabel shrink htmlFor="numbering-native-label-placeholder">
-                Alignments
-              </InputLabel>
+{//setSearches(searches => [...searches, query])
+}
+          {elements.map(element => 
+             <div>
+               <Box>
+                  <img
+                    alt={element.name}
+                    id={`${element.name}-${props.value.id}`}
+                    // className={ residueChecked ? classes.visible : classes.hidden}
+                    className={ element.visible? classes.visible : classes.hidden}
+                    src={`${appname}/${element.dirpath}/${props.value.path}.${element.extention}`}
+                    height={props.height || "188"}
+                    width={props.width || "4840"}></img>
+                </Box>
+              </div>
+            )}
+        
           
-            </FormControl>
-         </div> */}
-          <Box>
-            {/* <img id={`weblogo-${props.value.id}`} className={residueChecked ? classes.visible: classes.hidden} src={`sequences/${props.highres?"highres":"png"}/${props.value.path}.${props.highres?"png":"png"}`} height={props.height?props.height:"188"} width={props.width ? props.width:"4857"}  /> */}
-            <img
-              alt="weblogo"
-              id={`weblogo-${props.value.id}`}
-              className={residueChecked ? classes.visible : classes.hidden}
-              src={`${appname}/sequences/png/${props.value.path}.png`}
-              height={props.height || "188"}
-              width={props.width || "4840"}></img>
-          </Box>
-          <Box className={mutationWeblogosChecked ? classes.visible : classes.hidden}>
+          {/* <Box className={mutationWeblogosChecked ? classes.visible : classes.hidden}>
             <img alt="mutation weblogo" id={`mutationw-${props.value.id}`} src={`${appname}/mutations/weblogos/png/${props.value.path}.png`} height={props.height || "188"} width={props.width ? props.width : "4840"} />
           </Box>
           <Box className={ptmBarchartChecked ? classes.visible : classes.hidden}>
@@ -370,7 +466,7 @@ function KinWeblogo(props) {
           </Box>
           <Box className={mutationBarchartChecked ? classes.visible : classes.hidden}>
             <img alt="mutation barchart" id={`mutationb-${props.value.id}`} src={`${appname}/mutations/barchart/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
-          </Box>
+          </Box> */}
           {/* <Box className={ptmWeblogosChecked ? classes.visible : classes.hidden}>
             <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box> */}

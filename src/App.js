@@ -113,14 +113,14 @@ const imgUgaLogoStyle = {
 
 
 function App() {
-  const appname= process.env.REACT_APP_NAME;
-  //let numberingjson = appname === "kinase" ? numberingKinase:numberingGta;
-  let numberingjson = require(`./${appname}/data/numbering.json`);
+
+
 
   const [rdbvalue, setRdbValue] = React.useState('rdbResidue');
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
+  const [elements, setElements] = React.useState([]);
   const [selectedNodes, setSelectedNodes] = React.useState([]);
   const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
   const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
@@ -131,6 +131,13 @@ function App() {
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = useState([]);
   const [height, setHeight] = React.useState(100);
+
+  const appname= process.env.REACT_APP_NAME;
+  let numberingjson = require(`./${appname}/data/numbering.json`);
+  const settings = require(`./${appname}.settings.js`).settings;
+  if (elements.length === 0)
+    setElements(settings.content.elements);
+
   const weblogoRemove= node => e =>
   {
     handleDelete(node);
@@ -166,10 +173,10 @@ function App() {
           height={height} 
           onRemove={weblogoRemove(item.value)}
           onChange={weblogoCheckboxChanged}
-          residueChecked={item.value.residueChecked} 
-          mutationWeblogosChecked={item.value.mutationWeblogosChecked}
-          mutationBarchartChecked={item.value.mutationBarchartChecked}
-          //ptmWeblogosChecked={item.value.ptmWeblogosChecked}
+          switches = {item.swiches}
+          // residueChecked={item.value.residueChecked} 
+          // mutationWeblogosChecked={item.value.mutationWeblogosChecked}
+          // mutationBarchartChecked={item.value.mutationBarchartChecked}
           ptmBarchartChecked={item.value.ptmBarchartChecked}
           viewMode = {viewMode}
            />
@@ -200,10 +207,18 @@ function App() {
     
     if (checked && !alreadyAdded) { //add the selection to selectedNodes
       setSelectedNode(node);
-      node.residueChecked = true;
-      node.ptmChecked = false;
-      node.mutationWeblogosChecked=false;
-      node.mutationBarchart=false;
+      let switches = elements.reduce(function (res, item) {
+        if (item.switchable) {
+          // creating checkboxes from settings, for example:
+          // node.residueChecked = true;
+          // node.ptmChecked = false;
+          let obj = {};
+          obj[item.id + "Checked"] = checked;
+          res.push(obj);
+        }
+        return res;
+      }, []);
+      node.swiches = switches;   
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
       console.log(selectedNodes);
     }
