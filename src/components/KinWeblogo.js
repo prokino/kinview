@@ -187,12 +187,12 @@ function KinWeblogo(props) {
   const [selectedNumberingValue, setNumberingValue] = React.useState('');
   const [propChanged, setPropChanged] = React.useState(false);
   const [isExpanded, setIsExpanded] = React.useState(true);
-  const [elements, setElements] = React.useState([]);
+  const [checkboxes, setCheckboxes] = React.useState([]);
   
   const appname= process.env.REACT_APP_NAME;
   let settings = require(`../${appname}.settings.js`).settings;
-  if (elements.length === 0)
-    setElements(settings.content.elements);
+  if (checkboxes.length === 0)
+    setCheckboxes(settings.content.elements.filter(x=>x.type==="checkbox"));
 
   // const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
   // const [constraintChecked, setConstraintChecked] = React.useState(true);
@@ -210,15 +210,15 @@ function KinWeblogo(props) {
   const numberingclass = classNames({
     "numberingdiv": true,
     //"hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmBarchartChecked) // || ptmWeblogosChecked
-    "hidden": !swiches.some(x => x.visible)
+    "hidden": !checkboxes.some(x => x.checked)
   });
 
   function toggleVisibility(event,name)
   {
-    var item = elements.find(x => x.name === name);
+    var item = checkboxes.find(x => x.name === name);
     if (item) 
-      item.visible = !item.visible;
-    setElements(elements);
+      item.checked = !item.checked;
+    setCheckboxes(checkboxes);
   }
 
   // function toggleResidue(event) {
@@ -239,7 +239,10 @@ function KinWeblogo(props) {
   //   props.onChange(event);
   // };
   function toggleCheckbox(event)
-  {
+  {    
+    let id =event.target.value;
+    let element = checkboxes.filter(el => el.id === id)[0];
+    element.checked = !element.checked;
     //setResidueChecked(prev => !prev);
     props.onChange(event);
   }
@@ -278,6 +281,7 @@ function KinWeblogo(props) {
   const numberingChanged = event => {
     if (props.numbers && event.target) {
       const val = props.numbers.filter(function (item) { return item.name === event.target.value });
+      console.log(val);
       let numbering = "N/A";
       if (val)
         numbering = val[0].value.map(n => n === null ? '- ' : <span className="v">{n}</span>);
@@ -309,8 +313,7 @@ function KinWeblogo(props) {
 
   const classes = useStyles();
   
-  console.log(settings);
-  console.log(settings.controls);
+
   // let ptmb_checkbox = '';
   // if (settings.controls.includes('ptmb_checkbox'))
   //     ptmb_checkbox = <FormControlLabel
@@ -352,26 +355,8 @@ function KinWeblogo(props) {
 
   
 
-
-// let constraint_checkbox = '';
-//   if (settings.controls.includes('constraint_checkbox'))
-//   constraint_checkbox = <FormControlLabel style={{marginLeft:5}}
-//               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={constraintChecked} value="constraint" onClick={e => { e.stopPropagation(); }} onChange={toggleConstraint} />}
-//               label="constraint" />;
-
-//   let positive_checkbox = '';
-//   if (settings.controls.includes('positive_checkbox'))
-//   positive_checkbox = <FormControlLabel style={{marginLeft:5}}
-//               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={positiveChecked} value="positive" onClick={e => { e.stopPropagation(); }} onChange={togglePositive} />}
-//               label="positive" />;
-
-//   let negative_checkbox = '';
-//   if (settings.controls.includes('negative_checkbox'))
-//   negative_checkbox = <FormControlLabel style={{marginLeft:5}}
-//               control={<Switch size="small" id={`res-checkbox-${props.value.id}`} checked={negativeChecked} value="negative" onClick={e => { e.stopPropagation(); }} onChange={toggleNegative} />}
-//               label="negative" />;
-let checkboxes = [];
-elements.forEach((element, index) => 
+let rendered_checkboxes = [];
+checkboxes.forEach((element, index) => 
 {
   if (element.switchable) 
   {
@@ -379,11 +364,11 @@ elements.forEach((element, index) =>
     <Switch size="small" 
       id={`${element.id}-checkbox-${props.value.id}`} 
       //checked={swiches[x=>x.id === ""].visible} 
-      checked={true} 
+      checked={element.checked} 
       value={element.id} 
     onClick={e => { e.stopPropagation(); }} 
     onChange={toggleCheckbox} />} label={element.name} />
-    checkboxes.push(checkbox);
+    rendered_checkboxes.push(checkbox);
   }
 }
 );
@@ -417,7 +402,7 @@ elements.forEach((element, index) =>
             {negative_checkbox}
             {weblogo_div} */}
 
-            {checkboxes}
+            {rendered_checkboxes}
 
 
             <Typography style={{marginRight:5}}>Reference Position</Typography>
@@ -440,16 +425,14 @@ elements.forEach((element, index) =>
         </ExpansionPanelSummary>
         
         <ExpansionPanelDetails className={classes.details}>
-{//setSearches(searches => [...searches, query])
-}
-          {elements.map(element => 
+          {checkboxes.map(element => 
              <div>
                <Box>
                   <img
                     alt={element.name}
                     id={`${element.name}-${props.value.id}`}
                     // className={ residueChecked ? classes.visible : classes.hidden}
-                    className={ element.visible? classes.visible : classes.hidden}
+                    className={ element.checked? classes.visible : classes.hidden}
                     src={`${appname}/${element.dirpath}/${props.value.path}.${element.extention}`}
                     height={props.height || "188"}
                     width={props.width || "4840"}></img>
@@ -471,8 +454,6 @@ elements.forEach((element, index) =>
             <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box> */}
    
-
-          
           <div className={numberingclass}>
             {selectedNumbering ? selectedNumbering.value.map((n, index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} onClick={highlightColumn} className="v">{n}</span>) : ""}
           </div>

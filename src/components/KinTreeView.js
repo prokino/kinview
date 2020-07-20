@@ -157,7 +157,6 @@ function KinTreeView(props) {
   const settings = require(`../${appname}.settings.js`).settings;
   let tree = require(`../${appname}/data/classification.json`);
   const rootid = tree[0]["id"]; //const rootid = appname === "kinase" ? "id@PK":"id@GTA";
-  console.log(rootid);
   if (appname === "kinase")
     tree = tree[0].concat(tree[1]);
   const originalNodes = tree.map((n)=>{n.checked=false;return n;});
@@ -189,7 +188,6 @@ function KinTreeView(props) {
   }
 
   function handleFilterChange(e,val) {
-    console.log("val="+ val);
     let filtered;
     if (val) {
       filtered = nodesCopy.filter(function iter(o) {

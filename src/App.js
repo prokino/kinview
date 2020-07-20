@@ -220,7 +220,6 @@ function App() {
       }, []);
       node.swiches = switches;   
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
-      console.log(selectedNodes);
     }
     else if(!checked) //remvoe the Selection
     {
