@@ -136,8 +136,10 @@ function App() {
   const appname= process.env.REACT_APP_NAME;
   let numberingjson = require(`./${appname}/data/numbering.json`);
   const settings = require(`./${appname}.settings.js`).settings;
-  if (elements.length === 0)
-    setElements(settings.content.elements);
+  useEffect(()=>
+  {setElements(settings.elements);}
+  ,[settings.elements]);
+    
 
   const weblogoRemove= node => e =>
   {
@@ -445,9 +447,6 @@ function App() {
 
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
-                  // selectedNodes.map(function (item, idx) {
-                  //   return //(<KinWeblogo src={'weblogos/' + item.path} height="140"  label={item.value} numbers={getCandidateNumbers(item)} />)
-                  // })
                 }
 
               </Paper>

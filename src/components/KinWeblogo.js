@@ -193,10 +193,11 @@ function KinWeblogo(props) {
   
   const appname= process.env.REACT_APP_NAME;
   let settings = require(`../${appname}.settings.js`).settings;
-  if (checkboxes.length === 0)
-    setCheckboxes(settings.content.elements.filter(x=>x.type==="checkbox"));
-  if (dropdowns.length === 0)
-    setDropdowns(settings.content.elements.filter(x=>x.type==="dropdown"));
+  useEffect(() => {
+      setCheckboxes(settings.elements.filter(x=>x.type==="checkbox"));
+      setDropdowns(settings.elements.filter(x=>x.type==="dropdown"));
+  }, [settings.elements]);
+
 
   // const [residueChecked, setResidueChecked] = React.useState(props.residueChecked);
   // const [constraintChecked, setConstraintChecked] = React.useState(true);
@@ -213,7 +214,6 @@ function KinWeblogo(props) {
   const DragHandle = sortableHandle(() => <ReorderIcon />);
   const numberingclass = classNames({
     "numberingdiv": true,
-    //"hidden": !(residueChecked || mutationWeblogosChecked || mutationBarchartChecked || ptmBarchartChecked) // || ptmWeblogosChecked
     "hidden": !checkboxes.some(x => x.checked)
   });
 
@@ -271,11 +271,6 @@ function KinWeblogo(props) {
   function toggleExpanded(event) {
     setIsExpanded(!isExpanded);
   };
-  useEffect(() => {
-    //alert(selectedNumbering);
-    //numberingChanged('init',props.numbers);
-    // setNumberingValue('AKT1');
-  }, []);
 
 
   
@@ -460,7 +455,8 @@ dropdowns.forEach((element,index) =>
                     className={ element.checked? classes.visible : classes.hidden}
                     src={`${appname}/${element.dirpath}/${props.value.path}.${element.extention}`}
                     height={props.height || "188"}
-                    width={props.width || "4840"}></img>
+                    width={props.width || "4840"}
+                    ></img>
                 </Box>
               </div>
             )}
@@ -479,7 +475,7 @@ dropdowns.forEach((element,index) =>
             <img id={`ptm-${props.value.id}`} src={`ptm/weblogos/png/${props.value.path}.png`} height={props.height ? props.height : "188"} width={props.width ? props.width : "4840"} />
           </Box> */}
    
-          <div className={numberingclass}>
+          <div className={numberingclass} style={{marginLeft: settings.ui.numberingMarginLeft, marginTop: settings.ui.numberingMarginTop}}>
             {selectedNumbering ? selectedNumbering.value.map((n, index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} onClick={highlightColumn} className="v">{n}</span>) : ""}
           </div>
 
