@@ -122,10 +122,12 @@ function App() {
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
   const [elements, setElements] = React.useState([]);
+  const [options, setOptions] = React.useState([]);
+
   const [selectedNodes, setSelectedNodes] = React.useState([]);
-  const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
-  const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
-  const [switchMotifChecked, setSwitchMotifChecked] = React.useState(false);
+  // const [switchShowTreeChecked, setSwitchShowTreeChecked] = React.useState(true);
+  // const [switchDomainChecked, setSwitchDomainChecked] = React.useState(false);
+  // const [switchMotifChecked, setSwitchMotifChecked] = React.useState(false);
   const [switchHighResChecked, setHighResChecked] = React.useState(false);
   const [openResetDialog, setOpenResetDialog] = React.useState(false);
   const [viewMode, setViewMode] = React.useState(false);
@@ -137,28 +139,33 @@ function App() {
   let numberingjson = require(`./${appname}/data/numbering.json`);
   const settings = require(`./${appname}.settings.js`).settings;
   useEffect(()=>
-  {setElements(settings.elements);}
-  ,[settings.elements]);
+  {
+    setElements(settings.elements);
+    setOptions(settings.options.filter(x=>x.type==="checkbox"));
+  }
+  ,[settings.elements,settings.options]);
     
 
   const weblogoRemove= node => e =>
   {
     handleDelete(node);
   }
+
+
   const weblogoCheckboxChanged = e =>
   {
     //let node = selectedNodes.filter(k => k.id == val.id);
     const modifiedNodes = selectedNodes.map((item,j)=>
     {
-      if (e.target.id == "res-checkbox-" + item.id )
+      if (e.target.id === "res-checkbox-" + item.id )
         item.residueChecked = e.target.checked;
-      if (e.target.id == "mutw-checkbox-" + item.id )
+      if (e.target.id === "mutw-checkbox-" + item.id )
         item.mutationWeblogosChecked = e.target.checked;
-      if (e.target.id == "mutb-checkbox-" + item.id )
+      if (e.target.id === "mutb-checkbox-" + item.id )
         item.mutationBarchartChecked = e.target.checked;
       // if (e.target.id == "ptmw-checkbox-" + item.id )
       //   item.ptmWeblogosChecked = e.target.checked;
-      if (e.target.id == "ptmb-checkbox-" + item.id )
+      if (e.target.id === "ptmb-checkbox-" + item.id )
         item.ptmBarchartChecked = e.target.checked;
       
       
@@ -262,9 +269,9 @@ function App() {
     });
     setSelectedNodes(filtered);
   }
-  const handleTreeSwitchChange = () => {
-    setSwitchShowTreeChecked(prev => !prev);
-  };
+  // const handleTreeSwitchChange = () => {
+  //   setSwitchShowTreeChecked(prev => !prev);
+  // };
   const handleHighResChange = () => {
     setHighResChecked(prev => !prev);
   };
@@ -273,12 +280,12 @@ function App() {
   };
   
   
-  const handleDomainSwitchChange = () => {
-    setSwitchDomainChecked(prev => !prev);
-  };
-  const handleMotifSwitchChange = () => {
-    setSwitchMotifChecked(prev => !prev);
-  };
+  // const handleDomainSwitchChange = () => {
+  //   setSwitchDomainChecked(prev => !prev);
+  // };
+  // const handleMotifSwitchChange = () => {
+  //   setSwitchMotifChecked(prev => !prev);
+  // };
 
   const handleResetClick = () => {
     setOpenResetDialog(true);
@@ -337,14 +344,44 @@ function App() {
   const heightChanged = (event,value) => {
     setHeight(value);
   };
+  function toggleCheckbox(event)
+  {    
+    let id =event.target.value;
+    let element = options.find(x => x.id === id);
+    element.checked = !element.checked;
+    const modifiedOptions = options.map((item,j)=>
+    {
+      if (id === item.id)
+        item.checked = event.target.checked;
+      return item;
+    });
+    setOptions(modifiedOptions);
+  }
   const classes = useStyles();
+
+  let rendered_options = [];
+  options.forEach((element,index) =>
+  {
+    if (element.visible) 
+    {
+      let checkbox = <FormControlLabel control={
+        <Switch 
+          id={`${element.id}-checkbox`} 
+          //checked={swiches[x=>x.id === ""].visible} 
+          checked={element.checked} 
+          value={element.id} 
+          onChange={toggleCheckbox} />} label={element.name} />
+        
+      rendered_options.push(checkbox);
+    }
+  });
 
   return (
     <div className={classes.root}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{settings.title?settings.title:"AppGen"}</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <Grid item>
         <Dialog
@@ -376,7 +413,7 @@ function App() {
 
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
-          <Grid key="leftTree" className={switchShowTreeChecked ? classes.treeVisible : classes.treeInvisible} item>
+          <Grid key="leftTree" className={options.some(x => x.id === "hierarchy" && x.checked) ? classes.treeVisible : classes.treeInvisible} item>
             <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} 
             onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
@@ -391,12 +428,13 @@ function App() {
           <fieldset>
                 <legend>Settings</legend>
 
-        <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
-        
-         {/* <Switch checked={viewMode} onChange={handleViewModechange} />} /> */}
         {/* <FormControlLabel label="High-Res" control={<Switch checked={switchHighResChecked} onChange={handleHighResChange} />} />         */}
+        
+        {/* <FormControlLabel label="Hierarchy" control={<Switch checked={switchShowTreeChecked} onChange={handleTreeSwitchChange} />} />
         <FormControlLabel label="Motif" control={<Switch checked={switchMotifChecked} onChange={handleMotifSwitchChange} />} />
-        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} />
+        <FormControlLabel label="Domain Structure" control={<Switch checked={switchDomainChecked} onChange={handleDomainSwitchChange} />} /> */}
+        {rendered_options}
+        
         <FormControlLabel label="View Mode" control={<VisibilityIcon color={viewMode? "primary":"action"} fontSize="small" onClick={handleViewModechange} style={{ cursor: "pointer" }} />} />
         <FormControlLabel label="Height " labelPlacement="start" control={
         <div className="sliderHeight">
@@ -415,11 +453,11 @@ function App() {
 
         </fieldset>
           </Box>
-          <Box className={switchDomainChecked || switchMotifChecked ? "" : classes.hidden}>
+          <Box className={options.show_legend && (options.some(x => x.id === "domain" && x.checked) || options.some(x => x.id === "motif" && x.checked)) ? "" : classes.hidden}>
           <fieldset>
           <legend>Legend</legend>
             <Box display="flex" alignItems="flex-start">
-              <Box component="span" className={switchMotifChecked ? "legend-motif" : classes.hidden}>
+              <Box component="span" className={options.some(x => x.id === "motif" && x.checked) ? "legend-motif" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Lysine</Typography>} control={<img alt="betasheet" src="img/legend/lysine.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Glutamic acid</Typography>} control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>C-spine</Typography>} control={<img alt="betasheet" src="img/legend/cspine.png" />} />
@@ -429,7 +467,7 @@ function App() {
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Gatekeeper</Typography>} control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
 
               </Box>
-              <Box component="span" className={switchDomainChecked ? "legend-domain" : classes.hidden}>
+              <Box component="span" className={options.some(x => x.id === "domain" && x.checked) ? "legend-domain" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&alpha;-helix</Typography>} control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&beta;-sheet</Typography>} control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
               </Box>
@@ -442,8 +480,8 @@ function App() {
         
         </div>
 
-        <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && switchMotifChecked ? classes.motif : classes.hidden} />
-        <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && switchDomainChecked ? classes.structure : classes.hidden} />
+        <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && options.some(x => x.id === "motif" && x.checked) ? classes.motif : classes.hidden} />
+        <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && options.some(x => x.id === "domain" && x.checked) ? classes.structure : classes.hidden} />
 
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />

@@ -1,19 +1,42 @@
 export const settings = {
-    title:"Tyrosine Kinase Explorer",
-    ui: 
-    {
-        numberingMarginLeft: "28px",
+    title: "Family-specific Constraints in the Tyrosine Kinome",
+    show_legend: false,
+    ui: {
+        numberingMarginLeft: "8px",
         numberingMarginTop: "-4px",
     },
-    elements: [
+    options: [{
+            id: "hierarchy",
+            type: "checkbox",
+            name: "Hierarchy",
+            checked: true,
+            visible: true
+        },
         {
+            id: "motif",
+            type: "checkbox",
+            name: "Motif",
+            path: "",
+            checked: false,
+            visible: false
+        },
+        {
+            id: "domain",
+            type: "checkbox",
+            name: "Domain Structure",
+            path: "",
+            checked: false,
+            visible: true
+        }
+    ],
+    elements: [{
             id: "constraint",
             type: "checkbox",
-            name: "Constraint",
+            name: "Constraints",
             dirpath: "constraint/png",
             extention: "png",
             checked: true,
-            visible: false
+            visible: true
         },
         {
             id: "positive",
@@ -22,12 +45,12 @@ export const settings = {
             dirpath: "positive/png",
             extention: "png",
             checked: true,
-            visible: true
+            visible: false
         },
         {
             id: "negative",
             type: "checkbox",
-            name: "Negative",
+            name: "Background",
             dirpath: "negative/png",
             extention: "png",
             checked: false,
