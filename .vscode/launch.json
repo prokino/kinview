@@ -25,12 +25,12 @@
             "request": "launch",
             "name": "Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceRoot}",
+            "webRoot": "${workspaceRoot}/src",
             "sourceMapPathOverrides": {
               "/mnt/c/*": "/__vscode-remote-uri__/mnt/c/*",
             },
             "env": { "CI": true },
-            "disableOptimisticBPs": true,
+          
         }
         
     ]

@@ -187,14 +187,16 @@ function KinWeblogo(props) {
   const [selectedNumberingValue, setNumberingValue] = React.useState('');
   const [propChanged, setPropChanged] = React.useState(false);
   const [isExpanded, setIsExpanded] = React.useState(true);
-  const [checkboxes, setCheckboxes] = React.useState([]);
+
   const [dropdowns, setDropdowns] = React.useState([]);
 
   
   const appname= process.env.REACT_APP_NAME;
   let settings = require(`../${appname}.settings.js`).settings;
+  const [checkboxes, setCheckboxes] = React.useState(settings.elements.filter(x=>x.type==="checkbox"));
   useEffect(() => {
-      setCheckboxes(settings.elements.filter(x=>x.type==="checkbox"));
+      //setCheckboxes(settings.elements.filter(x=>x.type==="checkbox"));
+      // setCheckboxes(props.checkboxes);
       setDropdowns(settings.elements.filter(x=>x.type==="dropdown"));
   }, [settings.elements]);
 
@@ -203,7 +205,7 @@ function KinWeblogo(props) {
   // const [constraintChecked, setConstraintChecked] = React.useState(true);
   // const [positiveChecked, setPositiveChecked] = React.useState(true);
   // const [negativeChecked, setNegativeChecked] = React.useState(false);
-  const [swiches, setSwitches] = React.useState([]);
+
   //if (swiches.length === 0)
 
 
@@ -243,9 +245,9 @@ function KinWeblogo(props) {
   //   props.onChange(event);
   // };
   function toggleCheckbox(event)
-  {    
+  { 
     let id =event.target.value;
-    let element = checkboxes.filter(el => el.id === id)[0];
+    let element = checkboxes.find(el => el.id === id);
     element.checked = !element.checked;
     //setResidueChecked(prev => !prev);
     props.onChange(event);

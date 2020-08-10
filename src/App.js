@@ -121,7 +121,7 @@ function App() {
   // const [firstLabel, setFirstLabel] = React.useState('');
   // const [secondLabel, setSecondLabel] = React.useState('');
   const [selectedNode, setSelectedNode] = React.useState('');
-  const [elements, setElements] = React.useState([]);
+  const [checkboxes, setCheckboxes] = React.useState([]);
   const [options, setOptions] = React.useState([]);
 
   const [selectedNodes, setSelectedNodes] = React.useState([]);
@@ -140,7 +140,7 @@ function App() {
   const settings = require(`./${appname}.settings.js`).settings;
   useEffect(()=>
   {
-    setElements(settings.elements);
+    setCheckboxes(settings.elements.filter(x=>x.type==="checkbox"));
     setOptions(settings.options.filter(x=>x.type==="checkbox"));
   }
   ,[settings.elements,settings.options]);
@@ -154,23 +154,41 @@ function App() {
 
   const weblogoCheckboxChanged = e =>
   {
-    //let node = selectedNodes.filter(k => k.id == val.id);
-    const modifiedNodes = selectedNodes.map((item,j)=>
+
+    //const el = e.target.id; //for example: negative-checkbox-id11@Axl
+    //const id = el.lastIndexOf("-")+1; //for example: id11@Axl
+    //const checkbox = el.substring(0,el.indexOf("-")); //for example: negative
+    //let node = selectedNodes.find(k => k.id === el.substring(id));
+    
+    const modifiedNodes = selectedNodes.map((node,j)=>
     {
-      if (e.target.id === "res-checkbox-" + item.id )
-        item.residueChecked = e.target.checked;
-      if (e.target.id === "mutw-checkbox-" + item.id )
-        item.mutationWeblogosChecked = e.target.checked;
-      if (e.target.id === "mutb-checkbox-" + item.id )
-        item.mutationBarchartChecked = e.target.checked;
-      // if (e.target.id == "ptmw-checkbox-" + item.id )
-      //   item.ptmWeblogosChecked = e.target.checked;
-      if (e.target.id === "ptmb-checkbox-" + item.id )
-        item.ptmBarchartChecked = e.target.checked;
-      
-      
-      return item;
+      if (node.id === node.id)
+      {
+        debugger;
+        if (node.checkboxes.length === 0) //not initialized
+          node.checkboxes = checkboxes; //todo: copy json?
+        let chk = node.checkboxes.find( x=> x.id === e.target.defaultValue);
+        chk["checked"] = e.target.checked;
+      }
+      return node;
     });
+
+    // const modifiedNodes = selectedNodes.map((item,j)=>
+    // {
+    //   if (e.target.id === "res-checkbox-" + item.id )
+    //     item.residueChecked = e.target.checked;
+    //   if (e.target.id === "mutw-checkbox-" + item.id )
+    //     item.mutationWeblogosChecked = e.target.checked;
+    //   if (e.target.id === "mutb-checkbox-" + item.id )
+    //     item.mutationBarchartChecked = e.target.checked;
+    //   // if (e.target.id == "ptmw-checkbox-" + item.id )
+    //   //   item.ptmWeblogosChecked = e.target.checked;
+    //   if (e.target.id === "ptmb-checkbox-" + item.id )
+    //     item.ptmBarchartChecked = e.target.checked;
+      
+      
+    //   return item;
+    // });
     
     setSelectedNodes(modifiedNodes);
   }
@@ -183,7 +201,7 @@ function App() {
           height={height} 
           onRemove={weblogoRemove(item.value)}
           onChange={weblogoCheckboxChanged}
-          switches = {item.swiches}
+          checkboxes = {item.checkboxes}
           // residueChecked={item.value.residueChecked} 
           // mutationWeblogosChecked={item.value.mutationWeblogosChecked}
           // mutationBarchartChecked={item.value.mutationBarchartChecked}
@@ -207,28 +225,27 @@ function App() {
     setSelectedNodes(arrayMove(selectedNodes, oldIndex, newIndex));
   };
 
-
+  //weblogo options (e.g., weblogo checkboxes) initialize here, when a node is selected
   function treeCheckboxChanged(node, checked) {
-    console.log("id=" + node.id);
-    console.log("checked=" + checked);
-    console.log("treeCheckboxChanged:" + selectedNodes.length);
 
     let alreadyAdded =selectedNodes.some(item => item.id === node.id);
     
     if (checked && !alreadyAdded) { //add the selection to selectedNodes
       setSelectedNode(node);
-      let switches = elements.reduce(function (res, item) {
-        if (item.switchable) {
-          // creating checkboxes from settings, for example:
-          // node.residueChecked = true;
-          // node.ptmChecked = false;
-          let obj = {};
-          obj[item.id + "Checked"] = checked;
-          res.push(obj);
-        }
-        return res;
-      }, []);
-      node.swiches = switches;   
+      if (!node.checkboxes)
+        node.checkboxes = JSON.parse(JSON.stringify(checkboxes));
+      // let checkboxes = elements.reduce(function (res, item) {
+      //   if (item.type === "checkbox") {
+      //     // creating checkboxes from settings, for example:
+      //     // node.residueChecked = true;
+      //     // node.ptmChecked = false;
+      //     let obj = {};
+      //     obj[item.id] = {"checked":checked};
+      //     res.push(obj);
+      //   }
+      //   return res;
+      // }, []);
+      // node.options = checkboxes;   
       setSelectedNodes(selectedNodes => [...selectedNodes, node]);
     }
     else if(!checked) //remvoe the Selection
@@ -347,15 +364,15 @@ function App() {
   function toggleCheckbox(event)
   {    
     let id =event.target.value;
-    let element = options.find(x => x.id === id);
+    let element = checkboxes.find(x => x.id === id);
     element.checked = !element.checked;
-    const modifiedOptions = options.map((item,j)=>
+    const modifiedOptions = checkboxes.map((item,j)=>
     {
       if (id === item.id)
         item.checked = event.target.checked;
       return item;
     });
-    setOptions(modifiedOptions);
+    setCheckboxes(modifiedOptions);
   }
   const classes = useStyles();
 
@@ -367,7 +384,7 @@ function App() {
       let checkbox = <FormControlLabel control={
         <Switch 
           id={`${element.id}-checkbox`} 
-          //checked={swiches[x=>x.id === ""].visible} 
+          //checked={checkboxes[x=>x.id === ""].visible} 
           checked={element.checked} 
           value={element.id} 
           onChange={toggleCheckbox} />} label={element.name} />
@@ -413,7 +430,7 @@ function App() {
 
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
-          <Grid key="leftTree" className={options.some(x => x.id === "hierarchy" && x.checked) ? classes.treeVisible : classes.treeInvisible} item>
+          <Grid key="leftTree" className={checkboxes.some(x => x.id === "hierarchy" && x.checked) ? classes.treeVisible : classes.treeInvisible} item>
             <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} 
             onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
@@ -453,11 +470,11 @@ function App() {
 
         </fieldset>
           </Box>
-          <Box className={options.show_legend && (options.some(x => x.id === "domain" && x.checked) || options.some(x => x.id === "motif" && x.checked)) ? "" : classes.hidden}>
+          <Box className={checkboxes.show_legend && (checkboxes.some(x => x.id === "domain" && x.checked) || checkboxes.some(x => x.id === "motif" && x.checked)) ? "" : classes.hidden}>
           <fieldset>
           <legend>Legend</legend>
             <Box display="flex" alignItems="flex-start">
-              <Box component="span" className={options.some(x => x.id === "motif" && x.checked) ? "legend-motif" : classes.hidden}>
+              <Box component="span" className={checkboxes.some(x => x.id === "motif" && x.checked) ? "legend-motif" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Lysine</Typography>} control={<img alt="betasheet" src="img/legend/lysine.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Glutamic acid</Typography>} control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>C-spine</Typography>} control={<img alt="betasheet" src="img/legend/cspine.png" />} />
@@ -467,7 +484,7 @@ function App() {
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Gatekeeper</Typography>} control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
 
               </Box>
-              <Box component="span" className={options.some(x => x.id === "domain" && x.checked) ? "legend-domain" : classes.hidden}>
+              <Box component="span" className={checkboxes.some(x => x.id === "domain" && x.checked) ? "legend-domain" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&alpha;-helix</Typography>} control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&beta;-sheet</Typography>} control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
               </Box>
@@ -480,8 +497,8 @@ function App() {
         
         </div>
 
-        <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && options.some(x => x.id === "motif" && x.checked) ? classes.motif : classes.hidden} />
-        <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && options.some(x => x.id === "domain" && x.checked) ? classes.structure : classes.hidden} />
+        <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && checkboxes.some(x => x.id === "motif" && x.checked) ? classes.motif : classes.hidden} />
+        <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && checkboxes.some(x => x.id === "domain" && x.checked) ? classes.structure : classes.hidden} />
 
                 {
                   <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />

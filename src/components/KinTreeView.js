@@ -171,6 +171,7 @@ function KinTreeView(props) {
 
   const filterInput = useRef(null);
 
+  //selecting root as default selected item
   useEffect(() => {
     let node = originalNodes.filter(x=> x.id === rootid)[0];
     node.checked=true;    
