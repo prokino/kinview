@@ -143,7 +143,7 @@ function App() {
     setCheckboxes(settings.elements.filter(x=>x.type==="checkbox"));
     setOptions(settings.options.filter(x=>x.type==="checkbox"));
   }
-  ,[settings.elements,settings.options]);
+  ,[settings,settings.elements,settings.options]);
     
 
   const weblogoRemove= node => e =>
@@ -155,20 +155,18 @@ function App() {
   const weblogoCheckboxChanged = e =>
   {
 
-    //const el = e.target.id; //for example: negative-checkbox-id11@Axl
-    //const id = el.lastIndexOf("-")+1; //for example: id11@Axl
+    const el = e.target.id; //for example: negative-checkbox-id11@Axl
+    const id = el.substring(el.lastIndexOf("-")+1); //for example: id11@Axl
     //const checkbox = el.substring(0,el.indexOf("-")); //for example: negative
     //let node = selectedNodes.find(k => k.id === el.substring(id));
     
     const modifiedNodes = selectedNodes.map((node,j)=>
     {
-      if (node.id === node.id)
+      if (node.id === id)
       {
-        debugger;
-        if (node.checkboxes.length === 0) //not initialized
-          node.checkboxes = checkboxes; //todo: copy json?
-        let chk = node.checkboxes.find( x=> x.id === e.target.defaultValue);
-        chk["checked"] = e.target.checked;
+        //if (node.checkboxes.length === 0) //not initialized
+        node.checkboxes = JSON.parse(JSON.stringify(node.checkboxes)); //a deep copy of checkboxes
+        node.checkboxes.find( x=> x.id === e.target.defaultValue)["checked"] = e.target.checked;
       }
       return node;
     });
@@ -361,18 +359,18 @@ function App() {
   const heightChanged = (event,value) => {
     setHeight(value);
   };
-  function toggleCheckbox(event)
+  function toggleOptions(event)
   {    
     let id =event.target.value;
-    let element = checkboxes.find(x => x.id === id);
+    let element = settings.options.find(x => x.id === id);
     element.checked = !element.checked;
-    const modifiedOptions = checkboxes.map((item,j)=>
+    const modifiedOptions = options.map((item,j)=>
     {
       if (id === item.id)
         item.checked = event.target.checked;
       return item;
     });
-    setCheckboxes(modifiedOptions);
+    setOptions(modifiedOptions);
   }
   const classes = useStyles();
 
@@ -387,7 +385,7 @@ function App() {
           //checked={checkboxes[x=>x.id === ""].visible} 
           checked={element.checked} 
           value={element.id} 
-          onChange={toggleCheckbox} />} label={element.name} />
+          onChange={toggleOptions} />} label={element.name} />
         
       rendered_options.push(checkbox);
     }
@@ -430,7 +428,7 @@ function App() {
 
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
-          <Grid key="leftTree" className={checkboxes.some(x => x.id === "hierarchy" && x.checked) ? classes.treeVisible : classes.treeInvisible} item>
+          <Grid key="leftTree" className={options.some(x => x.id === "hierarchy" && x.checked) ? classes.treeVisible : classes.treeInvisible} item>
             <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} 
             onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
@@ -470,11 +468,12 @@ function App() {
 
         </fieldset>
           </Box>
-          <Box className={checkboxes.show_legend && (checkboxes.some(x => x.id === "domain" && x.checked) || checkboxes.some(x => x.id === "motif" && x.checked)) ? "" : classes.hidden}>
+          <Box className={settings.show_legend && (options.some(x => x.id === "domain" && x.checked) || options.some(x => x.id === "motif" && x.checked)) ? "" : classes.hidden}>
           <fieldset>
           <legend>Legend</legend>
             <Box display="flex" alignItems="flex-start">
-              <Box component="span" className={checkboxes.some(x => x.id === "motif" && x.checked) ? "legend-motif" : classes.hidden}>
+              <Box component="span" 
+                className={options.some(x => x.id === "motif" && x.checked) ? "legend-motif" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Lysine</Typography>} control={<img alt="betasheet" src="img/legend/lysine.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Glutamic acid</Typography>} control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>C-spine</Typography>} control={<img alt="betasheet" src="img/legend/cspine.png" />} />
@@ -484,7 +483,7 @@ function App() {
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Gatekeeper</Typography>} control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
 
               </Box>
-              <Box component="span" className={checkboxes.some(x => x.id === "domain" && x.checked) ? "legend-domain" : classes.hidden}>
+              <Box component="span" className={options.some(x => x.id === "domain" && x.checked) ? "legend-domain" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&alpha;-helix</Typography>} control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&beta;-sheet</Typography>} control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
               </Box>
@@ -493,16 +492,13 @@ function App() {
         </fieldset>
           </Box>
         </Box>
-        
-        
         </div>
 
-        <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && checkboxes.some(x => x.id === "motif" && x.checked) ? classes.motif : classes.hidden} />
-        <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && checkboxes.some(x => x.id === "domain" && x.checked) ? classes.structure : classes.hidden} />
-
-                {
-                  <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
-                }
+          <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && options.some(x => x.id === "motif" && x.checked) ? classes.motif : classes.hidden} />
+          <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && options.some(x => x.id === "domain" && x.checked) ? classes.structure : classes.hidden} />
+              {
+                <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
+              }
 
               </Paper>
             </div>

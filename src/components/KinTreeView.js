@@ -156,9 +156,8 @@ function KinTreeView(props) {
   const appname= process.env.REACT_APP_NAME;
   const settings = require(`../${appname}.settings.js`).settings;
   let tree = require(`../${appname}/data/classification.json`);
+  if (appname === "kinase") tree = tree[0].concat(tree[1]);
   const rootid = tree[0]["id"]; //const rootid = appname === "kinase" ? "id@PK":"id@GTA";
-  if (appname === "kinase")
-    tree = tree[0].concat(tree[1]);
   const originalNodes = tree.map((n)=>{n.checked=false;return n;});
   const nodesCopy = JSON.parse(JSON.stringify(originalNodes));
   
@@ -236,7 +235,7 @@ if (nodes)    return nodes.map((node, index) => {
   }
 
   let showOnlyDark='';
-  if (settings.controls && settings.controls.includes('treeview_only_dark'))
+  if (settings.options.some(x=>x.id === "treeview_only_dark"))
       showOnlyDark = <FormControlLabel style={{width:'max-content'}} label="Only Dark Kinase" control={<Switch checked={switchOnlyDark} onChange={handleOnlyDark} />} />
   
   let autoComplete='';

@@ -209,23 +209,23 @@ function KinWeblogo(props) {
   //if (swiches.length === 0)
 
 
-  const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
-  const [mutationBarchartChecked, setMutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
-  // const [ptmWeblogosChecked, setPtmWeblogosChecked] = React.useState(props.ptmWeblogosChecked);
-  const [ptmBarchartChecked, setPtmBarchartChecked] = React.useState(props.ptmBarchartChecked);
+  // const [mutationWeblogosChecked, setMutationWeblogosChecked] = React.useState(props.mutationWeblogosChecked);
+  // const [mutationBarchartChecked, setMutationBarchartChecked] = React.useState(props.mutationBarchartChecked);
+  // // const [ptmWeblogosChecked, setPtmWeblogosChecked] = React.useState(props.ptmWeblogosChecked);
+  // const [ptmBarchartChecked, setPtmBarchartChecked] = React.useState(props.ptmBarchartChecked);
   const DragHandle = sortableHandle(() => <ReorderIcon />);
   const numberingclass = classNames({
     "numberingdiv": true,
     "hidden": !checkboxes.some(x => x.checked)
   });
 
-  function toggleVisibility(event,name)
-  {
-    var item = checkboxes.find(x => x.name === name);
-    if (item) 
-      item.checked = !item.checked;
-    setCheckboxes(checkboxes);
-  }
+  // function toggleVisibility(event,name)
+  // {
+  //   var item = checkboxes.find(x => x.name === name);
+  //   if (item) 
+  //     item.checked = !item.checked;
+  //   setCheckboxes(checkboxes);
+  // }
 
   // function toggleResidue(event) {
   //   setResidueChecked(prev => !prev);
@@ -252,22 +252,22 @@ function KinWeblogo(props) {
     //setResidueChecked(prev => !prev);
     props.onChange(event);
   }
-  function toggleMutationBarchart(event) {
-    setMutationBarchartChecked(prev => !prev);
-    props.onChange(event);
-  };
-  function toggleMutationWeblogos(event) {
-    setMutationWeblogosChecked(prev => !prev);
-    props.onChange(event);
-  };
+  // function toggleMutationBarchart(event) {
+  //   setMutationBarchartChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
+  // function toggleMutationWeblogos(event) {
+  //   setMutationWeblogosChecked(prev => !prev);
+  //   props.onChange(event);
+  // };
   // function togglePtmWeblogos(event) {
   //   setPtmWeblogosChecked(prev => !prev);
   //   props.onChange(event);
   // };
-  function togglePtmBarchart(event) {
-    setPtmBarchartChecked(prev => !prev);
-    props.onChange(event);
-  }; 
+  // function togglePtmBarchart(event) {
+  //   setPtmBarchartChecked(prev => !prev);
+  //   props.onChange(event);
+  // }; 
   //componentDidMount
 
   function toggleExpanded(event) {
