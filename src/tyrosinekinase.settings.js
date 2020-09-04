@@ -4,6 +4,7 @@ export const settings = {
     ui: {
         numberingMarginLeft: "8px",
         numberingMarginTop: "-4px",
+        numberingMinWidth: "18.55px"
     },
     options: [{
             id: "hierarchy",

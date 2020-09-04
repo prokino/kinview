@@ -187,13 +187,13 @@ function KinWeblogo(props) {
   const [selectedNumberingValue, setNumberingValue] = React.useState('');
   const [propChanged, setPropChanged] = React.useState(false);
   const [isExpanded, setIsExpanded] = React.useState(true);
-
   const [dropdowns, setDropdowns] = React.useState([]);
 
-  
+
   const appname= process.env.REACT_APP_NAME;
   let settings = require(`../${appname}.settings.js`).settings;
-  const [checkboxes, setCheckboxes] = React.useState(settings.elements.filter(x=>x.type==="checkbox"));
+  
+  const [checkboxes, setCheckboxes] = React.useState(props.checkboxes && props.checkboxes.length>0?props.checkboxes :settings.elements.filter(x=>x.type==="checkbox"));
   useEffect(() => {
       //setCheckboxes(settings.elements.filter(x=>x.type==="checkbox"));
       // setCheckboxes(props.checkboxes);
@@ -478,7 +478,9 @@ dropdowns.forEach((element,index) =>
           </Box> */}
    
           <div className={numberingclass} style={{marginLeft: settings.ui.numberingMarginLeft, marginTop: settings.ui.numberingMarginTop}}>
-            {selectedNumbering ? selectedNumbering.value.map((n, index) => n === null ? <span key={`p${index}`} className="v">-</span> : <span key={`p${index}`} onClick={highlightColumn} className="v">{n}</span>) : ""}
+            {selectedNumbering ? selectedNumbering.value.map(
+              (n, index) => 
+               <span key={`p${index}`} onClick={highlightColumn} style={{minWidth:`${settings.ui.numberingMinWidth}`, writingMode:"vertical-lr"}}>{n === null ? "-" : n}</span>) : ""}
           </div>
 
 

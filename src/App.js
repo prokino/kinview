@@ -165,7 +165,7 @@ function App() {
       if (node.id === id)
       {
         //if (node.checkboxes.length === 0) //not initialized
-        node.checkboxes = JSON.parse(JSON.stringify(node.checkboxes)); //a deep copy of checkboxes
+        node.checkboxes = node.checkboxes.length>0? JSON.parse(JSON.stringify(node.checkboxes)):settings.elements.filter(x=>x.type==="checkbox"); //a deep copy of checkboxes
         node.checkboxes.find( x=> x.id === e.target.defaultValue)["checked"] = e.target.checked;
       }
       return node;
@@ -199,11 +199,11 @@ function App() {
           height={height} 
           onRemove={weblogoRemove(item.value)}
           onChange={weblogoCheckboxChanged}
-          checkboxes = {item.checkboxes}
+          checkboxes = {item.value.checkboxes}
           // residueChecked={item.value.residueChecked} 
           // mutationWeblogosChecked={item.value.mutationWeblogosChecked}
           // mutationBarchartChecked={item.value.mutationBarchartChecked}
-          ptmBarchartChecked={item.value.ptmBarchartChecked}
+          //ptmBarchartChecked={item.value.ptmBarchartChecked}
           viewMode = {viewMode}
            />
     </div>

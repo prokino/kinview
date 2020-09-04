@@ -3,8 +3,9 @@ export const settings = {
     title: "KinView (Protein Kinase Viewer)",
     show_legend: true,
     ui: {
-        numberingMarginLeft: "8px",
-        numberingMarginTop: "-4px",
+        numberingMarginLeft: "28px",
+        numberingMarginTop: "-1px",
+        numberingMinWidth: "20.01px"
     },
     options: [
         {
@@ -54,7 +55,7 @@ export const settings = {
             id: "mutant_weblogo",
             type: "checkbox",
             group: "Mutant Type",
-            name: "Weblogo",
+            name: "Mutant/Weblogo",
             dirpath: "mutations/weblogos/png",
             extention: "png",
             checked: false,
@@ -64,7 +65,7 @@ export const settings = {
             id: "barchart_weblogo",
             type: "checkbox",
             group: "Mutant Type",
-            name: "Barchart",
+            name: "Mutant/Barchart",
             dirpath: "mutations/barchart/png",
             extention: "png",
             checked: false,

@@ -1,5 +1,34 @@
 export const settings = {
     title:"GTExplorer",
+    show_legend: true,
+    ui: {
+        numberingMarginLeft: "48px",
+        numberingMarginTop: "-12px",
+        numberingMinWidth: "20.76px"
+    },
+    options: [
+        {
+            id: "hierarchy",
+            type: "checkbox",
+            name: "Hierarchy",
+            checked: true,
+            visible: true
+        },
+        {
+            id: "motif",
+            type: "checkbox",
+            name: "Motif",
+            checked: false,
+            visible: true
+        },
+        {
+            id: "domain",
+            type: "checkbox",
+            name: "Domain Structure",
+            checked: false,
+            visible: true
+        }
+    ],
     elements: [{
             id: "weblogo",
             type: "checkbox",
