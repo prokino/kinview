@@ -6,7 +6,7 @@
 |---	|---	|
 |   KinView	|   [![Netlify Status](https://api.netlify.com/api/v1/badges/b4c08ab1-96fd-4caf-ab62-54bd1fe3bd1b/deploy-status)](https://app.netlify.com/sites/uga-kinview/deploys)|
 |   GTA Explorer	|   [![Netlify Status](https://api.netlify.com/api/v1/badges/08f203b3-bdd8-4931-b464-86d37e51acf4/deploy-status)](https://app.netlify.com/sites/uga-gta/deploys)	|
-|   Tyrosinekinase	|  [![Netlify Status](https://api.netlify.com/api/v1/badges/9255ffc6-82fb-4eb6-ad37-56d67e52766d/deploy-status)](https://app.netlify.com/sites/uga-tyrosinekinase/deploys)|
+|   Tyrosinekinase	|  Private Project|
 |   	|   	|
 
 
