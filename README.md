@@ -30,6 +30,6 @@ You might build and run this project on your local machine. Your application wil
 - `npm run build` to compile and build the project
 - `cp -r build/* ../` to replace the old compiled files with new ones
 
-Note 1: if there was no `source` directory in `/var/www/html/kinview/`, clone this repository there
-Note 2: there should be an environment variable `REACT_APP_NAME` having value `kinase`, if not, run `env REACT_APP_NAME=kinase`
+1. Note: if there was no `source` directory in `/var/www/html/kinview/`, clone this repository there
+2. Note: there should be an environment variable `REACT_APP_NAME` having value `kinase`, if not, run `env REACT_APP_NAME=kinase`
 
