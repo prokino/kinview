@@ -19,25 +19,17 @@ A sample application using the Protein Family Browser. GTA description..
 ## Installation
 You might build and run this project on your local machine. Your application will work offline without internet connection anfter building. Or, you can follow the Publish Online section to publish your application on netlify.com. Of course, you can use other CI/CD platform or a web server (e.g., nginx, apache) to host the application.
 
-### Offline Setup
-The offline setup means no internet connection required after the building process. However, you can still access your application on a local network or host it on your own web server.
-
 #### Pre-requirements
 - Install [Node JS](https://nodejs.org/en/download/)
-#### Steps
-- Modify package.json by adding a new line in the scripts section to start the application. For example: 
-`"start_ApplicationName": "env REACT_APP_NAME=ApplicationName react-scripts start HOST=0.0.0.0"`
-- `npm install` to install npm packages in the source code directory (it takes a few minutes)
-- Run the script added to package.json using npm. For example: `npm start_ApplicationName`
 
-### Online Setup
-- Clone this repository
-- Create an account on netlify.com
-- Connect Netlify to your GitHub account
-- Choose a website name, and after each change you make on the repository the website is updated.
+### Updating KinView on http://prokino.uga.edu/kinview/
+- `cd /var/www/html/kinview/source` to navigate to the source directory
+- `git pull` to update the source code
+- `npm install` to install required npm packages in the source directory
+    - if `npm` command not found, add `node` to the path: `export PATH=$PATH:/opt/rh/rh-nodejs12/root/usr/bin`
+- `npm run build` to compile and build the project
+- `cp -r build/* ../` to replace the old compiled files with new ones
 
-
-## Development
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Note 1: if there was no `source` directory in `/var/www/html/kinview/`, clone this repository there
+Note 2: there should be an environment variable `REACT_APP_NAME` having value `kinase`, if not, run `env REACT_APP_NAME=kinase`
 
