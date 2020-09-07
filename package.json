@@ -2,7 +2,7 @@
   "name": "kinview-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://prokino.uga.edu/kinview/",
+  "homepage": ".",
   "///homepage": "https://prokino.github.io/kinview",
   "//homepage": "https://uga-gta.netlify.app/",
   "author": "Saber Soleymani",
@@ -30,7 +30,7 @@
     "sequelize": "^6.3.3"
   },
   "main": "public/electron.js",
-  "proxy": "http://localhost:8085",
+  "//proxy": "http://localhost:8085",
   "scripts": {
     "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
     "start": "react-scripts start HOST=0.0.0.0",
