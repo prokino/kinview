@@ -244,7 +244,7 @@ if (nodes)    return nodes.map((node, index) => {
             size="small"
             //ref={filterInput}
             id="input-with-icon-grid" 
-            options={switchOnlyDark?darkKinase:undefined}
+            options={switchOnlyDark?darkKinase:originalNodes}
             getOptionLabel={option => option.value}
             onInputChange={handleFilterChange}
             { ...( !switchOnlyDark && { freeSolo: true } ) } 
