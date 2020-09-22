@@ -4,6 +4,7 @@
         "value": "FPVR",
         "path": "FPVR",
         "members": [
+            "alignment",
             "RET",
             "FGFR1",
             "FGFR2",
@@ -26,6 +27,7 @@
         "value": "FPVR",
         "path": "FPVR",
         "members": [
+            "alignment",
             "RET"
         ],
         "nodes": [
@@ -35,6 +37,7 @@
                 "value": "Ret",
                 "path": "Ret",
                 "members": [
+                    "alignment",
                     "RET"
                 ],
                 "nodes": []
@@ -45,6 +48,7 @@
                 "value": "FGFR",
                 "path": "FGFR",
                 "members": [
+                    "alignment",
                     "FGFR1",
                     "FGFR2",
                     "FGFR4",
@@ -58,6 +62,7 @@
                 "value": "PVR",
                 "path": "PVR",
                 "members": [
+                    "alignment",
                     "FLT1",
                     "FLT4",
                     "KDR",
@@ -73,6 +78,7 @@
                         "type": "subfamily",
                         "value": "VEGFR",
                         "members": [
+                            "alignment",
                             "FLT1",
                             "FLT4",
                             "KDR"
@@ -85,6 +91,7 @@
                         "type": "subfamily",
                         "value": "PDGFR",
                         "members": [
+                            "alignment",
                             "PDGFRb",
                             "PDGFRa"
                         ],
@@ -96,6 +103,7 @@
                         "type": "subfamily",
                         "value": "Kit",
                         "members": [
+                            "alignment",
                             "KIT"
                         ],
                         "path": "Kit",
@@ -106,6 +114,7 @@
                         "type": "subfamily",
                         "value": "CSF1R",
                         "members": [
+                            "alignment",
                             "FMS"
                         ],
                         "path": "CSF1R",
@@ -116,6 +125,7 @@
                         "type": "subfamily",
                         "value": "Flt3",
                         "members": [
+                            "alignment",
                             "FLT3"
                         ],
                         "path": "Flt3",
@@ -131,6 +141,7 @@
         "value": "Tie",
         "path": "Tie",
         "members": [
+            "alignment",
             "TIE1",
             "TIE2"
         ],
@@ -142,6 +153,7 @@
         "value": "EGFR",
         "path": "EGFR",
         "members": [
+            "alignment",
             "EGFR",
             "HER2",
             "HER3",
@@ -155,6 +167,7 @@
         "value": "Axl",
         "path": "Axl",
         "members": [
+            "alignment",
             "AXL",
             "TYRO3",
             "MER"
@@ -167,6 +180,7 @@
         "value": "Met",
         "path": "Met",
         "members": [
+            "alignment",
             "MET",
             "RON"
         ],
@@ -178,6 +192,7 @@
         "value": "Ryk",
         "path": "Ryk",
         "members": [
+            "alignment",
             "RYK"
         ],
         "nodes": []
@@ -188,6 +203,7 @@
         "value": "IRKL",
         "path": "IRKL",
         "members": [
+            "alignment",
             "CCK4",
             "LTK",
             "ALK",
@@ -214,6 +230,7 @@
                 "value": "Ror",
                 "path": "Ror",
                 "members": [
+                    "alignment",
                     "ROR1",
                     "ROR2"
                 ],
@@ -225,6 +242,7 @@
                 "value": "Trk",
                 "path": "Trk",
                 "members": [
+                    "alignment",
                     "TRKA",
                     "TRKC",
                     "TRKB"
@@ -237,6 +255,7 @@
                 "value": "Musk",
                 "path": "Musk",
                 "members": [
+                    "alignment",
                     "MUSK"
                 ],
                 "nodes": []
@@ -247,6 +266,7 @@
                 "value": "DDR",
                 "path": "DDR",
                 "members": [
+                    "alignment",
                     "DDR1",
                     "DDR2"
                 ],
@@ -258,6 +278,7 @@
                 "value": "InsR",
                 "path": "InsR",
                 "members": [
+                    "alignment",
                     "INSR",
                     "IGF1R",
                     "IRR"
@@ -270,6 +291,7 @@
                 "value": "Sev",
                 "path": "Sev",
                 "members": [
+                    "alignment",
                     "ROS"
                 ],
                 "nodes": []
@@ -280,6 +302,7 @@
                 "value": "ALK",
                 "path": "ALK",
                 "members": [
+                    "alignment",
                     "LTK",
                     "ALK"
                 ],
@@ -291,6 +314,7 @@
                 "value": "CCK4",
                 "path": "CCK4",
                 "members": [
+                    "alignment",
                     "CCK4"
                 ],
                 "nodes": []
@@ -301,6 +325,7 @@
                 "value": "Lmr",
                 "path": "Lmr",
                 "members": [
+                    "alignment",
                     "LMR1",
                     "LMR2",
                     "LMR3"
@@ -315,6 +340,7 @@
         "value": "Eph",
         "path": "Eph",
         "members": [
+            "alignment",
             "EphA5",
             "EphA3",
             "EphA4",
@@ -338,6 +364,7 @@
         "value": "SrcM",
         "path": "SrcM",
         "members": [
+            "alignment",
             "FYN",
             "YES",
             "FGR",
@@ -362,6 +389,7 @@
                 "value": "SrcA",
                 "path": "SrcA",
                 "members": [
+                    "alignment",
                     "FYN",
                     "YES",
                     "FGR",
@@ -375,6 +403,7 @@
                 "value": "SrcB",
                 "path": "SrcB",
                 "members": [
+                    "alignment",
                     "LCK",
                     "LYN",
                     "HCK",
@@ -388,6 +417,7 @@
                 "value": "Frk",
                 "path": "Frk",
                 "members": [
+                    "alignment",
                     "FRK"
                 ],
                 "nodes": []
@@ -398,6 +428,7 @@
                 "value": "Tec",
                 "path": "Tec",
                 "members": [
+                    "alignment",
                     "TEC",
                     "TXK",
                     "BMX",
@@ -412,6 +443,7 @@
                 "value": "Abl",
                 "path": "Abl",
                 "members": [
+                    "alignment",
                     "ABL",
                     "ARG"
                 ],
@@ -425,61 +457,100 @@
         "value": "SRM",
         "path": "SRM",
         "members": [
+            "alignment",
             "BRK",
             "SRM"
         ],
         "nodes": []
     },
     {
-        "id": "id32@Csk",
+        "id": "id32@Src-Aque1",
+        "type": "subgroup",
+        "value": "Src-Aque1",
+        "path": "Src-Aque1",
+        "members": [
+            "alignment"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id33@Csk",
         "type": "subgroup",
         "value": "Csk",
         "path": "Csk",
         "members": [
+            "alignment",
             "CSK",
             "CTK"
         ],
         "nodes": []
     },
     {
-        "id": "id33@Fer",
+        "id": "id34@Fer",
         "type": "subgroup",
         "value": "Fer",
         "path": "Fer",
         "members": [
+            "alignment",
             "FES",
             "FER"
         ],
-        "nodes": []
+        "nodes": [
+            {
+                "id": "id35@other-Fer",
+                "type": "family",
+                "value": "other-Fer",
+                "path": "other-Fer",
+                "members": [
+                    "alignment",
+                    "FES",
+                    "FER"
+                ],
+                "nodes": []
+            },
+            {
+                "id": "id36@nematode-Fer",
+                "type": "family",
+                "value": "nematode-Fer",
+                "path": "nematode-Fer",
+                "members": [
+                    "alignment"
+                ],
+                "nodes": []
+            }
+        ]
     },
     {
-        "id": "id34@FAK",
+        "id": "id37@FAK",
         "type": "subgroup",
         "value": "FAK",
         "path": "FAK",
         "members": [
+            "alignment",
             "FAK",
             "PYK2"
         ],
         "nodes": []
     },
     {
-        "id": "id35@Syk",
+        "id": "id38@Syk",
         "type": "subgroup",
         "value": "Syk",
         "path": "Syk",
         "members": [
+            "alignment",
             "ZAP70",
             "SYK"
         ],
         "nodes": []
     },
     {
-        "id": "id36@Jak",
+        "id": "id39@Jak",
         "type": "subgroup",
         "value": "Jak",
         "path": "Jak",
         "members": [
+            "alignment",
             "TYK2",
             "JAK1",
             "JAK2",
@@ -488,11 +559,12 @@
         "nodes": []
     },
     {
-        "id": "id37@JakB",
+        "id": "id40@JakB",
         "type": "subgroup",
         "value": "JakB",
         "path": "JakB",
         "members": [
+            "alignment",
             "TYK2b",
             "JAK1b",
             "JAK2b",
@@ -501,23 +573,75 @@
         "nodes": []
     },
     {
-        "id": "id38@Ack",
+        "id": "id41@Ack",
         "type": "subgroup",
         "value": "Ack",
         "path": "Ack",
         "members": [
+            "alignment",
             "ACK",
             "TNK1"
         ],
         "nodes": []
     },
     {
-        "id": "id39@STYK1",
+        "id": "id42@STYK1",
         "type": "subgroup",
         "value": "STYK1",
         "path": "STYK1",
         "members": [
+            "alignment",
             "SuRTK106"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id43@TK-Sp1",
+        "type": "subgroup",
+        "value": "TK-Sp1",
+        "path": "TK-Sp1",
+        "members": [
+            "alignment"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id44@HMTK",
+        "type": "subgroup",
+        "value": "HMTK",
+        "path": "HMTK",
+        "members": [
+            "alignment"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id45@KIN16",
+        "type": "subgroup",
+        "value": "KIN16",
+        "path": "KIN16",
+        "members": [
+            "alignment"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id46@KIN6",
+        "type": "subgroup",
+        "value": "KIN6",
+        "path": "KIN6",
+        "members": [
+            "alignment"
+        ],
+        "nodes": []
+    },
+    {
+        "id": "id47@RTKC",
+        "type": "subgroup",
+        "value": "RTKC",
+        "path": "RTKC",
+        "members": [
+            "alignment"
         ],
         "nodes": []
     }
