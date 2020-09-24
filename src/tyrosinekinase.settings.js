@@ -27,7 +27,9 @@ export const settings = {
             name: "Domain Structure",
             path: "",
             checked: false,
-            visible: true
+            visible: true,
+            width: 4840,
+            marginLeft: 20
         }
     ],
     elements: [{

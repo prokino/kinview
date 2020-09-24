@@ -346,7 +346,9 @@ function App() {
   //     ctx.stroke();
   //   }
   // }
-
+  const isEnabled = (id) => {
+    return options.some(x => x.id === id && x.checked);
+  }
   const handleCloseYes = () => {
     setOpenResetDialog(false);
     setSelectedNodes([]);
@@ -428,7 +430,7 @@ function App() {
 
       <Grid item xs={12}>
         <Grid container justify="flex-start" spacing={1} className={classes.nowrap}>
-          <Grid key="leftTree" className={options.some(x => x.id === "hierarchy" && x.checked) ? classes.treeVisible : classes.treeInvisible} item>
+          <Grid key="leftTree" className={isEnabled("hierarchy") ? classes.treeVisible : classes.treeInvisible} item>
             <KinTreeView darkKinase={darkKinase} selectedNodes={selectedNodes} 
             onCheckBoxesChanged={treeCheckboxChanged} />
           </Grid>
@@ -468,12 +470,12 @@ function App() {
 
         </fieldset>
           </Box>
-          <Box className={settings.show_legend && (options.some(x => x.id === "domain" && x.checked) || options.some(x => x.id === "motif" && x.checked)) ? "" : classes.hidden}>
+          <Box className={settings.show_legend && (isEnabled("domain") || isEnabled("motif")) ? "" : classes.hidden}>
           <fieldset>
           <legend>Legend</legend>
             <Box display="flex" alignItems="flex-start">
               <Box component="span" 
-                className={options.some(x => x.id === "motif" && x.checked) ? "legend-motif" : classes.hidden}>
+                className={isEnabled("motif") ? "legend-motif" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Lysine</Typography>} control={<img alt="betasheet" src="img/legend/lysine.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Glutamic acid</Typography>} control={<img alt="betasheet" src="img/legend/glutamic.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>C-spine</Typography>} control={<img alt="betasheet" src="img/legend/cspine.png" />} />
@@ -483,7 +485,7 @@ function App() {
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>Gatekeeper</Typography>} control={<img alt="betasheet" src="img/legend/gatekeeper.png" />} />
 
               </Box>
-              <Box component="span" className={options.some(x => x.id === "domain" && x.checked) ? "legend-domain" : classes.hidden}>
+              <Box component="span" className={isEnabled("domain") ? "legend-domain" : classes.hidden}>
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&alpha;-helix</Typography>} control={<img alt="betasheet" src="img/legend/alphahelix.png" />} />
                 <FormControlLabel labelPlacement='end' label={<Typography className={classes.legendLabel}>&beta;-sheet</Typography>} control={<img alt="betasheet" src="img/legend/betasheet.png" />} />
               </Box>
@@ -494,8 +496,13 @@ function App() {
         </Box>
         </div>
 
-          <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && options.some(x => x.id === "motif" && x.checked) ? classes.motif : classes.hidden} />
-          <img src={`${appname}/img/structure.png`} alt="Domain Structure" style={{width:4840,marginLeft:43}}  className={selectedNode && options.some(x => x.id === "domain" && x.checked) ? classes.structure : classes.hidden} />
+          <img src={`${appname}/img/motif.png`} alt="Motif" style={{width:4840,marginLeft:43}} className={selectedNode && isEnabled("motif") ? classes.motif : classes.hidden} />
+          <img src={`${appname}/img/structure.png`} alt="Domain Structure" 
+                style={
+                      {
+                        width: isEnabled("domain") && options.filter(x => x.id === "domain")[0].width ? options.filter(x => x.id === "domain")[0].width:4840,
+                        marginLeft: isEnabled("domain") && options.filter(x => x.id === "domain")[0].marginLeft ? options.filter(x => x.id === "domain")[0].marginLeft:43}}  
+                        className={selectedNode && isEnabled("domain") ? classes.structure : classes.hidden} />
               {
                 <SortableList items={selectedNodes} onSortEnd={onSortEnd} useDragHandle />
               }
