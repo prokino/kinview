@@ -91,13 +91,13 @@ def classification_csv_to_json():
                 family['nodes'].append(entity)
   
     # add one row for all to the beginning of the file
-    subgroups.insert(0, {
-        "id": "id@" + root_name,
-        "value": root_name,
-        "path": root_name,
-        "members": root['Members'].split(";"),
-        "nodes": [],
-    })
+    # subgroups.insert(0, {
+    #     "id": "id@" + root_name,
+    #     "value": root_name,
+    #     "path": root_name,
+    #     "members": root['Members'].split(";"),
+    #     "nodes": [],
+    # })
     return subgroups
 
 def write_classification(data):

@@ -310,7 +310,7 @@ function KinWeblogo(props) {
     let items = [];
     options.forEach(option =>
       {
-        items.push({text:option.name, value: `${baseUrl}${option.dir}/${val}.${option.ext}`});
+        items.push({text:option.name, value: `${baseUrl}/${option.dir}/${val}.${option.ext}`});
       }
       );
     return items;

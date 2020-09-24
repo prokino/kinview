@@ -1,27 +1,5 @@
 [
     {
-        "id": "id@FPVR",
-        "value": "FPVR",
-        "path": "FPVR",
-        "members": [
-            "alignment",
-            "RET",
-            "FGFR1",
-            "FGFR2",
-            "FGFR4",
-            "FGFR3",
-            "FLT1",
-            "FLT4",
-            "KDR",
-            "FMS",
-            "KIT",
-            "FLT3",
-            "PDGFRb",
-            "PDGFRa"
-        ],
-        "nodes": []
-    },
-    {
         "id": "id1@FPVR",
         "type": "subgroup",
         "value": "FPVR",

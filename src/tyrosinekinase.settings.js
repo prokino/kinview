@@ -57,6 +57,18 @@ export const settings = {
             checked: false,
             visible: true
         },
+        {
+            type: "dropdown",
+            name: "Sequence",
+            visible: true,
+            options: [{
+                    name: "Download",
+                    dir: "sequence",
+                    ext: "fa"
+                },
+
+            ]
+        },
 
     ]
 };
