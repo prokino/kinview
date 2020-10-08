@@ -33,7 +33,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 30,
   },
   paper: {
-    padding: theme.spacing(0),
+    paddingTop: theme.spacing(0),
+    paddingBottom: theme.spacing(0),
   },
   leftBox:
   {
@@ -440,7 +441,7 @@ function App() {
               <Paper id="mainPaper" className={selectedNode ? classes.paper : classes.hidden} elevation={0}>
               <div className="settings">
         
-        <Box  display="flex" alignItems="flex-start" p={1} m={1}>
+        <Box  display="flex" alignItems="flex-start" p={0.1} m={0.1}>
           <Box>
           <fieldset>
                 <legend>Settings</legend>
