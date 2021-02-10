@@ -37,7 +37,9 @@ const useTreeItemStyles = makeStyles(theme => ({
       // paddingLeft: theme.spacing(2),
     },
   },
-  expanded: {},
+  expanded: {
+    alignItems: 'baseline',
+  },
   label: {
     fontWeight: 'inherit',
     color: 'inherit',
@@ -220,7 +222,7 @@ function KinTreeView(props) {
     }
 
 if (nodes)    return nodes.map((node, index) => {
-      return <div key={`node-${index}`} style={{ display: 'flex', alignItems: 'baseline' }}>
+      return <div key={`node-${index}`} style={{ display: 'flex', alignItems: node.nodes && node.nodes.length>0? 'baseline':'center' }}>
         <Checkbox
           id={`checkbox-${node.id}`}
           size='small'

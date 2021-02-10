@@ -276,8 +276,10 @@ function KinWeblogo(props) {
 
 
   
-  let baseUrl = `${window.location.origin.toString()}`;
-  baseUrl = baseUrl + "/" + appname;
+  // let baseUrl = `${window.location.origin.toString()}`;
+  // baseUrl = baseUrl + "/" + appname;
+  
+  const baseUrl = "/kinview/" + appname;
 
   const numberingChanged = event => {
     if (props.numbers && event.target) {

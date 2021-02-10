@@ -5,7 +5,8 @@ export const settings = {
     ui: {
         numberingMarginLeft: "28px",
         numberingMarginTop: "-1px",
-        numberingMinWidth: "20.01px"
+        numberingMinWidth: "20.01px",
+        motifMarginLeft: "10px",
     },
     options: [
         {
@@ -30,7 +31,9 @@ export const settings = {
             type: "checkbox",
             name: "Domain Structure",
             checked: false,
-            visible: true
+            visible: true,
+            width: 4877,
+            marginLeft: 0
         }
     ],
     elements: [{
