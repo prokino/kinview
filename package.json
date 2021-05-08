@@ -17,7 +17,7 @@
     "cors": "^2.8.5",
     "electron-is-dev": "^1.2.0",
     "express": "^4.17.1",
-    "handlebars": "^4.7.2",
+    "handlebars": "^4.7.7",
     "lodash": "^4.17.19",
     "material-ui-popup-state": "^1.5.4",
     "mysql2": "^2.1.0",
